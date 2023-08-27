@@ -1,5 +1,9 @@
 import { useState } from "react";
 import BlogList from "./blogList";
+import Example from './Example';
+import playful from "./palyfull";
+import Scale from "./scale";
+import Contact from "./contactus";
 
 
 
@@ -22,7 +26,11 @@ const Home = () => {
     
     return ( 
         <div className="home">
-           <BlogList blogs = {blogs} title = "All Blogs" handleDelete={handleDelete}/>
+           
+           
+           <Example></Example>
+           <Scale></Scale>
+           <Contact></Contact>
            
         </div>
      );
