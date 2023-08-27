@@ -1,18 +1,24 @@
-
+import React from 'react';
 import './App.css';
-import Navbar from './navbar';
-import Home from './Home'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Home from './Home';
+import Product from './Product'; // Make sure to create this component
 
 function App() {
-  const title = 'Welcome to the new blog';
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       
-      <div className="content">
-        <Home></Home>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product" element={<Product />} />
+            {/* Add more Routes here as needed */}
+          </Routes>
+        </div>
       </div>
-    
-    </div>
+    </Router>
   );
 }
 

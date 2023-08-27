@@ -4,6 +4,7 @@ import Example from './Example';
 import playful from "./palyfull";
 import Scale from "./scale";
 import Contact from "./contactus";
+import Navbar from "./navbar";
 
 
 
@@ -27,7 +28,7 @@ const Home = () => {
     return ( 
         <div className="home">
            
-           
+           <Navbar></Navbar>
            <Example></Example>
            <Scale></Scale>
            <Contact></Contact>
