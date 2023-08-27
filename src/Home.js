@@ -1,7 +1,5 @@
 import { useState } from "react";
-import BlogList from "./blogList";
 import Example from './Example';
-import playful from "./palyfull";
 import Scale from "./scale";
 import Contact from "./contactus";
 import Navbar from "./navbar";
