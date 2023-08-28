@@ -13,7 +13,7 @@ export default function Message() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/api/process_text/', {
+      const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/process_text/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
