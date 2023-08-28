@@ -4,6 +4,8 @@ import {  HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './Home';
 import Product from './Product'; // Make sure to create this component
+import Contact from './contactus';
+import SignInUpSwitcher from './auth/switch';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product" element={<Product />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<SignInUpSwitcher />} />
             {/* Add more Routes here as needed */}
           </Routes>
         </div>

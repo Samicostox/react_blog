@@ -3,6 +3,7 @@ import Example from './Example';
 import Scale from "./scale";
 import Contact from "./contactus";
 import Navbar from "./navbar";
+import Content from "./content";
 
 
 
@@ -27,9 +28,11 @@ const Home = () => {
         <div className="home">
            
            <Navbar></Navbar>
+           
            <Example></Example>
+           <Content></Content>
            <Scale></Scale>
-           <Contact></Contact>
+           
            
         </div>
      );
