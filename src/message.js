@@ -18,7 +18,7 @@ export default function Message() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ sample_text: sampleText }),
+        body: JSON.stringify({ sample_text: sampleText, personalize: agreed}),
       });
 
       if (!response.ok) {
@@ -86,9 +86,9 @@ export default function Message() {
               </Switch>
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-700">
-              By selecting this, you agree to our{' '}
+              Personalied Email
               <a href="#" className="font-semibold text-green-700">
-                privacy&nbsp;policy
+                
               </a>
               .
             </Switch.Label>
