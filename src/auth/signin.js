@@ -1,107 +1,119 @@
-import React from "react";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../navbar';
 
-function SignInForm() {
-  const [state, setState] = React.useState({
-    email: "",
-    password: ""
-  });
+export default function Signin() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null); // Added error state
+  const navigate = useNavigate();
 
-  const handleChange = evt => {
-    const value = evt.target.value;
-    setState({
-      ...state,
-      [evt.target.name]: value
-    });
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null); // Resetting the error before a new request
 
-  const handleOnSubmit = evt => {
-    evt.preventDefault();
-
-    const { email, password } = state;
-    alert(`You are login with email: ${email} and password: ${password}`);
-
-    for (const key in state) {
-      setState({
-        ...state,
-        [key]: ""
+    try {
+      const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
       });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        if (data.msg === 'Successfully logged in!') {
+          localStorage.setItem('token', data.token);
+          navigate('/');
+        } else {
+          setError(data.msg);
+        }
+      } else {
+        setError(data.msg);
+      }
+    } catch (error) {
+      setError('There was a problem with the fetch operation.');
+      console.error('There was a problem with the fetch operation:', error);
     }
   };
 
-  const formContainerStyle = {
-    position: "absolute",
-    top: 0,
-    height: "100%",
-    transition: "all 0.6s ease-in-out"
-  };
-
-  const inputStyle = {
-    backgroundColor: "#eee",
-    border: "none",
-    padding: "12px 15px",
-    margin: "8px 0",
-    width: "100%"
-  };
-
-  const buttonStyle = {
-    borderRadius: "20px",
-    border: "1px solid #ff4b2b",
-    backgroundColor: "#ff4b2b",
-    color: "#ffffff",
-    fontSize: "12px",
-    fontWeight: "bold",
-    padding: "12px 45px",
-    letterSpacing: "1px",
-    textTransform: "uppercase",
-    transition: "transform 80ms ease-in"
-  };
-
   return (
-    <div style={formContainerStyle}>
-      <form onSubmit={handleOnSubmit}>
-        <h1 style={{ fontWeight: "bold", margin: 0 }}>Sign in</h1>
-        <div style={{ margin: "20px 0" }}>
-          <a href="#" style={{
-            border: "1px solid #dddddd",
-            borderRadius: "50%",
-            display: "inline-flex",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "0 5px",
-            height: "40px",
-            width: "40px"
-          }}>
-            <i className="fab fa-facebook-f" />
-          </a>
-          {/* ...other social icons */}
+    <>
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        <Navbar></Navbar>
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+          
+          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+            Sign in to your account
+          </h2>
+          {error && <p className="mt-3 text-center text-red-500">{error}</p>} {/* Display error */}
         </div>
-        <span style={{ fontSize: "12px" }}>or use your account</span>
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          value={state.email}
-          onChange={handleChange}
-          style={inputStyle}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={state.password}
-          onChange={handleChange}
-          style={inputStyle}
-        />
-        <a href="#" style={{
-          color: "#333",
-          fontSize: "14px",
-          textDecoration: "none",
-          margin: "15px 0"
-        }}>Forgot your password?</a>
-        <button style={buttonStyle}>Sign In</button>
-      </form>
-    </div>
+
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="email" className="text-left block text-sm font-medium text-gray-900">
+                Email address
+              </label>
+              <div className="mt-2">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between">
+                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+                  Password
+                </label>
+                <div className="text-sm">
+                  <a href="#" className="font-semibold text-green-700 hover:text-green-700">
+                    Forgot password?
+                  </a>
+                </div>
+              </div>
+              <div className="mt-2">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                className="flex w-full justify-center rounded-md bg-green-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800"
+              >
+                Sign in
+              </button>
+            </div>
+          </form>
+
+          <p className="mt-10 text-center text-sm text-gray-500">
+            Not a member?{' '}
+            <a href="/#signup" className="font-semibold leading-6 text-green-800 hover:text-green-700">
+              Sign Up
+            </a>
+          </p>
+        </div>
+      </div>
+    </>
   );
 }
-
-export default SignInForm;

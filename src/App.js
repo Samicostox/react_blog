@@ -7,12 +7,19 @@ import Product from './Product'; // Make sure to create this component
 import Contact from './contactus';
 import SignInUpSwitcher from './auth/switch';
 import Message from './message';
+import Signin from './auth/signin';
+import Signup from './auth/signup';
+import OTP from './auth/OTP';
+
+
+
 
 function App() {
   return (
     <Router>
       <div className="App">
-      
+
+            
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -20,6 +27,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<SignInUpSwitcher />} />
             <Route path="/message" element={<Message />} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/OTP" element={<OTP />} />
             {/* Add more Routes here as needed */}
           </Routes>
         </div>
