@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Product', href: '/#product' },
-  { name: 'Contact', href: '/#contact' },
-  { name: 'Software', href: '/#message' },
-  { name: 'Company', href: '#' },
+  { name: 'Product', href: '/product' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Software', href: '/message' },
+  { name: 'PDF', href: '/PDF', requiresAuth: true },
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();  // Initialize useNavigate
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -23,6 +25,14 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
+  };
+
+  const handleNavigation = (href, requiresAuth) => {
+    if (requiresAuth && !isLoggedIn) {
+      navigate('/signin');  // Redirect to login if not authenticated
+      return;
+    }
+    navigate(href);
   };
 
   return (
@@ -50,7 +60,11 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+            <a
+              key={item.name}
+              onClick={() => handleNavigation(item.href, item.requiresAuth)}
+              className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+            >
               {item.name}
             </a>
           ))}
@@ -61,7 +75,7 @@ const Navbar = () => {
               Log out <span aria-hidden="true">&rarr;</span>
             </button>
           ) : (
-            <a href="/#signin" className="text-sm font-semibold leading-6 text-gray-900">
+            <a onClick={() => navigate("/signin")} className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           )}
@@ -94,8 +108,8 @@ const Navbar = () => {
                 {navigation.map((item) => (
                   <a
                     key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => handleNavigation(item.href, item.requiresAuth)}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
                   >
                     {item.name}
                   </a>
@@ -111,8 +125,8 @@ const Navbar = () => {
                   </button>
                 ) : (
                   <a
-                    href="/#signin"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => navigate("/signin")}
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
                   >
                     Log in
                   </a>
@@ -124,6 +138,7 @@ const Navbar = () => {
       </Dialog>
     </header>
   );
-};
 
-export default Navbar;
+ };
+
+  export default Navbar;
