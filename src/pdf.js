@@ -1,8 +1,17 @@
+import { useState, useEffect } from 'react';
 import Navbar from './navbar';
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function PDF() {
   const [scopeOfApp, setScopeOfApp] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/signin');  // replace '/login' with your login page route
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -74,9 +74,15 @@ export default function Content() {
                   </span>
                 </li>
               </ul>
-              <p className="mt-8">
-              The algorithm is designed to adapt and improve over time, learning from each interaction to become more effective at identifying qualified leads. It integrates seamlessly with your existing CRM systems for a smooth workflow.
-              </p>
+              
+              <div className="mt-6">
+              <a
+                href="/#message" // Replace with your actual route
+                className="inline-flex items-center px-4 py-2 text-base font-medium text-white bg-green-800 border border-transparent rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700"
+              >
+               Lead Generation 
+              </a>
+            </div>
             
             </div>
           </div>

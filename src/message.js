@@ -1,6 +1,7 @@
 import Navbar from './navbar';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Switch } from '@headlessui/react';
+import { useNavigate } from 'react-router-dom';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -9,6 +10,14 @@ function classNames(...classes) {
 export default function Message() {
   const [agreed, setAgreed] = useState(false);
   const [sampleText, setSampleText] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/signin');  // replace '/login' with your login page route
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
