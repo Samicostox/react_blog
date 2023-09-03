@@ -60,17 +60,17 @@ export default function Signup() {
 
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <Navbar />
-        <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Sign up for an account
-          </h2>
-          {error && <p className="mt-3 text-center text-red-500">{error}</p>} {/* New line for displaying error messages */}
-        </div>
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="py-8 px-4 bg-white sm:rounded-lg sm:px-10">
+    <div className="flex min-h-screen flex-1 flex-col px-6 py-12 lg:px-8">
+      <Navbar />
+      <div className="sm:mx-auto sm:w-full sm:max-w-md" style={{ marginTop: '150px' }}>
+        
+        <h2 className="mt-6 text-center text-4xl font-extrabold text-gray-900">
+          Sign up for an account
+        </h2>
+        {error && <p className="mt-3 text-center text-lg text-red-500">{error}</p>}
+      </div>
+      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <div className="py-8 px-4 bg-white sm:rounded-lg sm:px-10">
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Name field */}
               <div>
