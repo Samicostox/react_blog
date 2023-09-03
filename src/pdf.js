@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 export default function PDF() {
   const [scopeOfApp, setScopeOfApp] = useState('');
+  const [title, setTitle] = useState('');
+  const [date, setDate] = useState('');
+  const [university, setUniversity] = useState('1'); // Default to University of Birmingham
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,13 +20,21 @@ export default function PDF() {
     e.preventDefault();
     const token = localStorage.getItem("token");  // Retrieve session token from local storage
 
+    const payload = {
+      token: token,
+      question: scopeOfApp,
+      title: title,
+      date: date,
+      university: university
+    };
+
     try {
       const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/generate_requirements_pdf/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ token: token, question: scopeOfApp }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
@@ -53,9 +64,53 @@ export default function PDF() {
         </p>
       </div>
       <form onSubmit={handleSubmit} style={{maxWidth: "1200px"}} className="mx-auto mt-16 sm:mt-20">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1">
+        
+
+          {/* Additional Fields */}
           <div className="sm:col-span-1">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="title" className="text-left block text-sm font-semibold leading-6 text-gray-900">
+              Title
+            </label>
+            <input
+              type="text"
+              id="title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+            />
+          </div>
+
+          <div className="sm:col-span-1 py-4">
+            <label htmlFor="date" className="text-left block text-sm font-semibold leading-6 text-gray-900">
+              Date
+            </label>
+            <input
+              type="date"
+              id="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+            />
+          </div>
+
+          <div className="sm:col-span-1 py-4">
+            <label htmlFor="university" className="text-left block text-sm font-semibold leading-6 text-gray-900">
+              University
+            </label>
+            <select
+              id="university"
+              value={university}
+              onChange={(e) => setUniversity(e.target.value)}
+              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+            >
+              <option value="1">University of Birmingham</option>
+              <option value="2">University of Warwick</option>
+            </select>
+          </div>
+
+          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1">
+          <div className="sm:col-span-1 py-4">
+            <label htmlFor="message" className="text-left block text-sm font-semibold leading-6 text-gray-900">
               Scope of App
             </label>
             <div className="mt-2.5">
@@ -69,16 +124,17 @@ export default function PDF() {
               />
             </div>
           </div>
-        </div>
-        <div className="mt-10">
-          <button
-            type="submit"
-            className="block w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
-          >
-            Generate PDF
-          </button>
+
+          <div className="mt-10">
+            <button
+              type="submit"
+              className="block w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
+            >
+              Generate PDF
+            </button>
+          </div>
         </div>
       </form>
     </div>
-  )
+  );
 }
