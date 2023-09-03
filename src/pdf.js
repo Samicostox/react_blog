@@ -7,6 +7,12 @@ export default function PDF() {
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [university, setUniversity] = useState('1'); // Default to University of Birmingham
+  const [nameOfProject, setNameOfProject] = useState('');
+  const [typeOfProject, setTypeOfProject] = useState(''); // You can also set a default value
+  const [nameOfClientCompany, setNameOfClientCompany] = useState('');
+  const [consultantName, setConsultantName] = useState('');
+
+  const projectTypes = ["Web Application", "Mobile Application", "Website"]; // Popula
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,7 +31,12 @@ export default function PDF() {
       question: scopeOfApp,
       title: title,
       date: date,
-      university: university
+      university: university,
+      name_of_project : nameOfProject,
+      type_of_project: typeOfProject,
+      name_of_client_company : nameOfClientCompany,
+      consultant_name: consultantName
+
     };
 
     try {
@@ -107,6 +118,59 @@ export default function PDF() {
               <option value="2">University of Warwick</option>
             </select>
           </div>
+
+          <div className="sm:col-span-1 py-4">
+    <label htmlFor="nameOfProject" className="text-left block text-sm font-semibold leading-6 text-gray-900">
+      Name of Project
+    </label>
+    <input
+      type="text"
+      id="nameOfProject"
+      value={nameOfProject}
+      onChange={(e) => setNameOfProject(e.target.value)}
+      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+    />
+  </div>
+
+  <div className="sm:col-span-1 py-4">
+    <label htmlFor="typeOfProject" className="text-left block text-sm font-semibold leading-6 text-gray-900">
+      Type of Project
+    </label>
+    <select
+      id="typeOfProject"
+      value={typeOfProject}
+      onChange={(e) => setTypeOfProject(e.target.value)}
+      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+    >
+      {projectTypes.map((type, index) => <option key={index} value={type}>{type}</option>)}
+    </select>
+  </div>
+
+  <div className="sm:col-span-1 py-4">
+    <label htmlFor="nameOfClientCompany" className="text-left block text-sm font-semibold leading-6 text-gray-900">
+      Name of Client Company
+    </label>
+    <input
+      type="text"
+      id="nameOfClientCompany"
+      value={nameOfClientCompany}
+      onChange={(e) => setNameOfClientCompany(e.target.value)}
+      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+    />
+  </div>
+
+  <div className="sm:col-span-1 py-4">
+    <label htmlFor="consultantName" className="text-left block text-sm font-semibold leading-6 text-gray-900">
+      Consultant Name
+    </label>
+    <input
+      type="text"
+      id="consultantName"
+      value={consultantName}
+      onChange={(e) => setConsultantName(e.target.value)}
+      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+    />
+  </div>
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1">
           <div className="sm:col-span-1 py-4">
