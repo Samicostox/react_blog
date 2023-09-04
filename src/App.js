@@ -11,6 +11,7 @@ import Signin from './auth/signin';
 import Signup from './auth/signup';
 import OTP from './auth/OTP';
 import PDF from './pdf';
+import GoogleMap from "./googlemap";
 
 
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/OTP" element={<OTP />} />
             <Route path="/PDF" element={<PDF />} />
+            <Route path="/googlemap" element={<GoogleMap />} />
             {/* Add more Routes here as needed */}
           </Routes>
         </div>

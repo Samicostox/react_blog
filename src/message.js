@@ -50,13 +50,13 @@ export default function Message() {
 
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <Navbar></Navbar>
-      <div className="mx-auto max-w-4x2 text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Enter your google search</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-700">
-          It will output you a csv file filtered thanks to an NLP algorithm with all the relevant data about your businesses
-        </p>
-      </div>
+    <Navbar></Navbar>
+  <div className="mx-auto max-w-4x2 text-center mt-10"> {/* Here's where I added `mt-10` */}
+    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Enter your google search</h2>
+    <p className="mt-2 text-lg leading-8 text-gray-700">
+      It will output you a csv file filtered thanks to an NLP algorithm with all the relevant data about your businesses
+    </p>
+  </div>
       <form onSubmit={handleSubmit} style={{maxWidth: "1200px"}} className="mx-auto mt-16 sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1">
           <div className="sm:col-span-1">
