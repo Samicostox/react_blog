@@ -24,7 +24,7 @@ export default function GoogleMap() {
     const token = localStorage.getItem("token");
     setIsLoading(true);
     try {
-      const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/fetch_venues/', {
+      const response = await fetch('http://localhost:8000/api/fetch_venues/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

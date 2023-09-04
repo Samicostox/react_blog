@@ -11,6 +11,8 @@ export default function PDF() {
   const [typeOfProject, setTypeOfProject] = useState(''); // You can also set a default value
   const [nameOfClientCompany, setNameOfClientCompany] = useState('');
   const [consultantName, setConsultantName] = useState('');
+  
+  const [isLoading, setIsLoading] = useState(false);
 
   const projectTypes = ["Web Application", "Mobile Application", "Website"]; // Popula
   const navigate = useNavigate();
@@ -24,6 +26,7 @@ export default function PDF() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);  // Set loading to true
     const token = localStorage.getItem("token");  // Retrieve session token from local storage
 
     const payload = {
@@ -60,8 +63,10 @@ export default function PDF() {
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
+      setIsLoading(false);  
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
+      setIsLoading(false);
     }
   };
 
@@ -190,13 +195,27 @@ export default function PDF() {
           </div>
 
           <div className="mt-10">
-            <button
-              type="submit"
-              className="block w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
-            >
-              Generate PDF
-            </button>
-          </div>
+  {isLoading ? (
+    <div className="flex items-center justify-center">
+      <button type="button"
+          className="inline-flex items-center px-4 py-2 text-sm font-semibold leading-6 text-white transition duration-150 ease-in-out bg-green-700 rounded-md shadow cursor-not-allowed hover:bg-green-600"
+          disabled>
+          <svg className="w-5 h-5 mr-3 -ml-1 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Generating...
+      </button>
+    </div>
+  ) : (
+    <button
+      type="submit"
+      className="inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
+    >
+      Generate PDF
+    </button>
+  )}
+</div>
         </div>
       </form>
     </div>
