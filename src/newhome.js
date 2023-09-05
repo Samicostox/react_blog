@@ -15,12 +15,15 @@ import PDF from './pdf'
 import Message from './message'
 import GoogleMap from './googlemap'
 import Home from './Home'
+import Store from './stored';
+
+
 
 const navigation = [
   { name: 'Technical documents', href: '#', icon: HomeIcon, current: true },
   { name: 'Email Generation', href: '#', icon: UsersIcon, current: false },
   { name: 'Cold Outreach', href: '#', icon: FolderIcon, current: false },
-  { name: 'Home', href: '#', icon: CalendarIcon, current: false },
+  { name: 'PDFs', href: '#', icon: CalendarIcon, current: false },
   
   
 ]
@@ -55,6 +58,10 @@ export default function Newhome() {
       navigate('/signin');
     }
   }, []);
+
+  function setToPDF() {
+    setActiveContent('Technical documents');
+  }
 
   return (
     <>
@@ -285,7 +292,7 @@ export default function Newhome() {
   {activeContent === 'Technical documents' && <PDF />}
   {activeContent === 'Email Generation' && <Message />}
   {activeContent === 'Cold Outreach' && <GoogleMap />}
-  {activeContent === 'Home' && <Home />}
+  {activeContent === 'PDFs' && <Store setToPDF={setToPDF} />}
   {activeContent === 'Doc1' && <PDF />}
  {activeContent === 'Doc2' && <Message />}
  {activeContent === 'Doc3' && <GoogleMap />}
