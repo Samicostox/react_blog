@@ -62,8 +62,9 @@ export default function GoogleMap() {
 
 
   return (
+    <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-      <Navbar></Navbar>
+      
       <div className="mx-auto max-w-4x2 text-center mt-10">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Lead Generation</h2>
         <p className="mt-2 text-lg leading-8 text-gray-700">
@@ -148,6 +149,7 @@ export default function GoogleMap() {
         </div>
       
       </form>
+    </div>
     </div>
   );
 }

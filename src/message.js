@@ -2,6 +2,7 @@ import Navbar from './navbar';
 import { useState,useEffect } from 'react';
 import { Switch } from '@headlessui/react';
 import { useNavigate } from 'react-router-dom';
+import Newhome from './newhome'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -52,8 +53,10 @@ export default function Message() {
   
 
   return (
+    <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-    <Navbar></Navbar>
+    
+    
   <div className="mx-auto max-w-4x2 text-center mt-10"> {/* Here's where I added `mt-10` */}
     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Enter your google search</h2>
     <p className="mt-2 text-lg leading-8 text-gray-700">
@@ -116,7 +119,7 @@ export default function Message() {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          Generating Leads...
+          Generating...
       </button>
     </div>
   ) : (
@@ -130,5 +133,8 @@ export default function Message() {
 </div>
       </form>
     </div>
+    </div>
   )
 }
+
+

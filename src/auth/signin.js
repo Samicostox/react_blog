@@ -26,7 +26,7 @@ export default function Signin() {
       if (response.ok) {
         if (data.msg === 'Successfully logged in!') {
           localStorage.setItem('token', data.token);
-          navigate('/');
+          navigate('/newhome');
         } else {
           setError(data.msg);
         }
