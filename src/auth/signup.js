@@ -12,7 +12,8 @@ export default function Signup() {
     email: '',
     password: '',
     confirm_password: '',
-    username: ''
+    university: '',
+    
   });
 
   const [error, setError] = useState(null);  // New state for handling errors
@@ -72,6 +73,12 @@ export default function Signup() {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="py-8 px-4 bg-white sm:rounded-lg sm:px-10">
             <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Avatar */}
+          <img
+            className="mx-auto h-24 w-24 rounded-md"
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            alt=""
+          />
               {/* Name field */}
               <div>
                 <label htmlFor="name" className="text-left block text-sm font-medium text-gray-700">
@@ -132,21 +139,24 @@ export default function Signup() {
                   className="mt-1 p-2 w-full border rounded-md"
                 />
               </div>
-              {/* Username field */}
-              <div>
-                <label htmlFor="username" className="text-left block text-sm font-medium text-gray-700">
-                  Username
-                </label>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  autoComplete="username"
-                  required
-                  onChange={handleChange}
-                  className="mt-1 p-2 w-full border rounded-md"
-                />
-              </div>
+              {/* University dropdown */}
+        <div>
+          <label htmlFor="university" className="text-left block text-sm font-medium text-gray-700">
+            Choose University
+          </label>
+          <select
+            name="university"
+            id="university"
+            required
+            onChange={handleChange}
+            className="mt-1 p-2 w-full border rounded-md"
+          >
+            <option value="" disabled selected>Select your University</option>
+            <option value="1">University of Warwick</option>
+            <option value="2">University of Birmingham</option>
+          </select>
+        </div>
+             
               {/* Submit Button */}
               <div></div>
               {/* Submit Button */}
