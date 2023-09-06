@@ -16,6 +16,7 @@ import Message from './message'
 import GoogleMap from './googlemap'
 import Home from './Home'
 import Store from './stored';
+import Displaycsv from './displaycsv';
 
 
 
@@ -24,7 +25,7 @@ const navigation = [
   { name: 'Email Generation', href: '#', icon: UsersIcon, current: false },
   { name: 'Cold Outreach', href: '#', icon: FolderIcon, current: false },
   { name: 'PDFs', href: '#', icon: CalendarIcon, current: false },
-  
+  { name: 'CSV', href: '#', icon: CalendarIcon, current: false },
   
 ]
 
@@ -307,6 +308,7 @@ export default function Newhome() {
   {activeContent === 'Email Generation' && <Message />}
   {activeContent === 'Cold Outreach' && <GoogleMap />}
   {activeContent === 'PDFs' && <Store setToPDF={setToPDF} />}
+  {activeContent === 'CSV' && <Displaycsv />}
   {activeContent === 'Doc1' && <PDF />}
  {activeContent === 'Doc2' && <Message />}
  {activeContent === 'Doc3' && <GoogleMap />}

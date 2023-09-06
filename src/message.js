@@ -24,13 +24,14 @@ export default function Message() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    const token = localStorage.getItem("token");
     try {
       const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/process_text/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ sample_text: sampleText, personalize: agreed}),
+        body: JSON.stringify({ sample_text: sampleText, personalize: agreed, token:token}),
       });
 
       if (!response.ok) {
