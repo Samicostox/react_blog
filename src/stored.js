@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Emptystate from './emptystate';  // import the Emptystate component
 
 export default function Store({ setToPDF }) {
   const [pdfFiles, setPdfFiles] = useState([]);
@@ -34,13 +35,9 @@ export default function Store({ setToPDF }) {
           </p>
         </div>
         {pdfFiles.length === 0 ? (
-        <button
-          onClick={setToPDF}
-          type="submit"
-          className="mt-12 flex w-full justify-center rounded-md bg-green-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800"
-        >
-          Generate technical documents
-        </button>
+            <div className="mt-20">  {/* Adding margin-top here */}
+          <Emptystate setToPDF={setToPDF}/>  
+          </div>
         ) : (
           <ul
             role="list"

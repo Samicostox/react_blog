@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import './App.css';
 import {  HashRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -13,6 +13,7 @@ import OTP from './auth/OTP';
 import PDF from './pdf';
 import GoogleMap from "./googlemap"
 import Newhome from './newhome';
+import Profile from './profile';
 
 
 
@@ -37,6 +38,7 @@ function App() {
             <Route path="/PDF" element={<PDF />} />
             <Route path="/googlemap" element={<GoogleMap />} />
             <Route path="/newhome" element={<Newhome />} />
+            <Route path="/profile" element={<Profile />} />
             {/* Add more Routes here as needed */}
           </Routes>
         </div>
