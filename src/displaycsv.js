@@ -1,10 +1,8 @@
-
-
-
 import React, { useState, useEffect, Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { useNavigate } from 'react-router-dom';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import Emptystate from './emptystate';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -16,7 +14,7 @@ const categories = [
   { id: 3, name: 'email' },
 ];
 
-export default function DisplayCSV() {
+export default function DisplayCSV({setToCSV}) {
   const [csvFiles, setCsvFiles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
@@ -71,6 +69,11 @@ export default function DisplayCSV() {
             Here are all the CSV files you've uploaded.
           </p>
         </div>
+        {csvFiles.length === 0 ? (
+            <div className="mt-20">  {/* Adding margin-top here */}
+          <Emptystate setToPDF={setToCSV}/>  
+          </div>
+        ) : (
         <div className="w-[300px] mt-20">
         <Listbox value={selectedCategory} onChange={setSelectedCategory}>
             {({ open }) => (
@@ -132,7 +135,7 @@ export default function DisplayCSV() {
               </>
             )}
           </Listbox>
-        </div>
+        </div>)}
 
         <ul role="list" className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8 mt-16 sm:mt-20">
   {filteredFiles.map((csvFile) => (

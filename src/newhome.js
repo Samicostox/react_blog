@@ -64,6 +64,10 @@ export default function Newhome() {
     setActiveContent('Technical documents');
   }
 
+  function setToCSV() {
+    setActiveContent('Email Generation');
+  }
+
   return (
     <>
       {/*
@@ -308,7 +312,7 @@ export default function Newhome() {
   {activeContent === 'Email Generation' && <Message />}
   {activeContent === 'Cold Outreach' && <GoogleMap />}
   {activeContent === 'PDFs' && <Store setToPDF={setToPDF} />}
-  {activeContent === 'CSV' && <Displaycsv />}
+  {activeContent === 'CSV' && <Displaycsv setToCSV={setToCSV}/>}
   {activeContent === 'Doc1' && <PDF />}
  {activeContent === 'Doc2' && <Message />}
  {activeContent === 'Doc3' && <GoogleMap />}
