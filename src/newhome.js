@@ -17,6 +17,8 @@ import GoogleMap from './googlemap'
 import Home from './Home'
 import Store from './stored';
 import Displaycsv from './displaycsv';
+import Documents from './documents';
+import Repo from './repo';
 
 
 
@@ -26,6 +28,7 @@ const navigation = [
   { name: 'Cold Outreach', href: '#', icon: FolderIcon, current: false },
   { name: 'PDFs', href: '#', icon: CalendarIcon, current: false },
   { name: 'CSV', href: '#', icon: CalendarIcon, current: false },
+  { name: 'Repo', href: '#', icon: CalendarIcon, current: false },
   
 ]
 
@@ -313,6 +316,7 @@ export default function Newhome() {
   {activeContent === 'Cold Outreach' && <GoogleMap />}
   {activeContent === 'PDFs' && <Store setToPDF={setToPDF} />}
   {activeContent === 'CSV' && <Displaycsv setToCSV={setToCSV}/>}
+  {activeContent === 'Repo' && <Repo />}
   {activeContent === 'Doc1' && <PDF />}
  {activeContent === 'Doc2' && <Message />}
  {activeContent === 'Doc3' && <GoogleMap />}
