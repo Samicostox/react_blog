@@ -27,6 +27,9 @@ export default function Signin() {
         if (data.msg === 'Successfully logged in!') {
           localStorage.setItem('token', data.token);
           localStorage.setItem('uni', data.university);
+          localStorage.setItem('name', data.name);
+          localStorage.setItem('profileçpicture', data.profile_picture);
+
           navigate('/newhome');
         } else {
           setError(data.msg);
