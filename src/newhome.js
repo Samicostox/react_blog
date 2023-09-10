@@ -19,11 +19,14 @@ import Store from './stored';
 import Displaycsv from './displaycsv';
 import Documents from './documents';
 import Repo from './repo';
+import NewPDF from './technical_documents/newpdf';
+import PDFViewer from './technical_documents/embed_pdf';
 
 
 
 const navigation = [
   { name: 'Technical documents', href: '#', icon: HomeIcon, current: true },
+  { name: 'New Technical documents', href: '#', icon: HomeIcon, current: false },
   { name: 'Email Generation', href: '#', icon: UsersIcon, current: false },
   { name: 'Cold Outreach', href: '#', icon: FolderIcon, current: false },
   { name: 'PDFs', href: '#', icon: CalendarIcon, current: false },
@@ -323,6 +326,8 @@ export default function Newhome() {
  {activeContent === 'Doc2' && <Message />}
  {activeContent === 'Doc3' && <GoogleMap />}
  {activeContent === 'Doc4' && <Home />}
+ {activeContent === 'New Technical documents' && <NewPDF />}
+ {activeContent === 'HiddenPage' && <PDFViewer />}
 </div>
 
         

@@ -15,6 +15,7 @@ import GoogleMap from "./googlemap"
 import Newhome from './newhome';
 import Profile from './profile';
 import Displaycsv from './displaycsv';
+import PDFViewer from './technical_documents/embed_pdf';
 
 
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/googlemap" element={<GoogleMap />} />
             <Route path="/newhome" element={<Newhome />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/pdfviewer" element={<PDFViewer />} />
             {/* Add more Routes here as needed */}
           </Routes>
         </div>
