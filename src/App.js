@@ -16,6 +16,8 @@ import Newhome from './newhome';
 import Profile from './profile';
 import Displaycsv from './displaycsv';
 import PDFViewer from './technical_documents/embed_pdf';
+import MultiStepForm from './technical_documents/modify_pdf';
+import ModifyPDF from './technical_documents/modify_pdf';
 
 
 
@@ -42,6 +44,7 @@ function App() {
             <Route path="/newhome" element={<Newhome />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/pdfviewer" element={<PDFViewer />} />
+            <Route path="/updatepdf" component={<ModifyPDF />} />
             {/* Add more Routes here as needed */}
           </Routes>
         </div>

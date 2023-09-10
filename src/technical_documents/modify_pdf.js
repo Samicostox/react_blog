@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import Navbar from '../navbar';
 import { useNavigate } from 'react-router-dom';
 
-export default function NewPDF() {
+
+function ModifyPDF(props) {
+
   const [scopeOfApp, setScopeOfApp] = useState('');
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
@@ -12,23 +13,30 @@ export default function NewPDF() {
   const [nameOfClientCompany, setNameOfClientCompany] = useState('');
   const [consultantName, setConsultantName] = useState('');
 
-  const [functionalTitles, setFunctionalTitles] = useState([]);
-  const [functional, setFunctional] = useState([]);
-  const [nonFunctionalTitles, setNonFunctionalTitles] = useState([]);
-  const [nonFunctional, setNonFunctional] = useState([]);
-  const [pdf_url, setPDF_URL] = useState('');
-  
   const [isLoading, setIsLoading] = useState(false);
 
-  const projectTypes = ["Web Application", "Mobile Application", "Website"]; // Popula
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      navigate('/signin');  // replace '/login' with your login page route
-    }
-  }, []);
+  const [functionalTitles, setFunctionalTitles] = useState([]);
+      const [functional, setFunctional] = useState([]);
+      const [nonFunctionalTitles, setNonFunctionalTitles] = useState([]);
+      const [nonFunctional, setNonFunctional] = useState([]);
+      const [pdf_url, setPDF_URL] = useState('');
+
+  const projectTypes = ["Web Application", "Mobile Application", "Website"]; // Popula
+
+  const containerStyle = {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh', // viewport height
+  };
+
+  const iframeStyle = {
+      width: '50%',
+      height: '75vh', 
+      border: 'none'
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,6 +50,7 @@ export default function NewPDF() {
       date: date,
       university: university,
       name_of_project : nameOfProject,
+      type_of_project: typeOfProject,
       name_of_client_company : nameOfClientCompany,
       consultant_name: consultantName
     };
@@ -77,6 +86,8 @@ export default function NewPDF() {
       setNonFunctionalTitles(responseData.non_functional_titles);
       setNonFunctional(responseData.non_functional_requirements);
       setPDF_URL(pdf_url);
+
+      
       /*
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
@@ -108,7 +119,7 @@ export default function NewPDF() {
       </div>
       <form onSubmit={handleSubmit} style={{maxWidth: "1200px"}} className="mx-auto mt-16 sm:mt-20">
         
-
+  
           {/* Additional Fields */}
           <div className="sm:col-span-1">
             <label htmlFor="title" className="text-left block text-sm font-semibold leading-6 text-gray-900">
@@ -122,7 +133,7 @@ export default function NewPDF() {
               className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
             />
           </div>
-
+  
           <div className="sm:col-span-1 py-4">
             <label htmlFor="date" className="text-left block text-sm font-semibold leading-6 text-gray-900">
               Date
@@ -135,7 +146,7 @@ export default function NewPDF() {
               className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
             />
           </div>
-
+  
           <div className="sm:col-span-1 py-4">
             <label htmlFor="university" className="text-left block text-sm font-semibold leading-6 text-gray-900">
               University
@@ -150,7 +161,7 @@ export default function NewPDF() {
               <option value="2">University of Warwick</option>
             </select>
           </div>
-
+  
           <div className="sm:col-span-1 py-4">
     <label htmlFor="nameOfProject" className="text-left block text-sm font-semibold leading-6 text-gray-900">
       Name of Project
@@ -163,7 +174,7 @@ export default function NewPDF() {
       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
     />
   </div>
-
+  
   <div className="sm:col-span-1 py-4">
     <label htmlFor="typeOfProject" className="text-left block text-sm font-semibold leading-6 text-gray-900">
       Type of Project
@@ -177,7 +188,7 @@ export default function NewPDF() {
       {projectTypes.map((type, index) => <option key={index} value={type}>{type}</option>)}
     </select>
   </div>
-
+  
   <div className="sm:col-span-1 py-4">
     <label htmlFor="nameOfClientCompany" className="text-left block text-sm font-semibold leading-6 text-gray-900">
       Name of Client Company
@@ -190,7 +201,7 @@ export default function NewPDF() {
       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
     />
   </div>
-
+  
   <div className="sm:col-span-1 py-4">
     <label htmlFor="consultantName" className="text-left block text-sm font-semibold leading-6 text-gray-900">
       Consultant Name
@@ -203,7 +214,7 @@ export default function NewPDF() {
       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
     />
   </div>
-
+  
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1">
           <div className="sm:col-span-1 py-4">
             <label htmlFor="message" className="text-left block text-sm font-semibold leading-6 text-gray-900">
@@ -220,7 +231,7 @@ export default function NewPDF() {
               />
             </div>
           </div>
-
+  
           <div className="mt-10">
   {isLoading ? (
     <div className="flex items-center justify-center">
@@ -242,10 +253,14 @@ export default function NewPDF() {
       Generate PDF
     </button>
   )}
-</div>
+  </div>
         </div>
       </form>
     </div>
     </div>
   );
 }
+
+export default ModifyPDF;
+
+
