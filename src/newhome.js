@@ -21,10 +21,13 @@ import Documents from './documents';
 import Repo from './repo';
 import Doc1 from './documentations/doc1';
 
+import NewPDF from './technical_documents/newpdf';
+import PDFViewer from './technical_documents/embed_pdf';
 
 
 const navigation = [
   { name: 'Technical documents', href: '#', icon: HomeIcon, current: true },
+  { name: 'New Technical documents', href: '#', icon: HomeIcon, current: false },
   { name: 'Email Generation', href: '#', icon: UsersIcon, current: false },
   { name: 'Cold Outreach', href: '#', icon: FolderIcon, current: false },
   { name: 'PDFs', href: '#', icon: CalendarIcon, current: false },
@@ -320,10 +323,14 @@ export default function Newhome() {
   {activeContent === 'PDFs' && <Store setToPDF={setToPDF} />}
   {activeContent === 'CSV' && <Displaycsv setToCSV={setToCSV}/>}
   {activeContent === 'Repo' && <Repo />}
-  {activeContent === 'Doc1' && <Doc1 />}
- {activeContent === 'Doc2' && <Doc1 />}
- {activeContent === 'Doc3' && <Doc1 />}
- {activeContent === 'Doc4' && <Doc1 />}
+
+{activeContent === 'Doc1' && <Doc1 />}
+{activeContent === 'Doc2' && <Doc1 />}
+{activeContent === 'Doc3' && <Doc1 />}
+{activeContent === 'Doc4' && <Doc1 />}
+ {activeContent === 'New Technical documents' && <NewPDF />}
+ {activeContent === 'HiddenPage' && <PDFViewer />}
+
 </div>
 
         
