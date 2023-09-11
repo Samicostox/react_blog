@@ -1,11 +1,46 @@
-import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
+import { CheckCircleIcon, InformationCircleIcon,BuildingOfficeIcon,UserGroupIcon ,ExclamationCircleIcon,LightBulbIcon,MagnifyingGlassIcon,BookmarkIcon,MegaphoneIcon} from '@heroicons/react/20/solid'
+import LottiePlayer from 'react-lottie-player';
+import animationData from './animation_lmf6j0mp.json';
+import TextWithImage from './textwithimage';
+
+// Add this to your CSS or inline styles
+const flexContainerStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'nowrap',
+};
+
+const flexItemStyle = {
+  flex: '1 1 auto',
+};
+
+const lottieStyle = {
+  flex: 'none', // This will prevent the Lottie animation from growing or shrinking
+  width: 400,
+  height: 400,
+};
 
 export default function Doc1() {
+  const imageSrc = "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply";
+  const text = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
+  const title = "Cold Outreach"
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   return (
+    <div className="w-full min-w-full">
+      <TextWithImage imageSrc={imageSrc} text={text} title={title} />
     <div className="bg-white px-6 py-32 lg:px-8">
+      
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <p className="text-left text-base font-semibold leading-7 text-green-700">Introducing</p>
-        <h1 className="text-left mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Cold Outreach</h1>
+        <p className="text-left text-base font-semibold leading-7 text-green-700">Cold Outreach</p>
+        <h1 className="text-left mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Introduction</h1>
         <p className="text-left mt-6 text-xl leading-8">
         Cold outreach is a strategic way to initiate contact with individuals who are not currently engaged with you, your product, or your services. While the term "cold" may imply a lack of connection, a well-executed cold outreach campaign can open doors to valuable business opportunities, partnerships, and networking. This guide is designed to offer you a comprehensive framework to make your cold outreach efforts successful.
         </p>
@@ -19,31 +54,35 @@ export default function Doc1() {
           Before you even think about sending out emails or making calls, it's crucial to know who you're targeting. You should understand the industry your target audience belongs to, their role within their organization, and the problems they might be facing that your product or service can solve. This information will not only help you tailor your message but also ensure that you're reaching out to people who are most likely to benefit from what you're offering.
           </p>
           <div className="text-left">
-          <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-                <strong className="text-left font-semibold text-gray-900">Data types.</strong> Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                blanditiis ratione.
-              </span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-                <strong className="text-left font-semibold text-gray-900">Loops.</strong> Anim aute id magna aliqua ad ad non
-                deserunt sunt. Qui irure qui lorem cupidatat commodo.
-              </span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-                <strong className="text-left font-semibold text-gray-900">Events.</strong> Ac tincidunt sapien vehicula erat
-                auctor pellentesque rhoncus. Et magna sit morbi lobortis.
-              </span>
-            </li>
-          </ul>
-          </div>
+  <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
+    <li className="flex gap-x-3">
+      <BuildingOfficeIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <span>
+        <strong className="text-left font-semibold text-gray-900">What industry they belong to.</strong> Provide details about the industry your target audience is part of.
+      </span>
+    </li>
+    <li className="flex gap-x-3">
+      <UserGroupIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <span>
+        <strong className="text-left font-semibold text-gray-900">Their role in the organization.</strong> Describe the roles and responsibilities of your target audience within their organization.
+      </span>
+    </li>
+    <li className="flex gap-x-3">
+      <ExclamationCircleIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <span>
+        <strong className="text-left font-semibold text-gray-900">Their potential pain points.</strong> Identify the challenges or problems your target audience might be facing.
+      </span>
+    </li>
+    <li className="flex gap-x-3">
+      <LightBulbIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <span>
+        <strong className="text-left font-semibold text-gray-900">How your product or service can provide a solution.</strong> Explain how your product or service can solve the problems or challenges your target audience is facing.
+      </span>
+    </li>
+  </ul>
+</div>
+
+
           
           <h2 className="text-left mt-16 text-2xl font-bold tracking-tight text-green-900">3. Creating a Contact List</h2>
           <p className="text-left mt-6">
@@ -75,35 +114,58 @@ For best results, aim to make your calls on Tuesday-Thursday mornings, speak cle
           </p>
 
           <div className="text-left">
-          <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-                <strong className="text-left font-semibold text-gray-900">Data types.</strong> Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                blanditiis ratione.
-              </span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-                <strong className="text-left font-semibold text-gray-900">Loops.</strong> Anim aute id magna aliqua ad ad non
-                deserunt sunt. Qui irure qui lorem cupidatat commodo.
-              </span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-                <strong className="text-left font-semibold text-gray-900">Events.</strong> Ac tincidunt sapien vehicula erat
-                auctor pellentesque rhoncus. Et magna sit morbi lobortis.
-              </span>
-            </li>
-          </ul>
-          </div>
+  <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
+    <li className="flex gap-x-3">
+      <MagnifyingGlassIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <span>
+        <strong className="text-left font-semibold text-gray-900">Clear and concise.</strong> Messages should be straightforward and to the point to capture the recipient's attention.
+      </span>
+    </li>
+    <li className="flex gap-x-3">
+      <BookmarkIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <span>
+        <strong className="text-left font-semibold text-gray-900">Relevant to the recipient.</strong> Tailor the content to the recipient's needs or interests.
+      </span>
+    </li>
+    <li className="flex gap-x-3">
+      <LightBulbIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <span>
+        <strong className="text-left font-semibold text-gray-900">Providing value or offering a solution to a problem.</strong> Address a pain point or offer something of value to the recipient.
+      </span>
+    </li>
+    <li className="flex gap-x-3">
+      <MegaphoneIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <span>
+        <strong className="text-left font-semibold text-gray-900">Containing a strong call-to-action (CTA).</strong> Include a compelling CTA to guide the recipient on the next steps.
+      </span>
+    </li>
+  </ul>
+</div>
 
-          
+
+
+    <div className="flex">
+        <div className="w-1/2">
+          <h2 className="text-left mt-16 text-2xl font-bold tracking-tight text-green-900">6. Email Best Practices</h2>
+          <p className="text-left mt-6">
+          When it comes to email best practices, there are several key points to keep in mind. First, always use a personalized subject line to capture the recipient's attention. Next, address the recipient by their name to make the email more engaging and personal. Maintain a respectful and professional tone throughout the email to establish credibility. Before sending, make sure to proofread the email for any errors or inconsistencies. Finally, include a signature at the end of the email that provides your contact details, making it easy for the recipient to get in touch with you. Additionally, it's crucial to always follow up if you haven't received a response within a reasonable time frame. Following up not only shows your continued interest but also increases the chances of your email being noticed.
+          </p>
+        </div>
+        <div className="w-1/2">
+          <LottiePlayer
+            loop
+            animationData={animationData}
+            play
+            style={{ width: 600, height: 600 }}
+          />
+        </div>
+      </div>
+
+
+     
         
       </div>
+    </div>
     </div>
   )
 }
