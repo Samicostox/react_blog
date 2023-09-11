@@ -19,6 +19,7 @@ import Store from './stored';
 import Displaycsv from './displaycsv';
 import Documents from './documents';
 import Repo from './repo';
+import Doc1 from './documentations/doc1';
 
 
 
@@ -54,7 +55,7 @@ export default function Newhome() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [activeContent, setActiveContent] = useState('Technical documents');
   const name_user = localStorage.getItem('name');
-  const profile_pic = localStorage.getItem('profile_picture');
+  const profile_pic = localStorage.getItem('profilepicture');
 
   const navigate = useNavigate();
 
@@ -319,10 +320,10 @@ export default function Newhome() {
   {activeContent === 'PDFs' && <Store setToPDF={setToPDF} />}
   {activeContent === 'CSV' && <Displaycsv setToCSV={setToCSV}/>}
   {activeContent === 'Repo' && <Repo />}
-  {activeContent === 'Doc1' && <PDF />}
- {activeContent === 'Doc2' && <Message />}
- {activeContent === 'Doc3' && <GoogleMap />}
- {activeContent === 'Doc4' && <Home />}
+  {activeContent === 'Doc1' && <Doc1 />}
+ {activeContent === 'Doc2' && <Doc1 />}
+ {activeContent === 'Doc3' && <Doc1 />}
+ {activeContent === 'Doc4' && <Doc1 />}
 </div>
 
         

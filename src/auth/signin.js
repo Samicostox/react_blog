@@ -28,7 +28,7 @@ export default function Signin() {
           localStorage.setItem('token', data.token);
           localStorage.setItem('uni', data.university);
           localStorage.setItem('name', data.name);
-          localStorage.setItem('profileçpicture', data.profile_picture);
+          localStorage.setItem('profilepicture', data.profile_picture);
 
           navigate('/newhome');
         } else {
