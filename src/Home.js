@@ -11,6 +11,7 @@ import CTA from "./CTA";
 import Footer from "./footer";
 
 
+
 const Home = () => {
 
     const handleDelete = (id) => {

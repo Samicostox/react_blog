@@ -23,6 +23,7 @@ import Doc1 from './documentations/doc1';
 
 import NewPDF from './technical_documents/newpdf';
 import PDFViewer from './technical_documents/embed_pdf';
+import Doc2 from './documentations/doc2';
 
 
 const navigation = [
@@ -325,7 +326,7 @@ export default function Newhome() {
   {activeContent === 'Repo' && <Repo />}
 
 {activeContent === 'Doc1' && <Doc1 />}
-{activeContent === 'Doc2' && <Doc1 />}
+{activeContent === 'Doc2' && <Doc2 />}
 {activeContent === 'Doc3' && <Doc1 />}
 {activeContent === 'Doc4' && <Doc1 />}
  {activeContent === 'New Technical documents' && <NewPDF />}

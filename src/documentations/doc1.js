@@ -56,25 +56,25 @@ export default function Doc1() {
           <div className="text-left">
   <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
     <li className="flex gap-x-3">
-      <BuildingOfficeIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <BuildingOfficeIcon className="mt-1 h-5 w-5 flex-none fill-green-800" aria-hidden="true" />
       <span>
         <strong className="text-left font-semibold text-gray-900">What industry they belong to.</strong> Provide details about the industry your target audience is part of.
       </span>
     </li>
     <li className="flex gap-x-3">
-      <UserGroupIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <UserGroupIcon className="mt-1 h-5 w-5 flex-none fill-green-800" aria-hidden="true" />
       <span>
         <strong className="text-left font-semibold text-gray-900">Their role in the organization.</strong> Describe the roles and responsibilities of your target audience within their organization.
       </span>
     </li>
     <li className="flex gap-x-3">
-      <ExclamationCircleIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <ExclamationCircleIcon className="mt-1 h-5 w-5 flex-none fill-green-800" aria-hidden="true" />
       <span>
         <strong className="text-left font-semibold text-gray-900">Their potential pain points.</strong> Identify the challenges or problems your target audience might be facing.
       </span>
     </li>
     <li className="flex gap-x-3">
-      <LightBulbIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <LightBulbIcon className="mt-1 h-5 w-5 flex-none fill-green-800" aria-hidden="true" />
       <span>
         <strong className="text-left font-semibold text-gray-900">How your product or service can provide a solution.</strong> Explain how your product or service can solve the problems or challenges your target audience is facing.
       </span>
@@ -116,25 +116,25 @@ For best results, aim to make your calls on Tuesday-Thursday mornings, speak cle
           <div className="text-left">
   <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
     <li className="flex gap-x-3">
-      <MagnifyingGlassIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <MagnifyingGlassIcon className="mt-1 h-5 w-5 flex-none fill-green-800" aria-hidden="true" />
       <span>
         <strong className="text-left font-semibold text-gray-900">Clear and concise.</strong> Messages should be straightforward and to the point to capture the recipient's attention.
       </span>
     </li>
     <li className="flex gap-x-3">
-      <BookmarkIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <BookmarkIcon className="mt-1 h-5 w-5 flex-none fill-green-800" aria-hidden="true" />
       <span>
         <strong className="text-left font-semibold text-gray-900">Relevant to the recipient.</strong> Tailor the content to the recipient's needs or interests.
       </span>
     </li>
     <li className="flex gap-x-3">
-      <LightBulbIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <LightBulbIcon className="mt-1 h-5 w-5 flex-none fill-green-800" aria-hidden="true" />
       <span>
         <strong className="text-left font-semibold text-gray-900">Providing value or offering a solution to a problem.</strong> Address a pain point or offer something of value to the recipient.
       </span>
     </li>
     <li className="flex gap-x-3">
-      <MegaphoneIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
+      <MegaphoneIcon className="mt-1 h-5 w-5 flex-none fill-green-800" aria-hidden="true" />
       <span>
         <strong className="text-left font-semibold text-gray-900">Containing a strong call-to-action (CTA).</strong> Include a compelling CTA to guide the recipient on the next steps.
       </span>
@@ -142,16 +142,14 @@ For best results, aim to make your calls on Tuesday-Thursday mornings, speak cle
   </ul>
 </div>
 
-
-
-    <div className="flex">
-        <div className="w-1/2">
+<div className="block">
+        <div className="w-full">
           <h2 className="text-left mt-16 text-2xl font-bold tracking-tight text-green-900">6. Email Best Practices</h2>
           <p className="text-left mt-6">
           When it comes to email best practices, there are several key points to keep in mind. First, always use a personalized subject line to capture the recipient's attention. Next, address the recipient by their name to make the email more engaging and personal. Maintain a respectful and professional tone throughout the email to establish credibility. Before sending, make sure to proofread the email for any errors or inconsistencies. Finally, include a signature at the end of the email that provides your contact details, making it easy for the recipient to get in touch with you. Additionally, it's crucial to always follow up if you haven't received a response within a reasonable time frame. Following up not only shows your continued interest but also increases the chances of your email being noticed.
           </p>
         </div>
-        <div className="w-1/2">
+        <div className="w-full">
           <LottiePlayer
             loop
             animationData={animationData}
@@ -160,6 +158,7 @@ For best results, aim to make your calls on Tuesday-Thursday mornings, speak cle
           />
         </div>
       </div>
+
 
 
      
