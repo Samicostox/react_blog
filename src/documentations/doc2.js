@@ -62,7 +62,7 @@ const timeline = [
     return classes.filter(Boolean).join(' ')
   }
 export default function Doc2() {
-  const imageSrc = "https://res.cloudinary.com/dl2adjye7/image/upload/v1694507175/subtle-prism_waud51.png";
+  const imageSrc = "https://res.cloudinary.com/dl2adjye7/image/upload/v1694524153/radiant-gradient_erbmo7.png";
   const text = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
   const title = "Venues Fetcher"
 

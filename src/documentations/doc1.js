@@ -21,7 +21,7 @@ const lottieStyle = {
 };
 
 export default function Doc1() {
-  const imageSrc = "https://res.cloudinary.com/dl2adjye7/image/upload/v1694507175/subtle-prism_waud51.png";
+  const imageSrc = "https://res.cloudinary.com/dl2adjye7/image/upload/v1694524253/flat-mountains_cptgfh.png";
   const text = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
   const title = "Cold Outreach"
 
