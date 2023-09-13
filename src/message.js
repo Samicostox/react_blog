@@ -3,24 +3,32 @@ import { useState,useEffect } from 'react';
 import { Switch } from '@headlessui/react';
 import { useNavigate } from 'react-router-dom';
 import Newhome from './newhome'
+import Validate2Dialog from './modals/validate'; // Alias validate2 as Validate2Dialog
+import ErrorDialog from './modals/error'; // Al
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Message() {
+export default function Message({setToDoc3}) {
   const [agreed, setAgreed] = useState(false);
   const [sampleText, setSampleText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [successDialogOpen, setSuccessDialogOpen] = useState(false); // Renamed to successDialogOpen
+  const [errorDialogOpen, setErrorDialogOpen] = useState(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("Error Dialog Open: ", errorDialogOpen);
+    console.log("Success Dialog Open: ", successDialogOpen);
     const token = localStorage.getItem('token');
     if (!token) {
       navigate('/signin');  // replace '/login' with your login page route
     }
   }, []);
+  
 
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -34,24 +42,22 @@ export default function Message() {
         body: JSON.stringify({ sample_text: sampleText, personalize: agreed, token:token}),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+      const data = await response.json();
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'response.csv';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      if (data.msg === "Your request is being processed. You'll be notified once the CSV is ready.") {
+        setSuccessDialogOpen(true);
+        console.log(successDialogOpen); 
+      } else {
+        setErrorDialogOpen(true);
+      }
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
+      setErrorDialogOpen(true);
     }
     setIsLoading(false);
   };
-  
+
+
 
   return (
     <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
@@ -59,6 +65,8 @@ export default function Message() {
     
     
   <div className="mx-auto max-w-4x2 text-center mt-10"> {/* Here's where I added `mt-10` */}
+  <Validate2Dialog open={successDialogOpen} setOpen={setSuccessDialogOpen} />
+    <ErrorDialog setToDoc3 = {setToDoc3} open={errorDialogOpen} setOpen={setErrorDialogOpen} />
     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Enter your google search</h2>
     <p className="mt-2 text-lg leading-8 text-gray-700">
       It will output you a csv file filtered thanks to an NLP algorithm with all the relevant data about your businesses
@@ -133,7 +141,9 @@ export default function Message() {
   )}
 </div>
       </form>
+      
     </div>
+  
     </div>
   )
 }

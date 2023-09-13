@@ -40,10 +40,10 @@ export default function Doc3({setToCSV, setTocold,setToDoc1, setToDoc2 ,setToDoc
       <TextWithImage imageSrc={imageSrc} text={text} title={title} />
       <div className="bg-white px-6 py-32 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <p className="text-left text-base font-semibold leading-7 text-green-700">Cold Outreach</p>
+        <p className="text-left text-base font-semibold leading-7 text-green-700">Email Generator</p>
         <h1 className="text-left mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Introduction</h1>
         <p className="text-left mt-6 text-xl leading-8">
-        Cold outreach is a strategic way to initiate contact with individuals who are not currently engaged with you, your product, or your services. While the term "cold" may imply a lack of connection, a well-executed cold outreach campaign can open doors to valuable business opportunities, partnerships, and networking. This guide is designed to offer you a comprehensive framework to make your cold outreach efforts successful.
+        add paragrapgh here 
         </p>
           <h2 className="text-left mt-16 text-2xl font-bold tracking-tight text-green-900 ">Step 1: Gather Raw Data</h2>
           <p className="text-left mt-6 ">
