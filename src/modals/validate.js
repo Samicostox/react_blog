@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/24/outline'
 
-export default function Validate2Dialog({ open, setOpen }) {
+export default function Validate2Dialog({ open, setOpen ,title}) {
   
 
   return (
@@ -42,7 +42,7 @@ export default function Validate2Dialog({ open, setOpen }) {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        This process might take a few minutes if you selected the personalised email option. the csv file once created will appear in your csv file dashboard
+                        {title}
                       </p>
                     </div>
                   </div>

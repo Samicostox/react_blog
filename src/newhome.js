@@ -337,7 +337,7 @@ export default function Newhome() {
         <div className="flex ml-auto lg:ml-72 h-full justify-center items-center">
   {activeContent === 'Technical documents' && <PDF />}
   {activeContent === 'Email Generation' && <Message setToDoc3 = {setToDoc3}/>}
-  {activeContent === 'Cold Outreach' && <GoogleMap />}
+  {activeContent === 'Cold Outreach' && <GoogleMap setToDoc3 = {setToDoc2}/>}
   {activeContent === 'PDFs' && <Store setToPDF={setToPDF} />}
   {activeContent === 'CSV' && <Displaycsv setToCSV={setToCSV}/>}
   {activeContent === 'Repo' && <Repo />}

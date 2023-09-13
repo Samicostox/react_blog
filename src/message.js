@@ -17,6 +17,7 @@ export default function Message({setToDoc3}) {
   const [successDialogOpen, setSuccessDialogOpen] = useState(false); // Renamed to successDialogOpen
   const [errorDialogOpen, setErrorDialogOpen] = useState(false); 
   const navigate = useNavigate();
+  const title = "This process might take a few minutes if you selected the personalised email option. the csv file once created will appear in your csv file dashboard";
 
   useEffect(() => {
     console.log("Error Dialog Open: ", errorDialogOpen);
@@ -65,7 +66,7 @@ export default function Message({setToDoc3}) {
     
     
   <div className="mx-auto max-w-4x2 text-center mt-10"> {/* Here's where I added `mt-10` */}
-  <Validate2Dialog open={successDialogOpen} setOpen={setSuccessDialogOpen} />
+  <Validate2Dialog open={successDialogOpen} setOpen={setSuccessDialogOpen} title = {title} />
     <ErrorDialog setToDoc3 = {setToDoc3} open={errorDialogOpen} setOpen={setErrorDialogOpen} />
     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Enter your google search</h2>
     <p className="mt-2 text-lg leading-8 text-gray-700">

@@ -1,14 +1,20 @@
 import Navbar from './navbar';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Validate2Dialog from './modals/validate'; // Alias validate2 as Validate2Dialog
+import ErrorDialog from './modals/error'; // Al
 
-export default function GoogleMap() {
+export default function GoogleMap({setToDoc3}) {
   const [cityName, setCityName] = useState('');
   const [apiKey, setApiKey] = useState('');
   const [error, setError] = useState(null); // Added error state
   const [keyword, setKeyword] = useState('');
   const [csvFileName, setCsvFileName] = useState('');
   const [isLoading, setIsLoading] = useState(false); // Added this line
+  const [successDialogOpen, setSuccessDialogOpen] = useState(false); // Renamed to successDialogOpen
+  const [errorDialogOpen, setErrorDialogOpen] = useState(false); 
+  const title = "This process might take a few minutes, you have time for a 3 minutes chess game! the csv file once created will appear in your csv file dashboard";
+
 
   const navigate = useNavigate();
 
@@ -38,23 +44,17 @@ export default function GoogleMap() {
         }),
       });
 
-      if (!response.ok) {
-        const data = await response.json();
-        setError(data.msg || `HTTP error! status: ${response.status}`);
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+      const data = await response.json();
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = csvFileName || 'response.csv';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      if (data.msg === "Your request is being processed. You'll be notified once the CSV is ready.") {
+        setSuccessDialogOpen(true);
+        console.log(successDialogOpen); 
+      } else {
+        setErrorDialogOpen(true);
+      }
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
-      setError(error.message || "There was a problem with the fetch operation.");
+      setErrorDialogOpen(true);
     }
     setIsLoading(false);
   };
@@ -64,6 +64,8 @@ export default function GoogleMap() {
   return (
     <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <Validate2Dialog open={successDialogOpen} setOpen={setSuccessDialogOpen} title ={title} />
+    <ErrorDialog setToDoc3 = {setToDoc3} open={errorDialogOpen} setOpen={setErrorDialogOpen} />
       
       <div className="mx-auto max-w-4x2 text-center mt-10">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Lead Generation</h2>
