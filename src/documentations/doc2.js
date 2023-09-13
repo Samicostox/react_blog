@@ -2,6 +2,7 @@ import { GlobeAmericasIcon, KeyIcon, LockClosedIcon, ClipboardIcon, BriefcaseIco
 import AlertBox from './alert'; 
 
 import TextWithImage from './textwithimage';
+import ProgressComponent from './progresspage';
 const timeline = [
     {
       id: 1,
@@ -61,7 +62,7 @@ const timeline = [
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
-export default function Doc2() {
+export default function Doc2({setTocold,setToDoc1, setToDoc2 ,setToDoc3}) {
   const imageSrc = "https://res.cloudinary.com/dl2adjye7/image/upload/v1694524153/radiant-gradient_erbmo7.png";
   const text = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
   const title = "Venues Fetcher"
@@ -126,7 +127,7 @@ export default function Doc2() {
 
         <h2 className="text-left mt-16 text-2xl font-bold tracking-tight text-green-900">2. How to Use the Venue Fetcher</h2>
         <p className="text-left mt-6">
-            Once you have your Google Maps API key, you're ready to start using Venue Fetcher. This section will guide you through the steps to effectively use the application to find venues based on your criteria.
+            Once you have your Google Maps API key, you're ready to start using <a onClick={() => setTocold()} className="text-green-500" target="_blank" rel="noopener noreferrer">cold outreach generator</a>. This section will guide you through the steps to effectively use the application to find venues based on your criteria.
           </p>
           <div className="text-left">
           <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
@@ -216,9 +217,13 @@ export default function Doc2() {
 
 
    
-      
+        
+    </div>
+    <div className="mt-10">
+    <ProgressComponent setTocold={setTocold} setToDoc1 = {setToDoc1} setToDoc2 = {setToDoc2} setToDoc3 = {setToDoc3} currentPage={1} />
     </div>
   </div>
+ 
   </div>
 )
 }

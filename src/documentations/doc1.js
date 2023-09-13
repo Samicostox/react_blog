@@ -2,6 +2,7 @@ import { CheckCircleIcon, InformationCircleIcon,BuildingOfficeIcon,UserGroupIcon
 import LottiePlayer from 'react-lottie-player';
 import animationData from './animation_lmf6j0mp.json';
 import TextWithImage from './textwithimage';
+import ProgressComponent from './progresspage';
 
 // Add this to your CSS or inline styles
 const flexContainerStyle = {
@@ -20,7 +21,7 @@ const lottieStyle = {
   height: 400,
 };
 
-export default function Doc1() {
+export default function Doc1({setTocold, setToCSV, setToDoc1, setToDoc2 ,setToDoc3}) {
   const imageSrc = "https://res.cloudinary.com/dl2adjye7/image/upload/v1694524253/flat-mountains_cptgfh.png";
   const text = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
   const title = "Cold Outreach"
@@ -86,7 +87,7 @@ export default function Doc1() {
           
           <h2 className="text-left mt-16 text-2xl font-bold tracking-tight text-green-900">3. Creating a Contact List</h2>
           <p className="text-left mt-6">
-  Once you have a clear picture of your target audience, the next step is to compile a contact list. This isn't just a list of names and email addresses; it should also include details like the person's position, the company they work for, and their LinkedIn profile. Additional information can also be beneficial depending on the nature of your outreach. For phone-based outreach, tools like <a href="https://fetchervenue.example.com" className="text-green-500" target="_blank" rel="noopener noreferrer">fetchervenue</a> can be useful, while email and LinkedIn outreach can be facilitated by using an <a href="https://emailgenerator.example.com" className="text-green-500" target="_blank" rel="noopener noreferrer">email generator</a> tool.
+  Once you have a clear picture of your target audience, the next step is to compile a contact list. This isn't just a list of names and email addresses; it should also include details like the person's position, the company they work for, and their LinkedIn profile. Additional information can also be beneficial depending on the nature of your outreach. For phone-based outreach, tools like <a onClick={() => setTocold()} className="text-green-500" target="_blank" rel="noopener noreferrer">cold outreach generator</a> can be useful, while email and LinkedIn outreach can be facilitated by using an <a onClick={() => setToCSV()} className="text-green-500" target="_blank" rel="noopener noreferrer">email generator</a> tool.
 </p>
           
 <figure className="mt-16">
@@ -164,7 +165,11 @@ For best results, aim to make your calls on Tuesday-Thursday mornings, speak cle
      
         
       </div>
+      <div className="mt-10">
+    <ProgressComponent setTocold={setTocold} setToDoc1 = {setToDoc1} setToDoc2 = {setToDoc2} setToDoc3 = {setToDoc3} currentPage={0} />
     </div>
+    </div>
+    
     </div>
   )
 }

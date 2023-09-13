@@ -24,6 +24,7 @@ import Doc1 from './documentations/doc1';
 import NewPDF from './technical_documents/newpdf';
 import PDFViewer from './technical_documents/embed_pdf';
 import Doc2 from './documentations/doc2';
+import Doc3 from './documentations/doc3';
 
 
 const navigation = [
@@ -74,8 +75,24 @@ export default function Newhome() {
     setActiveContent('Technical documents');
   }
 
+  function setToCold() {
+    setActiveContent('Cold Outreach');
+  }
+
   function setToCSV() {
     setActiveContent('Email Generation');
+  }
+
+  function setToDoc1() {
+    setActiveContent('Doc1');
+  }
+
+  function setToDoc2() {
+    setActiveContent('Doc2');
+  }
+
+  function setToDoc3() {
+    setActiveContent('Doc3');
   }
 
   return (
@@ -325,9 +342,9 @@ export default function Newhome() {
   {activeContent === 'CSV' && <Displaycsv setToCSV={setToCSV}/>}
   {activeContent === 'Repo' && <Repo />}
 
-{activeContent === 'Doc1' && <Doc1 />}
-{activeContent === 'Doc2' && <Doc2 />}
-{activeContent === 'Doc3' && <Doc1 />}
+{activeContent === 'Doc1' && <Doc1 setTocold={setToCold} setToCSV={setToCSV} setToDoc1 = {setToDoc1} setToDoc2 = {setToDoc2} setToDoc3 = {setToDoc3}/>}
+{activeContent === 'Doc2' && <Doc2 setTocold={setToCold} setToDoc1 = {setToDoc1} setToDoc2 = {setToDoc2} setToDoc3 = {setToDoc3}/>}
+{activeContent === 'Doc3' && <Doc3 setToCSV={setToCSV} setTocold={setToCold} setToDoc1 = {setToDoc1} setToDoc2 = {setToDoc2} setToDoc3 = {setToDoc3}/>}
 {activeContent === 'Doc4' && <Doc1 />}
  {activeContent === 'New Technical documents' && <NewPDF />}
  {activeContent === 'HiddenPage' && <PDFViewer />}
