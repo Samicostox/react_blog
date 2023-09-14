@@ -104,7 +104,7 @@ const Carousel = () => {
 
   return (
     
-    <div className="flex overflow-hidden bg-center bg-cover bg-no-repeat" 
+    <div className="relative isolate pt-14" 
      style={{backgroundImage: 'url("https://res.cloudinary.com/dl2adjye7/image/upload/v1694696153/scattered-forcefields_mlnc1h.svg")'}}
 >
   <div 
