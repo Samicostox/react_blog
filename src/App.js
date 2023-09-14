@@ -18,6 +18,7 @@ import Displaycsv from './displaycsv';
 import PDFViewer from './technical_documents/embed_pdf';
 import MultiStepForm from './technical_documents/modify_pdf';
 import ModifyPDF from './technical_documents/modify_pdf';
+import Landingpage from './website/landingpage';
 
 
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/pdfviewer" element={<PDFViewer />} />
             <Route path="/updatepdf" component={<ModifyPDF />} />
+            <Route path="/landing" element={<Landingpage />} />
             {/* Add more Routes here as needed */}
           </Routes>
         </div>
