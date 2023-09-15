@@ -1,5 +1,4 @@
 import React from 'react';
-import Newhome from '../newhome';
 
 function PDFViewer(props) {
   const containerStyle = {

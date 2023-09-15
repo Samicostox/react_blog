@@ -4,262 +4,235 @@ import { useNavigate } from 'react-router-dom';
 
 function ModifyPDF(props) {
 
-  const [scopeOfApp, setScopeOfApp] = useState('');
-  const [title, setTitle] = useState('');
-  const [date, setDate] = useState('');
-  const [university, setUniversity] = useState('1'); // Default to University of Birmingham
-  const [nameOfProject, setNameOfProject] = useState('');
-  const [typeOfProject, setTypeOfProject] = useState(''); // You can also set a default value
-  const [nameOfClientCompany, setNameOfClientCompany] = useState('');
-  const [consultantName, setConsultantName] = useState('');
+  
 
-  const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
+    /*
+    const functionalTitles = localStorage.getItem("functionalTitles");
+    const functional = localStorage.getItem("functional");
+    const nonFunctionalTitles = localStorage.getItem("[nonFunctionalTitles");
+    const nonFunctional = localStorage.getItem("nonFunctional");
+    */
+    
 
-  const navigate = useNavigate();
+    const serializedFunctionalTitle = localStorage.getItem("functionalTitles");
+    const serializedFunctional = localStorage.getItem("functional");
+    const serializedNonFunctionalTitle = localStorage.getItem("nonFunctionalTitles");
+    const serializedNonFunctional = localStorage.getItem("nonFunctional");
 
-  const [functionalTitles, setFunctionalTitles] = useState([]);
-      const [functional, setFunctional] = useState([]);
-      const [nonFunctionalTitles, setNonFunctionalTitles] = useState([]);
-      const [nonFunctional, setNonFunctional] = useState([]);
-      const [pdf_url, setPDF_URL] = useState('');
+    const functionalTitles = JSON.parse(serializedFunctionalTitle);
+    const functional = JSON.parse(serializedFunctional);
+    const nonFunctionalTitles = JSON.parse(serializedNonFunctionalTitle);
+    const nonFunctional = JSON.parse(serializedNonFunctional);
+  
 
-  const projectTypes = ["Web Application", "Mobile Application", "Website"]; // Popula
 
-  const containerStyle = {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh', // viewport height
-  };
+    const [functionalData, setFunctionalData] = useState(functional); // assuming 'functional' is an array passed as prop or defined elsewhere
+    const [nonFunctionalData, setNonFunctionalData] = useState(nonFunctional); // same assumption for 'nonFunctional'
 
-  const iframeStyle = {
-      width: '50%',
-      height: '75vh', 
-      border: 'none'
-  };
+    const [functionalTitlesState, setFunctionalTitlesState] = useState(functionalTitles);
+    const [nonFunctionalTitlesState, setNonFunctionalTitlesState] = useState(nonFunctionalTitles);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);  // Set loading to true
-    const token = localStorage.getItem("token");  // Retrieve session token from local storage
+    const functionalRefs = functionalTitles.map(() => []);
+    const nonFunctionalRefs = nonFunctionalTitles.map(() => []);
+    const functionalTitleRefs = functionalTitles.map(() => []);
+    const nonFunctionalTitleRefs = nonFunctionalTitles.map(() => []);
 
-    const payload = {
-      token: token,
-      question: scopeOfApp,
-      title: title,
-      date: date,
-      university: university,
-      name_of_project : nameOfProject,
-      type_of_project: typeOfProject,
-      name_of_client_company : nameOfClientCompany,
-      consultant_name: consultantName
+
+
+    const handleAddField = (type, index) => {
+        if (type === 'functional') {
+            const newFunctionalData = [...functionalData];
+            newFunctionalData[index].push(''); // Add a new empty field
+            setFunctionalData(newFunctionalData);
+        } else {
+            const newNonFunctionalData = [...nonFunctionalData];
+            newNonFunctionalData[index].push(''); // Add a new empty field
+            setNonFunctionalData(newNonFunctionalData);
+        }
     };
 
-    try {
-      const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/generate_requirements_pdf/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        const functionalDataFromRefs = functionalRefs.map(refGroup => refGroup.map(ref => ref.value));
+        const nonFunctionalDataFromRefs = nonFunctionalRefs.map(refGroup => refGroup.map(ref => ref.value));
+        const functionalTitlesFromRefs = functionalTitleRefs.map(ref => ref.value);
+        const nonFunctionalTitlesFromRefs = nonFunctionalTitleRefs.map(ref => ref.value);
+    
+        const payload = {
+            functional_titles: functionalTitlesFromRefs,
+            functional_requirements: functionalDataFromRefs,
+            non_functional_titles: nonFunctionalTitlesFromRefs,
+            non_functional_requirements: nonFunctionalDataFromRefs
+        };
+      console.log('Sent data:', JSON.stringify(payload));
+   
+      // Send a POST request
+      try {
+          const response = await fetch('YOUR_ENDPOINT_URL_HERE', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(payload)
+          });
+   
+          if (response.ok) {
+              // Handle successful response
+              console.log('Data sent successfully.');
+              // Navigate or show success message or any other action you want to perform
+          } else {
+              // Handle errors
+              console.error('Failed to send data:', response.statusText);
+          }
+      } catch (error) {
+          console.error('There was an error:', error);
       }
-      
-      const responseData = await response.json();
-      // eslint-disable-next-line no-restricted-globals
-      print(responseData);
-      const pdf_url = response.headers.get('X-PDF-URL');
+   };
 
-      // If you want to set them to state, you would do:
-
-      localStorage.setItem('functionalTitles', responseData.functional_title);
-      localStorage.setItem('functional', responseData.functional_requirements);
-      localStorage.setItem('nonFunctionalTitles', responseData.non_functional_titles);
-      localStorage.setItem('nonFunctional', responseData.non_functional_requirements);
-      localStorage.setItem('pdf_url', pdf_url);
-
-      setFunctionalTitles(responseData.functional_title);
-      setFunctional(responseData.functional_requirements);
-      setNonFunctionalTitles(responseData.non_functional_titles);
-      setNonFunctional(responseData.non_functional_requirements);
-      setPDF_URL(pdf_url);
-
-      
-      /*
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      
-      a.href = url;
-      a.download = 'requirements.pdf';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      */
-      setIsLoading(false);
-      navigate('/pdfviewer');
-    } catch (error) {
-      console.error("There was a problem with the fetch operation:", error);
-      setIsLoading(false);
+  const handleTitleChange = (event, type, index) => {
+    const newValue = event.target.value;
+    if (type === 'functional') {
+        const newTitles = [...functionalTitlesState];
+        newTitles[index] = newValue;
+        setFunctionalTitlesState(newTitles);
+    } else {
+        const newTitles = [...nonFunctionalTitlesState];
+        newTitles[index] = newValue;
+        setNonFunctionalTitlesState(newTitles);
     }
-  };
+};
 
-  return (
-    <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+  const handleRemoveField = (type, sectionIndex, fieldIndex) => {
+    if (type === 'functional') {
+        const newFunctionalData = [...functionalData];
+        newFunctionalData[sectionIndex].splice(fieldIndex, 1);
+        setFunctionalData(newFunctionalData);
+    } else {
+        const newNonFunctionalData = [...nonFunctionalData];
+        newNonFunctionalData[sectionIndex].splice(fieldIndex, 1);
+        setNonFunctionalData(newNonFunctionalData);
+    }
+};
+
+
+    return (
+
       
-      <div className="mx-auto max-w-4x2 text-center mt-10">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Enter the Scope of the App</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-700">
-          You will receive a PDF file with the requirements based on your input.
-        </p>
-      </div>
       <form onSubmit={handleSubmit} style={{maxWidth: "1200px"}} className="mx-auto mt-16 sm:mt-20">
-        
-  
-          {/* Additional Fields */}
-          <div className="sm:col-span-1">
-            <label htmlFor="title" className="text-left block text-sm font-semibold leading-6 text-gray-900">
-              Title
-            </label>
+    <h2 className="mb-8">Functional Requirements</h2>
+    {functionalTitles.map((title, index) => (
+        <div key={title} className="sm:col-span-1 requirement-section mb-4">
             <input
-              type="text"
-              id="title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+                type="text"
+                ref={functionalTitleRefs[index]}
+                value={title}
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6" // Increased bottom margin here
             />
-          </div>
-  
-          <div className="sm:col-span-1 py-4">
-            <label htmlFor="date" className="text-left block text-sm font-semibold leading-6 text-gray-900">
-              Date
-            </label>
+            <ul>
+                {functionalData[index].map((req, reqIndex) => (
+                    <div className="flex items-center mb-2" key={reqIndex}>
+                        <input
+                            type="text"
+                            ref={(el) => functionalRefs[index][reqIndex] = el}
+                            id={`functional_${index}_${reqIndex}`}
+                            defaultValue={req}
+                            name={`functional_${index}_${reqIndex}`}
+                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+                        />
+                        <button 
+                            type="button"
+                            onClick={() => handleRemoveField('functional', index, reqIndex)}
+                            className="ml-2 bg-red-500 hover:bg-red-400 p-1 text-white"
+                        >
+                            X
+                        </button>
+                    </div>
+                ))}
+            </ul>
+            <button type="button" onClick={() => handleAddField('functional', index)} className="mt-2 inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500">Add</button> 
+            
+        </div>
+    ))}
+    <h2 className="mb-8">Non-functional Requirements</h2>
+    {nonFunctionalTitles.map((title, index) => (
+        <div key={title} className="sm:col-span-1 requirement-section mb-4">
             <input
-              type="date"
-              id="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+                type="text"
+                ref={nonFunctionalTitleRefs[index]}
+                value={title}
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6" // Increased bottom margin here
             />
-          </div>
-  
-          <div className="sm:col-span-1 py-4">
-            <label htmlFor="university" className="text-left block text-sm font-semibold leading-6 text-gray-900">
-              University
-            </label>
-            <select
-              id="university"
-              value={university}
-              onChange={(e) => setUniversity(e.target.value)}
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
-            >
-              <option value="1">University of Birmingham</option>
-              <option value="2">University of Warwick</option>
-            </select>
-          </div>
-  
-          <div className="sm:col-span-1 py-4">
-    <label htmlFor="nameOfProject" className="text-left block text-sm font-semibold leading-6 text-gray-900">
-      Name of Project
-    </label>
-    <input
-      type="text"
-      id="nameOfProject"
-      value={nameOfProject}
-      onChange={(e) => setNameOfProject(e.target.value)}
-      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
-    />
-  </div>
-  
-  <div className="sm:col-span-1 py-4">
-    <label htmlFor="typeOfProject" className="text-left block text-sm font-semibold leading-6 text-gray-900">
-      Type of Project
-    </label>
-    <select
-      id="typeOfProject"
-      value={typeOfProject}
-      onChange={(e) => setTypeOfProject(e.target.value)}
-      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
-    >
-      {projectTypes.map((type, index) => <option key={index} value={type}>{type}</option>)}
-    </select>
-  </div>
-  
-  <div className="sm:col-span-1 py-4">
-    <label htmlFor="nameOfClientCompany" className="text-left block text-sm font-semibold leading-6 text-gray-900">
-      Name of Client Company
-    </label>
-    <input
-      type="text"
-      id="nameOfClientCompany"
-      value={nameOfClientCompany}
-      onChange={(e) => setNameOfClientCompany(e.target.value)}
-      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
-    />
-  </div>
-  
-  <div className="sm:col-span-1 py-4">
-    <label htmlFor="consultantName" className="text-left block text-sm font-semibold leading-6 text-gray-900">
-      Consultant Name
-    </label>
-    <input
-      type="text"
-      id="consultantName"
-      value={consultantName}
-      onChange={(e) => setConsultantName(e.target.value)}
-      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
-    />
-  </div>
-  
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1">
-          <div className="sm:col-span-1 py-4">
-            <label htmlFor="message" className="text-left block text-sm font-semibold leading-6 text-gray-900">
-              Scope of App
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                name="message"
-                id="message"
-                rows={4}
-                value={scopeOfApp}
-                onChange={(e) => setScopeOfApp(e.target.value)}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-  
-          <div className="mt-10">
-  {isLoading ? (
-    <div className="flex items-center justify-center">
-      <button type="button"
-          className="inline-flex items-center px-4 py-2 text-sm font-semibold leading-6 text-white transition duration-150 ease-in-out bg-green-700 rounded-md shadow cursor-not-allowed hover:bg-green-600"
-          disabled>
-          <svg className="w-5 h-5 mr-3 -ml-1 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-          </svg>
-          Generating...
-      </button>
-    </div>
-  ) : (
+            <ul>
+                {nonFunctionalData[index].map((req, reqIndex) => (
+                    <div className="flex items-center mb-2" key={reqIndex}>
+                        <input
+                            type="text"
+                            ref={(el) => nonFunctionalRefs[index][reqIndex] = el}
+                            id={`functional_${index}_${reqIndex}`}
+                            defaultValue={req}
+                            name={`functional_${index}_${reqIndex}`}
+                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+                        />
+                        <button 
+                            type="button"
+                            onClick={() => handleRemoveField('nonFunctional', index, reqIndex)}
+                            className="ml-2 bg-red-500 hover:bg-red-400 p-1 text-white"
+                        >
+                            X
+                        </button>
+                    </div>
+                ))}
+            </ul>
+            <button type="button" onClick={() => handleAddField('nonFunctional', index)} className="mt-2 inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500">Add</button> 
+            
+        </div>
+    ))}
+
+    
+
     <button
       type="submit"
-      className="inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
+      className="mt-8 inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
     >
       Generate PDF
     </button>
-  )}
-  </div>
-        </div>
-      </form>
-    </div>
-    </div>
+</form>
+
   );
-}
+    /*
+    return (
+      <div className="requirements-form">
+  
+        <h2>Functional Requirements </h2>
+        {(functionalTitles).map((title, index) => (
+          <div key={title} className="requirement-section">
+            <h3>{title}</h3>
+            <ul>
+              {functional[index].map((req, reqIndex) => (
+                <li key={reqIndex}>{req}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+  
+        <h2>Non-functional Requirements</h2>
+        {nonFunctionalTitles.map((title, index) => (
+          <div key={title} className="requirement-section">
+            <h3>{title}</h3>
+            <ul>
+              {nonFunctional[index].map((req, reqIndex) => (
+                <li key={reqIndex}>{req}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+  
+      </div>
+    );*/
+  }
+  
 
 export default ModifyPDF;
 

@@ -59,24 +59,37 @@ export default function NewPDF() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       
-      const responseData = await response.json();
+      const data = await response.json();
+      console.log('Received data:', data);
       // eslint-disable-next-line no-restricted-globals
-      print(responseData);
-      const pdf_url = response.headers.get('X-PDF-URL');
+      if (response.ok) {
+        
+          //const pdf_url = response.headers.get('X-PDF-URL');
+
+          const serializedFunctionalTitle = JSON.stringify(data.functional_titles);
+          const serializedFunctional = JSON.stringify(data.functional_requirements);
+          const serializedNonFunctionalTitle = JSON.stringify(data.non_functional_titles);
+          const serializedNonFunctional = JSON.stringify(data.non_functional_requirements);
+          localStorage.setItem('functionalTitles', serializedFunctionalTitle);
+          localStorage.setItem('functional', serializedFunctional);
+          localStorage.setItem('nonFunctionalTitles', serializedNonFunctionalTitle);
+          localStorage.setItem('nonFunctional', serializedNonFunctional);
+          //localStorage.setItem('pdf_url', pdf_url);
+          setFunctionalTitles(data.functional_title);
+          setFunctional(data.functional_requirements);
+          setNonFunctionalTitles(data.non_functional_titles);
+          setNonFunctional(data.non_functional_requirements);
+          //setPDF_URL(pdf_url);
+          
+          setIsLoading(false);
+          navigate('/updatepdf');
+        
+      } 
+      
 
       // If you want to set them to state, you would do:
 
-      localStorage.setItem('functionalTitles', responseData.functional_title);
-      localStorage.setItem('functional', responseData.functional_requirements);
-      localStorage.setItem('nonFunctionalTitles', responseData.non_functional_titles);
-      localStorage.setItem('nonFunctional', responseData.non_functional_requirements);
-      localStorage.setItem('pdf_url', pdf_url);
-
-      setFunctionalTitles(responseData.functional_title);
-      setFunctional(responseData.functional_requirements);
-      setNonFunctionalTitles(responseData.non_functional_titles);
-      setNonFunctional(responseData.non_functional_requirements);
-      setPDF_URL(pdf_url);
+      
       /*
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
@@ -88,8 +101,7 @@ export default function NewPDF() {
       a.click();
       document.body.removeChild(a);
       */
-      setIsLoading(false);
-      navigate('/pdfviewer');
+      
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
       setIsLoading(false);

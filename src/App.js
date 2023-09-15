@@ -45,7 +45,7 @@ function App() {
             <Route path="/newhome" element={<Newhome />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/pdfviewer" element={<PDFViewer />} />
-            <Route path="/updatepdf" component={<ModifyPDF />} />
+            <Route path="/updatepdf" element={<ModifyPDF />} />
             <Route path="/landing" element={<Landingpage />} />
             {/* Add more Routes here as needed */}
           </Routes>

@@ -25,6 +25,7 @@ import NewPDF from './technical_documents/newpdf';
 import PDFViewer from './technical_documents/embed_pdf';
 import Doc2 from './documentations/doc2';
 import Doc3 from './documentations/doc3';
+import ModifyPDF from './technical_documents/modify_pdf';
 
 
 const navigation = [
@@ -93,6 +94,9 @@ export default function Newhome() {
 
   function setToDoc3() {
     setActiveContent('Doc3');
+  }
+  function setToModifyPDF() {
+    setActiveContent('Modify PDF');
   }
 
   return (
@@ -347,7 +351,7 @@ export default function Newhome() {
 {activeContent === 'Doc3' && <Doc3 setToCSV={setToCSV} setTocold={setToCold} setToDoc1 = {setToDoc1} setToDoc2 = {setToDoc2} setToDoc3 = {setToDoc3}/>}
 {activeContent === 'Doc4' && <Doc1 />}
  {activeContent === 'New Technical documents' && <NewPDF />}
- {activeContent === 'HiddenPage' && <PDFViewer />}
+ {activeContent === 'Modify PDf' && <ModifyPDF />}
 
 </div>
 
