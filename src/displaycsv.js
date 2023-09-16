@@ -174,7 +174,7 @@ export default function DisplayCSV({setToCSV}) {
         </div>)}
 
         <ul role="list" className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8 mt-16 sm:mt-20">
-  {filteredFiles.map((csvFile) => (
+        {filteredFiles.slice().reverse().map((csvFile) => (
     <li key={csvFile.id} className="relative overflow-hidden rounded-xl border border-gray-200">
       <a href={csvFile.csv_file} download>
         
