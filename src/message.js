@@ -16,6 +16,7 @@ export default function Message({setToDoc3}) {
   const [isLoading, setIsLoading] = useState(false);
   const [successDialogOpen, setSuccessDialogOpen] = useState(false); // Renamed to successDialogOpen
   const [errorDialogOpen, setErrorDialogOpen] = useState(false); 
+  const [csvFileName, setCsvFileName] = useState('');
   const navigate = useNavigate();
   const title = "This process might take a few minutes if you selected the personalised email option. the csv file once created will appear in your csv file dashboard";
 
@@ -40,7 +41,7 @@ export default function Message({setToDoc3}) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ sample_text: sampleText, personalize: agreed, token:token}),
+        body: JSON.stringify({ sample_text: sampleText, personalize: agreed, title: csvFileName, token:token}),
       });
 
       const data = await response.json();
@@ -68,7 +69,7 @@ export default function Message({setToDoc3}) {
   <div className="mx-auto max-w-4x2 text-center mt-10"> {/* Here's where I added `mt-10` */}
   <Validate2Dialog open={successDialogOpen} setOpen={setSuccessDialogOpen} title = {title} />
     <ErrorDialog setToDoc3 = {setToDoc3} open={errorDialogOpen} setOpen={setErrorDialogOpen} />
-    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Enter your google search</h2>
+    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Enter your google search</h2>
     <p className="mt-2 text-lg leading-8 text-gray-700">
       It will output you a csv file filtered thanks to an NLP algorithm with all the relevant data about your businesses
     </p>
@@ -76,7 +77,7 @@ export default function Message({setToDoc3}) {
       <form onSubmit={handleSubmit} style={{maxWidth: "1200px"}} className="mx-auto mt-16 sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1">
           <div className="sm:col-span-1">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900 text-left">
               Google search
             </label>
             <div className="mt-2.5">
@@ -90,6 +91,21 @@ export default function Message({setToDoc3}) {
               />
             </div>
           </div>
+          <div className="sm:col-span-1">
+  <label htmlFor="csvFileName" className="block text-sm font-semibold leading-6 text-gray-900 text-left">
+    CSV File Name
+  </label>
+  <div className="mt-2.5">
+    <input
+      type="text"
+      name="csvFileName"
+      id="csvFileName"
+      value={csvFileName}
+      onChange={(e) => setCsvFileName(e.target.value)}
+      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+    />
+  </div>
+</div>
           <Switch.Group as="div" className="flex gap-x-4 sm:col-span-1">
             <div className="flex h-6 items-center">
               <Switch

@@ -195,7 +195,7 @@ export default function Landingpage() {
     <div className="bg-white">
       {/* Header */}
       <Navbar></Navbar>
-      <Hero></Hero>
+    
       
       <div className="relative isolate pt-14 ">
       <Carousel></Carousel>

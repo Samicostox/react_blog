@@ -105,7 +105,7 @@ const Carousel = () => {
   return (
     
     <div className="relative isolate pt-14" 
-     style={{backgroundImage: 'url("https://res.cloudinary.com/dl2adjye7/image/upload/v1694711147/Animated_Shape_1_tz1zai.svg")'}}
+     style={{backgroundImage: 'url("")'}}
 >
   <div 
     onMouseDown={handleMouseDown}
