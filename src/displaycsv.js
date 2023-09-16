@@ -110,20 +110,37 @@ export default function DisplayCSV({setToCSV}) {
           Here are all the CSV files you've uploaded.
         </p>
       </div>
-      <div className="border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-20">
+      
+      {filteredFiles.length === 0 ? (
+        <div className="mt-20"> {/* Adding margin-top here */}
+          {/* Assuming Emptystate component is used for empty state */}
+          <Emptystate setToPDF={setToCSV}/>
+        </div>
+      ) : (
+        <>
+          {/* Filtering and Sorting System */}
+          <div className="border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-20">
         <h3 className="text-base font-semibold leading-6 text-gray-900">Filter CSV Files</h3>
         <div className="relative mt-3 sm:ml-4 sm:mt-0">
           <label htmlFor="search-csv" className="sr-only">Search</label>
           <div className="flex rounded-md shadow-sm">
-          <input
-          type="text"
-          name="search-csv"
-          id="search-csv"
-          className="block w-full rounded-none rounded-l-md border-0 py-1.5 pl-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700"
-          placeholder="Search CSV"
-          value={searchQuery} // Add this line
-          onChange={e => setSearchQuery(e.target.value)} // Add this line
-        />
+          
+              <div className="flex rounded-md shadow-sm">
+      <div className="relative flex-grow focus-within:z-10">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+              </div>
+              <input
+                type="text"
+                name="search-candidate"
+                id="search-candidate"
+                className="block w-full rounded-md border-0 py-1.5 pl-10 text-sm leading-6 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700"
+                placeholder="Search CSV"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </div>
             <button
               type="button"
               className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
@@ -136,6 +153,7 @@ export default function DisplayCSV({setToCSV}) {
           </div>
           {showSortMenu && (
             <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+              
               <ul className="space-y-2">
                 {categories.map((category) => (
                   <li key={category.id}>
@@ -195,6 +213,8 @@ export default function DisplayCSV({setToCSV}) {
     </li>
   ))}
 </ul>
+</>
+ )}
 
       </div>
     </div>
