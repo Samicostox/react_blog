@@ -1,8 +1,9 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { useNavigate } from 'react-router-dom';
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import { CheckIcon, ChevronUpDownIcon,TrashIcon  } from '@heroicons/react/20/solid'
 import Emptystate from './emptystate';
+import Verify from './modals/areyousure';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -18,6 +19,8 @@ export default function DisplayCSV({setToCSV}) {
   const [csvFiles, setCsvFiles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [csvToDelete, setCsvToDelete] = useState(null); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -60,8 +63,41 @@ export default function DisplayCSV({setToCSV}) {
     return <p>Loading...</p>;
   }
 
+  const deleteCSV = (csvId) => {
+    const token = localStorage.getItem('token');
+    fetch('https://djangoback-705982cd1fda.herokuapp.com/api/delete_csv/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token: token, csv_id: csvId }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.msg === "CSV file deleted successfully") {
+        setCsvFiles(prevFiles => prevFiles.filter(file => file.id !== csvId));
+      }
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+  };
+
+  const openModal = (csvId) => {
+    setCsvToDelete(csvId);
+    setModalOpen(true);
+  };
+
+  const confirmDelete = () => {
+    if (csvToDelete !== null) {
+      deleteCSV(csvToDelete);
+      setCsvToDelete(null);
+    }
+  };
+
   return (
     <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
+      <Verify open={modalOpen} setOpen={setModalOpen} onDelete={confirmDelete} />
       <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-4x2 text-center mt-10">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Your CSV Files</h2>
@@ -139,14 +175,21 @@ export default function DisplayCSV({setToCSV}) {
 
         <ul role="list" className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8 mt-16 sm:mt-20">
   {filteredFiles.map((csvFile) => (
-    <li key={csvFile.id} className="overflow-hidden rounded-xl border border-gray-200">
+    <li key={csvFile.id} className="relative overflow-hidden rounded-xl border border-gray-200">
       <a href={csvFile.csv_file} download>
+        
         <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
-          <img
-            src="https://res.cloudinary.com/dl2adjye7/image/upload/v1694028599/63ff784daa460f472e688fb0_csv_2_dok9c8.png"
-            alt={csvFile.name}
-            className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
-          />
+        <img
+        src={csvFile.category === 'phone' ? 
+          "https://res.cloudinary.com/dl2adjye7/image/upload/v1694028599/63ff784daa460f472e688fb0_csv_2_dok9c8.png" : 
+          csvFile.category === 'email' ? 
+          "https://res.cloudinary.com/dl2adjye7/image/upload/v1694853894/imgonline-com-ua-ReplaceColor-ko8MIMdERcDM1_eh9daf.jpg" : 
+          "https://res.cloudinary.com/dl2adjye7/image/upload/v1694028599/63ff784daa460f472e688fb0_csv_2_dok9c8.png" // Default image
+        }
+        alt={csvFile.name}
+        className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
+      />
+
           <div className="text-sm font-medium leading-6 text-gray-900">{csvFile.name}</div>
         </div>
         <dl className="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
@@ -162,9 +205,14 @@ export default function DisplayCSV({setToCSV}) {
           </div>
         </dl>
       </a>
+      <button onClick={() => openModal(csvFile.id)} className="absolute top-2 right-0 m-2">
+        <TrashIcon className="h-6 w-6 fill-red-700" />
+      </button>
+      
     </li>
   ))}
 </ul>
+
       </div>
     </div>
   );
