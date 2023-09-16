@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { CheckIcon, ChevronUpDownIcon, TrashIcon, BarsArrowUpIcon, MagnifyingGlassIcon, ChevronDownIcon  } from '@heroicons/react/20/solid'
+import { Menu, Transition } from '@headlessui/react';
 const posts = [
     {
       id: 1,
@@ -178,13 +179,26 @@ const posts = [
     { id: 2, name: 'WIS' },
     { id: 3, name: 'UOB' },
   ];
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ');
+  }
   
   export default function Repo() {
+    const [searchQuery, setSearchQuery] = useState('');
 
-    const [showSortMenu, setShowSortMenu] = useState(false);
-    const [searchQuery, setSearchQuery] = useState("");
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
- 
+    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [showDropdown, setShowDropdown] = useState(false);
+  
+    const filteredPosts = posts.filter(post => {
+      if (selectedCategory !== 'All' && post.category.title !== selectedCategory) {
+        return false;
+      }
+      if (searchQuery && !post.title.toLowerCase().includes(searchQuery.toLowerCase())) {
+        return false;
+      }
+      return true;
+    });
+  
    
     return (
       <div className="bg-white py-24 sm:py-32">
@@ -198,8 +212,71 @@ const posts = [
             </p>
           </div>
           
-              <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-              {posts.map((post) => (
+          <div className="border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-20">
+  <h3 className="text-base font-semibold leading-6 text-gray-900">Filter Templates</h3>
+  <div className="relative mt-3 sm:ml-4 sm:mt-0 flex items-center gap-4">
+          {/* Search Box */}
+          <div className="flex rounded-md shadow-sm">
+      <div className="relative flex-grow focus-within:z-10">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+              </div>
+              <input
+                type="text"
+                name="search-candidate"
+                id="search-candidate"
+                className="block w-full rounded-md border-0 py-1.5 pl-10 text-sm leading-6 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700"
+                placeholder="Search templates"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </div>
+
+          {/* Dropdown for Sort */}
+          
+          <Menu as="div" className="relative inline-block text-left">
+          <div>
+            <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+              Sort
+              <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+            </Menu.Button>
+          </div>
+
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-100"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
+          >
+            <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div className="py-1">
+                {["All", "UOB", "WIS"].map((option) => (
+                  <Menu.Item key={option}>
+                    {({ active }) => (
+                      <button
+                        onClick={() => setSelectedCategory(option)}
+                        className={classNames(
+                          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                          'block px-4 py-2 text-sm'
+                        )}
+                      >
+                        {option}
+                      </button>
+                    )}
+                  </Menu.Item>
+                ))}
+              </div>
+            </Menu.Items>
+          </Transition>
+        </Menu>
+        </div>
+      </div>
+      <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        {filteredPosts.map((post) => (
                 <article key={post.id} className="flex flex-col items-start justify-between">
                   <div className="relative w-full">
                     <a href={post.linkdownload} download>
@@ -223,10 +300,10 @@ const posts = [
                         </a>
                       </div>
                       <div className="group relative">
-                        <h3 className="text-left mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                          <span className="text-left absolute inset-0" />
-                          {post.title}
-                        </h3>
+                      <h3 className="text-left mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                        <span className="text-left absolute inset-0" />
+                        {post.title}
+                      </h3>
                         <p className="text-left mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
                       </div>
                       <div className="relative mt-8 flex items-center gap-x-4">
