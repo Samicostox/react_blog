@@ -43,7 +43,7 @@ export default function Service_mobile() {
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
             <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                <span className="font-semibold text-indigo-600">We’re hiring</span>
+                <span className="font-semibold text-green-600">We’re hiring</span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="#" className="flex items-center gap-x-1">
                   <span className="absolute inset-0" aria-hidden="true" />
@@ -62,7 +62,7 @@ export default function Service_mobile() {
             <div className="mt-10 flex items-center gap-x-6">
               <a
                 href="/#contact2"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 Get a Quote
               </a>
