@@ -82,7 +82,7 @@ export default function Signin() {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a href="#" className="font-semibold text-green-700 hover:text-green-700">
+                  <a href="/#forgotpassword" className="font-semibold text-green-700 hover:text-green-700">
                     Forgot password?
                   </a>
                 </div>

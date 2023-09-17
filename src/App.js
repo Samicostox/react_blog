@@ -19,6 +19,8 @@ import PDFViewer from './technical_documents/embed_pdf';
 import MultiStepForm from './technical_documents/modify_pdf';
 import ModifyPDF from './technical_documents/modify_pdf';
 import Landingpage from './website/landingpage';
+import Forgotpassword from './auth/forgot_password';
+import Resetpassword from './auth/reset_password';
 
 
 
@@ -47,6 +49,9 @@ function App() {
             <Route path="/pdfviewer" element={<PDFViewer />} />
             <Route path="/updatepdf" element={<ModifyPDF />} />
             <Route path="/landing" element={<Landingpage />} />
+            <Route path="/forgotpassword" element={<Forgotpassword />} />
+            <Route path="/resetpassword" element={<Resetpassword />} />
+            
             {/* Add more Routes here as needed */}
           </Routes>
         </div>

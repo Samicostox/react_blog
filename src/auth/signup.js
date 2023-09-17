@@ -74,11 +74,7 @@ export default function Signup() {
         <div className="py-8 px-4 bg-white sm:rounded-lg sm:px-10">
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Avatar */}
-          <img
-            className="mx-auto h-24 w-24 rounded-md"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-          />
+          
               {/* Name field */}
               <div>
                 <label htmlFor="name" className="text-left block text-sm font-medium text-gray-700">
