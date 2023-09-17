@@ -3,7 +3,7 @@ import React from 'react';
 
 const LogoCloud = ({ title, logos }) => {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
   {/* Centered title */}
   <div className="text-center mb-8">
     <h2 className="text-2xl font-semibold">They trusted us</h2>

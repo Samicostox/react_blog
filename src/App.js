@@ -21,6 +21,9 @@ import ModifyPDF from './technical_documents/modify_pdf';
 import Landingpage from './website/landingpage';
 import Forgotpassword from './auth/forgot_password';
 import Resetpassword from './auth/reset_password';
+import Service_mobile from './website/services';
+import Contact2 from './website/contact';
+
 
 
 
@@ -51,6 +54,8 @@ function App() {
             <Route path="/landing" element={<Landingpage />} />
             <Route path="/forgotpassword" element={<Forgotpassword />} />
             <Route path="/resetpassword" element={<Resetpassword />} />
+            <Route path="/service-mobile" element={<Service_mobile />} />
+            <Route path="/contact2" element={<Contact2 />} />
             
             {/* Add more Routes here as needed */}
           </Routes>

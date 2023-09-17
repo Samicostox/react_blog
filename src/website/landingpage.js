@@ -192,79 +192,37 @@ export default function Landingpage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
+    
     <div className="bg-white">
       {/* Header */}
+      
       <Navbar></Navbar>
-    
       
       <div className="relative isolate pt-14 ">
-      <Carousel></Carousel>
+      
       
       </div>
 
-      <main>
+      <main className="">
         {/* Hero section */}
+
+        <Carousel></Carousel>
         
         <LogoCloud></LogoCloud>
        
         
-       
+       <Hero></Hero>
        
 
         {/* Testimonials section */}
-        <div className="relative isolate mt-32 sm:mt-56 sm:pt-32">
-          <svg
-            className="absolute inset-0 -z-10 hidden h-full w-full stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] sm:block"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="55d3d46d-692e-45f2-becd-d8bdc9344f45"
-                width={200}
-                height={200}
-                x="50%"
-                y={0}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y={0} className="overflow-visible fill-gray-50">
-              <path
-                d="M-200.5 0h201v201h-201Z M599.5 0h201v201h-201Z M399.5 400h201v201h-201Z M-400.5 600h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
-            <rect width="100%" height="100%" strokeWidth={0} fill="url(#55d3d46d-692e-45f2-becd-d8bdc9344f45)" />
-          </svg>
+        <div className="relative isolate mt-32 sm:mt-20 sm:pt-32">
+          
+          
           <div className="relative">
-            <div
-              className="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
-              aria-hidden="true"
-            >
-              <div
-                className="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
-                style={{
-                  clipPath:
-                    'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                }}
-              />
-            </div>
-            <div
-              className="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-8 opacity-25 blur-3xl xl:justify-end"
-              aria-hidden="true"
-            >
-              <div
-                className="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]"
-                style={{
-                  clipPath:
-                    'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                }}
-              />
-            </div>
+            
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-xl sm:text-center">
-                <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Testimonials</h2>
+                <h2 className="text-lg font-semibold leading-8 tracking-tight text-green-700">Testimonials</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   We have worked with thousands of amazing people
                 </p>

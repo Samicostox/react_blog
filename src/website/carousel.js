@@ -38,42 +38,48 @@ const Carousel = () => {
       text: "Esse id magna consectetur fugiat non dolor in ad laboris magna laborum ea consequat. Nisi irure aliquip nisi adipisicing veniam voluptate id. In veniam incididunt ex veniam adipisicing sit.",
       hiring: true,
       buttonText: "Get a Quote",
-      svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png"
+      svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
+      href: '/#service-mobile'
     },
     {
       title: "Web Development",
       text: "Ut labore sit non cupidatat cillum ut excepteur duis commodo. Consequat aliqua nostrud et nostrud veniam ad labore consectetur.",
       hiring: true,
-      buttonText: "Learn More",
-      svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png"
+      buttonText: "Get a Quote",
+      svgSource: "https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg",
+      href: '/#service-mobile'
     },
     {
       title: "Data Engineering",
       text: "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
       hiring: true,
-      buttonText: "Join Us",
-      svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png"
+      buttonText: "Get a Quote",
+      svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
+      href: '/#service-mobile'
     },
     {
        title: "Business Dev",
        text: "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
        hiring: true,
-       buttonText: "Join Us",
-       svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png"
+       buttonText: "Get a Quote",
+       svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
+       href: '/#service-mobile'
     },
       {
         title: "Benchmarking",
         text: "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
         hiring: true,
-        buttonText: "Join Us",
-        svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png"
+        buttonText: "Get a Quote",
+        svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
+        href: '/#service-mobile'
       },
       {
         title: "Strategy",
         text: "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
         hiring: true,
-        buttonText: "Join Us",
-        svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png"
+        buttonText: "Get a Quote",
+        svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
+        href: '/#service-mobile'
       }
   ];
 
@@ -105,7 +111,7 @@ const Carousel = () => {
   return (
     
     <div className="relative isolate pt-14" 
-     style={{backgroundImage: 'url("")'}}
+     style={{backgroundImage: 'url("https://res.cloudinary.com/dl2adjye7/image/upload/v1694956125/Polygon_Luminary_3_zjfove.svg")'}}
 >
   <div 
     onMouseDown={handleMouseDown}
@@ -120,7 +126,7 @@ const Carousel = () => {
                 {slide.hiring && (
                   <div className="flex">
                     <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                      <span className="font-semibold text-indigo-600">We’re hiring</span>
+                      <span className="font-semibold text-green-600">We’re hiring</span>
                       <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                       <a href="#" className="flex items-center gap-x-1">
                         <span className="absolute inset-0" aria-hidden="true" />
@@ -133,11 +139,11 @@ const Carousel = () => {
                 <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-left">
                   {slide.title}
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-600 text-left">{slide.text}</p>
+                <p className="mt-6 text-lg leading-8 text-black-600 text-left">{slide.text}</p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
-                    href="#"
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    href={slide.href}
+                    className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                   >
                     {slide.buttonText}
                   </a>
@@ -169,6 +175,8 @@ const Carousel = () => {
                   <img src={slide.svgSource} alt="" />
                 </foreignObject>
               </svg>
+
+              
             
               </div>
             </div>
