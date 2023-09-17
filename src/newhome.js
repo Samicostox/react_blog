@@ -305,7 +305,7 @@ export default function Newhome() {
         {/* ... other code */}
       </ul>
       <div className="-mx-6 mt-auto mb-8">
-            <a href="/#profile" className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50">
+            <a href="/#newhome" className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50">
               <img
                 className="h-8 w-8 rounded-full bg-gray-50"
                 src={profile_pic}
@@ -327,8 +327,8 @@ export default function Newhome() {
             <span className="sr-only">Open sidebar</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-          <div className="flex-1 text-sm font-semibold leading-6 text-gray-900">Dashboard</div>
-          <a href="/#profile">
+          <div className="flex-1 text-sm font-semibold leading-6 text-gray-900">Software</div>
+          <a href="/#newhome">
             <span className="sr-only">Your profile</span>
             <img
               className="h-8 w-8 rounded-full bg-gray-50"
