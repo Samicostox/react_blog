@@ -1,54 +1,49 @@
 import React from 'react';
 
+const LogoCloud = ({ className }) => {
+  const logos = [
+    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
+    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    //... More logos
+  ];
 
-const LogoCloud = ({ title, logos }) => {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
-  {/* Centered title */}
-  <div className="text-center mb-8">
-    <h2 className="text-2xl font-semibold">They trusted us</h2>
-  </div>
+    <div className={`mx-auto px-6 lg:px-8 mt-20 overflow-hidden ${className}`}>
+      {/* Centered title */}
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">They trusted us</h2>
+      </div>
   
-  {/* Logo cloud */}
-  <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-    <img
-      className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-      src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg"
-      alt="Transistor"
-      width={158}
-      height={48}
-    />
-    <img
-      className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-      src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg"
-      alt="Reform"
-      width={158}
-      height={48}
-    />
-    <img
-      className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-      src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-400.svg"
-      alt="Tuple"
-      width={158}
-      height={48}
-    />
-    <img
-      className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-      src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-400.svg"
-      alt="SavvyCal"
-      width={158}
-      height={48}
-    />
-    <img
-      className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-      src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-400.svg"
-      alt="Statamic"
-      width={158}
-      height={48}
-    />
-  </div>
-</div>
-   );
-};
+      {/* Logo ticker */}
+      <div className="w-full overflow-hidden mt-20">
+        <div className="flex space-x-36 animate-ticker">  {/* Increase space here */}
+          {logos.map((logo, index) => (
+            <img
+              key={index}
+              className="max-h-12 object-contain"
+              src={logo}
+              alt="Company logo"
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+          }
+
 
 export default LogoCloud;

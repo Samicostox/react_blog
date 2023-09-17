@@ -216,6 +216,7 @@ export default function Landingpage() {
 
         <Carousel></Carousel>
         
+        
         <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
@@ -238,7 +239,9 @@ export default function Landingpage() {
       </div>
        
         
-      <CardDefault></CardDefault>        
+      <CardDefault></CardDefault> 
+
+      <LogoCloud className="max-w-screen"></LogoCloud>       
         {/* Testimonials section */}
         <div className="relative isolate mt-32 sm:mt-20 sm:pt-32">
           

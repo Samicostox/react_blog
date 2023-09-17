@@ -37,7 +37,8 @@ function App() {
             
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Landingpage />} />
+            <Route path="/software" element={<Home />} />
             <Route path="/product" element={<Product />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<SignInUpSwitcher />} />
