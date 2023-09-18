@@ -15,12 +15,6 @@ const incentives = [
       imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg',
       description: "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
     },
-    {
-      name: 'Cost Effective',
-      imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg',
-      description:
-        "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
-    },
     
   ]
 
@@ -115,36 +109,7 @@ const people = [
               Uni : "WIS",
               color : "bg-purple-100"
             },
-            {
-              name: 'Lindsay Walton',
-              role: 'Consultant',
-              imageUrl:
-                'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-              twitterUrl: '#',
-              linkedinUrl: '#',
-              Uni : "WIS",
-              color : "bg-purple-100"
-            },
-            {
-                name: 'Lindsay Walton',
-                role: 'Consultant',
-                imageUrl:
-                  'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-                twitterUrl: '#',
-                linkedinUrl: '#',
-                Uni : "WIS",
-                color : "bg-purple-100"
-              },
-              {
-                name: 'Lindsay Walton',
-                role: 'Consultant',
-                imageUrl:
-                  'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-                twitterUrl: '#',
-                linkedinUrl: '#',
-                Uni : "WIS",
-                color : "bg-purple-100"
-              },
+            
     // More people...
   ]
   
