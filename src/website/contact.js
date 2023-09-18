@@ -12,10 +12,65 @@
   }
   ```
 */
+import Successclient from '../modals/successclient';
+import React, { useState } from 'react';
+import axios from 'axios';
 import Navbar from "../navbar"
 export default function Contact2() {
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+
+    const [formData, setFormData] = useState({
+        first_name: "",
+        last_name: "",
+        email: "",
+        company: "",
+        phone: "",
+        message: "",
+        budget: "",
+      });
+    
+      // Function to handle form submission
+      // Function to handle form submission
+        const handleSubmit = async (e) => {
+            e.preventDefault();
+        
+            try {
+            const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/create_client/', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+        
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+        
+            const data = await response.json();
+            console.log("Client created: ", data);
+            
+            // Show the success modal
+            setShowSuccessModal(true);
+        
+            } catch (error) {
+            console.error("An error occurred while creating the client: ", error);
+            }
+        };
+  
+    
+      // Function to handle input changes
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+          ...formData,
+          [name]: value,
+        });
+      };
     return (
         <div className="relative bg-white">
+            <Successclient open={showSuccessModal} setOpen={setShowSuccessModal} />
       <Navbar></Navbar>
 
       {/* Hide image on small screens, show on large screens */}
@@ -39,7 +94,12 @@ export default function Contact2() {
             </p>
 
             {/* Added padding around the form for small screens */}
-            <form action="#" method="POST" className="mt-16 p-4 sm:p-0">
+            <form
+                action="#"
+                method="POST"
+                className="mt-16 p-4 sm:p-0"
+                onSubmit={handleSubmit}
+                >
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1"> {/* Changed to 1 column for larger screens */}
                   <div>
                     <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900 text-left">
@@ -48,9 +108,12 @@ export default function Contact2() {
                     <div className="mt-2.5">
                       <input
                         type="text"
-                        name="first-name"
-                        id="first-name"
+                        name="first_name"
+                        id="first_name"
+                        required
                         autoComplete="given-name"
+                        value={formData.first_name}
+                        onChange={handleChange}
                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
                       />
                     </div>
@@ -62,9 +125,12 @@ export default function Contact2() {
                     <div className="mt-2.5">
                       <input
                         type="text"
-                        name="last-name"
-                        id="last-name"
+                        name="last_name"
+                        id="last_name"
+                        required
                         autoComplete="family-name"
+                        value={formData.last_name}
+                        onChange={handleChange}
                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
                       />
                     </div>
@@ -75,10 +141,13 @@ export default function Contact2() {
                     </label>
                     <div className="mt-2.5">
                       <input
-                        id="email"
-                        name="email"
                         type="email"
+                        name="email"
+                        id="email"
+                        required
                         autoComplete="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
                       />
                     </div>
@@ -92,7 +161,9 @@ export default function Contact2() {
                         type="text"
                         name="company"
                         id="company"
-                        autoComplete="organization"
+                        required  
+                        value={formData.company}
+                        onChange={handleChange}
                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
                       />
                     </div>
@@ -111,6 +182,9 @@ export default function Contact2() {
                         type="tel"
                         name="phone"
                         id="phone"
+                        
+                        value={formData.phone}
+                        onChange={handleChange}
                         autoComplete="tel"
                         aria-describedby="phone-description"
                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
@@ -128,8 +202,11 @@ export default function Contact2() {
                     </div>
                     <div className="mt-2.5">
                       <textarea
-                        id="message"
                         name="message"
+                        id="message"
+                        required
+                        value={formData.message}
+                        onChange={handleChange}
                         rows={4}
                         aria-describedby="message-description"
                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
@@ -140,48 +217,57 @@ export default function Contact2() {
                   <fieldset className="sm:col-span-2">
                     <legend className="block text-sm font-semibold leading-6 text-gray-900 text-left">Expected budget</legend>
                     <div className="mt-4 space-y-4 text-sm leading-6 text-gray-600">
-                      <div className="flex gap-x-2.5">
+                        <div className="flex gap-x-2.5">
                         <input
-                          id="budget-under-25k"
-                          name="budget"
-                          defaultValue="under_25k"
-                          type="radio"
-                          className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
+                            id="budget-under-25k"
+                            name="budget"
+                            value="under_25k"
+                            checked={formData.budget === 'under_25k'}
+                            onChange={handleChange}
+                            type="radio"
+                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
                         />
                         <label htmlFor="budget-under-25k">Less than $25K</label>
-                      </div>
-                      <div className="flex gap-x-2.5">
+                        </div>
+                        <div className="flex gap-x-2.5">
                         <input
-                          id="budget-25k-50k"
-                          name="budget"
-                          defaultValue="25k-50k"
-                          type="radio"
-                          className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
+                            id="budget-25k-50k"
+                            name="budget"
+                            value="25k-50k"
+                            checked={formData.budget === '25k-50k'}
+                            onChange={handleChange}
+                            type="radio"
+                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
                         />
                         <label htmlFor="budget-25k-50k">$25K – $50K</label>
-                      </div>
-                      <div className="flex gap-x-2.5">
+                        </div>
+                        <div className="flex gap-x-2.5">
                         <input
-                          id="budget-50k-100k"
-                          name="budget"
-                          defaultValue="50k-100k"
-                          type="radio"
-                          className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
+                            id="budget-50k-100k"
+                            name="budget"
+                            value="50k-100k"
+                            checked={formData.budget === '50k-100k'}
+                            onChange={handleChange}
+                            type="radio"
+                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
                         />
                         <label htmlFor="budget-50k-100k">$50K – $100K</label>
-                      </div>
-                      <div className="flex gap-x-2.5">
+                        </div>
+                        <div className="flex gap-x-2.5">
                         <input
-                          id="budget-over-100k"
-                          name="budget"
-                          defaultValue="over_100k"
-                          type="radio"
-                          className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
+                            id="budget-over-100k"
+                            name="budget"
+                            value="over_100k"
+                            checked={formData.budget === 'over_100k'}
+                            onChange={handleChange}
+                            type="radio"
+                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
                         />
                         <label htmlFor="budget-over-100k">$100K+</label>
-                      </div>
+                        </div>
                     </div>
-                  </fieldset>
+                    </fieldset>
+
                 </div>
                 <div className="mt-10 flex justify-start border-t border-gray-900/10 pt-8">
                   <button

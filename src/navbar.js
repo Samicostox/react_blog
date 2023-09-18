@@ -72,7 +72,10 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           {isLoggedIn ? (
-            <button onClick={handleLogout} className="text-sm font-semibold leading-6 text-gray-900">
+            <button onClick={() => {
+              handleLogout();
+              navigate('/');
+            }} className="text-sm font-semibold leading-6 text-gray-900">
               Log out <span aria-hidden="true">&rarr;</span>
             </button>
           ) : (

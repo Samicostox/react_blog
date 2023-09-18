@@ -11,7 +11,7 @@ export default function Signin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null); // Resetting the error before a new request
-
+  
     try {
       const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/login/', {
         method: 'POST',
@@ -20,17 +20,20 @@ export default function Signin() {
         },
         body: JSON.stringify({ email, password }),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('uni', data.university);
+        localStorage.setItem('name', data.name);
+        localStorage.setItem('profilepicture', data.profile_picture);
+  
+        // Navigate based on the message
         if (data.msg === 'Successfully logged in!') {
-          localStorage.setItem('token', data.token);
-          localStorage.setItem('uni', data.university);
-          localStorage.setItem('name', data.name);
-          localStorage.setItem('profilepicture', data.profile_picture);
-
           navigate('/newhome');
+        } else if (data.msg === 'Admin logged in') {
+          navigate('/adminhome');
         } else {
           setError(data.msg);
         }

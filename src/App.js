@@ -23,6 +23,7 @@ import Forgotpassword from './auth/forgot_password';
 import Resetpassword from './auth/reset_password';
 import Service_mobile from './website/services';
 import Contact2 from './website/contact';
+import Adminhome from './adminhome';
 
 
 
@@ -57,6 +58,7 @@ function App() {
             <Route path="/resetpassword" element={<Resetpassword />} />
             <Route path="/service-mobile" element={<Service_mobile />} />
             <Route path="/contact2" element={<Contact2 />} />
+            <Route path="/adminhome" element={<Adminhome />} />
             
             {/* Add more Routes here as needed */}
           </Routes>
