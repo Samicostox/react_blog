@@ -97,7 +97,9 @@ export default function Adminhome() {
             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-left">{client.email}</td>
             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-left">{client.company}</td>
             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-left">{client.phone}</td>
-            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-left">{client.message}</td>
+            <td className="whitespace-normal px-3 py-4 text-sm text-gray-500 text-left" style={{ maxWidth: '300px'}}>
+  {client.message}
+</td>
             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-left">{client.budget}</td>
             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-left">
             <button onClick={() => handleEmailClick(client.email, client.company)}>

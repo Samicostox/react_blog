@@ -221,10 +221,10 @@ export default function Landingpage() {
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Trusted by creators worldwide
+              Our Year In Results
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-600">
-              Lorem ipsum dolor sit amet consect adipisicing possimus.
+              This is what we achieved after only one year of hardworking and passion. 
             </p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
@@ -241,7 +241,8 @@ export default function Landingpage() {
         
       <CardDefault></CardDefault> 
 
-      <LogoCloud className="max-w-screen"></LogoCloud>       
+      <LogoCloud className="max-w-screen"></LogoCloud>  
+     
         {/* Testimonials section */}
         <div className="relative isolate mt-32 sm:mt-20 sm:pt-32">
           

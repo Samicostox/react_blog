@@ -21,10 +21,10 @@ import ModifyPDF from './technical_documents/modify_pdf';
 import Landingpage from './website/landingpage';
 import Forgotpassword from './auth/forgot_password';
 import Resetpassword from './auth/reset_password';
-import Service_mobile from './website/services';
+import Service_mobile from './website/Services/services-mobile';
 import Contact2 from './website/contact';
 import Adminhome from './adminhome';
-
+import Team from './website/Team';
 
 
 
@@ -59,6 +59,7 @@ function App() {
             <Route path="/service-mobile" element={<Service_mobile />} />
             <Route path="/contact2" element={<Contact2 />} />
             <Route path="/adminhome" element={<Adminhome />} />
+            <Route path="/team" element={<Team />} />
             
             {/* Add more Routes here as needed */}
           </Routes>

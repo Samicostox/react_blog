@@ -7,7 +7,7 @@ const navigation = [
   { name: 'LeadGeneration', href: '/software' },
   { name: 'Contact', href: '/contact2' },
   { name: 'Software', href: '/newhome' },
-  { name: 'Team', href: '/landing' },
+  { name: 'Team', href: '/team' },
   
 ];
 
