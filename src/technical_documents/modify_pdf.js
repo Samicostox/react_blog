@@ -38,6 +38,9 @@ function ModifyPDF(props) {
     const functionalTitleRefs = functionalTitles.map(() => []);
     const nonFunctionalTitleRefs = nonFunctionalTitles.map(() => []);
 
+    const [rerenderToggle, setRerenderToggle] = useState(false);
+
+
 
 
     const handleAddField = (type, index) => {
@@ -50,6 +53,7 @@ function ModifyPDF(props) {
             newNonFunctionalData[index].push(''); // Add a new empty field
             setNonFunctionalData(newNonFunctionalData);
         }
+        setRerenderToggle(prev => !prev);   
     };
 
     const handleSubmit = async (e) => {
@@ -91,30 +95,36 @@ function ModifyPDF(props) {
       }
    };
 
-  const handleTitleChange = (event, type, index) => {
-    const newValue = event.target.value;
-    if (type === 'functional') {
-        const newTitles = [...functionalTitlesState];
-        newTitles[index] = newValue;
-        setFunctionalTitlesState(newTitles);
-    } else {
-        const newTitles = [...nonFunctionalTitlesState];
-        newTitles[index] = newValue;
-        setNonFunctionalTitlesState(newTitles);
-    }
-};
-
-  const handleRemoveField = (type, sectionIndex, fieldIndex) => {
+   const handleRemoveField = (type, sectionIndex, fieldIndex) => {
     if (type === 'functional') {
         const newFunctionalData = [...functionalData];
+        console.log('deleted item',newFunctionalData);
         newFunctionalData[sectionIndex].splice(fieldIndex, 1);
         setFunctionalData(newFunctionalData);
+        console.log('deleted item',functionalData);
     } else {
         const newNonFunctionalData = [...nonFunctionalData];
         newNonFunctionalData[sectionIndex].splice(fieldIndex, 1);
         setNonFunctionalData(newNonFunctionalData);
     }
 };
+
+   const handleRemoveField2 = (type, sectionIndex, fieldIndex) => {
+    if (type === 'functional') {
+        const newFunctionalData = functionalData.map((section, idx) => {
+            if (idx !== sectionIndex) return section;
+            return section.filter((_, index) => index !== fieldIndex);
+        });
+        setFunctionalData(newFunctionalData);
+    } else {
+        const newNonFunctionalData = nonFunctionalData.map((section, idx) => {
+            if (idx !== sectionIndex) return section;
+            return section.filter((_, index) => index !== fieldIndex);
+        });
+        setNonFunctionalData(newNonFunctionalData);
+    }
+};
+
 
 
     return (
@@ -123,11 +133,12 @@ function ModifyPDF(props) {
       <form onSubmit={handleSubmit} style={{maxWidth: "1200px"}} className="mx-auto mt-16 sm:mt-20">
     <h2 className="mb-8">Functional Requirements</h2>
     {functionalTitles.map((title, index) => (
-        <div key={title} className="sm:col-span-1 requirement-section mb-4">
+        <div key={rerenderToggle ? `${title}_toggled` : title} className="sm:col-span-1 requirement-section mb-4">
+
             <input
                 type="text"
                 ref={functionalTitleRefs[index]}
-                value={title}
+                defaultValue={title}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6" // Increased bottom margin here
             />
             <ul>
@@ -157,11 +168,11 @@ function ModifyPDF(props) {
     ))}
     <h2 className="mb-8">Non-functional Requirements</h2>
     {nonFunctionalTitles.map((title, index) => (
-        <div key={title} className="sm:col-span-1 requirement-section mb-4">
+        <div key={rerenderToggle ? `${title}_toggled` : title} className="sm:col-span-1 requirement-section mb-4">
             <input
                 type="text"
                 ref={nonFunctionalTitleRefs[index]}
-                value={title}
+                defaultValue={title}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6" // Increased bottom margin here
             />
             <ul>

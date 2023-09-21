@@ -26,6 +26,7 @@ import PDFViewer from './technical_documents/embed_pdf';
 import Doc2 from './documentations/doc2';
 import Doc3 from './documentations/doc3';
 import ModifyPDF from './technical_documents/modify_pdf';
+import DisplayPDF from './displaypdf';
 
 
 const navigation = [
@@ -342,7 +343,7 @@ export default function Newhome() {
   {activeContent === 'Technical documents' && <PDF />}
   {activeContent === 'Email Generation' && <Message setToDoc3 = {setToDoc3}/>}
   {activeContent === 'Cold Outreach' && <GoogleMap setToDoc3 = {setToDoc2}/>}
-  {activeContent === 'PDFs' && <Store setToPDF={setToPDF} />}
+  {activeContent === 'PDFs' && <DisplayPDF setToPDF={setToPDF} />}
   {activeContent === 'CSV' && <Displaycsv setToCSV={setToCSV}/>}
   {activeContent === 'Repo' && <Repo />}
 
