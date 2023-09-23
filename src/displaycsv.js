@@ -110,16 +110,8 @@ export default function DisplayCSV({setToCSV}) {
           Here are all the CSV files you've uploaded.
         </p>
       </div>
-      
-      {filteredFiles.length === 0 ? (
-        <div className="mt-20"> {/* Adding margin-top here */}
-          {/* Assuming Emptystate component is used for empty state */}
-          <Emptystate setToPDF={setToCSV}/>
-        </div>
-      ) : (
-        <>
-          {/* Filtering and Sorting System */}
-          <div className="border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-20">
+
+      <div className="border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-20">
         <h3 className="text-base font-semibold leading-6 text-gray-900">Filter CSV Files</h3>
         <div className="relative mt-3 sm:ml-4 sm:mt-0">
           <label htmlFor="search-csv" className="sr-only">Search</label>
@@ -173,6 +165,16 @@ export default function DisplayCSV({setToCSV}) {
           )}
         </div>
       </div>
+      
+      {filteredFiles.length === 0 ? (
+        <div className="mt-20"> {/* Adding margin-top here */}
+          {/* Assuming Emptystate component is used for empty state */}
+          <Emptystate setToPDF={setToCSV}/>
+        </div>
+      ) : (
+        <>
+          {/* Filtering and Sorting System */}
+         
 
         <ul role="list" className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8 mt-16 sm:mt-20">
         {filteredFiles.slice().reverse().map((csvFile) => (
@@ -191,7 +193,14 @@ export default function DisplayCSV({setToCSV}) {
         className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
       />
 
-          <div className="text-sm font-medium leading-6 text-gray-900">{csvFile.name}</div>
+<div 
+  className="text-sm font-medium leading-6 text-gray-900 text-left" 
+  style={{ overflowWrap: 'anywhere' }}
+>
+  {csvFile.name}
+</div>
+
+
         </div>
         <dl className="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
           <div className="flex justify-between gap-x-4 py-3">
