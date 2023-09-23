@@ -8,9 +8,7 @@ import {
     Button,
   } from "@material-tailwind/react";
 import Navbar from '../navbar';
-import { FaReact } from 'react-icons/fa'; // for React icon
-import { IoLogoSpring } from 'react-icons/io'; // for Springboot icon
-import { DiDjango } from 'react-icons/di'; // for Django icon
+
 
 import React from 'react';
 
