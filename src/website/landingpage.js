@@ -213,9 +213,9 @@ export default function Landingpage() {
 
       <main className="">
         {/* Hero section */}
-
+        <div className = "overflow-x-hidden">
         <Carousel></Carousel>
-        
+        </div>
         
         <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
         <div className="mx-auto max-w-2xl lg:max-w-none">

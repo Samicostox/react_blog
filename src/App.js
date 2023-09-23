@@ -25,6 +25,7 @@ import Service_mobile from './website/Services/services-mobile';
 import Contact2 from './website/contact';
 import Adminhome from './adminhome';
 import Team from './website/Team';
+import { PastProjects } from './website/past_project';
 
 
 
@@ -60,6 +61,7 @@ function App() {
             <Route path="/contact2" element={<Contact2 />} />
             <Route path="/adminhome" element={<Adminhome />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/past-projects" element={<PastProjects />} />
             
             {/* Add more Routes here as needed */}
           </Routes>

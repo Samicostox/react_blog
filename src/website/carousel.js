@@ -108,17 +108,37 @@ const Carousel = () => {
     resetTimer();
   };
 
+  const handleTouchStart = (e) => {
+    setMouseDownX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (mouseDownX === null) return;
+    
+    const deltaX = e.changedTouches[0].clientX - mouseDownX;
+  
+    // Change slide if the touch movement is significant enough
+    if (deltaX < -50) nextSlide();
+    else if (deltaX > 50) prevSlide();
+  
+    setMouseDownX(null);
+    resetTimer();
+  };
+
   return (
     
-    <div className="relative isolate pt-14" 
-     style={{backgroundImage: 'url("https://res.cloudinary.com/dl2adjye7/image/upload/v1694956125/Polygon_Luminary_3_zjfove.svg")'}}
->
-  <div 
-    onMouseDown={handleMouseDown}
-    onMouseUp={handleMouseUp}
-    className="flex transition-all ease-in-out duration-500"
-    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-  >
+    <div 
+      className="relative isolate pt-14 overflow-hidden" // Added overflow-hidden here using Tailwind
+      style={{backgroundImage: 'url("https://res.cloudinary.com/dl2adjye7/image/upload/v1694956125/Polygon_Luminary_3_zjfove.svg")'}}
+    >
+      <div 
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onTouchStart={handleTouchStart} // If you decide to add touch events
+        onTouchEnd={handleTouchEnd} // If you decide to add touch events
+        className="flex transition-all ease-in-out duration-500"
+        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+      >
     {slides.map((slide, index) => (
       <div key={index} className="relative isolate flex-none w-full pt-14">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">

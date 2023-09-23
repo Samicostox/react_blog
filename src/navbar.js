@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Contact', href: '/contact2' },
   { name: 'Software', href: '/newhome' },
   { name: 'Team', href: '/team' },
+  { name: 'past-projects', href: '/past-projects' },
   
 ];
 
