@@ -140,6 +140,7 @@ const Carousel = () => {
   return (
     
     <div className="relative overflow-hidden" >
+      {/*
      <Particles
   init={particlesInit}
   id="tsparticles"
@@ -206,6 +207,9 @@ const Carousel = () => {
     retina_detect: true,
   }}
 />
+
+*/}
+
 
 
 
