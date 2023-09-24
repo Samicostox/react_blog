@@ -127,6 +127,7 @@ const Carousel = () => {
     resetTimer();
   };
 
+  {/*
   const particlesInit = async (main) => {
     console.log(main);
 
@@ -135,6 +136,8 @@ const Carousel = () => {
     // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(main);
   };
+
+  */}
 
 
   return (
