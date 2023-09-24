@@ -130,6 +130,7 @@ const Carousel = () => {
     <div 
       className="relative isolate pt-14 overflow-hidden" // Added overflow-hidden here using Tailwind
       style={{backgroundImage: 'url("https://res.cloudinary.com/dl2adjye7/image/upload/v1694956125/Polygon_Luminary_3_zjfove.svg")'}}
+      // Olala Petit bg regarde ce que je t'es trouvé pour remplacé la background image : https://vincentgarreau.com/particles.js/
     >
       <div 
         onMouseDown={handleMouseDown}
