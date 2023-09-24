@@ -22,61 +22,61 @@ import React from 'react';
         title: 'Safequeen',
         link: 'https://google.com',
         tags: [
-          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="Web App Icon" className="h-4 w-4" /> },
+          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png" alt="Web App Icon" className="h-4 w-4" /> },
           { text: 'React', color: 'bg-blue-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="React Icon" className="h-4 w-4" /> },
           { text: 'Django', color: 'bg-green-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503370/django-icon_rxmwzx.svg" alt="Django Icon" className="h-4 w-4" /> }
         ],
         description: 'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...',
-        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582742/2_gigwzc.png',
       },
       {
         title: 'Uplist',
         link: 'https://google.com',
         tags: [
-          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="Web App Icon" className="h-4 w-4" /> },
+          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png" alt="Web App Icon" className="h-4 w-4" /> },
           { text: 'Django', color: 'bg-green-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503370/django-icon_rxmwzx.svg" alt="Django Icon" className="h-4 w-4" /> }
         ],
         description: 'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...',
-        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582741/4_iyqcel.png',
       },
       {
         title: 'Nuzones',
         link: 'https://google.com',
         tags: [
-          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="Web App Icon" className="h-4 w-4" /> }
+          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png" alt="Web App Icon" className="h-4 w-4" /> }
         ],
         description: 'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...',
-        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582741/3_apm9xl.png',
       },
       {
         title: 'VDBCOOK',
         link: 'https://google.com',
         tags: [
-          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="Web App Icon" className="h-4 w-4" /> },
+          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png" alt="Web App Icon" className="h-4 w-4" /> },
           { text: 'Springboot', color: 'bg-orange-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503536/spring-icon_w5s3uf.svg" alt="Springboot Icon" className="h-4 w-4" /> }
         ],
         description: 'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...',
-        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582741/5_mmavil.png',
       },
       {
         title: 'Vanguard',
         link: 'https://google.com',
         tags: [
-          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="Web App Icon" className="h-4 w-4" /> },
+          { text: 'Strategy', color: 'bg-pink-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583592/strategy_b6dcym.png" alt="Web App Icon" className="h-4 w-4" /> },
           { text: 'React', color: 'bg-blue-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="React Icon" className="h-4 w-4" /> }
         ],
         description: 'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...',
-        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582979/UoBjuniorsolutions.weblow.io_1080_x_700_px_fp29em.png',
       },
       {
         title: 'WebExpress',
         link: 'https://google.com',
         tags: [
-          { text: 'Web App', color: 'bg-blue-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="Web App Icon" className="h-4 w-4" /> },
-          { text: 'React', color: 'bg-blue-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="React Icon" className="h-4 w-4" /> }
+          { text: 'Data Engineering', color: 'bg-purple-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583655/data-management_1_vnmv5o.png" alt="Web App Icon" className="h-4 w-4" /> },
+          { text: 'Python', color: 'bg-green-200', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583207/python_wfr9jn.svg" alt="React Icon" className="h-4 w-4" /> }
         ],
         description: 'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...',
-        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582979/UoBjuniorsolutions.weblow.io_1080_x_700_px_fp29em.png',
       }
     
     
