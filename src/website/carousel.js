@@ -1,4 +1,6 @@
 import React, { useState, useEffect,useRef  } from "react";
+import Particles from "react-tsparticles"; 
+import { loadFull } from "tsparticles"; 
 
 const ChevronRightIcon = () => <span>→</span>;
 
@@ -125,13 +127,88 @@ const Carousel = () => {
     resetTimer();
   };
 
+  const particlesInit = async (main) => {
+    console.log(main);
+
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(main);
+  };
+
+
   return (
     
-    <div 
-      className="relative isolate pt-14 overflow-hidden" // Added overflow-hidden here using Tailwind
-      style={{backgroundImage: 'url("https://res.cloudinary.com/dl2adjye7/image/upload/v1694956125/Polygon_Luminary_3_zjfove.svg")'}}
-      // Olala Petit bg regarde ce que je t'es trouvé pour remplacé la background image : https://vincentgarreau.com/particles.js/
-    >
+    <div className="relative overflow-hidden" >
+     <Particles
+  init={particlesInit}
+  id="tsparticles"
+  className="absolute inset-0 z-10"
+  options={{
+    background: {
+      color: "white",
+    },
+    fpsLimit: 60,
+    particles: {
+      number: {
+        value: 80,
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+      color: {
+        value: "#008000", // Darker green color
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 0.5,
+      },
+      size: {
+        value: 5,
+        random: true,
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#008000",
+        opacity: 0.4,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 2, // Adjust the speed as needed
+        direction: "none",
+        out_mode: "out",
+      },
+    },
+    interactivity: {
+      detectsOn: "canvas",
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+        resize: true,
+      },
+      modes: {
+        repulse: {
+          distance: 100,
+        },
+      },
+    },
+    retina_detect: true,
+  }}
+/>
+
+
+
       <div 
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
