@@ -159,7 +159,7 @@ export default function Newhome() {
   <button type="button" onClick={() => navigate('/')}>
     <img
       className="h-8 w-auto"
-      src="https://res.cloudinary.com/dl2adjye7/image/upload/v1693234097/leads10_jsebfk.png"
+      src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695632928/sami8694_Minimal_logo_tech_students_network_green_logo_white_ba_e6513ada-90f3-453c-aea9-fbd2672f25a9_a0nnlk.png  "
       alt="Your Company"
     />
   </button>
@@ -242,7 +242,7 @@ export default function Newhome() {
   <button type="button" onClick={() => navigate('/')}>
     <img
       className="h-8 w-auto"
-      src="https://res.cloudinary.com/dl2adjye7/image/upload/v1693234097/leads10_jsebfk.png"
+      src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695632928/sami8694_Minimal_logo_tech_students_network_green_logo_white_ba_e6513ada-90f3-453c-aea9-fbd2672f25a9_a0nnlk.png"
       alt="Your Company"
     />
   </button>

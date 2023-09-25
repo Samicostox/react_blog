@@ -32,27 +32,33 @@ export default function OTPPage() {
 };
 
   
-const handleSubmit = async (e, newOtp = otp) => { // Use passed newOtp or state otp
+const handleSubmit = async (e, newOtp = otp) => {
   e.preventDefault();
   const otpValue = newOtp.join('');
 
-    try {
-      const response = await axios.post('https://djangoback-705982cd1fda.herokuapp.com/api/verify-email-code/', {
-        code: otpValue,
-        email: emailFromSignup,  // Include the email in the API call
-      });
+  try {
+    const response = await axios.post('https://djangoback-705982cd1fda.herokuapp.com/api/verify-email-code/', {
+      code: otpValue,
+      email: emailFromSignup,
+    });
 
-      if (response.data) {
-        // handle success, navigate or show a message
-        alert('OTP verified successfully');
-        navigate('/')
-
-      }
-    } catch (error) {
-      // handle error
-      alert('OTP verification failed');
+    if (response.data) {
+      // Store user information in local storage
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('uni', response.data.university || ''); // Store empty string if university is null
+      localStorage.setItem('name', response.data.name);
+      localStorage.setItem('profilepicture', response.data.profile_picture || ''); // Store empty string if profile_picture is null
+      
+      // Navigate to newhome
+      navigate('/newhome');
     }
-  };
+  } catch (error) {
+    // Handle error
+    alert('OTP verification failed');
+    console.error('OTP verification failed:', error);
+  }
+};
+
 
   const handlePaste = (e) => {
     e.preventDefault();
