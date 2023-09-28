@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import xtype from "xtypejs";
 
-function ModifyPDF(props) {
+function NonFunctional(props) {
   const navigate = useNavigate();
   /*
     const functionalTitles = localStorage.getItem("functionalTitles");
@@ -147,7 +147,7 @@ function ModifyPDF(props) {
       <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-4x2 text-center mt-10">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            You can now update your Technical Document!
+            You can nonical Document!
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-700">
             You will receive an updated PDF file with the modifications you just
@@ -159,51 +159,6 @@ function ModifyPDF(props) {
           style={{ maxWidth: "1200px" }}
           className="mx-auto mt-16 sm:mt-20"
         >
-          <h2 className="mb-8">Functional Requirements</h2>
-          {functionalTitles.map((title, index) => (
-            <div
-              key={rerenderToggle ? `${title}_toggled` : title}
-              className="sm:col-span-1 requirement-section mb-4"
-            >
-              <input
-                type="text"
-                id={`functional_${index}`}
-                ref={(el) => (functionalTitleRefs[index] = el)}
-                defaultValue={title}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6" // Increased bottom margin here
-              />
-              <ul>
-                {functionalData[index].map((req, reqIndex) => (
-                  <div className="flex items-center mb-2" key={reqIndex}>
-                    <input
-                      type="text"
-                      ref={(el) => (functionalRefs[index][reqIndex] = el)}
-                      id={`functional_${index}_${reqIndex}`}
-                      defaultValue={req}
-                      name={`functional_${index}_${reqIndex}`}
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
-                    />
-                    <button
-                      type="button"
-                      onClick={() =>
-                        handleRemoveField("functional", index, reqIndex)
-                      }
-                      className="ml-2 bg-red-500 hover:bg-red-400 p-1 text-white"
-                    >
-                      X
-                    </button>
-                  </div>
-                ))}
-              </ul>
-              <button
-                type="button"
-                onClick={() => handleAddField("functional", index)}
-                className="mt-2 inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
-              >
-                Add
-              </button>
-            </div>
-          ))}
           <h2 className="mb-8">Non-functional Requirements</h2>
           {nonFunctionalTitles.map((title, index) => (
             <div
@@ -248,17 +203,18 @@ function ModifyPDF(props) {
               </button>
             </div>
           ))}
-
-          <button
-            type="submit"
-            className="inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
-          >
-            Update PDF
-          </button>
+          <div className="mt-10">
+            <button
+              type="submit"
+              className="inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
+            >
+              Update PDF
+            </button>
+          </div>
         </form>
       </div>
     </div>
   );
 }
 
-export default ModifyPDF;
+export default NonFunctional;
