@@ -41,7 +41,7 @@ function FrontPage({ moveToNext }) {
 
   return (
     <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
-      <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div className="isolate bg-white px-6 py-24 sm:py-3 lg:px-8">
         <div className="mx-auto max-w-4x2 text-center mt-10">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             You can update the Front Page of your Technical Document!
