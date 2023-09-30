@@ -57,6 +57,7 @@ function NonFunctional(props) {
       localStorage.getItem("functional")
     );
     const name_of_project = localStorage.getItem("name_of_project");
+    const id = localStorage.getItem("pdf_id");
     const type_of_project = localStorage.getItem("type_of_project");
     const name_of_client_company = localStorage.getItem(
       "name_of_client_company"
@@ -65,9 +66,10 @@ function NonFunctional(props) {
     const title = localStorage.getItem("title");
     const date = localStorage.getItem("date");
     const university = localStorage.getItem("university");
+    const scope = localStorage.getItem("scope");
     const payload = {
-      token: "d8518b03fe17f68ae1c54e2c1c85e2735a79e35a",
-      pdf_id: 13,
+      token: token,
+      pdf_id: id,
       functional_titles: functional_titles,
       functional_requirements: functional_requirements,
       non_functional_titles: nonFunctionalTitlesFromRefs,
@@ -79,8 +81,7 @@ function NonFunctional(props) {
       title: title,
       date: date,
       university: university,
-      question:
-        "betgogo is a web app that allows user to place bet between each other, this app will have a login and sign up page where users can login or register, reset their password and reset their email. It will have a profile page where users can update their profile and manage their account. there will be a friend page where users can mlanage their relationship with others. there will be a bet page where users can see their current bet, create new bets and modify existing bets. Also wanty a new thing",
+      question: scope,
     };
     console.log("Sent data:", JSON.stringify(payload));
 
@@ -124,23 +125,16 @@ function NonFunctional(props) {
   };
 
   return (
-    <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
-      <div className="isolate bg-white px-6 py-24 sm:py-3 lg:px-8">
-        <div className="mx-auto max-w-4x2 text-center mt-10">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            You can nonical Document!
-          </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-700">
-            You will receive an updated PDF file with the modifications you just
-            made.
-          </p>
-        </div>
+    <div className="w-full pl-5 pr-5 pt-10 pb-10 sm:pl-[10px] sm:pr-[10px]">
+      <div className="isolate bg-white px-6 py-24 sm:py-3 lg:px-8 border-2 rounded-md">
         <form
           onSubmit={handleSubmit}
           style={{ maxWidth: "1200px" }}
-          className="mx-auto mt-16 sm:mt-20"
+          className="mx-auto mt-8 sm:mt-10"
         >
-          <h2 className="mb-8">Non-functional Requirements</h2>
+          <h2 className="text-3xl pb-10 text-left font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Non-functional Requirements
+          </h2>
           {nonFunctionalTitlesData.map((title, index) => (
             <div
               key={rerenderToggle ? `${title}_toggled` : title}

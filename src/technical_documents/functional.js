@@ -55,23 +55,16 @@ function Functional({ moveToNext }) {
   };
 
   return (
-    <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
-      <div className="isolate bg-white px-6 py-24 sm:py-3 lg:px-8">
-        <div className="mx-auto max-w-4x2 text-center mt-10">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            You can now update your Technical Document!
-          </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-700">
-            You will receive an updated PDF file with the modifications you just
-            made.
-          </p>
-        </div>
+    <div className="w-full pl-5 pr-5 pt-10 pb-10 sm:pl-[10px] sm:pr-[10px]">
+      <div className="isolate bg-white px-6 py-24 sm:py-3 lg:px-8 border-2 rounded-md">
         <form
           onSubmit={handleSubmit}
           style={{ maxWidth: "1200px" }}
-          className="mx-auto mt-16 sm:mt-20"
+          className="mx-auto mt-8 sm:mt-10"
         >
-          <h2 className="mb-8">Functional Requirements</h2>
+          <h2 className="text-3xl pb-10 text-left font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Functional Requirements
+          </h2>
           {functionalTitlesData.map((title, index) => (
             <div
               key={rerenderToggle ? `${title}_toggled` : title}

@@ -22,7 +22,9 @@ function FrontPage({ moveToNext }) {
   const [university, setUniversity] = useState(
     localStorage.getItem("university") || ""
   );
-  const [scopeOfApp, setScopeOfApp] = useState();
+  const [scopeOfApp, setScopeOfApp] = useState(
+    localStorage.getItem("scope") || ""
+  );
   const projectTypes = ["Web Application", "Mobile Application", "Website"];
 
   const handleSubmit = (e) => {
@@ -40,23 +42,16 @@ function FrontPage({ moveToNext }) {
   };
 
   return (
-    <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
-      <div className="isolate bg-white px-6 py-24 sm:py-3 lg:px-8">
-        <div className="mx-auto max-w-4x2 text-center mt-10">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            You can update the Front Page of your Technical Document!
-          </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-700">
-            You will receive an updated PDF file with the modifications you just
-            made.
-          </p>
-        </div>
+    <div className="w-full pl-5 pr-5 pt-10 pb-10 sm:pl-[10px] sm:pr-[10px]">
+      <div className="isolate bg-white px-6 py-24 sm:py-3 lg:px-8 border-2 rounded-md">
         <form
           onSubmit={handleSubmit}
           style={{ maxWidth: "1200px" }}
-          className="mx-auto mt-16 sm:mt-20"
+          className="mx-auto mt-8 sm:mt-10"
         >
-          <h2 className="mb-8">Front Page</h2>
+          <h2 className="text-3xl text-left font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Front Page
+          </h2>
           <div className="sm:col-span-1 py-4">
             <label
               htmlFor="name_of_project"
@@ -187,7 +182,7 @@ function FrontPage({ moveToNext }) {
               />
             </div>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 pb-10">
             <button
               type="submit"
               className="inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
