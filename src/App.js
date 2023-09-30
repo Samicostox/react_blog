@@ -27,6 +27,7 @@ import Adminhome from "./adminhome";
 import Team from "./website/Team";
 import { PastProjects } from "./website/past_project";
 import UpdatePDF from "./technical_documents/updatepdf";
+import AboutUs from "./website/abous-us";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
             <Route path="/adminhome" element={<Adminhome />} />
             <Route path="/team" element={<Team />} />
             <Route path="/past-projects" element={<PastProjects />} />
+            <Route path="/about" element={<AboutUs />} />
 
             {/* Add more Routes here as needed */}
           </Routes>
