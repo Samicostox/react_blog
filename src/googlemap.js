@@ -83,8 +83,9 @@ export default function GoogleMap({ setToDoc3 }) {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Lead Generation
           </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-700">
-            Generates over 300 Cold Outreach leads in one click!
+          <p className="mt-4 text-lg leading-8 text-gray-700 mx-auto" style={{maxWidth: "1000px"}}>
+            Generates over 300 Cold Outreach leads in one click!  If you don't know how to use this tool please visit our  
+            <a onClick={() => setToDoc3()} className="text-green-500" target="_blank" rel="noopener noreferrer">  Cold Outreach Documentation</a> 
           </p>
           {error && <p className="text-center text-red-500">{error}</p>}
         </div>

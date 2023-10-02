@@ -44,10 +44,11 @@ const navigation = [
 ];
 
 const navigation2 = [
-  { name: "Doc1", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Doc2", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Doc3", href: "#", icon: DocumentDuplicateIcon, current: false },
+  { name: "Cold Approach", href: "#", icon: DocumentDuplicateIcon, current: false },
+  { name: "Venues Fetcher", href: "#", icon: DocumentDuplicateIcon, current: false },
+  { name: "Email Generation Guide", href: "#", icon: DocumentDuplicateIcon, current: false },
   { name: "Doc4", href: "#", icon: DocumentDuplicateIcon, current: false },
+ 
 ];
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
@@ -87,15 +88,15 @@ export default function Newhome() {
   }
 
   function setToDoc1() {
-    setActiveContent("Doc1");
+    setActiveContent("Cold Approach");
   }
 
   function setToDoc2() {
-    setActiveContent("Doc2");
+    setActiveContent("Venues Fetcher");
   }
 
   function setToDoc3() {
-    setActiveContent("Doc3");
+    setActiveContent("Email Generation Guide");
   }
   function setToModifyPDF() {
     setActiveContent("Modify PDF");
@@ -313,7 +314,7 @@ export default function Newhome() {
                     </div>
                     <ul role="list" className="-mx-2 space-y-1">
                       {navigation2
-                        .filter((item) => item.name.startsWith("Doc"))
+                        .filter((item) => item.name.startsWith(""))
                         .map((item) => (
                           <li key={item.name}>
                             <button
@@ -394,7 +395,7 @@ export default function Newhome() {
             {activeContent === "CSV" && <Displaycsv setToCSV={setToCSV} />}
             {activeContent === "Repo" && <Repo />}
 
-            {activeContent === "Doc1" && (
+            {activeContent === "Cold Approach" && (
               <Doc1
                 setTocold={setToCold}
                 setToCSV={setToCSV}
@@ -403,7 +404,7 @@ export default function Newhome() {
                 setToDoc3={setToDoc3}
               />
             )}
-            {activeContent === "Doc2" && (
+            {activeContent === "Venues Fetcher" && (
               <Doc2
                 setTocold={setToCold}
                 setToDoc1={setToDoc1}
@@ -411,7 +412,7 @@ export default function Newhome() {
                 setToDoc3={setToDoc3}
               />
             )}
-            {activeContent === "Doc3" && (
+            {activeContent === "Email Generation Guide" && (
               <Doc3
                 setToCSV={setToCSV}
                 setTocold={setToCold}
@@ -420,7 +421,14 @@ export default function Newhome() {
                 setToDoc3={setToDoc3}
               />
             )}
-            {activeContent === "Doc4" && <Doc1 />}
+            {activeContent === "Doc4" && <Doc1
+            setTocold={setToCold}
+            setToCSV={setToCSV}
+            setToDoc1={setToDoc1}
+            setToDoc2={setToDoc2}
+            setToDoc3={setToDoc3}
+             />}
+             
             {activeContent === "New Technical documents" && <NewPDF />}
             {activeContent === "Modify PDf" && <ModifyPDF />}
           </div>

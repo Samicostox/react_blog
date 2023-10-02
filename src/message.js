@@ -66,14 +66,15 @@ export default function Message({setToDoc3}) {
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
     
     
-  <div className="mx-auto max-w-4x2 text-center mt-10"> {/* Here's where I added `mt-10` */}
-  <Validate2Dialog open={successDialogOpen} setOpen={setSuccessDialogOpen} title = {title} />
-    <ErrorDialog setToDoc3 = {setToDoc3} open={errorDialogOpen} setOpen={setErrorDialogOpen} />
-    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Enter your google search</h2>
-    <p className="mt-2 text-lg leading-8 text-gray-700">
-      It will output you a csv file filtered thanks to an NLP algorithm with all the relevant data about your businesses
-    </p>
-  </div>
+  <div className="mx-auto max-w-4xl text-center mt-10"> {/* Adjusted max-width to be more standardized */}
+  <Validate2Dialog open={successDialogOpen} setOpen={setSuccessDialogOpen} title={title} />
+  <ErrorDialog setToDoc3={setToDoc3} open={errorDialogOpen} setOpen={setErrorDialogOpen} />
+  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Enter your google search</h2>
+  <p className="mt-4 text-lg leading-8 text-gray-700 mx-auto" style={{maxWidth: "1000px"}}>
+    It will output you a CSV file filtered thanks to an NLP algorithm with all the relevant data about your businesses. If you don't know how to use this tool please visit our  
+    <a onClick={() => setToDoc3()} className="text-green-500" target="_blank" rel="noopener noreferrer">  Email Generation Documentation</a> 
+  </p>
+</div>
       <form onSubmit={handleSubmit} style={{maxWidth: "1200px"}} className="mx-auto mt-16 sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1">
           <div className="sm:col-span-1">
