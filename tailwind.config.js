@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'alliance': ['Alliance', 'sans-serif'],
+      },
       animation: {
         ticker: 'ticker 30s infinite linear',
       },

@@ -64,7 +64,7 @@ import {
       ];
       return (
         <div className="container mx-auto py-12 mt-20">
-          <h1 className="text-center text-4xl font-bold mb-12">OUR SERVICES</h1>
+          <h1 className="text-center text-4xl text-black mb-12 font-alliance font-bold">OUR SERVICES</h1>
           <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {cards.map((card, index) => (
               <li 
@@ -78,7 +78,7 @@ import {
                         <img src={card.imageUrl} alt="card-image" />
                       </CardHeader>
                       <CardBody className="lg:h-[300px] md:h-[330px] overflow-auto">
-                        <Typography variant="h5" color="blue-gray" className="mb-2 text-left">
+                        <Typography variant="h5" color="blue-gray" className="mb-2 text-left font-alliance font-bold">
                           {card.title}
                         </Typography>
                         <div className="flex space-x-3 mb-2 mt-4"> {/* This div will contain the tech icons. */}
@@ -91,9 +91,9 @@ import {
                             />
                           ))}
                         </div>
-                        <Typography className="text-left mt-4 ">{card.description}</Typography>
+                        <Typography className="text-left mt-4 font-alliance">{card.description}</Typography>
                       </CardBody>
-                      <CardFooter className="pt-0 text-left text-green-800">
+                      <CardFooter className="pt-0 text-left text-green-800 font-alliance font-bold">
                         <Button>Read More</Button>
                       </CardFooter>
                     </Card>

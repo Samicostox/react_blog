@@ -1,0 +1,21 @@
+@font-face {
+     font-family: 'Alliance';
+     src: url('./font/AllianceNo2-Light.ttf') format('truetype'); /* Replace with the actual font file name for the light version */
+     font-weight: 300; /* 300 is equivalent to 'light' font weight */
+     font-style: normal;
+   }
+   
+   @font-face {
+     font-family: 'Alliance';
+     src: url('./font/AllianceNo2-Regular.ttf') format('truetype');
+     font-weight: normal; /* 400 is equivalent to 'normal' font weight */
+     font-style: normal;
+   }
+   
+   @font-face {
+     font-family: 'Alliance';
+     src: url('./font/AllianceNo2-SemiBold.ttf') format('truetype');
+     font-weight: bold; /* 700 is equivalent to 'bold' font weight */
+     font-style: normal;
+   }
+   

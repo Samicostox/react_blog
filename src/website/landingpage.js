@@ -220,18 +220,18 @@ export default function Landingpage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Our Year In Results
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-600">
+          <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Our Year In Results 
+          </h2>
+            <p className="mt-4 font-alliance text-lg leading-8 text-gray-600">
               This is what we achieved after only one year of hardworking and passion. 
             </p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col bg-gray-400/5 p-8">
-                <dt className="text-sm font-semibold leading-6 text-gray-600">{stat.name}</dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
+                <dt className="text-sm font-semibold leading-6 text-gray-500 font-alliance">{stat.name}</dt>
+                <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 font-alliance font-bold">{stat.value}</dd>
               </div>
             ))}
           </dl>
@@ -251,8 +251,8 @@ export default function Landingpage() {
             
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-xl sm:text-center">
-                <h2 className="text-lg font-semibold leading-8 tracking-tight text-green-700">Testimonials</h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 className="text-lg font-semibold leading-8 tracking-tight text-green-700 font-alliance font-bold">Testimonials</h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance">
                   We have worked with thousands of amazing people
                 </p>
               </div>

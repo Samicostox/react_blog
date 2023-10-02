@@ -25,7 +25,7 @@ const LogoCloud = ({ className }) => {
     <div className={`mx-auto px-6 lg:px-8 mt-20 overflow-hidden ${className}`}>
       {/* Centered title */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">They trusted us</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance font-bold">They trusted us</h2>
       </div>
   
       {/* Logo ticker */}
