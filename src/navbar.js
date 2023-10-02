@@ -45,7 +45,7 @@ const Navbar = () => {
             <span className="sr-only">Your Company</span>
             <img
               className="h-24 w-auto"
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695632928/sami8694_Minimal_logo_tech_students_network_green_logo_white_ba_e6513ada-90f3-453c-aea9-fbd2672f25a9_a0nnlk.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1696254880/Logos_1_erqpem.png"
               alt=""
             />
           </a>
