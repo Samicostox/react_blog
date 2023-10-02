@@ -89,7 +89,7 @@ export default function AboutUs() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className="relative bg-white h-screen z-2">
       <header className="bg-white">
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
