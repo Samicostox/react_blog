@@ -1,5 +1,5 @@
 import Navbar from "../navbar";
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { ChevronRightIcon,CheckCircleIcon } from "@heroicons/react/20/solid";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import {
   docco,
@@ -8,6 +8,19 @@ import {
   nord,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import tomorrowNight from "react-syntax-highlighter/dist/esm/styles/hljs/atelier-cave-dark";
+import JoinOurTeam from "./component/jointeam";
+import HeaderT from "./component/header-team";
+import StepperWithContent from "./component/stepper";
+
+
+const benefits = [
+  'Competitive salaries',
+  'Flexible work hours',
+  '30 days of paid vacation',
+  'Annual team retreats',
+  'Benefits for you and your family',
+  'A great work environment',
+]
 
 const incentives = [
   {
@@ -85,161 +98,64 @@ export default function Team() {
     <div className="bg-white py-24 sm:py-32">
       <Navbar></Navbar>
 
-      <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20 max-w-[1800px] mx-auto">
-        <div className="mx-auto max-w-14xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
-          <div className="px-6 lg:px-0 lg:pt-4 ">
-            <div className="mx-auto max-w-[1800px]">
-              <div className="max-w-full pl-16 pr-16 ">
-                {" "}
-                {/* Removed max-w-lg to make title and paragraph wider */}
-                <div className="mt-24 sm:mt-32 lg:mt-16 text-left">
-                  <a href="#" className="inline-flex space-x-6">
-                    <span className="rounded-full bg-green-600/10 px-3 py-1 text-sm leading-6 text-green-600 ring-1 ring-inset ring-green-600/10 text-left font-alliance font-bold">
-                      Our Services
-                    </span>
-                  </a>
-                </div>
-                <h1 className="mt-10 text-4xl font-alliance font-bold tracking-tight text-gray-900 sm:text-6xl text-left w-full max-w-[600px]">
-                  {" "}
-                  {/* Added w-full to make title wider */}
-                  Our Pool of Talents in the West Midlands
+      <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20  mx-auto">
+        
+        <HeaderT></HeaderT>
+
+        <div className="w-full px-4 py-24 sm:px-6 lg:px-8">
+          {" "}
+          {/* Made it full-width */}
+          <div className="rounded-2xl bg-gray-50 px-6 py-16 sm:p-16">
+            <div className="mx-auto max-w-xl lg:max-w-none">
+              <div className="text-center">
+                <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
+                  We built our business on customer service
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-600 text-left w-full font-alliance font-light">
-                  {" "}
-                  {/* Added w-full to make paragraph wider */}
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.Anim aute id magna aliqua ad ad non
-                  deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
-                  sunt amet fugiat veniam occaecat fugiat aliqua.Anim aute id
-                  magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-                  cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                  fugiat aliqua.Anim aute id magna aliqua ad ad non deserunt
-                  sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                  fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua
-                  ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-                  commodo. Elit sunt amet fugiat veniam occaecat fugiat
-                  aliqua.Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                  irure qui lorem cupidatat commodo. Elit sunt amet fugiat
-                  veniam occaecat fugiat aliqua.
-                </p>
-                <div className="mt-10 flex items-center gap-x-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 font-alliance font-bold"
-                  >
-                    Contact Us
-                  </a>
-                  <a
-                    href="#"
-                    className="text-sm font-alliance font-bold leading-6 text-gray-900"
-                  >
-                    Our Software <span aria-hidden="true ">→</span>
-                  </a>
-                </div>
               </div>
-            </div>
-          </div>
-          <div className="mt-20 sm:mt-24 md:mx-auto max-w-3xl lg:mx-0 lg:mt-0 lg:w-screen">
-            <div
-              className="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl shadow-green-600/10 ring-1 ring-green-50 md:-mr-20 lg:-mr-36"
-              aria-hidden="true"
-            />
-            <div className="shadow-lg md:rounded-3xl">
-              <div className="bg-green-600 [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
-                <div
-                  className="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-green-100 opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
-                  aria-hidden="true"
-                />
-                <div className="relative px-6 pt-8 sm:pt-16 md:pl-16 md:pr-0">
-                  <div className="mx-auto max-w-2xl md:mx-0 md:max-w-none">
-                    <div className="w-screen overflow-hidden rounded-tl-xl bg-gray-900">
-                      <div className="flex bg-gray-800/40 ring-1 ring-white/5">
-                        <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
-                          <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                            NotificationSetting.jsx
-                          </div>
-                          <div className="border-r border-gray-600/10 px-4 py-2">
-                            App.jsx
-                          </div>
-                        </div>
-                      </div>
-                      <div className="px-6 pb-14 pt-6 text-left ">
-                        {" "}
-                        {/* Added inline style to make it wider */}
-                        <SyntaxHighlighter
-                          language="react"
-                          style={tomorrowNight}
-                          customStyle={{
-                            backgroundColor: "transparent", // Set background to transparent
-                          }}
-                          codeTagProps={{
-                            style: {
-                              color: "white", // Set the text color to white
-                            },
-                          }}
-                        >
-                          {`
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div><div className="App">
-    <h1>Hello CodeSandbox</h1>
-    <h2>Start editing to see some magic happen!</h2>
-  </div>
-  );
-}
-        `}
-                        </SyntaxHighlighter>
+              <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
+                {incentives.map((incentive) => (
+                  <div
+                    key={incentive.name}
+                    className="text-center sm:flex sm:text-left lg:block lg:text-center "
+                  >
+                    <div className="sm:flex-shrink-0">
+                      <div className="flow-root">
+                        <img
+                          className="mx-auto h-16 w-16"
+                          src={incentive.imageSrc}
+                          alt=""
+                        />
                       </div>
                     </div>
+                    <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+                      <h3 className="text-sm font-medium text-gray-900 font-alliance font-bold">
+                        {incentive.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-gray-500 font-alliance font-light ">
+                        {incentive.description}
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 md:rounded-3xl"
-                    aria-hidden="true"
-                  />
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
         
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-  <div className="text-center mb-8"> {/* Moved this outside of the flex container */}
-    <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
-      Our Processes
-    </h1>
-  </div>
-  <div className="my-16 flex justify-center">
-    <img
-      src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696334276/Part_Times_1920_x_800_px_kvsdmj.png"
-      alt="Our Processes"
-      className=""
-    />
-  </div>
-</div>
 
 
-        <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
+
+  
+        
+        
+
+
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32 " />
       </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-[1800px] px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mt-20">
             Our team
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600 text-left    ">
@@ -325,45 +241,15 @@ function App() {
           ))}
         </ul>
       </div>
-      <div className="w-full px-4 py-24 sm:px-6 lg:px-8">
-          {" "}
-          {/* Made it full-width */}
-          <div className="rounded-2xl bg-gray-50 px-6 py-16 sm:p-16">
-            <div className="mx-auto max-w-xl lg:max-w-none">
-              <div className="text-center">
-                <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
-                  We built our business on customer service
-                </h1>
-              </div>
-              <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
-                {incentives.map((incentive) => (
-                  <div
-                    key={incentive.name}
-                    className="text-center sm:flex sm:text-left lg:block lg:text-center "
-                  >
-                    <div className="sm:flex-shrink-0">
-                      <div className="flow-root">
-                        <img
-                          className="mx-auto h-16 w-16"
-                          src={incentive.imageSrc}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
-                      <h3 className="text-sm font-medium text-gray-900 font-alliance font-bold">
-                        {incentive.name}
-                      </h3>
-                      <p className="mt-2 text-sm text-gray-500 font-alliance font-light ">
-                        {incentive.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+
+      <div className="mt-40">
+      
+        <JoinOurTeam ></JoinOurTeam>
+
         </div>
     </div>
+    
   );
 }
+
+

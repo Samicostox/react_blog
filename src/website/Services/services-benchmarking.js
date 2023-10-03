@@ -7,7 +7,7 @@ import Offer from '../component/offer'
 
 
 
-export default function Service_mobile() {
+export default function Service_benchmarking() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -55,7 +55,7 @@ export default function Service_mobile() {
               </div>
             </div>
             <h1 className="mt-10 max-w-x1 text-4xl font-alliance font-bold tracking-tight text-gray-900 sm:text-6xl text-left ">
-            Mobile Application Development
+            Benchmarking
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 text-left">
               Esse id magna consectetur fugiat non dolor in ad laboris magna laborum ea consequat. Nisi irure aliquip
@@ -75,7 +75,7 @@ export default function Service_mobile() {
             
              
               
-                <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696331868/Untitled_1080_x_1080_px_900_x_1080_px_1_hbkthq.png" alt="" className="mx-auto w-[33rem] max-w-full "/>
+                <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340539/4_lfxng4.png" alt="" className="mx-auto w-[35rem] max-w-full "/>
              
          
           </div>

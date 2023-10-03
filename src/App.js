@@ -28,6 +28,11 @@ import Team from "./website/Team";
 import { PastProjects } from "./website/past_project";
 import UpdatePDF from "./technical_documents/updatepdf";
 import AboutUs from "./website/abous-us";
+import Service_web from "./website/Services/services-web";
+import Service_data from "./website/Services/services-data";
+import Service_benchmarking from "./website/Services/services-benchmarking";
+import Service_businessplan from "./website/Services/services_businessplan";
+import Service_strategy from "./website/Services/services-strategy";
 
 function App() {
   return (
@@ -54,6 +59,11 @@ function App() {
             <Route path="/forgotpassword" element={<Forgotpassword />} />
             <Route path="/resetpassword" element={<Resetpassword />} />
             <Route path="/service-mobile" element={<Service_mobile />} />
+            <Route path="/service-web" element={<Service_web />} />
+            <Route path="/service-data" element={<Service_data />} />
+            <Route path="/service-benchmarking" element={<Service_benchmarking />} />
+            <Route path="/service-businessplan" element={<Service_businessplan />} />
+            <Route path="/service-strategy" element={<Service_strategy />} />
             <Route path="/contact2" element={<Contact2 />} />
             <Route path="/adminhome" element={<Adminhome />} />
             <Route path="/team" element={<Team />} />

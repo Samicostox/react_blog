@@ -7,7 +7,7 @@ import Offer from '../component/offer'
 
 
 
-export default function Service_mobile() {
+export default function Service_strategy() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -43,7 +43,7 @@ export default function Service_mobile() {
         </svg>
         <div className="max-w-[1800px] mx-auto px-6 py-24 sm:py-32 xl:flex lg:items-center lg:px-40 lg:py-40 lg:gap-x-20">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-          <div className="flex">
+            <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">We’re recruiting</span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
@@ -55,7 +55,7 @@ export default function Service_mobile() {
               </div>
             </div>
             <h1 className="mt-10 max-w-x1 text-4xl font-alliance font-bold tracking-tight text-gray-900 sm:text-6xl text-left ">
-            Mobile Application Development
+            Strategy
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 text-left">
               Esse id magna consectetur fugiat non dolor in ad laboris magna laborum ea consequat. Nisi irure aliquip
@@ -75,7 +75,7 @@ export default function Service_mobile() {
             
              
               
-                <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696331868/Untitled_1080_x_1080_px_900_x_1080_px_1_hbkthq.png" alt="" className="mx-auto w-[33rem] max-w-full "/>
+                <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340542/5_ndyarz.png" alt="" className="mx-auto w-[35rem] max-w-full "/>
              
          
           </div>

@@ -32,7 +32,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696258003/computer_svt21c.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx','spring-icon_w5s3uf','wix_kcymgx','flutter_wz2bg3','wordpress-icon-alt_zvugtj','webflow_pstet1'],
-              link: '/#service-mobile'
+              link: '/#service-web'
           },
           {
             title: 'Data Engineering',
@@ -41,7 +41,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696257232/datata_gl2sns.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
-              link: '/#service-mobile'
+              link: '/#service-data'
           },
           {
             title: 'Business Plan',
@@ -50,7 +50,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325241/11_ndpclf.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
-              link: '/#service-mobile'
+              link: '/#service-businessplan'
           },
           {
             title: 'Strategies',
@@ -59,7 +59,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325244/12_soms8p.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
-              link: '/#service-mobile'
+              link: '/#service-strategy'
           },
           {
             title: 'Benchmarking',
@@ -68,7 +68,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325237/10_hoa8by.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
-              link: '/#service-mobile'
+              link: '/#service-benchmarking'
           },
         // More cards...
       ];
