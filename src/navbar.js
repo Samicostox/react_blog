@@ -65,7 +65,7 @@ const Navbar = () => {
             <a
               key={item.name}
               onClick={() => handleNavigation(item.href, item.requiresAuth)}
-              className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+              className="text-sm leading-6 text-gray-900 cursor-pointer font-alliance"
             >
               {item.name}
             </a>
@@ -76,11 +76,11 @@ const Navbar = () => {
             <button onClick={() => {
               handleLogout();
               navigate('/');
-            }} className="text-sm font-semibold leading-6 text-gray-900">
+            }} className="text-sm font-semibold leading-6 text-gray-900 font-alliance font-bold">
               Log out <span aria-hidden="true">&rarr;</span>
             </button>
           ) : (
-            <a onClick={() => navigate("/signin")} className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer">
+            <a onClick={() => navigate("/signin")} className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer font-alliance font-bold">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           )}

@@ -41,7 +41,7 @@ import {
             description:
               'Future-proof your business with our expert strategic planning. We dive deep into market analytics and trends to craft strategies that position you for lasting success and growth.',
             imageUrl:
-              'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+              'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325241/11_ndpclf.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
           },
           {
@@ -49,7 +49,7 @@ import {
             description:
               'Stay ahead of the curve with our comprehensive benchmarking services. We will help you gauge where you stand in the market, unveiling opportunities and strategies to outperform competitors and set industry standards.',
             imageUrl:
-              'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+              'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325244/12_soms8p.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
           },
           {
@@ -57,7 +57,7 @@ import {
             description:
               'Turn your vision into a tangible roadmap with our tailored business plan services. Whether you are a startup or an established entity, our team crafts plans that attract investors and steer your business towards unparalleled success.',
             imageUrl:
-              'https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg',
+              'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325237/10_hoa8by.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
           },
         // More cards...
@@ -94,7 +94,7 @@ import {
                         <Typography className="text-left mt-4 font-alliance">{card.description}</Typography>
                       </CardBody>
                       <CardFooter className="pt-0 text-left text-green-800 font-alliance font-bold">
-                        <Button>Read More</Button>
+                        <Button>Read More <span className="ml-1 text-white" aria-hidden="true ">→</span></Button>
                       </CardFooter>
                     </Card>
                   </div>
