@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import xtype from "xtypejs";
-
+import { TrashIcon } from "@heroicons/react/20/solid";
 function NonFunctional(props) {
   const navigate = useNavigate();
 
@@ -21,6 +21,7 @@ function NonFunctional(props) {
   const nonFunctionalTitleRefs = nonFunctionalTitles.map(() => []);
 
   const [rerenderToggle, setRerenderToggle] = useState(false);
+  const [editingTitleIndex, setEditingTitleIndex] = useState(null);
 
   const handleAddField = (type, index) => {
     const nonFunctionalDataFromRefs = nonFunctionalRefs.map((refGroup) =>
@@ -39,6 +40,12 @@ function NonFunctional(props) {
   };
 
   const handleSubmit = async (e) => {
+    if (editingTitleIndex !== null) {
+      const updatedTitles = [...nonFunctionalTitlesData];
+      updatedTitles[editingTitleIndex] =
+        nonFunctionalTitleRefs[editingTitleIndex].value;
+      setNonFunctionalTitlesData(updatedTitles);
+    }
     e.preventDefault();
     const token = localStorage.getItem("token"); // Retrieve session token from local storage
 
@@ -46,9 +53,9 @@ function NonFunctional(props) {
       refGroup.map((ref) => ref.value)
     );
 
-    const nonFunctionalTitlesFromRefs = nonFunctionalTitleRefs.map(
+    /*const nonFunctionalTitlesFromRefs = nonFunctionalTitleRefs.map(
       (refGroup) => refGroup.value
-    );
+    );*/
 
     const functional_titles = JSON.parse(
       localStorage.getItem("functionalTitles")
@@ -72,7 +79,7 @@ function NonFunctional(props) {
       pdf_id: id,
       functional_titles: functional_titles,
       functional_requirements: functional_requirements,
-      non_functional_titles: nonFunctionalTitlesFromRefs,
+      non_functional_titles: JSON.stringify(nonFunctionalTitlesData),
       non_functional_requirements: nonFunctionalDataFromRefs,
       name_of_project: name_of_project,
       type_of_project: type_of_project,
@@ -113,6 +120,32 @@ function NonFunctional(props) {
     }
   };
 
+  const startEditingTitle = (index) => {
+    // If there's an active editing index, save the changes to the state
+    if (editingTitleIndex !== null && editingTitleIndex !== index) {
+      const updatedTitles = [...nonFunctionalTitlesData];
+      updatedTitles[editingTitleIndex] =
+        nonFunctionalTitleRefs[editingTitleIndex].value;
+      setNonFunctionalTitlesData(updatedTitles);
+    }
+
+    // Set the new editing index
+    setEditingTitleIndex(index);
+  };
+
+  const stopEditingTitle = () => {
+    // If there's an active editing index, save the changes to the state
+    if (editingTitleIndex !== null) {
+      const updatedTitles = [...nonFunctionalTitlesData];
+      updatedTitles[editingTitleIndex] =
+        nonFunctionalTitleRefs[editingTitleIndex].value;
+      setNonFunctionalTitlesData(updatedTitles);
+    }
+
+    // Reset the editing index
+    setEditingTitleIndex(null);
+  };
+
   const handleRemoveField = (type, sectionIndex, fieldIndex) => {
     const nonFunctionalTitlesFromRefs = nonFunctionalTitleRefs.map(
       (refGroup) => refGroup.value
@@ -140,12 +173,40 @@ function NonFunctional(props) {
               key={rerenderToggle ? `${title}_toggled` : title}
               className="sm:col-span-1 requirement-section mb-4"
             >
-              <input
-                type="text"
-                ref={(el) => (nonFunctionalTitleRefs[index] = el)}
-                defaultValue={title}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6" // Increased bottom margin here
-              />
+              {editingTitleIndex === index ? (
+                <input
+                  type="text"
+                  id={`functional_${index}`}
+                  ref={(el) => (nonFunctionalTitleRefs[index] = el)}
+                  defaultValue={title}
+                  onBlur={stopEditingTitle}
+                  className="block w-full text-2xl rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6"
+                />
+              ) : (
+                <div className="flex items-center justify-between">
+                  <h3 className="text-2xl mb-6">{title}</h3>
+                  <button
+                    type="button"
+                    onClick={() => startEditingTitle(index)}
+                    className="p-1 text-gray-500 hover:text-gray-700"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              )}
               <ul>
                 {nonFunctionalData[index].map((req, reqIndex) => (
                   <div className="flex items-center mb-2" key={reqIndex}>
@@ -164,20 +225,7 @@ function NonFunctional(props) {
                       }
                       className="ml-2  p-1 text-white"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="red"
-                        className="w-6 h-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                        />
-                      </svg>
+                      <TrashIcon className="h-6 w-6 fill-red-700" />
                     </button>
                   </div>
                 ))}

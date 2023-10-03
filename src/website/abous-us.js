@@ -11,6 +11,7 @@ import Content from "./about_us/content";
 import Timeline from "./about_us/timeline";
 import Navbar from "./navigation_bar";
 import Package from "./about_us/package_service";
+import Slider from "./about_us/slider";
 const navigation = [
   { name: "LeadGeneration", href: "/software" },
   { name: "Contact", href: "/contact2" },
@@ -124,6 +125,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+      <Slider />
       <Package />
       <Content />
       <Timeline />
