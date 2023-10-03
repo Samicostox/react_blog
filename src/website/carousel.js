@@ -40,7 +40,7 @@ const Carousel = () => {
       hiring: true,
       buttonText: "Get a Quote",
       svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: '/#service-mobile'
+      href: '/#contact2'
     },
     {
       title: "Web Development",
@@ -48,7 +48,7 @@ const Carousel = () => {
       hiring: true,
       buttonText: "Get a Quote",
       svgSource: "https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg",
-      href: '/#service-mobile'
+      href: '/#contact2'
     },
     {
       title: "Data Engineering",
@@ -56,7 +56,7 @@ const Carousel = () => {
       hiring: true,
       buttonText: "Get a Quote",
       svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: '/#service-mobile'
+      href: '/#contact2'
     },
     {
        title: "Business Dev",
@@ -64,7 +64,7 @@ const Carousel = () => {
        hiring: true,
        buttonText: "Get a Quote",
        svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-       href: '/#service-mobile'
+       href: '/#contact2'
     },
       {
         title: "Benchmarking",
@@ -72,7 +72,7 @@ const Carousel = () => {
         hiring: true,
         buttonText: "Get a Quote",
         svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-        href: '/#service-mobile'
+        href: '/#contact2'
       },
       {
         title: "Strategy",
@@ -80,7 +80,7 @@ const Carousel = () => {
         hiring: true,
         buttonText: "Get a Quote",
         svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-        href: '/#service-mobile'
+        href: '/#contact2'
       }
   ];
 

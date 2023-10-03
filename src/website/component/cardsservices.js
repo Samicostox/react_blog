@@ -11,6 +11,10 @@ import {
   
    
   export function CardDefault({ title, description, imageUrl }) {
+    function handleReadMoreClick(link) {
+      window.location.href = link;
+      window.scrollTo(0, 0);
+  }
     const cards = [
         {
           title: 'Mobile Development',
@@ -19,6 +23,7 @@ import {
           imageUrl:
             'https://res.cloudinary.com/dl2adjye7/image/upload/v1696257551/mobile_ghadoy.png',
             icons: ['react_y3ribl', 'django-icon_rxmwzx','apple_czgnk8','android-icon_l1eebj','flutter_wz2bg3'],
+            link: '/#service-mobile'
         },
         {
             title: 'Web Development',
@@ -27,6 +32,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696258003/computer_svt21c.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx','spring-icon_w5s3uf','wix_kcymgx','flutter_wz2bg3','wordpress-icon-alt_zvugtj','webflow_pstet1'],
+              link: '/#service-mobile'
           },
           {
             title: 'Data Engineering',
@@ -35,6 +41,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696257232/datata_gl2sns.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
+              link: '/#service-mobile'
           },
           {
             title: 'Business Plan',
@@ -43,6 +50,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325241/11_ndpclf.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
+              link: '/#service-mobile'
           },
           {
             title: 'Strategies',
@@ -51,6 +59,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325244/12_soms8p.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
+              link: '/#service-mobile'
           },
           {
             title: 'Benchmarking',
@@ -59,6 +68,7 @@ import {
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325237/10_hoa8by.png',
               icons: ['react_y3ribl', 'django-icon_rxmwzx'],
+              link: '/#service-mobile'
           },
         // More cards...
       ];
@@ -94,8 +104,10 @@ import {
                         <Typography className="text-left mt-4 font-alliance">{card.description}</Typography>
                       </CardBody>
                       <CardFooter className="pt-0 text-left text-green-800 font-alliance font-bold">
-                        <Button>Read More <span className="ml-1 text-white" aria-hidden="true ">→</span></Button>
-                      </CardFooter>
+    <Button onClick={() => handleReadMoreClick(card.link)}>
+        Read More <span className="ml-1 text-white" aria-hidden="true">→</span>
+    </Button>
+</CardFooter>
                     </Card>
                   </div>
                 </div>
