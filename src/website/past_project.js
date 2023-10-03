@@ -40,7 +40,7 @@ import React from 'react';
           { text: 'Django', color: 'bg-green-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503370/django-icon_rxmwzx.svg" alt="Django Icon" className="h-4 w-4" /> },
           { text: 'React', color: 'bg-blue-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="React Icon" className="h-4 w-4" /> },
           { text: 'Figma', color: 'bg-orange-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322228/figma_joejhn.svg" alt="Figma Icon" className="h-4 w-4" /> },
-          { text: 'Azure', color: 'bg-purple-200', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322583/microsoft-azure_mm7l4o.svg" alt="Azure Icon" className="h-4 w-4" /> },
+          { text: 'Azure', color: 'bg-blue-200', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322583/microsoft-azure_mm7l4o.svg" alt="Azure Icon" className="h-4 w-4" /> },
           
         ],
         description: 'UPlist is a central platform for music artists to display their work, boost online visibility, and offer services. Artists can embed videos and stream tracks, engage fans, and manage bookings with an integrated Stripe system. Listeners can easily search and filter to find top industry artists.',
@@ -50,7 +50,11 @@ import React from 'react';
         title: 'Nuzones',
         link: 'https://google.com',
         tags: [
-          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png" alt="Web App Icon" className="h-4 w-4" /> }
+          { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png" alt="Web App Icon" className="h-4 w-4" /> },
+          { text: 'React', color: 'bg-blue-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="React Icon" className="h-4 w-4" /> },
+          { text: 'Django', color: 'bg-green-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503370/django-icon_rxmwzx.svg" alt="Django Icon" className="h-4 w-4" /> },
+          { text: 'Figma', color: 'bg-orange-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322228/figma_joejhn.svg" alt="Figma Icon" className="h-4 w-4" /> },
+          { text: 'Heroku', color: 'bg-purple-200', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322208/heroku-icon_t8pyfm.svg" alt="Heroku Icon" className="h-4 w-4" /> },
         ],
         description: 'NuZones is a web app that guides cyclists to prime biking spots in their area. Users join a community, contribute by listing new locations, and access a detailed UK-wide biking directory. By fostering collaboration, the platform elevates the cycling experience for everyone involved.',
         imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582741/3_apm9xl.png',
@@ -60,7 +64,10 @@ import React from 'react';
         link: 'https://google.com',
         tags: [
           { text: 'Web App', color: 'bg-red-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png" alt="Web App Icon" className="h-4 w-4" /> },
-          { text: 'Springboot', color: 'bg-orange-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503536/spring-icon_w5s3uf.svg" alt="Springboot Icon" className="h-4 w-4" /> }
+          { text: 'Flutter', color: 'bg-cyan-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696255935/flutter_wz2bg3.svg" alt="Flutter Icon" className="h-4 w-4" /> },
+          { text: 'Figma', color: 'bg-orange-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322228/figma_joejhn.svg" alt="Figma Icon" className="h-4 w-4" /> },
+          
+          
         ],
         description: 'VDBCook is a dedicated web app for a renowned personal chef, offering users the opportunity to book bespoke culinary services. Browse through curated menus, set appointments, and indulge in a unique dining experience right at home. Its gourmet cuisine, personalized to your taste.',
         imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582741/5_mmavil.png',
@@ -70,7 +77,7 @@ import React from 'react';
         link: 'https://google.com',
         tags: [
           { text: 'Strategy', color: 'bg-pink-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583592/strategy_b6dcym.png" alt="Web App Icon" className="h-4 w-4" /> },
-          { text: 'React', color: 'bg-blue-100', icon: <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" alt="React Icon" className="h-4 w-4" /> }
+          
         ],
         description: "Vanguard sought expert services to craft precise technical documents tailored to their specific domain. With meticulous attention to detail, comprehensive guides, manuals, and schematics were delivered, ensuring clarity and accuracy for their operational needs.",
         imageUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1695582979/UoBjuniorsolutions.weblow.io_1080_x_700_px_fp29em.png',

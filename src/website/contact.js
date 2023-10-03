@@ -85,10 +85,10 @@ export default function Contact2() {
         {/* Added padding for small screens and removed image for small screens */}
         <div className="px-4 sm:px-16 lg:px-16 mt-28">
           <div className="lg:max-w-4xl">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 text-left">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 text-left font-alliance font-bold">
               Let's work together
             </h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600 text-left">
+            <p className="mt-2 text-lg leading-8 text-gray-600 text-left font-alliance font-light">
               Proin volutpat consequat porttitor cras nullam gravida at orci
               molestie a eu arcu sed ut tincidunt magna.
             </p>
@@ -102,7 +102,7 @@ export default function Contact2() {
                 >
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-1"> {/* Changed to 1 column for larger screens */}
                   <div>
-                    <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900 text-left">
+                    <label htmlFor="first-name" className="block text-sm font-alliance font-bold leading-6 text-gray-900 text-left">
                       First name
                     </label>
                     <div className="mt-2.5">
@@ -119,7 +119,7 @@ export default function Contact2() {
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900 text-left">
+                    <label htmlFor="last-name" className="block text-sm font-alliance font-bold leading-6 text-gray-900 text-left">
                       Last name
                     </label>
                     <div className="mt-2.5">
@@ -136,7 +136,7 @@ export default function Contact2() {
                     </div>
                   </div>
                   <div className="sm:col-span-2">
-                    <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900 text-left">
+                    <label htmlFor="email" className="block text-sm font-alliance font-bold leading-6 text-gray-900 text-left">
                       Email
                     </label>
                     <div className="mt-2.5">
@@ -148,12 +148,12 @@ export default function Contact2() {
                         autoComplete="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6 font-alliance font-bold"
                       />
                     </div>
                   </div>
                   <div className="sm:col-span-2">
-                    <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900 text-left">
+                    <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900 text-left font-alliance font-bold">
                       Company
                     </label>
                     <div className="mt-2.5">
@@ -164,13 +164,13 @@ export default function Contact2() {
                         required  
                         value={formData.company}
                         onChange={handleChange}
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6 font-alliance font-bold"
                       />
                     </div>
                   </div>
                   <div className="sm:col-span-2">
                     <div className="flex justify-between text-sm leading-6">
-                      <label htmlFor="phone" className="block font-semibold text-gray-900 text-left">
+                      <label htmlFor="phone" className="block font-semibold text-gray-900 text-left font-alliance font-bold">
                         Phone
                       </label>
                       <p id="phone-description" className="text-gray-400">
@@ -193,11 +193,11 @@ export default function Contact2() {
                   </div>
                   <div className="sm:col-span-2">
                     <div className="flex justify-between text-sm leading-6">
-                      <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+                      <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900 font-alliance font-bold">
                         How can we help you?
                       </label>
                       <p id="message-description" className="text-gray-400">
-                        Max 500 characters
+                        Max 2000 characters
                       </p>
                     </div>
                     <div className="mt-2.5">
@@ -215,55 +215,55 @@ export default function Contact2() {
                     </div>
                   </div>
                   <fieldset className="sm:col-span-2">
-                    <legend className="block text-sm font-semibold leading-6 text-gray-900 text-left">Expected budget</legend>
+                    <legend className="block text-sm font-semibold leading-6 text-gray-900 text-left font-alliance font-bold">Expected budget</legend>
                     <div className="mt-4 space-y-4 text-sm leading-6 text-gray-600">
                         <div className="flex gap-x-2.5">
                         <input
                             id="budget-under-25k"
                             name="budget"
                             value="under_25k"
-                            checked={formData.budget === 'under_25k'}
+                            checked={formData.budget === '1000k'}
                             onChange={handleChange}
                             type="radio"
-                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
+                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600 font-alliance font-bold"
                         />
-                        <label htmlFor="budget-under-25k">Less than $25K</label>
+                        <label htmlFor="budget-under-25k">Less than £1,000</label>
                         </div>
                         <div className="flex gap-x-2.5">
                         <input
                             id="budget-25k-50k"
                             name="budget"
                             value="25k-50k"
-                            checked={formData.budget === '25k-50k'}
+                            checked={formData.budget === '1K-5K'}
                             onChange={handleChange}
                             type="radio"
-                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
+                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600 font-alliance font-bold"
                         />
-                        <label htmlFor="budget-25k-50k">$25K – $50K</label>
+                        <label htmlFor="budget-25k-50k">£1,000 – £5,000</label>
                         </div>
                         <div className="flex gap-x-2.5">
                         <input
                             id="budget-50k-100k"
                             name="budget"
                             value="50k-100k"
-                            checked={formData.budget === '50k-100k'}
+                            checked={formData.budget === '5k-10k'}
                             onChange={handleChange}
                             type="radio"
-                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
+                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600 font-alliance font-bold"
                         />
-                        <label htmlFor="budget-50k-100k">$50K – $100K</label>
+                        <label htmlFor="budget-50k-100k">£5,000 – £10,000</label>
                         </div>
                         <div className="flex gap-x-2.5">
                         <input
                             id="budget-over-100k"
                             name="budget"
                             value="over_100k"
-                            checked={formData.budget === 'over_100k'}
+                            checked={formData.budget === 'over_10k'}
                             onChange={handleChange}
                             type="radio"
-                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600"
+                            className="mt-1 h-4 w-4 border-gray-300 text-green-600 shadow-sm focus:ring-green-600 font-alliance font-bold"
                         />
-                        <label htmlFor="budget-over-100k">$100K+</label>
+                        <label htmlFor="budget-over-100k">£10,000+</label>
                         </div>
                     </div>
                     </fieldset>
