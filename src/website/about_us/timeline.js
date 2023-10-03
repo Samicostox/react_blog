@@ -1,31 +1,31 @@
 const timeline = [
   {
-    name: "Founded company",
+    name: "Birmingham Innovation Studio",
     description:
-      "Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.",
-    date: "Aug 2021",
-    dateTime: "2021-08",
+      "After completing several summer internships and recognizing the gap between theoretical knowledge gained at university and the practical skills demanded in the industry, we launched our first Innovation Studio at the University of Birmingham.",
+    date: "Aug 2022",
+    dateTime: "2022-08",
   },
   {
-    name: "Secured $65m in funding",
+    name: "Services and Client Satisfaction",
     description:
-      "Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.",
-    date: "Dec 2021",
-    dateTime: "2021-12",
+      "In under a year, we've made significant strides by successfully completing 10 projects in collaboration with 8 companies, assisting them in launching their MVPs or improving their opperations. ",
+    date: "Jul 2023",
+    dateTime: "2023-01",
   },
   {
-    name: "Released beta",
+    name: "Warwick Innovation Studio",
     description:
-      "Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.",
-    date: "Feb 2022",
-    dateTime: "2022-02",
+      "Our new Innovation Studio at the University of Warwick highlights our commitment to connecting academia and industry. Staffed by Warwick students, the studio offers them hands-on experience while giving businesses access to emerging talent, fostering a win-win partnership.",
+    date: "Aug 2023",
+    dateTime: "2023-07",
   },
   {
-    name: "Global launch of product",
+    name: "Software Launch",
     description:
-      "Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.",
-    date: "Dec 2022",
-    dateTime: "2022-12",
+      "We're gearing up to release our new software, streamlining everything from lead generation to project management, boosting our team's efficiency",
+    date: "Oct 2023",
+    dateTime: "2023-10",
   },
 ];
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
+import { PencilIcon } from "@heroicons/react/solid";
 import {
   CheckIcon,
   ChevronUpDownIcon,
@@ -150,6 +151,11 @@ export default function DisplayPDF({ setToPDF }) {
     }
   };
 
+  const handleUpdateClick = (e, pdfFile) => {
+    e.stopPropagation(); // Prevents triggering click events on parent elements
+    updatePDF(pdfFile); // You might already have a function to handle updates
+  };
+
   return (
     <div className="w-full pl-5 pr-5 sm:pl-[100px] sm:pr-[100px]">
       <Verify
@@ -199,6 +205,73 @@ export default function DisplayPDF({ setToPDF }) {
                 <p className="mt-2 text-lg leading-8 text-gray-700">
                   Here are all the PDF files you've uploaded.
                 </p>
+
+                {/* Filtering and Sorting System */}
+                <div className="border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-20">
+                  <h3 className="text-base font-semibold leading-6 text-gray-900">
+                    Filter PDF Files
+                  </h3>
+                  <div className="relative mt-3 sm:ml-4 sm:mt-0">
+                    <label htmlFor="search-csv" className="sr-only">
+                      Search
+                    </label>
+                    <div className="flex rounded-md shadow-sm">
+                      <div className="flex rounded-md shadow-sm">
+                        <div className="relative flex-grow focus-within:z-10">
+                          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <MagnifyingGlassIcon
+                              className="h-5 w-5 text-gray-400"
+                              aria-hidden="true"
+                            />
+                          </div>
+                          <input
+                            type="text"
+                            name="search-candidate"
+                            id="search-candidate"
+                            className="block w-full rounded-md border-0 py-1.5 pl-10 text-sm leading-6 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700"
+                            placeholder="Search PDF"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                          />
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                        onClick={() => setShowSortMenu(!showSortMenu)}
+                      >
+                        <BarsArrowUpIcon
+                          className="-ml-0.5 h-5 w-5 text-gray-400"
+                          aria-hidden="true"
+                        />
+                        Sort
+                        <ChevronDownIcon
+                          className="-mr-1 h-5 w-5 text-gray-400"
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </div>
+                    {showSortMenu && (
+                      <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+                        <ul className="space-y-2">
+                          {categories.map((category) => (
+                            <li key={category.id}>
+                              <button
+                                onClick={() => {
+                                  setSelectedCategory(category);
+                                  setShowSortMenu(false);
+                                }}
+                                className="block w-full text-left px-4 py-2 text-sm"
+                              >
+                                {category.name}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
 
               {filteredFiles.length === 0 ? (
@@ -210,73 +283,6 @@ export default function DisplayPDF({ setToPDF }) {
                 </div>
               ) : (
                 <>
-                  {/* Filtering and Sorting System */}
-                  <div className="border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-20">
-                    <h3 className="text-base font-semibold leading-6 text-gray-900">
-                      Filter PDF Files
-                    </h3>
-                    <div className="relative mt-3 sm:ml-4 sm:mt-0">
-                      <label htmlFor="search-csv" className="sr-only">
-                        Search
-                      </label>
-                      <div className="flex rounded-md shadow-sm">
-                        <div className="flex rounded-md shadow-sm">
-                          <div className="relative flex-grow focus-within:z-10">
-                            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                              <MagnifyingGlassIcon
-                                className="h-5 w-5 text-gray-400"
-                                aria-hidden="true"
-                              />
-                            </div>
-                            <input
-                              type="text"
-                              name="search-candidate"
-                              id="search-candidate"
-                              className="block w-full rounded-md border-0 py-1.5 pl-10 text-sm leading-6 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700"
-                              placeholder="Search PDF"
-                              value={searchQuery}
-                              onChange={(e) => setSearchQuery(e.target.value)}
-                            />
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                          onClick={() => setShowSortMenu(!showSortMenu)}
-                        >
-                          <BarsArrowUpIcon
-                            className="-ml-0.5 h-5 w-5 text-gray-400"
-                            aria-hidden="true"
-                          />
-                          Sort
-                          <ChevronDownIcon
-                            className="-mr-1 h-5 w-5 text-gray-400"
-                            aria-hidden="true"
-                          />
-                        </button>
-                      </div>
-                      {showSortMenu && (
-                        <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
-                          <ul className="space-y-2">
-                            {categories.map((category) => (
-                              <li key={category.id}>
-                                <button
-                                  onClick={() => {
-                                    setSelectedCategory(category);
-                                    setShowSortMenu(false);
-                                  }}
-                                  className="block w-full text-left px-4 py-2 text-sm"
-                                >
-                                  {category.name}
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
                   <ul
                     role="list"
                     className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8 mt-16 sm:mt-20"
@@ -327,7 +333,27 @@ export default function DisplayPDF({ setToPDF }) {
                               </dd>
                             </div>
                           </dl>
-
+                          <button
+                            onClick={() => {
+                              setSelectedPdf(pdfFile);
+                            }}
+                            className="absolute top-2 right-8 m-2" // Adjust the position as per your design
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="w-6 h-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+                              />
+                            </svg>
+                          </button>
                           <button
                             onClick={(e) => {
                               e.stopPropagation(); // Prevents the modal from opening when the trash icon is clicked

@@ -10,11 +10,6 @@ export default function Content() {
           <div className="px-6 lg:px-0 lg:pt-4">
             <div className="mx-auto max-w-2xl">
               <div className="max-w-lg">
-                <img
-                  className="h-11"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt="Your Company"
-                />
                 <div className="mt-24 sm:mt-32 lg:mt-16">
                   <a href="#" className="inline-flex space-x-6">
                     <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
@@ -29,13 +24,16 @@ export default function Content() {
                     </span>
                   </a>
                 </div>
-                <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-left">
-                  Supercharge your web applications
+                <h1 className="mt-10 text-left text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl ">
+                  The right talents for your projects
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600 text-left">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
+                  Based in United Kingdom's Universities, Innovation Studios is
+                  a student-led consulting firm offering a blend of technical
+                  and business services at competitive rates. Our mission is to
+                  equip university students with valuable, paid work experience.
+                  At the same time, we aim to give you access to the brightest
+                  emerging talents across various disciplines.
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a

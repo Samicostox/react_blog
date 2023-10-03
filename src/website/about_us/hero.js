@@ -10,7 +10,7 @@ export default function Hero() {
     await loadFull(main);
   };
   return (
-    <div className="relative bg-black z-2 overflow-hidden">
+    <div className="relative bg-black z-2 overflow-hidden -mt-200">
       <div className="relative isolate overflow-hidden pt-14">
         <img
           src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696091538/mfejpnzaoaiiiv9sygg8.jpg"
