@@ -7,7 +7,7 @@ const HeaderT = () => {
         <div className="mx-auto max-w-14xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40 max-w-[1800px] ">
           <div className="px-6 lg:px-0 lg:pt-4 ">
             <div className="mx-auto max-w-[1800px]">
-              <div className="max-w-full px-6 lg:px-8 pr-16 "> {/* Modified this line */}
+              <div className="max-w-full px-6 lg:px-8  "> {/* Modified this line */}
                 {" "}
                 {/* Removed max-w-lg to make title and paragraph wider */}
                 <div className="mt-24 sm:mt-32 lg:mt-16 text-left">
@@ -29,8 +29,7 @@ const HeaderT = () => {
                   qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                   occaecat fugiat aliqua.Anim aute id magna aliqua ad ad non
                   deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
-                  sunt amet fugiat veniam occaecat fugiat aliqua.Anim aute id
-                  magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+                  sunt amet fugiat veniam occaecat
                   cupidatat commodo. Elit sunt amet fugiat veniam occaecat
                   fugiat aliqua.Anim aute id magna aliqua ad ad non deserunt
                   sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet

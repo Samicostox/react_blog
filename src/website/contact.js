@@ -281,6 +281,7 @@ export default function Contact2() {
             </div>
           </div>
         </div>
+        
       </div>
     )
   }

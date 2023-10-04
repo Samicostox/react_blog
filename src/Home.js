@@ -8,7 +8,8 @@ import Chatbot from "react-chatbot-kit";
 
 import Section2 from "./section2";
 import CTA from "./CTA";
-import Footer from "./footer";
+import Footer from "./website/footer";
+
 
 
 
@@ -34,8 +35,7 @@ const Home = () => {
             <Content></Content>
             <Section2></Section2>
             <CTA></CTA>
-            <Footer></Footer>
-            
+            <Footer></Footer>            
             
             {/* Add the Chatbot component here */}
             

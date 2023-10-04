@@ -28,6 +28,7 @@ import Header from './header'
 import LogoCloud from './logocloud'
 import Hero from './hero'
 import { CardDefault } from './component/cardsservices'
+import Footer from './footer'
 
 
 
@@ -317,6 +318,8 @@ export default function Landingpage() {
           </div>
         </div>
       </main>
+
+      <Footer></Footer>
 
       {/* Footer */}
       

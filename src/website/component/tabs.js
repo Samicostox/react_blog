@@ -8,6 +8,7 @@ import {
 } from "@material-tailwind/react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Tab1, Tab2, Tab3, Tab4, Tab5 } from "./tabs_component/tab1";
+import { CardDefault } from "./cardsservices";
 
 export function TabsWithIcon() {
   const [activeTab, setActiveTab] = useState("We Train");
@@ -18,14 +19,14 @@ export function TabsWithIcon() {
       component: <Tab1 />,
     },
     {
-      label: "2. Training",
+      label: "2. Trainings",
       value: "react",
       component: <Tab2 />,
     },
     {
-      label: "3. Projects",
+      label: "3. Projects.",
       value: "vue",
-      component: <Tab3 />,
+      component: <CardDefault/>,
     },
     {
       label: "4. Employement",
@@ -33,7 +34,7 @@ export function TabsWithIcon() {
       component: <Tab4 />,
     },
     {
-      label: "5. Graduate",
+      label: "5. Benefits",
       value: "svelte",
       component: <Tab5 />,
     },
@@ -53,18 +54,18 @@ export function TabsWithIcon() {
         className="rounded-none border-b border-blue-gray-50 bg-transparent p-0 mt-20"
         indicatorProps={{
           className:
-            "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
+            "bg-transparent border-b-2 border-green-700 shadow-none rounded-none",
         }}
       >
         {data.map(({ label, value }) => (
-          <Tab
-            key={value}
-            value={value}
-            onClick={() => setActiveTab(value)}
-            className={activeTab === value ? "text-gray-900" : ""}
-          >
-            {label}
-          </Tab>
+           <Tab
+           key={value}
+           value={value}
+           onClick={() => setActiveTab(value)}
+           className={`text-xs md:text-base ${activeTab === value ? "text-gray-900" : ""}`}
+         >
+           {label}
+         </Tab>
         ))}
       </TabsHeader>
       <TabsBody>

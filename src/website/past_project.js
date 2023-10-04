@@ -7,6 +7,7 @@ import {
     Typography,
     Button,
   } from "@material-tailwind/react";
+import Footer from "./footer";
 import Navbar from '../navbar';
 
 
@@ -136,6 +137,8 @@ import React from 'react';
               </li>
             ))}
           </ul>
+
+          <Footer></Footer>
         </div>
       );
     }

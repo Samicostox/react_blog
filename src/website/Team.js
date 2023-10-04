@@ -12,6 +12,7 @@ import JoinOurTeam from "./component/jointeam";
 import HeaderT from "./component/header-team";
 import StepperWithContent from "./component/stepper";
 import { TabsWithIcon } from "./component/tabs";
+import Footer from "./footer";
 
 
 const benefits = [
@@ -103,24 +104,24 @@ export default function Team() {
         
         <HeaderT></HeaderT>
 
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ width: '1700px', height: '1px', backgroundColor: 'black', marginLeft: '45px', marginRight: '45px' }}></div>
-      </div>
-
-
+        
+        
        
 
         <div className="mx-auto max-w-[1800px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32 mt-10">
 
+        <div style={{ height: '1px', backgroundColor: 'black',}}></div>
+
+          
+        <div className="mt-10">
         <TabsWithIcon></TabsWithIcon>
 
         </div>
 
+        </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ width: '1700px', height: '1px', backgroundColor: 'black', marginLeft: '45px', marginRight: '45px' }}></div>
-      </div>
 
+        
 
 
   
@@ -129,8 +130,10 @@ export default function Team() {
 
 
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32 " />
+
       </div>
       <div className="mx-auto max-w-[1800px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32">
+      <div style={{ height: '1px', backgroundColor: 'black',}}></div>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mt-10 font-alliance">
             Our team
@@ -218,52 +221,19 @@ export default function Team() {
           ))}
         </ul>
       </div>
+      
 
-      <div className="w-full px-4 py-24 sm:px-6 lg:px-8">
-          {" "}
-          {/* Made it full-width */}
-          <div className="rounded-2xl bg-gray-50 px-6 py-16 sm:p-16">
-            <div className="mx-auto max-w-xl lg:max-w-none">
-              <div className="text-center">
-                <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
-                  We built our business on customer service
-                </h1>
-              </div>
-              <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
-                {incentives.map((incentive) => (
-                  <div
-                    key={incentive.name}
-                    className="text-center sm:flex sm:text-left lg:block lg:text-center "
-                  >
-                    <div className="sm:flex-shrink-0">
-                      <div className="flow-root">
-                        <img
-                          className="mx-auto h-16 w-16"
-                          src={incentive.imageSrc}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
-                      <h3 className="text-sm font-medium text-gray-900 font-alliance font-bold">
-                        {incentive.name}
-                      </h3>
-                      <p className="mt-2 text-sm text-gray-500 font-alliance font-light ">
-                        {incentive.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+      
 
-      <div className="mt-40">
+      <div className="mt-20">
       
         <JoinOurTeam ></JoinOurTeam>
 
         </div>
+
+        <Footer></Footer>
+
+        
     </div>
     
   );

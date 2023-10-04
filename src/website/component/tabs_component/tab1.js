@@ -1,5 +1,5 @@
 import React from "react";
-import { InboxIcon, TrashIcon, UsersIcon,CheckIcon  } from '@heroicons/react/24/outline'
+import { InboxIcon, TrashIcon, UsersIcon,CheckIcon,AcademicCapIcon,BanknotesIcon,CheckBadgeIcon,ReceiptRefundIcon,ClockIcon  } from '@heroicons/react/24/outline'
 
 const features = [
     {
@@ -28,7 +28,7 @@ const features = [
 function Tab1() {
     return (
         <div className="bg-white py-24 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl  lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance">
                 Stay on top of customer support
@@ -73,7 +73,7 @@ const stats = [
 function Tab2() {
     return (
         <div className="bg-white py-24 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl  lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pr-4">
                 <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
@@ -166,14 +166,106 @@ function Tab2() {
       )
 }
 
-function Tab3() {
-  return (
-    <div className="p-4 bg-green-200 rounded-md">
-      <h2 className="text-xl font-bold">Tab 3</h2>
-      <p>This is the content for Tab 3. It's a green box!</p>
-    </div>
-  );
-}
+const actions = [
+    {
+      title: 'Experience',
+      href: '/#contact2',
+      icon: ClockIcon,
+      iconForeground: 'text-teal-700',
+      iconBackground: 'bg-teal-50',
+    },
+    {
+      title: 'Training',
+      href: '/#contact2',
+      icon: CheckBadgeIcon,
+      iconForeground: 'text-purple-700',
+      iconBackground: 'bg-purple-50',
+    },
+    {
+      title: 'Support',
+      href: '/#contact2',
+      icon: UsersIcon,
+      iconForeground: 'text-sky-700',
+      iconBackground: 'bg-sky-50',
+    },
+    {
+      title: 'compensation',
+      href: '/#contact2',
+      icon: BanknotesIcon,
+      iconForeground: 'text-yellow-700',
+      iconBackground: 'bg-yellow-50',
+    },
+    {
+      title: 'Career',
+      href: '/#contact2',
+      icon: ReceiptRefundIcon,
+      iconForeground: 'text-rose-700',
+      iconBackground: 'bg-rose-50',
+    },
+    {
+      title: 'Community',
+      href: '/#contact2',
+      icon: AcademicCapIcon,
+      iconForeground: 'text-indigo-700',
+      iconBackground: 'bg-indigo-50',
+    },
+  ]
+  
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+
+function Tab5() {
+    return (
+        <div className="divide-y divide-gray-400 overflow-hidden rounded-lg bg-gray-200 shadow-lg sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0 mt-20 max-w-7xl mx-auto border border-gray-300">
+          {actions.map((action, actionIdx) => (
+            <div
+              key={action.title}
+              className={classNames(
+                actionIdx === 0 ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none' : '',
+                actionIdx === 1 ? 'sm:rounded-tr-lg' : '',
+                actionIdx === actions.length - 2 ? 'sm:rounded-bl-lg' : '',
+                actionIdx === actions.length - 1 ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none' : '',
+                'group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-green-700 text-left shadow-sm'
+              )}
+            >
+              <div>
+                <span
+                  className={classNames(
+                    action.iconBackground,
+                    action.iconForeground,
+                    'inline-flex rounded-lg p-3 ring-4 ring-white text-left'
+                  )}
+                >
+                  <action.icon className="h-6 w-6 text-left" aria-hidden="true" />
+                </span>
+              </div>
+              <div className="mt-8">
+                <h3 className="text-base font-semibold leading-6 text-gray-900 text-left">
+                  <a href={action.href} className="focus:outline-none text-left font-alliance">
+                    {/* Extend touch target to entire panel */}
+                    <span className="absolute inset-0 text-left font-alliance" aria-hidden="true" />
+                    {action.title}
+                  </a>
+                </h3>
+                <p className="mt-2 text-sm text-gray-500 text-left font-alliance font-light">
+                  Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et
+                  quo et molestiae.
+                </p>
+              </div>
+              <span
+                className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400"
+                aria-hidden="true"
+              >
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
+                </svg>
+              </span>
+            </div>
+          ))}
+        </div>
+    )
+                  }
 
 const tiers = [
     {
@@ -218,14 +310,12 @@ const tiers = [
   ]
 
   
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+
 
 function Tab4() {
   return (
     <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl  lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-base font-semibold leading-7 text-green-600 font-alliance">Approach</h2>
           <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-alliance">
@@ -298,7 +388,7 @@ function Tab4() {
   );
 }
 
-function Tab5() {
+function Tab3() {
   return (
     <div className="p-4 bg-purple-200 rounded-md">
       <h2 className="text-xl font-bold">Tab 5</h2>
