@@ -5,10 +5,12 @@ import Contact from "./contactus";
 import Navbar from "./navbar";
 import Content from "./content";
 import Chatbot from "react-chatbot-kit";
+import Navbarv2 from "./navbarv2";
 
 import Section2 from "./section2";
 import CTA from "./CTA";
 import Footer from "./website/footer";
+import CTA2 from "./CTA2";
 
 
 
@@ -28,13 +30,13 @@ const Home = () => {
 
     return ( 
         <div className="home">
-            <Navbar></Navbar>
+            <Navbarv2></Navbarv2>
             <Example></Example>
             
             
             <Content></Content>
             <Section2></Section2>
-            <CTA></CTA>
+            <CTA2></CTA2>
             <Footer></Footer>            
             
             {/* Add the Chatbot component here */}

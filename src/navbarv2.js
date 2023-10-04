@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -9,11 +9,10 @@ const navigation = [
   { name: 'Software', href: '/newhome' },
   { name: 'Team', href: '/team' },
   { name: 'Past Projects', href: '/past-projects' },
-  
 ];
 
-const Navbar = () => {
-  const navigate = useNavigate();  // Initialize useNavigate
+const Navbarv2 = () => {
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -31,7 +30,7 @@ const Navbar = () => {
 
   const handleNavigation = (href, requiresAuth) => {
     if (requiresAuth && !isLoggedIn) {
-      navigate('/signin');  // Redirect to login if not authenticated
+      navigate('/signin');
       return;
     }
     navigate(href);
@@ -71,18 +70,19 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
+          <button onClick={() => navigate("/join")} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">Join In</button>
           {isLoggedIn ? (
             <button onClick={() => {
               handleLogout();
               navigate('/');
-            }} className="text-sm font-semibold leading-6 text-gray-900 font-alliance font-bold">
-              Log out <span aria-hidden="true">&rarr;</span>
+            }} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">
+              Log out <span className="text-white" aria-hidden="true">&rarr;</span>
             </button>
           ) : (
-            <a onClick={() => navigate("/signin")} className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer font-alliance font-bold">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            <button onClick={() => navigate("/signin")} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">
+              Log in <span className="text-white" aria-hidden="true">&rarr;</span>
+            </button>
           )}
         </div>
       </nav>
@@ -94,7 +94,7 @@ const Navbar = () => {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-24 w-auto"
-                src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1696254880/Logos_1_erqpem.png"
+                src="https://res.cloudinary.com/dl2adjye7/image/upload/v1693234097/leads10_jsebfk.png"
                 alt=""
               />
             </a>
@@ -120,21 +120,22 @@ const Navbar = () => {
                   </a>
                 ))}
               </div>
-              <div className="py-6">
+              <div className="py-6 space-y-4">
+                <button onClick={() => navigate("/join")} className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2">Join In</button>
                 {isLoggedIn ? (
                   <button
                     onClick={handleLogout}
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
                   >
-                    Log out
+                    Log out <span className="text-white" aria-hidden="true">&rarr;</span>
                   </button>
                 ) : (
-                  <a
+                  <button
                     onClick={() => navigate("/signin")}
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer "
+                    className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
                   >
-                    Log in
-                  </a>
+                    Log in <span className="text-white" aria-hidden="true">&rarr;</span>
+                  </button>
                 )}
               </div>
             </div>
@@ -143,7 +144,6 @@ const Navbar = () => {
       </Dialog>
     </header>
   );
+};
 
- };
-
-  export default Navbar;
+export default Navbarv2;

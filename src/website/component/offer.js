@@ -2,7 +2,7 @@ const steps = [
   {
     name: 'Requirement Gathering',
     description: 'Understanding the needs and requirements of the mobile application.Understanding the needs and requirements of the mobile application.Understanding the needs and requirements of the mobile application.',
-    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
+    imageSrc: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1696437699/sheet_wlghil.png',
   },
   {
     name: 'Design',
@@ -41,7 +41,7 @@ export default function Offer() {
             <div key={step.name} className="text-center sm:flex sm:text-left lg:block lg:text-center">
               <div className="sm:flex-shrink-0">
                 <div className="flow-root">
-                  <img className="mx-auto h-24 w-28" src={step.imageSrc} alt="" />
+                  <img className="mx-auto h-16 w-1-" src={step.imageSrc} alt="" />
                 </div>
               </div>
               <div className="mt-3 sm:ml-3 sm:mt-0 lg:ml-0 lg:mt-3">
