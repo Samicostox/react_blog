@@ -43,13 +43,13 @@ export default function Service_web() {
         </svg>
         <div className="max-w-[1800px] mx-auto px-6 py-24 sm:py-32 xl:flex lg:items-center lg:px-40 lg:py-40 lg:gap-x-20">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            <div className="flex">
+          <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                <span className="font-semibold text-green-600">We’re hiring</span>
+                <span className="font-semibold text-green-600">We’re recruiting</span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="#" className="flex items-center gap-x-1">
                   <span className="absolute inset-0" aria-hidden="true" />
-                  See open positions
+                  Join the team
                   <ChevronRightIcon className="-mr-2 h-5 w-5 text-gray-400" aria-hidden="true" />
                 </a>
               </div>

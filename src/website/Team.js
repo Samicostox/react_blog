@@ -11,6 +11,7 @@ import tomorrowNight from "react-syntax-highlighter/dist/esm/styles/hljs/atelier
 import JoinOurTeam from "./component/jointeam";
 import HeaderT from "./component/header-team";
 import StepperWithContent from "./component/stepper";
+import { TabsWithIcon } from "./component/tabs";
 
 
 const benefits = [
@@ -102,47 +103,23 @@ export default function Team() {
         
         <HeaderT></HeaderT>
 
-        <div className="w-full px-4 py-24 sm:px-6 lg:px-8">
-          {" "}
-          {/* Made it full-width */}
-          <div className="rounded-2xl bg-gray-50 px-6 py-16 sm:p-16">
-            <div className="mx-auto max-w-xl lg:max-w-none">
-              <div className="text-center">
-                <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
-                  We built our business on customer service
-                </h1>
-              </div>
-              <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
-                {incentives.map((incentive) => (
-                  <div
-                    key={incentive.name}
-                    className="text-center sm:flex sm:text-left lg:block lg:text-center "
-                  >
-                    <div className="sm:flex-shrink-0">
-                      <div className="flow-root">
-                        <img
-                          className="mx-auto h-16 w-16"
-                          src={incentive.imageSrc}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
-                      <h3 className="text-sm font-medium text-gray-900 font-alliance font-bold">
-                        {incentive.name}
-                      </h3>
-                      <p className="mt-2 text-sm text-gray-500 font-alliance font-light ">
-                        {incentive.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ width: '1700px', height: '1px', backgroundColor: 'black', marginLeft: '45px', marginRight: '45px' }}></div>
+      </div>
+
+
+       
+
+        <div className="mx-auto max-w-[1800px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32 mt-10">
+
+        <TabsWithIcon></TabsWithIcon>
+
         </div>
 
-        
+
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ width: '1700px', height: '1px', backgroundColor: 'black', marginLeft: '45px', marginRight: '45px' }}></div>
+      </div>
 
 
 
@@ -153,12 +130,12 @@ export default function Team() {
 
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32 " />
       </div>
-      <div className="mx-auto max-w-[1800px] px-6 lg:px-8">
+      <div className="mx-auto max-w-[1800px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mt-20">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mt-10 font-alliance">
             Our team
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600 text-left    ">
+          <p className="mt-6 text-lg leading-8 text-gray-600 text-left font-alliance   ">
             We’re a dynamic group of individuals who are passionate about what
             we do and dedicated to delivering the best results for our clients.
           </p>
@@ -170,7 +147,7 @@ export default function Team() {
           {people.map((person) => (
             <li key={person.name}>
               <img
-                className="aspect-[3/2] w-full rounded-2xl object-cover"
+                className="aspect-[3/2] w-full rounded-2xl object-cover font-alliance"
                 src={person.imageUrl}
                 alt=""
               />
@@ -180,10 +157,10 @@ export default function Team() {
                 {" "}
                 {/* Change here */}
                 <div>
-                  <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 text-left">
+                  <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 text-left font-alliance">
                     {person.name}
                   </h3>
-                  <p className="text-base leading-7 text-gray-600 text-left">
+                  <p className="text-base leading-7 text-gray-600 text-left font-alliance font-light">
                     {person.role}
                   </p>
                 </div>
@@ -241,6 +218,46 @@ export default function Team() {
           ))}
         </ul>
       </div>
+
+      <div className="w-full px-4 py-24 sm:px-6 lg:px-8">
+          {" "}
+          {/* Made it full-width */}
+          <div className="rounded-2xl bg-gray-50 px-6 py-16 sm:p-16">
+            <div className="mx-auto max-w-xl lg:max-w-none">
+              <div className="text-center">
+                <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
+                  We built our business on customer service
+                </h1>
+              </div>
+              <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
+                {incentives.map((incentive) => (
+                  <div
+                    key={incentive.name}
+                    className="text-center sm:flex sm:text-left lg:block lg:text-center "
+                  >
+                    <div className="sm:flex-shrink-0">
+                      <div className="flow-root">
+                        <img
+                          className="mx-auto h-16 w-16"
+                          src={incentive.imageSrc}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+                      <h3 className="text-sm font-medium text-gray-900 font-alliance font-bold">
+                        {incentive.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-gray-500 font-alliance font-light ">
+                        {incentive.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
       <div className="mt-40">
       
