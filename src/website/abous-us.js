@@ -69,6 +69,16 @@ export default function AboutUs() {
   return (
     <div className="relative bg-white z-2">
       <Navbar />
+      <div className="h-screen overflow-y-scroll scroll-snap-y-mandatory">
+        {[1, 2, 3, 4, 5].map((id) => (
+          <section
+            key={id}
+            className="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 scroll-snap-start"
+          >
+            <h2 className="text-4xl font-bold text-white">Section {id}</h2>
+          </section>
+        ))}
+      </div>
 
       <div className="relative bg-black z-2 overflow-hidden top-0">
         <div className="relative isolate overflow-hidden pt-14">
