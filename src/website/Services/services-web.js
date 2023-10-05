@@ -1,14 +1,21 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import Navbar from '../../navbar'
 import Offer from '../component/offer'
+import Footer from '../footer'
+import CTAP from './CTA_pastprojects'
 
 
 
 export default function Service_web() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
 
   return (
     <div className="bg-white">
@@ -83,6 +90,9 @@ export default function Service_web() {
       </div>
 
       <Offer></Offer>
+      <CTAP></CTAP>
+
+      <Footer></Footer>
     </div>
   )
 }

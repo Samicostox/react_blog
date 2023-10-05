@@ -201,6 +201,10 @@ function classNames(...classes) {
 }
 
 export default function Landingpage() {
+  window.onload = function() {
+    window.scrollTo(0, 0);
+}
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const particlesInit = useCallback(async engine => {
@@ -226,7 +230,7 @@ export default function Landingpage() {
 
       <main className="">
         {/* Hero section */}
-        <div className="relative">
+        <div className="relative z-10">
         
         <Carousel></Carousel>
       </div>

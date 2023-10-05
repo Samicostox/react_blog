@@ -11,13 +11,17 @@ import Footer from "./footer";
 import Navbar from '../navbar';
 
 
-import React from 'react';
+import { useState,useEffect  } from 'react'
 
 
 
   
    
   export function PastProjects({ title, description, imageUrl }) {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+  }, []);
+  
     const cards = [
       {
         title: 'Safequeen',
