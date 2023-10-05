@@ -71,7 +71,11 @@ const Navbarv2 = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
-          <button onClick={() => navigate("/join")} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">Join In</button>
+        {isLoggedIn ? (
+                <button onClick={() => navigate("/newhome")} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">Software</button>
+              ) : (
+                <button onClick={() => navigate("/contact2")} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">Contact Us</button>
+              )}
           {isLoggedIn ? (
             <button onClick={() => {
               handleLogout();
@@ -94,7 +98,7 @@ const Navbarv2 = () => {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-24 w-auto"
-                src="https://res.cloudinary.com/dl2adjye7/image/upload/v1693234097/leads10_jsebfk.png"
+                src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1696254880/Logos_1_erqpem.png"
                 alt=""
               />
             </a>
@@ -121,7 +125,11 @@ const Navbarv2 = () => {
                 ))}
               </div>
               <div className="py-6 space-y-4">
-                <button onClick={() => navigate("/join")} className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2">Join In</button>
+              {isLoggedIn ? (
+                      <button onClick={() => navigate("/newhome")} className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2">Software</button>
+                    ) : (
+                      <button onClick={() => navigate("/contact2")} className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2">Contact Us</button>
+                    )}
                 {isLoggedIn ? (
                   <button
                     onClick={handleLogout}

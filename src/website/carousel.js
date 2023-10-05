@@ -1,4 +1,8 @@
-import React, { useState, useEffect,useRef  } from "react";
+import React, { useState, useEffect,useRef,useCallback   } from "react";
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim";
+import ParticlesBackground1 from "./particles_test/p1";
+import ParticlesBackground2 from "./particles_test/p2";
 
 
 const ChevronRightIcon = () => <span>→</span>;
@@ -30,7 +34,14 @@ const Carousel = () => {
   };
   
   
-  
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    //await loadFull(engine);
+    await loadSlim(engine);
+}, []);
 
 
   const slides = [
@@ -40,15 +51,23 @@ const Carousel = () => {
       hiring: true,
       buttonText: "Get a Quote",
       svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: '/#contact2'
+      href: '/#contact2',
+      particlesComponent: <ParticlesBackground1 />
+      
+        
     },
+    
     {
       title: "Web Development",
       text: "Ut labore sit non cupidatat cillum ut excepteur duis commodo. Consequat aliqua nostrud et nostrud veniam ad labore consectetur.",
       hiring: true,
       buttonText: "Get a Quote",
       svgSource: "https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg",
-      href: '/#contact2'
+      href: '/#contact2',
+      particlesComponent: <ParticlesBackground2 />
+      
+    
+    
     },
     {
       title: "Data Engineering",
@@ -56,32 +75,48 @@ const Carousel = () => {
       hiring: true,
       buttonText: "Get a Quote",
       svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: '/#contact2'
+      href: '/#contact2',
+      particlesComponent: <ParticlesBackground2 />
+      
     },
+    
+    
     {
        title: "Business Dev",
        text: "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
        hiring: true,
        buttonText: "Get a Quote",
        svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-       href: '/#contact2'
+       href: '/#contact2',
+       particlesComponent: <ParticlesBackground2/>
+      
     },
+    
+    
       {
         title: "Benchmarking",
         text: "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
         hiring: true,
         buttonText: "Get a Quote",
         svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-        href: '/#contact2'
+        href: '/#contact2',
+        particlesComponent: <ParticlesBackground2/>
+        
+          
       },
+      
+      
       {
         title: "Strategy",
         text: "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
         hiring: true,
         buttonText: "Get a Quote",
         svgSource: "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-        href: '/#contact2'
-      }
+        href: '/#contact2',
+        particlesComponent: <ParticlesBackground2/>
+      },
+      
+      
   ];
 
   const nextSlide = () => {
@@ -126,27 +161,103 @@ const Carousel = () => {
     resetTimer();
   };
 
+  const particlesLoaded = useCallback(async container => {
+    await console.log(container);
+}, []);
 
+  
+
+ 
 
 
   return (
     
-    <div className="relative overflow-hidden" >
+    <div className="relative overflow-hidden">
+      <Particles
+      id="tsparticles3"
+      init={particlesInit}
+      className="absolute top-0 left-0 w-full h-full z-0"
+      options={{
+        background: {
+          color: "white",
+        },
+        fpsLimit: 60,
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#008000",
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.5,
+          },
+          size: {
+            value: 5,
+            random: true,
+          },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#008000",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            out_mode: "out",
+          },
+        },
+        interactivity: {
+          detectsOn: "canvas",
+          events: {
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onClick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            repulse: {
+              distance: 100,
+            },
+          },
+        },
+        retina_detect: true,
+      }}
+    />
+    <div 
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      className="flex transition-all ease-in-out duration-500"
+      style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+    >
+      {slides.map((slide, index) => (
+        <div key={index} className="relative isolate flex-none w-full pt-14">
+          <div className="absolute top-0 left-0 w-full h-full z-0">
+          
+          </div>
+         
+
      
-     
-
-
-
-      <div 
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onTouchStart={handleTouchStart} // If you decide to add touch events
-        onTouchEnd={handleTouchEnd} // If you decide to add touch events
-        className="flex transition-all ease-in-out duration-500"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
-    {slides.map((slide, index) => (
-      <div key={index} className="relative isolate flex-none w-full pt-14">
+        
+        
+        
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
                 {slide.hiring && (
@@ -207,9 +318,12 @@ const Carousel = () => {
               </div>
             </div>
           </div>
+       
         ))}
         
       </div>
+      
+      
       
     </div>
   );

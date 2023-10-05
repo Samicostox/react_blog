@@ -2,7 +2,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Hero from "./about_us/hero";
 import Services from "./about_us/services";
@@ -12,6 +12,9 @@ import Timeline from "./about_us/timeline";
 import Navbar from "./navigation_bar";
 import Package from "./about_us/package_service";
 import Slider from "./about_us/slider";
+
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim";
 const navigation = [
   { name: "LeadGeneration", href: "/software" },
   { name: "Contact", href: "/contact2" },
@@ -62,12 +65,26 @@ export default function AboutUs() {
     };
   }, []);
 
+  
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    //await loadFull(engine);
+    await loadSlim(engine);
+}, []);
+
+
   return (
     <div className="relative bg-white z-2">
       <Navbar />
+      
 
       <div className="relative bg-black z-2 overflow-hidden top-0">
+        
         <div className="relative isolate overflow-hidden pt-14">
+          
           <img
             src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696091538/mfejpnzaoaiiiv9sygg8.jpg"
             alt=""

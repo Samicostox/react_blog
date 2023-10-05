@@ -12,7 +12,7 @@
   }
   ```
 */
-import { useState } from 'react'
+
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import {
@@ -29,6 +29,9 @@ import LogoCloud from './logocloud'
 import Hero from './hero'
 import { CardDefault } from './component/cardsservices'
 import Footer from './footer'
+import React, { useState, useEffect,useRef,useCallback   } from "react";
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim";
 
 
 
@@ -200,6 +203,15 @@ function classNames(...classes) {
 export default function Landingpage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    //await loadFull(engine);
+    await loadSlim(engine);
+}, []);
+
   return (
     
     <div className="bg-white">
@@ -214,14 +226,19 @@ export default function Landingpage() {
 
       <main className="">
         {/* Hero section */}
-        <div className = "overflow-x-hidden">
-        <Carousel></Carousel>
-        </div>
+        <div className="relative">
         
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
+        <Carousel></Carousel>
+      </div>
+       
+      <div className="relative z-10 bg-white w-full ">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20 ">
+        <div className="w-full bg-white h-20 relative z-10">
+  {/* Content of the container goes here */}
+</div>
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
-          <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl ">
             Our Year In Results 
           </h2>
             <p className="mt-4 font-alliance text-lg leading-8 text-gray-600">
@@ -238,20 +255,43 @@ export default function Landingpage() {
           </dl>
         </div>
       </div>
+      </div>
+
+      <div className="w-full bg-white h-20 relative z-10">
+  {/* Content of the container goes here */}
+</div>
+
+
+      
        
-        
+      
+      <div className="relative z-10 bg-white w-full">
       <CardDefault></CardDefault> 
 
-      <LogoCloud className="max-w-screen"></LogoCloud>  
+      </div>
+
+      <div className="w-full bg-white h-20 relative z-10">
+  {/* Content of the container goes here */}
+</div>
+      <div className="relative z-10 bg-white w-full">
+      <LogoCloud className="max-w-screen z-10 bg-white"></LogoCloud> 
+      </div> 
+
+      <div className="w-full bg-white h-30 relative z-10">
+  {/* Content of the container goes here */}
+</div>
      
         {/* Testimonials section */}
-        <div className="relative isolate mt-32 sm:mt-20 sm:pt-32">
+        <div className="relative isolate 0 sm:pt-32 z-10 bg-white">
           
           
           <div className="relative">
             
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-xl sm:text-center">
+              <div className="w-full bg-white h-20 relative z-10">
+  {/* Content of the container goes here */}
+</div>
                 <h2 className="text-lg font-semibold leading-8 tracking-tight text-green-700 font-alliance font-bold">Testimonials</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance">
                   We have worked with thousands of amazing people
@@ -319,7 +359,11 @@ export default function Landingpage() {
         </div>
       </main>
 
+      <div className="relative z-10 bg-white w-full">
+
       <Footer></Footer>
+
+      </div>
 
       {/* Footer */}
       
