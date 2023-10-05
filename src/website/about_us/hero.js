@@ -1,4 +1,4 @@
-import Particles from "react-tsparticles";
+import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 export default function Hero() {
   const particlesInit = async (main) => {
