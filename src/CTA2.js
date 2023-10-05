@@ -14,7 +14,7 @@ export default function CTA2() {
                 href="/#newhome"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-green-900 shadow-sm hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-alliance"
               >
-                Get started
+                Sign Up 
               </a>
               <a href="#" className="text-sm font-semibold leading-6 text-white font-alliance">
                 Learn more <span aria-hidden="true">→</span>

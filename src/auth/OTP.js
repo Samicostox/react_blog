@@ -2,6 +2,7 @@ import React, { useState,useRef  } from 'react';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../navbar';
+import Navbarv2 from '../navbarv2';
 
 export default function OTPPage() {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -87,7 +88,7 @@ const handleSubmit = async (e, newOtp = otp) => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <Navbar></Navbar>
+      <Navbarv2></Navbarv2>
       <h1 className="text-3xl font-bold mb-4">Enter your OTP</h1>
       <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col items-center">
         <div className="flex space-x-2 mb-4">

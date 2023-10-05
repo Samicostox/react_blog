@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Example from './Example';
 import Scale from "./scale";
 import Contact from "./contactus";
@@ -16,6 +16,10 @@ import CTA2 from "./CTA2";
 
 
 const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleDelete = (id) => {
         const newBlogs = blogs.filter(blog => blog.id !== id)
