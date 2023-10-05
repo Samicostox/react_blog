@@ -12,9 +12,9 @@ import Timeline from "./about_us/timeline";
 import Navbar from "./navigation_bar";
 import Package from "./about_us/package_service";
 import Slider from "./about_us/slider";
-
-
-
+import TypeformEmbed from "./typeform_students";
+import Footer from "./footer";
+import Example from "./about_us/scroll_horizontal";
 const navigation = [
   { name: "LeadGeneration", href: "/software" },
   { name: "Contact", href: "/contact2" },
@@ -64,18 +64,14 @@ export default function AboutUs() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
- 
+  const [viewLeft, setViewLeft] = useState(true);
 
   return (
     <div className="relative bg-white z-2">
       <Navbar />
-      
 
       <div className="relative bg-black z-2 overflow-hidden top-0">
-        
         <div className="relative isolate overflow-hidden pt-14">
-          
           <img
             src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696091538/mfejpnzaoaiiiv9sygg8.jpg"
             alt=""
@@ -133,12 +129,16 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <Slider />
+      <TypeformEmbed />
+      <Example />
+
       <Package />
       <Content />
       <Timeline />
+      <Slider />
       <Services />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
