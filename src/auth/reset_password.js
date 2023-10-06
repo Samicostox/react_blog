@@ -6,6 +6,7 @@ import queryString from 'query-string';
 import Bademail from '../modals/problem';
 import Emailsent from '../modals/emailsent';
 import { useNavigate } from 'react-router-dom';  // Import the Emailsent modal
+import Navbarv2 from '../navbarv2';
 
 export default function Resetpassword() {
   const [password, setPassword] = useState('');
@@ -59,7 +60,7 @@ export default function Resetpassword() {
           ```
         */}
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <Navbar />
+        <Navbarv2 />
         <div className="sm:mx-auto sm:w-full sm:max-w-md" style={{ marginTop: '150px' }}>
             
         <h2 className="mt-6 text-center text-4xl font-extrabold text-gray-900">

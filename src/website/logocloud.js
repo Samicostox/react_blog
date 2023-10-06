@@ -2,22 +2,21 @@ import React from 'react';
 
 const LogoCloud = ({ className }) => {
   const logos = [
-    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-400.svg",
-    "https://tailwindui.com/img/logos/158x48/reform-logo-gray-400.svg",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537893/University-of-Birmingham-logo_od1gji.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537925/Warwick_Logo_jdtjhp.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537983/e4b96220-cc71-4e7f-946f-4433d1fa2895_xnwxrc.jpg",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538138/Screenshot_2023-10-05_213455_dlyfie.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538028/mqdefault_idsy1j.jpg",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537893/University-of-Birmingham-logo_od1gji.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537925/Warwick_Logo_jdtjhp.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537983/e4b96220-cc71-4e7f-946f-4433d1fa2895_xnwxrc.jpg",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538138/Screenshot_2023-10-05_213455_dlyfie.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538028/mqdefault_idsy1j.jpg",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537893/University-of-Birmingham-logo_od1gji.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537925/Warwick_Logo_jdtjhp.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537983/e4b96220-cc71-4e7f-946f-4433d1fa2895_xnwxrc.jpg",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538138/Screenshot_2023-10-05_213455_dlyfie.png",
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538028/mqdefault_idsy1j.jpg",
     //... More logos
   ];
 
@@ -34,7 +33,7 @@ const LogoCloud = ({ className }) => {
           {logos.map((logo, index) => (
             <img
               key={index}
-              className="max-h-12 object-contain"
+              className="max-h-16 object-contain"
               src={logo}
               alt="Company logo"
             />

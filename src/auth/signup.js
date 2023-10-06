@@ -5,6 +5,7 @@
 import React, { useState } from 'react';
 import Navbar from '../navbar';
 import { useNavigate } from 'react-router-dom';
+import Navbarv2 from '../navbarv2';
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ export default function Signup() {
   return (
     <>
     <div className="flex min-h-screen flex-1 flex-col px-6 py-12 lg:px-8">
-      <Navbar />
+      <Navbarv2 />
       <div className="sm:mx-auto sm:w-full sm:max-w-md" style={{ marginTop: '150px' }}>
         
         <h2 className="mt-6 text-center text-4xl font-extrabold text-gray-900">

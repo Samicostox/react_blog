@@ -5,6 +5,7 @@ import Emailsent from '../modals/emailsent';  // Import your modal component
 import { useNavigate } from 'react-router-dom';
 import Bademail from '../modals/problem';
 import { EnvelopeIcon } from '@heroicons/react/20/solid'
+import Navbarv2 from '../navbarv2';
 /*
   This example requires some changes to your config:
   
@@ -61,7 +62,7 @@ export default function Forgotpassword() {
           ```
         */}
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <Navbar />
+        <Navbarv2 />
           <div className="sm:mx-auto sm:w-full sm:max-w-sm " style={{ marginTop: '150px' }}>
             
           <h2 className="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">

@@ -13,6 +13,8 @@ import HeaderT from "./component/header-team";
 import StepperWithContent from "./component/stepper";
 import { TabsWithIcon } from "./component/tabs";
 import Footer from "./footer";
+import Navbarv2 from "../navbarv2";
+import React, { useState,useEffect } from 'react';
 
 const benefits = [
   "Competitive salaries",
@@ -95,9 +97,12 @@ const people = [
 ];
 
 export default function Team() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
   return (
     <div className="bg-white py-24 sm:py-32">
-      <Navbar></Navbar>
+      <Navbarv2></Navbarv2>
 
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20  mx-auto">
         <HeaderT></HeaderT>

@@ -12,6 +12,7 @@ import Navbar from '../navbar';
 
 
 import { useState,useEffect  } from 'react'
+import Navbarv2 from '../navbarv2';
 
 
 
@@ -103,7 +104,7 @@ import { useState,useEffect  } from 'react'
       ];
       return (
         <div className="container mx-auto py-12 mt-32">
-          <Navbar></Navbar>
+          <Navbarv2></Navbarv2>
           <h1 className="text-center text-4xl font-alliance font-bold mb-12">Past Projects</h1>
           <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {cards.map((card, index) => (

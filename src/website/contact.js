@@ -13,10 +13,15 @@
   ```
 */
 import Successclient from '../modals/successclient';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import Navbar from "../navbar"
+import Navbarv2 from '../navbarv2';
 export default function Contact2() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
     const [showSuccessModal, setShowSuccessModal] = useState(false);
 
 
@@ -71,7 +76,7 @@ export default function Contact2() {
     return (
         <div className="relative bg-white">
             <Successclient open={showSuccessModal} setOpen={setShowSuccessModal} />
-      <Navbar></Navbar>
+      <Navbarv2></Navbarv2>
 
       {/* Hide image on small screens, show on large screens */}
       <div className="hidden lg:block lg:absolute lg:inset-0 lg:left-1/2 mt-32">
