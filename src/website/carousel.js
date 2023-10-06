@@ -199,7 +199,7 @@ const Carousel = () => {
               value: 0.5,
             },
             size: {
-              value: 5,
+              value: 3,
               random: true,
             },
             links: {
