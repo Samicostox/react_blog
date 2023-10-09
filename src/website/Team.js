@@ -14,7 +14,7 @@ import StepperWithContent from "./component/stepper";
 import { TabsWithIcon } from "./component/tabs";
 import Footer from "./footer";
 import Navbarv2 from "../navbarv2";
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const benefits = [
   "Competitive salaries",
@@ -99,7 +99,7 @@ const people = [
 export default function Team() {
   useEffect(() => {
     window.scrollTo(0, 0);
-}, []);
+  }, []);
   return (
     <div className="bg-white py-24 sm:py-32">
       <Navbarv2></Navbarv2>
@@ -124,8 +124,8 @@ export default function Team() {
             Our team
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600 text-left font-alliance   ">
-            We’re a dynamic group of individuals who are passionate about what
-            we do and dedicated to delivering the best results for our clients.
+            Meet the brilliant minds shaping the future, our team of dedicated
+            and innovative students!
           </p>
         </div>
         <ul

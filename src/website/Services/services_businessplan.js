@@ -70,9 +70,9 @@ export default function Service_businessplan() {
               Business Plan
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 text-left">
-              Esse id magna consectetur fugiat non dolor in ad laboris magna
-              laborum ea consequat. Nisi irure aliquip nisi adipisicing veniam
-              voluptate id. In veniam incididunt ex veniam adipisicing sit.
+              Future-proof your business with our expert strategic planning. We
+              dive deep into market analytics and trends to craft strategies
+              that position you for lasting success and growth.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a

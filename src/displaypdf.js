@@ -334,8 +334,16 @@ export default function DisplayPDF({ setToPDF }) {
                             </div>
                           </dl>
                           <button
-                            onClick={() => {
-                              setSelectedPdf(pdfFile);
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setSelectedPdf(null);
+                              /*
+                              const link = document.createElement("a");
+                              link.href = `${pdfFile.pdf_file}.pdf`;
+                              link.download = `${pdfFile.pdf_file}.pdf`;
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);*/
                             }}
                             className="absolute top-2 right-8 m-2" // Adjust the position as per your design
                           >

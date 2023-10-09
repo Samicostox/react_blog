@@ -43,7 +43,7 @@ const Carousel = () => {
     {
       title: "Mobile Development",
       text:
-        "Esse id magna consectetur fugiat non dolor in ad laboris magna laborum ea consequat. Nisi irure aliquip nisi adipisicing veniam voluptate id. In veniam incididunt ex veniam adipisicing sit.",
+        "Dive into the mobile-centric world with our top-tier mobile app solutions. From idea to launch, our team ensures your app not only looks great but also resonates with your target audience for maximum engagement.",
       hiring: true,
       buttonText: "Get a Quote",
       svgSource:
@@ -57,7 +57,7 @@ const Carousel = () => {
     {
       title: "Web Development",
       text:
-        "Ut labore sit non cupidatat cillum ut excepteur duis commodo. Consequat aliqua nostrud et nostrud veniam ad labore consectetur.",
+        "Elevate your online presence with our bespoke web development services. We craft beautiful, user-friendly websites that captivate and convert, ensuring your brand stands out in the digital landscape.",
       hiring: true,
       buttonText: "Get a Quote",
       svgSource:
@@ -70,7 +70,7 @@ const Carousel = () => {
     {
       title: "Data Engineering",
       text:
-        "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
+        "Unlock the power of your data with our cutting-edge data science services. We transform raw data into actionable insights, helping you make informed decisions and stay ahead in your industry.",
       hiring: true,
       buttonText: "Get a Quote",
       svgSource:
@@ -84,7 +84,7 @@ const Carousel = () => {
     {
       title: "Business Dev",
       text:
-        "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
+        "Future-proof your business with our expert strategic planning. We dive deep into market analytics and trends to craft strategies that position you for lasting success and growth.",
       hiring: true,
       buttonText: "Get a Quote",
       svgSource:
@@ -98,7 +98,7 @@ const Carousel = () => {
     {
       title: "Benchmarking",
       text:
-        "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
+        "Turn your vision into a tangible roadmap with our tailored business plan services. Whether you are a startup or an established entity, our team crafts plans that attract investors and steer your business towards unparalleled success.",
       hiring: true,
       buttonText: "Get a Quote",
       svgSource:
@@ -112,7 +112,7 @@ const Carousel = () => {
     {
       title: "Strategy",
       text:
-        "Fugiat deserunt sunt dolore reprehenderit irure esse eu commodo velit duis.",
+        "Stay ahead of the curve with our comprehensive benchmarking services. We will help you gauge where you stand in the market, unveiling opportunities and strategies to outperform competitors and set industry standards.",
       hiring: true,
       buttonText: "Get a Quote",
       svgSource:
