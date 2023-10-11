@@ -7,6 +7,48 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 
+const steps = [
+  {
+    name: "1. Requirement Gathering",
+    description:
+      "We dive into your ideas, meticulously extracting requirements through detailed dialogues and questionnaires. Utilizing agile and Kanban, our student team ensures a flexible, client-approved project outline that mirrors your aspirations.",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1696437699/sheet_wlghil.png",
+  },
+  {
+    name: "2. Design",
+    description:
+      "Adhering to Human Interface Guidelines, our designs, crafted with tools like Figma, blend aesthetics with user-centric functionality, ensuring your brand identity is cohesively represented throughout the user experience.",
+    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+  },
+  {
+    name: "3. Development",
+    description:
+      "Leveraging Flutter and React Native, our student developers infuse innovation into every code line. We accommodate essential changes and ensure optimal performance through thorough testing, all while maintaining budget integrity.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+  },
+  {
+    name: "4. Testing",
+    description:
+      "Your app undergoes stringent testing, involving you in the user testing phase to refine and ensure a seamless, bug-free user experience that not only meets but exceeds expectations.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg",
+  },
+  {
+    name: "5. Deployment",
+    description:
+      "Navigating through platform guidelines and managing deployment intricacies, we ensure your app is smoothly and successfully launched on platforms like the App Store, providing an uninterrupted user experience.",
+    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+  },
+  {
+    name: "6. Maintenance",
+    description:
+      "Our commitment extends post-launch with a 2-week to 1-month maintenance period, focusing on bug fixes and crucial updates, while providing continuous support via email to address any arising issues promptly.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+  },
+];
 export default function Service_mobile() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -94,7 +136,7 @@ export default function Service_mobile() {
         </div>
       </div>
 
-      <Offer></Offer>
+      <Offer steps={steps} />
       <CTAP></CTAP>
       <Footer></Footer>
     </div>

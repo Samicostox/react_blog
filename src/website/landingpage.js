@@ -139,7 +139,7 @@ export default function Landingpage() {
 
       <Navbarv2></Navbarv2>
 
-      <div className="relative isolate pt-14 "></div>
+      <div className="relative isolate"></div>
 
       <main className="">
         {/* Hero section */}

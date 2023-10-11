@@ -1,12 +1,12 @@
 import React from "react";
 
-const Card = ({ imgSrc, title, description }) => (
-  <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-left">
-    <a href="#">
+const Card = ({ imgSrc, title, description, url }) => (
+  <div className="m-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 text-left">
+    <a href={url}>
       <img className="rounded-t-lg" src={imgSrc} alt="" />
     </a>
     <div className="p-5">
-      <a href="#">
+      <a href={url}>
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {title}
         </h5>
@@ -15,7 +15,7 @@ const Card = ({ imgSrc, title, description }) => (
         {description}
       </p>
       <a
-        href="#"
+        href={url}
         className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       >
         Read more
@@ -40,20 +40,38 @@ const Card = ({ imgSrc, title, description }) => (
 );
 
 export default function InnovationStudios() {
-  const imgSrc =
-    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696091538/mfejpnzaoaiiiv9sygg8.jpg";
-  const title = "Noteworthy technology acquisitions 2021";
+  const imgSrcBham =
+    "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697039921/birmingham_ngicng.jpg";
+
+  const titleBham = "Birmingham Innovation Studio";
+  const urlBham = "https://www.birminghaminnovationstudio.com/";
+
   const description =
     "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.";
 
+  const imgSrcWar =
+    "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697039865/warwick_hvxrqw.jpg";
+  const titleWar = "Warwick Innovation Studio";
+  const urlWar = "https://www.warwickinnovationstudio.com/";
+
   return (
-    <div className="space-y-4 p-10">
-      <h1 className=" text-left text-4xl font-bold text-gray-900 dark:text-white">
-        Top Technology Acquisitions
+    <div className="flex flex-col items-center justify-center min-h-1000 p-4 space-y-4">
+      <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
+        Our Innovation Studios
       </h1>
       <div className="flex space-x-4">
-        <Card imgSrc={imgSrc} title={title} description={description} />
-        <Card imgSrc={imgSrc} title={title} description={description} />
+        <Card
+          imgSrc={imgSrcBham}
+          title={titleBham}
+          description={description}
+          url={urlBham}
+        />
+        <Card
+          imgSrc={imgSrcWar}
+          title={titleWar}
+          description={description}
+          url={urlWar}
+        />
       </div>
     </div>
   );

@@ -16,6 +16,8 @@ import TypeformEmbed from "./typeform_students";
 import Footer from "./footer";
 import Example from "./about_us/scroll_horizontal";
 import InnovationStudios from "./about_us/innovation_studios";
+import ScrollSnapProgressBar from "./about_us/package_service";
+import NumberLine from "./about_us/package_service";
 const navigation = [
   { name: "LeadGeneration", href: "/software" },
   { name: "Contact", href: "/contact2" },
@@ -23,7 +25,11 @@ const navigation = [
   { name: "Team", href: "/team" },
   { name: "Past Projects", href: "/past-projects" },
 ];
-
+const sections = [
+  { content: "Section 1 Content" },
+  { content: "Section 2 Content" },
+  // More sections...
+];
 export default function AboutUs() {
   const navigate = useNavigate(); // Initialize useNavigate
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -70,7 +76,7 @@ export default function AboutUs() {
   return (
     <div className="relative bg-white z-2">
       <Navbar />
-
+      <NumberLine />
       <div className="relative bg-black z-2 overflow-hidden top-0">
         <div className="relative isolate overflow-hidden pt-14">
           <img
@@ -93,7 +99,7 @@ export default function AboutUs() {
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl z-3">
-                Bridging the gap Between University and Industry
+                Work Now With Tomorrow's Most Brillant Minds.
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-300">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
@@ -130,14 +136,14 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-
       <Content />
-      <Example />
 
-      <Timeline />
       <InnovationStudios />
+      <Timeline />
       <Slider />
       <Services />
+
+      <Example />
       <TypeformEmbed />
       <Testimonials />
       <Footer />

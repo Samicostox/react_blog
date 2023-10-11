@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: 'LeadGeneration', href: '/software' },
-  { name: 'Contact', href: '/contact2' },
-  { name: 'Software', href: '/newhome' },
-  { name: 'Team', href: '/team' },
-  { name: 'Past Projects', href: '/past-projects' },
+  { name: "LeadGeneration", href: "/software" },
+  { name: "Contact", href: "/contact2" },
+  { name: "Software", href: "/newhome" },
+  { name: "Team", href: "/team" },
+  { name: "Past Projects", href: "/past-projects" },
 ];
 
 const Navbarv2 = () => {
@@ -17,34 +17,59 @@ const Navbarv2 = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
       setIsLoggedIn(true);
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 10) {
+        // You can adjust this value as needed
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     setIsLoggedIn(false);
   };
 
   const handleNavigation = (href, requiresAuth) => {
     if (requiresAuth && !isLoggedIn) {
-      navigate('/signin');
+      navigate("/signin");
       return;
     }
     navigate(href);
   };
+  const [scrolled, setScrolled] = useState(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
-      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header
+      className={`sticky absolute inset-x-0 top-0 z-50  ${
+        scrolled ? "bg-white shadow-lg" : "bg-transparent"
+      }`}
+    >
+      <nav
+        className="flex items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               className="h-24 w-auto"
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1696254880/Logos_1_erqpem.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697027873/Design_sans_titre_3_tffvky.png"
               alt=""
             />
           </a>
@@ -71,26 +96,53 @@ const Navbarv2 = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
-        {isLoggedIn ? (
-                <button onClick={() => navigate("/newhome")} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">Software</button>
-              ) : (
-                <button onClick={() => navigate("/contact2")} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">Contact Us</button>
-              )}
           {isLoggedIn ? (
-            <button onClick={() => {
-              handleLogout();
-              navigate('/');
-            }} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">
-              Log out <span className="text-white" aria-hidden="true">&rarr;</span>
+            <button
+              onClick={() => navigate("/newhome")}
+              className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+            >
+              Software
             </button>
           ) : (
-            <button onClick={() => navigate("/signin")} className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance">
-              Log in <span className="text-white" aria-hidden="true">&rarr;</span>
+            <button
+              onClick={() => navigate("/contact2")}
+              className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+            >
+              Contact Us
+            </button>
+          )}
+          {isLoggedIn ? (
+            <button
+              onClick={() => {
+                handleLogout();
+                navigate("/");
+              }}
+              className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+            >
+              Log out{" "}
+              <span className="text-white" aria-hidden="true">
+                &rarr;
+              </span>
+            </button>
+          ) : (
+            <button
+              onClick={() => navigate("/signin")}
+              className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+            >
+              Log in{" "}
+              <span className="text-white" aria-hidden="true">
+                &rarr;
+              </span>
             </button>
           )}
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -117,7 +169,9 @@ const Navbarv2 = () => {
                 {navigation.map((item) => (
                   <a
                     key={item.name}
-                    onClick={() => handleNavigation(item.href, item.requiresAuth)}
+                    onClick={() =>
+                      handleNavigation(item.href, item.requiresAuth)
+                    }
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
                   >
                     {item.name}
@@ -125,24 +179,40 @@ const Navbarv2 = () => {
                 ))}
               </div>
               <div className="py-6 space-y-4">
-              {isLoggedIn ? (
-                      <button onClick={() => navigate("/newhome")} className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2">Software</button>
-                    ) : (
-                      <button onClick={() => navigate("/contact2")} className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2">Contact Us</button>
-                    )}
+                {isLoggedIn ? (
+                  <button
+                    onClick={() => navigate("/newhome")}
+                    className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2"
+                  >
+                    Software
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => navigate("/contact2")}
+                    className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2"
+                  >
+                    Contact Us
+                  </button>
+                )}
                 {isLoggedIn ? (
                   <button
                     onClick={handleLogout}
                     className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
                   >
-                    Log out <span className="text-white" aria-hidden="true">&rarr;</span>
+                    Log out{" "}
+                    <span className="text-white" aria-hidden="true">
+                      &rarr;
+                    </span>
                   </button>
                 ) : (
                   <button
                     onClick={() => navigate("/signin")}
                     className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
                   >
-                    Log in <span className="text-white" aria-hidden="true">&rarr;</span>
+                    Log in{" "}
+                    <span className="text-white" aria-hidden="true">
+                      &rarr;
+                    </span>
                   </button>
                 )}
               </div>

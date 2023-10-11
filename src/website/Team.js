@@ -101,7 +101,7 @@ export default function Team() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white">
       <Navbarv2></Navbarv2>
 
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20  mx-auto">

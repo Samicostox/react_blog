@@ -6,7 +6,47 @@ import Navbar from "../../navbar";
 import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
-
+const steps = [
+  {
+    name: "1. Scope Definition",
+    description:
+      "We dive into understanding your goals, aligning the benchmarking exercise with your business objectives, and collaboratively selecting specific processes or areas to yield insightful results.",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1696437699/sheet_wlghil.png",
+  },
+  {
+    name: "2. Selection of Comparisons",
+    description:
+      "We strategically identify benchmark partners, whether industry leaders or direct competitors, ensuring they provide an optimal comparison point to measure your performance against.",
+    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+  },
+  {
+    name: "3. Data Collection",
+    description:
+      "Embarking on data collection, we meticulously gather performance data from your organization and selected benchmarks, ensuring a comprehensive and relevant overview.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+  },
+  {
+    name: "4. Data Analysis",
+    description:
+      "Leveraging sophisticated tools and academic expertise, we analyze data, highlighting performance gaps and opportunities, backed by our unique blend of student talent and professional oversight.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg",
+  },
+  {
+    name: "5. Strategy & Action Plan",
+    description:
+      "Our analysis insights shape a strategic blueprint, offering actionable recommendations and clear steps to address performance gaps and elevate your business operations.",
+    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+  },
+  {
+    name: "6. Post-Delivery Support",
+    description:
+      "Strategy formulation is just the beginning. We are with you every step of the way, offering post-delivery consultations, revisions, and insights to ensure the strategy is actualised effectively.",
+    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+  },
+];
 export default function Service_benchmarking() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -94,7 +134,7 @@ export default function Service_benchmarking() {
         </div>
       </div>
 
-      <Offer></Offer>
+      <Offer steps={steps} />
       <CTAP></CTAP>
       <Footer></Footer>
     </div>
