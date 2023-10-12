@@ -24,9 +24,9 @@ export function TabsWithIcon() {
       component: <Tab2 />,
     },
     {
-      label: "3. Projects.",
+      label: "3. Projects",
       value: "vue",
-      component: <CardDefault/>,
+      component: <CardDefault />,
     },
     {
       label: "4. Employement",
@@ -39,50 +39,51 @@ export function TabsWithIcon() {
       component: <Tab5 />,
     },
   ];
-  const currentTabIndex = data.findIndex(item => item.value === activeTab);
+  const currentTabIndex = data.findIndex((item) => item.value === activeTab);
 
   return (
-    <div>
-    <div className="text-left">
-    <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
-      We built our business on customer service
-    </h1>
-  </div>
-    <Tabs value={activeTab}>
-        
-      <TabsHeader
-        className="rounded-none border-b border-blue-gray-50 bg-transparent p-0 mt-20"
-        indicatorProps={{
-          className:
-            "bg-transparent border-b-2 border-green-700 shadow-none rounded-none",
-        }}
-      >
-        {data.map(({ label, value }) => (
-           <Tab
-           key={value}
-           value={value}
-           onClick={() => setActiveTab(value)}
-           className={`text-xs md:text-base ${activeTab === value ? "text-gray-900" : ""}`}
-         >
-           {label}
-         </Tab>
-        ))}
-      </TabsHeader>
-      <TabsBody>
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentTabIndex * 100}%)` }}
+    <div className="m-28 -mb-28">
+      <div className="text-left">
+        <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
+          Getting Involved as a Uni Student
+        </h1>
+      </div>
+      <Tabs value={activeTab}>
+        <TabsHeader
+          className="rounded-none border-b border-blue-gray-50 bg-transparent p-0 mt-20"
+          indicatorProps={{
+            className:
+              "bg-transparent border-b-2 border-green-700 shadow-none rounded-none",
+          }}
         >
-          {data.map(({ value, component }) => (
-            <div className="flex-none w-full">
-              <TabPanel key={value} value={value}>
-                {component}
-              </TabPanel>
-            </div>
+          {data.map(({ label, value }) => (
+            <Tab
+              key={value}
+              value={value}
+              onClick={() => setActiveTab(value)}
+              className={`text-xs md:text-base ${
+                activeTab === value ? "text-gray-900" : ""
+              }`}
+            >
+              {label}
+            </Tab>
           ))}
-        </div>
-      </TabsBody>
-    </Tabs>
+        </TabsHeader>
+        <TabsBody>
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentTabIndex * 100}%)` }}
+          >
+            {data.map(({ value, component }) => (
+              <div className="flex-none w-full">
+                <TabPanel key={value} value={value}>
+                  {component}
+                </TabPanel>
+              </div>
+            ))}
+          </div>
+        </TabsBody>
+      </Tabs>
     </div>
   );
 }
