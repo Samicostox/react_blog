@@ -1,16 +1,5 @@
-import Navbar from "../navbar";
-import { ChevronRightIcon, CheckCircleIcon } from "@heroicons/react/20/solid";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import {
-  docco,
-  dark,
-  atomDark,
-  nord,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
-import tomorrowNight from "react-syntax-highlighter/dist/esm/styles/hljs/atelier-cave-dark";
 import JoinOurTeam from "./component/jointeam";
 import HeaderT from "./component/header-team";
-import StepperWithContent from "./component/stepper";
 import { TabsWithIcon } from "./component/tabs";
 import Footer from "./footer";
 import Navbarv2 from "../navbarv2";

@@ -38,7 +38,7 @@ export default function Timeline() {
             <div key={item.name}>
               <time
                 dateTime={item.dateTime}
-                className="flex items-center text-sm font-semibold leading-6 text-indigo-600"
+                className="flex items-center text-sm font-semibold leading-6 text-green-600"
               >
                 <svg
                   viewBox="0 0 4 4"
