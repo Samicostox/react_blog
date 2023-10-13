@@ -40,13 +40,13 @@ export default function Content() {
     const handleScroll = () => {
       if (!isEditorInView) return;
 
-      const lines = initialCode.split("\n");
-      const numberOfLinesToShow = Math.min(
-        lines.length,
-        Math.floor(window.scrollY / 75)
+      const characters = initialCode.split("");
+      const numberOfCharactersToShow = Math.min(
+        characters.length,
+        Math.floor(window.scrollY / 5)
       );
 
-      const newCode = lines.slice(0, numberOfLinesToShow).join("\n");
+      const newCode = characters.slice(0, numberOfCharactersToShow).join("");
       setCode(newCode);
     };
 
@@ -58,73 +58,101 @@ export default function Content() {
   }, [isEditorInView]);
 
   return (
-    <div className="bg-white z-2">
-      <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
-        <div className="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
-          <div className="px-6 lg:px-0 lg:pt-4">
-            <div className="mx-auto max-w-2xl">
-              <div className="max-w-lg">
-                <div className="mt-24 sm:mt-32 lg:mt-16">
-                  <a href="#" className="inline-flex space-x-6">
-                    <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
-                      What's new
-                    </span>
-                    <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-                      <span>Just shipped v0.1.0</span>
-                      <ChevronRightIcon
-                        className="h-5 w-5 text-gray-400"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </a>
-                </div>
-                <h1 className="mt-10 text-left text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl ">
-                  The right talents for your projects
-                </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-600 text-left">
-                  Based in United Kingdom's Universities, Innovation Studios is
-                  a student-led consulting firm offering a blend of technical
-                  and business services at competitive rates. Our mission is to
-                  equip university students with valuable, paid work experience.
-                  At the same time, we aim to give you access to the brightest
-                  emerging talents across various disciplines.
-                  {/* ... (rest of your text) */}
-                </p>
-                <div className="mt-10 flex items-center gap-x-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    Documentation
-                  </a>
-                  <a
-                    href="#"
-                    className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    View on GitHub <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
+    <div className="relative  top-0 right-0 left-0 mr-10 z-1 justify-center pt-28">
+      <div className="mx-auto max-w-[1800px]  ">
+        <div className=" mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div className="text-base leading-7 text-gray-700 lg:max-w-lg pl-32">
+            <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
+              Company values
+            </p>
+            <h1 className="mt-12 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance">
+              Making you Industry Ready
+            </h1>
+            <div className="max-w-xl">
+              <p className="mt-8 mb-8 text-left font-alliance font-light">
+                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
+                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
+                Id dolor praesent donec est. Odio penatibus risus viverra tellus
+                varius sit neque erat velit. Faucibus commodo massa rhoncus,
+                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
+                sed amet vitae sed turpis id.
+              </p>
+            </div>
+            <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
+              Company values
+            </p>
+            <h1 className="mt-12 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance">
+              Making you Industry Ready
+            </h1>
+            <div className="max-w-xl">
+              <p className="mt-8 mb-8 text-left font-alliance font-light">
+                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
+                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
+                Id dolor praesent donec est. Odio penatibus risus viverra tellus
+                varius sit neque erat velit. Faucibus commodo massa rhoncus,
+                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
+                sed amet vitae sed turpis id.
+              </p>
+            </div>
+            <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
+              Company values
+            </p>
+            <h1 className="mt-12 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance">
+              Making you Industry Ready
+            </h1>
+            <div className="max-w-xl">
+              <p className="mt-8 mb-8 text-left font-alliance font-light">
+                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
+                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
+                Id dolor praesent donec est. Odio penatibus risus viverra tellus
+                varius sit neque erat velit. Faucibus commodo massa rhoncus,
+                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
+                sed amet vitae sed turpis id.
+              </p>
             </div>
           </div>
-          <div ref={editorRef} className="sticky top-0">
-            <div className="mt-10 shadow-lg rounded-lg overflow-hidden">
-              <Editor
-                height="500px"
-                language="javascript"
-                theme=" "
-                value={"\n" + code}
-                options={{
-                  inlineSuggest: true,
-                  fontSize: "16px",
-                  formatOnType: true,
-                  autoClosingBrackets: true,
-                  minimap: {
-                    enabled: false, // Disabling the minimap
-                    scale: 0,
-                  },
-                }}
-              />
+
+          <div className="lg:pr-4 pl-36 h-[1300px]">
+            <div
+              ref={editorRef}
+              className="sticky top-[20vh] mt-10 shadow-lg rounded-lg overflow-hidden "
+              style={{
+                backgroundColor: "#1E1E1E",
+                borderLeft: "50px solid #16a34a",
+                borderTop: "50px solid #16a34a",
+              }}
+            >
+              <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
+                <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white rounded-tl">
+                  NotificationSetting.jsx
+                </div>
+                <div className="border-r border-gray-600/10 px-4 py-2">
+                  App.jsx
+                </div>
+              </div>
+              <div className="pt-8" style={{ backgroundColor: "#1E1E1E" }}>
+                <Editor
+                  height="500px"
+                  language="javascript"
+                  theme="vs-dark"
+                  value={code}
+                  options={{
+                    inlineSuggest: true,
+                    fontSize: "16px",
+                    formatOnType: true,
+                    autoClosingBrackets: true,
+                    minimap: {
+                      enabled: false, // Disabling the minimap
+                      scale: 0,
+                    },
+                    scrollbar: {
+                      vertical: "hidden",
+                      horizontal: "hidden",
+                    },
+                    scrollBeyondLastLine: false, // Prevents scrolling beyond the last line in the editor
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
