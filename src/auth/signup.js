@@ -62,8 +62,9 @@ export default function Signup() {
 
   return (
     <>
+    <Navbarv2 />
     <div className="flex min-h-screen flex-1 flex-col px-6 py-12 lg:px-8">
-      <Navbarv2 />
+      
       <div className="sm:mx-auto sm:w-full sm:max-w-md" style={{ marginTop: '150px' }}>
         
         <h2 className="mt-6 text-center text-4xl font-extrabold text-gray-900">

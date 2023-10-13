@@ -255,7 +255,7 @@ const Carousel = () => {
                 {slide.hiring && (
                   <div className="flex">
                     <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                      <span className="font-semibold text-green-600 font-alliance font-bold">
+                      <span className="font-semibold text-green-600 font-alliance font-bold ">
                         We’re hiring
                       </span>
                       <span

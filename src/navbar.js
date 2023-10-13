@@ -81,7 +81,7 @@ const Navbar = () => {
             </button>
           ) : (
             <a onClick={() => navigate("/signin")} className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer font-alliance font-bold">
-              Log in <span aria-hidden="true">&rarr;</span>
+              Get Started <span aria-hidden="true">&rarr;</span>
             </a>
           )}
         </div>
@@ -126,14 +126,14 @@ const Navbar = () => {
                     onClick={handleLogout}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Log out
+                    Log out <span aria-hidden="true">&rarr;</span>
                   </button>
                 ) : (
                   <a
                     onClick={() => navigate("/signin")}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer "
                   >
-                    Log in
+                    Get Started <span aria-hidden="true">&rarr;</span>
                   </a>
                 )}
               </div>

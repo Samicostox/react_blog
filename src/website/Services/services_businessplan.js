@@ -6,6 +6,7 @@ import Navbar from "../../navbar";
 import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
+import Navbarv2 from "../../navbarv2";
 
 const steps = [
   {
@@ -59,9 +60,9 @@ export default function Service_businessplan() {
 
   return (
     <div className="bg-white">
-      <Navbar></Navbar>
+      <Navbarv2></Navbarv2>
 
-      <div className="relative isolate pt-14">
+      <div className="relative isolate ">
         <svg
           className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
           aria-hidden="true"
@@ -91,7 +92,7 @@ export default function Service_businessplan() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="max-w-[1800px] mx-auto px-6 py-24 sm:py-32 xl:flex lg:items-center lg:px-40 lg:py-40 lg:gap-x-20">
+        <div className="max-w-[1800px] mx-auto px-6 py-24 sm:py-32 xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
             <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">

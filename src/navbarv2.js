@@ -128,7 +128,7 @@ const Navbarv2 = () => {
               onClick={() => navigate("/signin")}
               className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
             >
-              Log in{" "}
+              Get Started{" "}
               <span className="text-white" aria-hidden="true">
                 &rarr;
               </span>
@@ -208,7 +208,7 @@ const Navbarv2 = () => {
                     onClick={() => navigate("/signin")}
                     className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
                   >
-                    Log in{" "}
+                    Get Started{" "}
                     <span className="text-white" aria-hidden="true">
                       &rarr;
                     </span>
