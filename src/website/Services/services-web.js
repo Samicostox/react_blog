@@ -12,39 +12,39 @@ const steps = [
     description:
       "We dive into your web ideas, extracting requirements and utilizing agile and Kanban. Our student team crafts a flexible, client-aligned project outline, turning your digital aspirations into structured plans.",
     imageSrc:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1696437699/sheet_wlghil.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190198/icons8-documents-96_xohmbh.png",
   },
   {
     name: "2. Design",
     description:
       "Merging aesthetics with functionality, our designs adhere to the latest guidelines and ensure your brand identity is consistently represented, crafting a seamless and engaging user journey on your website.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190297/icons8-ui-ux-design-96_k1ku97.png",
   },
   {
     name: "3. Development",
     description:
       "Our student developers employ web technologies to transform designs into functional, innovative websites, ensuring visual appeal, robust functionality, and adherence to your budget and requirements.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190419/icons8-development-96_kqu2mg.png",
   },
   {
     name: "4. Testing",
     description:
       "Your website undergoes rigorous testing, ensuring a bug-free, seamless user experience that exceeds expectations, with your feedback integrated to refine and optimize performance.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190546/icons8-testing-80_f0rgbp.png",
   },
   {
     name: "5. Deployment",
     description:
       "We navigate deployment intricacies to ensure your website launches smoothly and successfully with Heroku or Azure, providing a consistent, uninterrupted user experience across the board.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190739/icons8-launch-96_dlqjg2.png",
   },
   {
     name: "6. Maintenance",
     description:
       "Post-launch, we offer 2 weeks to 1 month of dedicated maintenance, focusing on bug fixes and updates, with ongoing email support to ensure your website remains up-to-date and operational.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
   },
 ];
 export default function Service_web() {

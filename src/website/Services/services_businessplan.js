@@ -13,40 +13,40 @@ const steps = [
     description:
       "We craft a succinct executive summary that introduces your business, articulates the purpose of the business plan, and specifies whether the objective is to attract capital or align your team. We ensure to highlight the financial needs, if any, and provide a snapshot of your business’s financial health and pivotal achievements.",
     imageSrc:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1696437699/sheet_wlghil.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190198/icons8-documents-96_xohmbh.png",
   },
   {
     name: "2. Company Description",
     description:
       "Our service provides a concise yet comprehensive introduction of your company, positioning it aptly within its industry and elucidating relevant market trends and financial data. We meticulously detail your business type, leadership, and employee dynamics, while spotlighting your unique selling propositions and advantages.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697194000/company_mbx4qf.svg",
   },
   {
     name: "3. Market Analysis and Opportunity",
     description:
       "We emphasize thorough market research and analysis to furnish a robust business plan. Our deliverables include insightful data on market size, growth, and potential risks, coupled with a succinct overview of your target demographic and a strategic positioning of your business in the market.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193674/am_zfftao.svg",
   },
   {
     name: "4. Competitive Analysis",
     description:
       "We conduct a rigorous competitive analysis, exploring the operations, financials, and value propositions of your competitors. Our service ensures that your business plan highlights strategies to leverage competitors' strengths and weaknesses to your benefit.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193804/ca_gdhaaa.svg",
   },
   {
     name: "5. Execution Plan",
     description:
       "Our expertly crafted execution plan outlines how your business will operate, develop, and fulfill its strategic objectives. We detail your organizational structure, leadership, and daily operations, providing clear timelines for startups to commence operations and achieve profitability, or for established companies to implement new strategies.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193880/plan_freyov.svg",
   },
   {
     name: "6. Marketing Plan",
     description:
       "We develop a streamlined marketing plan that elucidates how your business will be promoted and how it will retain customers. Our service ensures that key aspects like brand messaging, marketing assets, and a succinct marketing SWOT analysis are included, keeping stakeholders well-informed of your promotional strategies.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697192863/markstrategy_xemy0f.svg",
   },
 ];
 

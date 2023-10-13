@@ -13,39 +13,39 @@ const steps = [
     description:
       "We initiate our projects by deeply understanding your business challenges and objectives. Through detailed discussions and strategic planning, we define clear problem statements and establish a tailored project scope, ensuring that our data-driven solutions align seamlessly with your business goals and vision.",
     imageSrc:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1696437699/sheet_wlghil.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190198/icons8-documents-96_xohmbh.png",
   },
   {
     name: "2. Data Acquisition and Understanding",
     description:
       "Our team employs a range of techniques to acquire, explore, and understand the data that will drive your solutions. Through exploratory data analysis and quality assessments, we ensure the data is robust and relevant, laying a solid foundation for the subsequent phases of the project.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191263/icons8-data-backup-100_w78o90.png",
   },
   {
     name: "3. Data Preprocessing and Cleaning",
     description:
       "We meticulously clean and preprocess the data, addressing any inconsistencies, missing values, and outliers. Through strategic transformations and feature engineering, we ensure the data is in an optimal format, ready to yield accurate and reliable insights in the modeling phase.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191351/icons8-data-cleaning-99_h1xp4m.png",
   },
   {
     name: "4. Model Development and Validation",
     description:
       "We design, train, and validate machine learning models that are custom-tailored to your specific problem and data. Rigorous validation ensures that our models provide reliable and generalizable insights, turning your data into actionable, predictive power.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191998/data_processing_z7vqnl.svg",
   },
   {
     name: "5. Model Deployment",
     description:
       "We strategically deploy models into your operational environment, ensuring they are scalable, maintainable, and integrate seamlessly with your existing systems. Continuous monitoring post-deployment ensures consistent performance and reliability in delivering insights.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190739/icons8-launch-96_dlqjg2.png",
   },
   {
     name: "6. Project Delivery and Maintenance",
     description:
       "We ensure you can leverage the deployed models effectively through comprehensive training and robust documentation. Our commitment extends beyond delivery, offering ongoing support and maintenance to ensure the sustainability and evolution of your data-driven solutions in alignment with your business dynamics.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
   },
 ];
 export default function Service_data() {

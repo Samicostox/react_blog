@@ -12,39 +12,39 @@ const steps = [
     description:
       "We dive into understanding your goals, aligning the benchmarking exercise with your business objectives, and collaboratively selecting specific processes or areas to yield insightful results.",
     imageSrc:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1696437699/sheet_wlghil.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190198/icons8-documents-96_xohmbh.png",
   },
   {
     name: "2. Selection of Comparisons",
     description:
       "We strategically identify benchmark partners, whether industry leaders or direct competitors, ensuring they provide an optimal comparison point to measure your performance against.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697194211/comparaison_v0uqaf.svg",
   },
   {
     name: "3. Data Collection",
     description:
       "Embarking on data collection, we meticulously gather performance data from your organization and selected benchmarks, ensuring a comprehensive and relevant overview.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191263/icons8-data-backup-100_w78o90.png",
   },
   {
     name: "4. Data Analysis",
     description:
       "Leveraging sophisticated tools and academic expertise, we analyze data, highlighting performance gaps and opportunities, backed by our unique blend of student talent and professional oversight.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191998/data_processing_z7vqnl.svg",
   },
   {
     name: "5. Strategy & Action Plan",
     description:
       "Our analysis insights shape a strategic blueprint, offering actionable recommendations and clear steps to address performance gaps and elevate your business operations.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193880/plan_freyov.svg",
   },
   {
     name: "6. Post-Delivery Support",
     description:
       "Strategy formulation is just the beginning. We are with you every step of the way, offering post-delivery consultations, revisions, and insights to ensure the strategy is actualised effectively.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
   },
 ];
 export default function Service_benchmarking() {

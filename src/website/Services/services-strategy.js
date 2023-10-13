@@ -12,39 +12,39 @@ const steps = [
     description:
       "Our specialists curate comprehensive technical documentation that is not only precise but also user-friendly. Whether it's product specifications, system architectures, or user manuals, we ensure every detail aligns with your business goals.",
     imageSrc:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1696437699/sheet_wlghil.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190198/icons8-documents-96_xohmbh.png",
   },
   {
     name: "Risk Analysis",
     description:
       "Risk is inherent in business. Our team delves deep to identify potential risks associated with your ventures. More importantly, for each risk pinpointed, we propose robust mitigation strategies, ensuring your operations remain resilient in face of uncertainties.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697192751/risk_analysis_cylvcg.svg",
   },
   {
     name: "Marketing Strategy",
     description:
       "Understanding your market is paramount. We harness the power of data analytics, industry trends, and deep market research to sculpt strategies that resonate with your target audience.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697192863/markstrategy_xemy0f.svg",
   },
   {
     name: "Pricing Strategy",
     description:
       "Price is more than just a number; it's a reflection of value. Through competitor analysis, value proposition refinement, and consumer behaviour insights, we recommend pricing structures that optimise profitability while ensuring customer satisfaction.",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697192921/icons8-pricing-strategy-78_z4qwmp.png",
   },
   {
     name: "Road Map",
     description:
       "With a clearly defined path, we layout step-by-step actionable plans. This ensures that strategy translates seamlessly into execution, propelling your business forward.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193006/icons8-roadmap-80_vyqfxx.png",
   },
   {
     name: "Post-Delivery Support",
     description:
       "Strategy formulation is just the beginning. We are with you every step of the way, offering post-delivery consultations, revisions, and insights to ensure the strategy is actualised effectively.al.",
-    imageSrc: "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
+    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
   },
 ];
 export default function Service_strategy() {
