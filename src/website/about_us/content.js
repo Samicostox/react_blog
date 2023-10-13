@@ -58,10 +58,10 @@ export default function Content() {
   }, [isEditorInView]);
 
   return (
-    <div className="relative  top-0 right-0 left-0 mr-10 z-1 justify-center pt-28">
+    <div className="relative  top-0 right-0 left-0 mr-10 z-1 justify-center pt-28 pb-28">
       <div className="mx-auto max-w-[1800px]  ">
-        <div className=" mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="text-base leading-7 text-gray-700 lg:max-w-lg pl-32">
+        <div className="mx-auto grid grid-cols-[2fr,2fr] items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0">
+          <div className="text-base leading-7 text-gray-700 lg:max-w-full pl-32">
             <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
               Company values
             </p>
@@ -112,7 +112,7 @@ export default function Content() {
             </div>
           </div>
 
-          <div className="lg:pr-4 pl-36 h-[1300px]">
+          <div className="lg:pr-4 h-[1300px]">
             <div
               ref={editorRef}
               className="sticky top-[20vh] mt-10 shadow-lg rounded-lg overflow-hidden "
@@ -120,17 +120,24 @@ export default function Content() {
                 backgroundColor: "#1E1E1E",
                 borderLeft: "50px solid #16a34a",
                 borderTop: "50px solid #16a34a",
+                borderRadius: "25px 25px 25px 25px", // Added border-radius
               }}
             >
-              <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
-                <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white rounded-tl">
+              <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400 rounded-tl-lg">
+                <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white rounded-tl-lg">
                   NotificationSetting.jsx
                 </div>
                 <div className="border-r border-gray-600/10 px-4 py-2">
                   App.jsx
                 </div>
               </div>
-              <div className="pt-8" style={{ backgroundColor: "#1E1E1E" }}>
+              <div
+                className="pt-8 rounded-tl"
+                style={{
+                  backgroundColor: "#1E1E1E",
+                  borderRadius: "25px 0px 0px 0px",
+                }}
+              >
                 <Editor
                   height="500px"
                   language="javascript"

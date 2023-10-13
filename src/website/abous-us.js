@@ -142,6 +142,12 @@ export default function AboutUs() {
       <InnovationStudios />
       <Timeline />
       <Services />
+      <h1 className="text-center text-4xl text-black  font-alliance font-bold ">
+        OUR APPROACH
+      </h1>
+      <p className="mt-6 text-lg leading-8 text-gray-600 text-center font-alliance mb-12 pb-10">
+        From inception to delivery we are here all along the way.
+      </p>
       <NumberLine />
 
       <div className="bg-white">
