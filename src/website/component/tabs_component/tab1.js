@@ -77,8 +77,8 @@ function Tab1() {
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600 text-left  ">
-                  <p className="flex-auto text-left ">{feature.description}</p>
+                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600 text-left font-alliance font-light">
+                  <p className="flex-auto text-left font-alliance ">{feature.description}</p>
                 </dd>
               </div>
             ))}
@@ -92,7 +92,7 @@ function Tab1() {
           data-tf-iframe-props="title=Talent Recuitment"
           data-tf-transitive-search-params
           data-tf-medium="snippet"
-          className=" mt-24 inline-block max-w-full overflow-hidden bg-green-800 rounded-md shadow-sm hover:bg-green-600 text-white text-lg rounded-full px-8 py-2 font-bold h-12 cursor-pointer whitespace-nowrap overflow-ellipsis text-center"
+          className=" mt-24 inline-block max-w-full overflow-hidden bg-green-800 rounded-md shadow-sm hover:bg-green-600 text-white text-lg rounded-full px-8 py-2 font-bold h-12 cursor-pointer whitespace-nowrap overflow-ellipsis text-center font-alliance"
         >
           Apply!
         </button>
@@ -116,7 +116,7 @@ function Tab2() {
             <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
               <img
                 className="absolute inset-0 h-full w-full object-cover "
-                src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
+                src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697210000/sami8694_Isometric_industry_ready_students_illustration_busines_9d0ee45b-503b-4c3b-b3b0-648205a34a45_jzbfd7.png"
                 alt=""
               />
 

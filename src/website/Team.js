@@ -96,7 +96,7 @@ export default function Team() {
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20  mx-auto">
         <HeaderT></HeaderT>
 
-        <div className="mx-auto max-w-[1800px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32 mt-10">
+        <div className="mx-auto max-w-[1600px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32 mt-10">
           <div style={{ height: "1px", backgroundColor: "black" }}></div>
 
           <div className="mt-10">
@@ -106,7 +106,7 @@ export default function Team() {
 
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32 " />
       </div>
-      <div className="mx-auto max-w-[1800px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32">
+      <div className="mx-auto max-w-[1600px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32">
         <div style={{ height: "1px", backgroundColor: "black" }}></div>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mt-10 font-alliance">

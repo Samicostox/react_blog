@@ -4,9 +4,9 @@ import tomorrowNight from "react-syntax-highlighter/dist/esm/styles/hljs/atelier
 
 const HeaderT = () => {
   return (
-    <div className="mx-auto max-w-14xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40 max-w-[1800px] ">
+    <div className="mx-auto max-w-14xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40 max-w-[1600px] ">
       <div className="px-6 lg:px-0 lg:pt-4 ">
-        <div className="mx-auto max-w-[1800px]">
+        <div className="mx-auto max-w-[1600px]">
           <div className="max-w-full px-6 lg:px-8  ">
             {" "}
             {/* Modified this line */}{" "}

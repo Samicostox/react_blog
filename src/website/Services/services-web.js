@@ -90,7 +90,7 @@ export default function Service_web() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="max-w-[1800px] mx-auto px-6 py-24 sm:py-32 xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
+        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
             <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">

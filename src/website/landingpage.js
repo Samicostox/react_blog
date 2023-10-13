@@ -186,7 +186,7 @@ export default function Landingpage() {
         </div>
 
         <div className="relative z-10 bg-white w-full">
-          <CardDefault></CardDefault>
+          <CardDefault title2 = "OUR SERVICES"></CardDefault>
         </div>
 
         <div className="w-full bg-white h-20 relative z-10">

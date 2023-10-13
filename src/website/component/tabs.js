@@ -26,7 +26,7 @@ export function TabsWithIcon() {
     {
       label: "3. Projects",
       value: "vue",
-      component: <CardDefault />,
+      component: <CardDefault title2 = "Projects You Can Work On" />,
     },
     {
       label: "4. Employement",
@@ -42,7 +42,7 @@ export function TabsWithIcon() {
   const currentTabIndex = data.findIndex((item) => item.value === activeTab);
 
   return (
-    <div className="m-28 -mb-28">
+    <div className=" -mb-28">
       <div className="text-left">
         <h1 className="text-4xl font-alliance font-bold tracking-tight text-gray-900">
           Getting Involved as a Uni Student
