@@ -250,7 +250,7 @@ const Carousel = () => {
           <div key={index} className="relative isolate flex-none w-full pt-14">
             <div className="absolute top-0 left-0 w-full h-full z-0"></div>
 
-            <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 z-10">
+            <div className="mx-auto max-w-7xl px-6  lg:flex lg:items-center lg:gap-x-10 lg:px-8 z-10">
               <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto z-10">
                 {slide.hiring && (
                   <div className="flex">
