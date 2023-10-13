@@ -22,7 +22,7 @@ import {
             'Dive into the mobile-centric world with our top-tier mobile app solutions. From idea to launch, our team ensures your app not only looks great but also resonates with your target audience for maximum engagement.',
           imageUrl:
             'https://res.cloudinary.com/dl2adjye7/image/upload/v1696257551/mobile_ghadoy.png',
-            icons: ['react_y3ribl', 'django-icon_rxmwzx','apple_czgnk8','android-icon_l1eebj','flutter_wz2bg3'],
+            icons: ['react_y3ribl', 'django-icon_rxmwzx','spring-icon_w5s3uf','apple_czgnk8','android-icon_l1eebj','flutter_wz2bg3'],
             link: '/#service-mobile'
         },
         {
@@ -31,7 +31,7 @@ import {
               'Elevate your online presence with our bespoke web development services. We craft beautiful, user-friendly websites that captivate and convert, ensuring your brand stands out in the digital landscape.',
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696258003/computer_svt21c.png',
-              icons: ['react_y3ribl', 'django-icon_rxmwzx','spring-icon_w5s3uf','wix_kcymgx','flutter_wz2bg3','wordpress-icon-alt_zvugtj','webflow_pstet1'],
+              icons: ['react_y3ribl', 'django-icon_rxmwzx','spring-icon_w5s3uf','wix_kcymgx','flutter_wz2bg3','wordpress-icon-alt_zvugtj','webflow_pstet1','vue_ez1vlf','framer_xrpm7x','html-5_wst3nk'],
               link: '/#service-web'
           },
           {
@@ -40,7 +40,7 @@ import {
               'Unlock the power of your data with our cutting-edge data science services. We transform raw data into actionable insights, helping you make informed decisions and stay ahead in your industry.',
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696257232/datata_gl2sns.png',
-              icons: ['react_y3ribl', 'django-icon_rxmwzx'],
+              icons: ['python_bmp5vb','pytorch-icon_qqdkjv','tensorflow_jtai3p','postgresql_1_rxgttx','icons8-excel_cndh13'],
               link: '/#service-data'
           },
           {
@@ -49,7 +49,7 @@ import {
               'Future-proof your business with our expert strategic planning. We dive deep into market analytics and trends to craft strategies that position you for lasting success and growth.',
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325241/11_ndpclf.png',
-              icons: ['react_y3ribl', 'django-icon_rxmwzx'],
+              icons: ['swot3_hxgd7t', 'canva_mvtfow', 'notion-logo-svgrepo-com_m5vflg','ologo_square_colour_light_bg_w5keat','modelcanva_ecyq0v'],
               link: '/#service-businessplan'
           },
           {
@@ -58,7 +58,7 @@ import {
               'Stay ahead of the curve with our comprehensive benchmarking services. We will help you gauge where you stand in the market, unveiling opportunities and strategies to outperform competitors and set industry standards.',
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325244/12_soms8p.png',
-              icons: ['react_y3ribl', 'django-icon_rxmwzx'],
+              icons: ['swot3_hxgd7t', 'canva_mvtfow', 'notion-logo-svgrepo-com_m5vflg','ologo_square_colour_light_bg_w5keat',],
               link: '/#service-strategy'
           },
           {
@@ -67,7 +67,7 @@ import {
               'Turn your vision into a tangible roadmap with our tailored business plan services. Whether you are a startup or an established entity, our team crafts plans that attract investors and steer your business towards unparalleled success.',
             imageUrl:
               'https://res.cloudinary.com/dl2adjye7/image/upload/v1696325237/10_hoa8by.png',
-              icons: ['react_y3ribl', 'django-icon_rxmwzx'],
+              icons: ['swot3_hxgd7t', 'canva_mvtfow', 'notion-logo-svgrepo-com_m5vflg','ologo_square_colour_light_bg_w5keat','python_bmp5vb'],
               link: '/#service-benchmarking'
           },
         // More cards...
