@@ -112,7 +112,7 @@ export default function Content() {
               <Editor
                 height="500px"
                 language="javascript"
-                theme="vs-dark"
+                theme=" "
                 value={"\n" + code}
                 options={{
                   inlineSuggest: true,
