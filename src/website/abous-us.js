@@ -81,8 +81,8 @@ export default function AboutUs() {
   const [viewLeft, setViewLeft] = useState(true);
 
   return (
-    <div className="relative bg-white z-2">
-      <Navbarv2 />
+    <div className="bg-white">
+      <Navbarv2></Navbarv2>
 
       <div className="relative bg-black z-2 overflow-hidden top-0">
         <div className="relative isolate overflow-hidden pt-14">
