@@ -67,7 +67,7 @@ export default function Content() {
 
   return (
     <div className="relative top-0 right-0 left-0 mr-10 z-1 justify-center pt-28 pb-28 sm:pt-12 sm:pb-12 md:pt-16 md:pb-16">
-      <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1700px] px-6 lg:px-8 lg:pl-14 pt-10   mt-10">
         <div className="mx-auto grid grid-cols-1 lg:grid-cols-[2fr,2fr] items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0">
           <div
             className="text-base leading-7 text-gray-700 lg:max-w-full pl-4 md:pl-12 lg:pl-48"
@@ -79,7 +79,7 @@ export default function Content() {
             <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
               Company values
             </p>
-            <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance">
+            <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance max-w-xl">
               Bridging The Gap Between University and Industry
             </h1>
             <div className="max-w-xl">
@@ -104,7 +104,7 @@ export default function Content() {
             <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
               Company values
             </p>
-            <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance">
+            <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance max-w-xl">
               Providing Higher Value with Younger Minds
             </h1>
             <div className="max-w-xl">
@@ -129,7 +129,7 @@ export default function Content() {
             <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
               Company values
             </p>
-            <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance">
+            <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance max-w-xl">
               Empowering Tomorrow's Leaders
             </h1>
             <div className="max-w-xl">
