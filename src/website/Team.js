@@ -123,7 +123,7 @@ const people = [
     name: "Nadia Jaufarally",
     role: "Software Developer",
     imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697379674/Nadia_rpgrde.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/nadiaj7860/",
     Uni: "WIS",

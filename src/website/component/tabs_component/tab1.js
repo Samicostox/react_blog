@@ -78,7 +78,9 @@ function Tab1() {
                   {feature.name}
                 </dt>
                 <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600 text-left font-alliance font-light">
-                  <p className="flex-auto text-left font-alliance ">{feature.description}</p>
+                  <p className="flex-auto text-left font-alliance ">
+                    {feature.description}
+                  </p>
                 </dd>
               </div>
             ))}
@@ -188,7 +190,8 @@ const actions = [
     icon: ClockIcon,
     iconForeground: "text-teal-700",
     iconBackground: "bg-teal-50",
-    text: "",
+    text:
+      "Engage in real-world applications that enhance academic knowledge while navigating through practical challenges and projects.",
   },
   {
     title: "Training",
@@ -196,7 +199,8 @@ const actions = [
     icon: CheckBadgeIcon,
     iconForeground: "text-purple-700",
     iconBackground: "bg-purple-50",
-    text: "",
+    text:
+      "Benefit from comprehensive training modules, ensuring you acquire vital professional skills and industry-relevant expertise.",
   },
   {
     title: "Support",
@@ -204,7 +208,8 @@ const actions = [
     icon: UsersIcon,
     iconForeground: "text-sky-700",
     iconBackground: "bg-sky-50",
-    text: "",
+    text:
+      "Enjoy a robust support system where your ideas are valued and your challenges are addressed through consistent mentorship and resources.",
   },
   {
     title: "Compensation",
@@ -212,7 +217,8 @@ const actions = [
     icon: BanknotesIcon,
     iconForeground: "text-yellow-700",
     iconBackground: "bg-yellow-50",
-    text: "",
+    text:
+      "Earn competitive compensation, providing financial support during your educational journey and potentially easing student loan burdens.",
   },
   {
     title: "Career",
@@ -220,7 +226,8 @@ const actions = [
     icon: ReceiptRefundIcon,
     iconForeground: "text-rose-700",
     iconBackground: "bg-rose-50",
-    text: "",
+    text:
+      "Establish a strong career foundation by connecting with industry professionals and gaining insights into your future professional pathway.",
   },
   {
     title: "Community",
@@ -228,7 +235,8 @@ const actions = [
     icon: AcademicCapIcon,
     iconForeground: "text-indigo-700",
     iconBackground: "bg-indigo-50",
-    text: "",
+    text:
+      "Be part of a vibrant community where networking, collaborative learning, and social interactions pave the way for lifelong friendships and professional connections.",
   },
 ];
 
