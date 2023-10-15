@@ -8,6 +8,7 @@ import Footer from "./footer";
 import InnovationStudios from "./about_us/innovation_studios";
 import NumberLine from "./about_us/package_service";
 import Navbarv2 from "../navbarv2";
+import Example from "./navigation_bar";
 
 const stats = [
   { id: 1, name: "Students working with us", value: "30+" },
@@ -61,7 +62,6 @@ export default function AboutUs() {
   return (
     <div className="bg-white">
       <Navbarv2></Navbarv2>
-
       <div className="relative bg-black z-2 overflow-hidden top-0">
         <div className="relative isolate overflow-hidden pt-14">
           <img
@@ -83,18 +83,21 @@ export default function AboutUs() {
           </div>
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
+              <h1 className="text-6xl font-alliance text-white font-bold">
+                Work Now With
+              </h1>
               <TypeAnimation
-                className="typingText text-4xl"
+                className="typingText text-6xl"
                 sequence={[
-                  "Work Now With",
-                  1000,
-                  "Work Now With Tomorrow's Leaders",
-                  1000,
-                  "Work Now With Tomorrow's Most Brillant Minds",
-                  1000,
-                  "Work Now With Tomorrow's Engineers",
-                  1000,
-                  "Work Now With Innovation Studios",
+                  "",
+                  2000,
+                  "Tomorrow's Leaders",
+                  2000,
+                  "Tomorrow's Most Brillant Minds",
+                  2000,
+                  "Tomorrow's Engineers",
+                  2000,
+                  "Innovation Studios",
                   5000,
                   () => {
                     console.log("Sequence completed");
@@ -105,25 +108,25 @@ export default function AboutUs() {
                 repeat={Infinity}
                 style={{
                   display: "inline-block",
-                  color: "white",
+                  color: "teal",
                   fontFamily: "Alliance",
                 }}
               />
 
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
+              <p className="mt-6 text-lg leading-8 text-gray-300 font-alliance">
+                We are a student-led consulting firm, which aims to provide a
+                unique platform where businesses meet and work with the
+                brilliant minds of tomorrow..
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="#"
-                  className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                  href="/#/contact2"
+                  className="rounded-md bg-green-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
-                  Get started
+                  Get a Quote
                 </a>
                 <a
-                  href="#"
+                  href="/#/services"
                   className="text-sm font-semibold leading-6 text-white"
                 >
                   Learn more <span aria-hidden="true">→</span>
@@ -198,9 +201,9 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className = "px-6">
+      <div className="px-6">
         <div className="mx-auto max-w-[1700px] px-6 lg:px-8 lg:pl-14 pt-10 mt-10">
-        <div style={{ height: "1px", backgroundColor: "black" }}></div>
+          <div style={{ height: "1px", backgroundColor: "black" }}></div>
         </div>
 
         <div className="mt-20">

@@ -1,13 +1,60 @@
-import { useState, useEffect } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Dialog, Popover, Transition } from "@headlessui/react";
+import {
+  MapIcon,
+  DevicePhoneMobileIcon,
+  ComputerDesktopIcon,
+  CircleStackIcon,
+  PresentationChartBarIcon,
+  MagnifyingGlassIcon,
+  ChevronDownIcon,
+} from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "LeadGeneration", href: "/software" },
-  { name: "Contact", href: "/contact2" },
   { name: "Team", href: "/team" },
   { name: "Past Projects", href: "/past-projects" },
+];
+
+const services = [
+  {
+    name: "Mobile Development",
+    description: "Elevate your mobile app experience with us.",
+    href: "#/service-mobile",
+    icon: DevicePhoneMobileIcon,
+  },
+  {
+    name: "Web Development",
+    description: "Captivate and convert with our striking websites.",
+    href: "#/service-web",
+    icon: ComputerDesktopIcon,
+  },
+  {
+    name: "Data Science",
+    description: "Turn data into decisive insights effortlessly.",
+    href: "#/service-data",
+    icon: CircleStackIcon,
+  },
+  {
+    name: "Business Plan",
+    description: "Navigate towards success with our bespoke business plans.",
+    href: "#/service-businessplan",
+    icon: MapIcon,
+  },
+  {
+    name: "Strategy",
+    description: "Plan strategically for impactful, lasting success.",
+    href: "#/service-strategy",
+    icon: PresentationChartBarIcon,
+  },
+  {
+    name: "Benchmarking",
+    description: "Stay ahead with our innovative benchmarking services.",
+    href: "#/service-benchmarking",
+    icon: MagnifyingGlassIcon,
+  },
 ];
 
 const Navbarv2 = () => {
@@ -52,6 +99,7 @@ const Navbarv2 = () => {
     navigate(href);
   };
   const [scrolled, setScrolled] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <header
@@ -83,6 +131,60 @@ const Navbarv2 = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+        <Popover className="hidden lg:flex relative lg:pr-10">
+          <div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <a
+              href="/#/services"
+              className="font-alliance flex items-center gap-x-1 text-sm  leading-6 text-gray-900"
+            >
+              Services
+            </a>
+
+            <Transition
+              show={isHovered}
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="font-alliance absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                <div className="p-4">
+                  {services.map((item) => (
+                    <div
+                      key={item.name}
+                      className=" group relative flex gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    >
+                      <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <item.icon
+                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div className="flex-auto">
+                        <a
+                          href={item.href}
+                          className="font-alliance block font-semibold text-gray-900 text-left"
+                        >
+                          {item.name}
+                          <span className="absolute inset-0" />
+                        </a>
+                        <p className=" font-alliance mt-1 text-gray-600 text-left">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </div>
+        </Popover>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <a
@@ -165,13 +267,30 @@ const Navbarv2 = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                {services.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="font-alliance group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <item.icon
+                        className=" h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+              <div className="space-y-2 py-6">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
                     onClick={() =>
                       handleNavigation(item.href, item.requiresAuth)
                     }
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
+                    className="font-alliance -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
                   >
                     {item.name}
                   </a>

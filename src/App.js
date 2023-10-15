@@ -40,7 +40,8 @@ function App() {
       <div className="App">
         <div className="content">
           <Routes>
-            <Route path="/" element={<Landingpage />} />
+            <Route path="/" element={<AboutUs />} />
+            <Route path="/services" element={<Landingpage />} />
             <Route path="/software" element={<Home />} />
             <Route path="/product" element={<Product />} />
             <Route path="/contact" element={<Contact />} />
@@ -61,8 +62,14 @@ function App() {
             <Route path="/service-mobile" element={<Service_mobile />} />
             <Route path="/service-web" element={<Service_web />} />
             <Route path="/service-data" element={<Service_data />} />
-            <Route path="/service-benchmarking" element={<Service_benchmarking />} />
-            <Route path="/service-businessplan" element={<Service_businessplan />} />
+            <Route
+              path="/service-benchmarking"
+              element={<Service_benchmarking />}
+            />
+            <Route
+              path="/service-businessplan"
+              element={<Service_businessplan />}
+            />
             <Route path="/service-strategy" element={<Service_strategy />} />
             <Route path="/contact2" element={<Contact2 />} />
             <Route path="/adminhome" element={<Adminhome />} />
