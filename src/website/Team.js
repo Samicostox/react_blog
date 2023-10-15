@@ -93,7 +93,7 @@ export default function Team() {
     <div className="bg-white">
       <Navbarv2></Navbarv2>
 
-      <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20  mx-auto">
+      <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20 mx-auto">
         <HeaderT></HeaderT>
 
         <div className="mx-auto max-w-[1600px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32 mt-10">
