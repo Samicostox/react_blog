@@ -248,7 +248,7 @@ const Carousel = () => {
       >
         {slides.map((slide, index) => (
           <div key={index} className="relative isolate flex-none w-full pt-14">
-            <div className="absolute top-0 left-0 w-full h-full z-0"></div>
+            <div className="absolute top-0 left-0 w-full h-full z-10"></div>
 
             <div className="mx-auto max-w-7xl px-6  lg:flex lg:items-center lg:gap-x-10 lg:px-8 z-10">
               <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto z-10">
@@ -285,7 +285,7 @@ const Carousel = () => {
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
                     href={slide.href}
-                    className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 font-alliance font-bold"
+                    className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 font-alliance font-bold z-20"
                   >
                     {slide.buttonText}
                   </a>
