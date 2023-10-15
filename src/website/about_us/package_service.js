@@ -62,12 +62,12 @@ const NumberLine = () => {
           {data2.map((item, index) => (
             <div
               key={item.number}
-              className="mx-auto grid grid-cols-1 md:grid-cols-[2fr,2fr] items-start gap-x-2 gap-y-4 sm:gap-y-6 lg:mx-0 mb-5"
+              className="mx-auto grid grid-cols-1 lg:grid-cols-[2.4fr,2fr] items-start gap-x-2 gap-y-4 sm:gap-y-6 lg:mx-0 mb-5"
             >
               <div
                 className={`text-base leading-7 text-gray-700 lg:max-w-full ${
                   index % 2 === 0 ? "" : "md:order-last"
-                } px-6 md:px-0 md:pl-[13%] md:mr-[9%] pb-[15%]`}
+                }  md:px-0 sm:pl-[0%] md:pl-[13%] md:pr-[4%] md:mr-[9%] pb-[15%]`}
               >
                 <p className="mt-3 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
                   {item.title}
@@ -82,9 +82,9 @@ const NumberLine = () => {
                 </div>
               </div>
 
-              <div className="px-6 md:px-0 md:pl-[13%] md:pr-[9%] pb-[15%]">
+              <div className="px-6 md:px-0 md:pl-[13%] md:pr-[16%] pb-[15%]">
                 <img
-                  className="hidden md:block w-full h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800"
+                  className="hidden lg:block w-full h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800"
                   src={item.imageUrl}
                   alt={`Illustration for ${item.title}`}
                 />

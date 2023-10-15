@@ -196,8 +196,10 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1700px] px-6 lg:px-8 lg:pl-14 pt-10   mt-10">
+      <div className = "px-6">
+        <div className="mx-auto max-w-[1700px] px-6 lg:px-8 lg:pl-14 pt-10 mt-10">
         <div style={{ height: "1px", backgroundColor: "black" }}></div>
+        </div>
 
         <div className="mt-20">
           <h1 className="text-center text-4xl text-black  font-alliance font-bold ">
