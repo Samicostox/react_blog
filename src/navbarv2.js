@@ -55,7 +55,7 @@ const Navbarv2 = () => {
 
   return (
     <header
-      className={`sticky absolute inset-x-0 top-0 z-50  ${
+      className={`sticky absolute inset-x-0 top-0 z-50 ${
         scrolled ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
