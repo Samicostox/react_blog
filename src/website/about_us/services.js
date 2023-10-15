@@ -8,6 +8,13 @@ import {
   CheckBadgeIcon,
   ReceiptRefundIcon,
   ClockIcon,
+  MapIcon,
+  DevicePhoneMobileIcon,
+  ComputerDesktopIcon,
+  CircleStackIcon,
+  PresentationChartBarIcon,
+  MagnifyingGlassCircleIcon,
+  MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [
@@ -59,7 +66,7 @@ const actions = [
   {
     title: "Mobile Development",
     href: "/#/service-mobile",
-    icon: ClockIcon,
+    icon: DevicePhoneMobileIcon,
     iconForeground: "text-teal-700",
     iconBackground: "bg-teal-50",
     text:
@@ -68,7 +75,7 @@ const actions = [
   {
     title: "Web Development",
     href: "/#/service-web",
-    icon: CheckBadgeIcon,
+    icon: ComputerDesktopIcon,
     iconForeground: "text-purple-700",
     iconBackground: "bg-purple-50",
     text:
@@ -77,7 +84,7 @@ const actions = [
   {
     title: "Data Science",
     href: "/#/service-data",
-    icon: UsersIcon,
+    icon: CircleStackIcon,
     iconForeground: "text-sky-700",
     iconBackground: "bg-sky-50",
     text:
@@ -86,7 +93,7 @@ const actions = [
   {
     title: "Business Plan",
     href: "/#/service-businessplan",
-    icon: BanknotesIcon,
+    icon: MapIcon,
     iconForeground: "text-yellow-700",
     iconBackground: "bg-yellow-50",
     text:
@@ -95,7 +102,7 @@ const actions = [
   {
     title: "Strategies",
     href: "/#/service-strategy",
-    icon: ReceiptRefundIcon,
+    icon: PresentationChartBarIcon,
     iconForeground: "text-rose-700",
     iconBackground: "bg-rose-50",
     text:
@@ -104,7 +111,7 @@ const actions = [
   {
     title: "Benchmarking",
     href: "/#/service-benchmarking",
-    icon: AcademicCapIcon,
+    icon: MagnifyingGlassIcon,
     iconForeground: "text-indigo-700",
     iconBackground: "bg-indigo-50",
     text:
@@ -118,9 +125,15 @@ function classNames(...classes) {
 export default function Services() {
   return (
     <div className="pb-36">
-      <h1 className="text-center text-4xl text-black mb-12 font-alliance font-bold">
+      <h1 className="text-center text-4xl text-black font-alliance font-bold">
         OUR SERVICES
       </h1>
+      <p className="mt-6 text-lg leading-8 text-gray-600 text-center font-alliance mb-12 sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+        Empowering your business with cutting-edge website design, innovative
+        mobile app development, strategic business planning, and insightful data
+        science solutions.
+      </p>
+
       <div className="divide-y divide-gray-400 overflow-hidden rounded-lg bg-gray-200 shadow-lg sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0 mt-20 max-w-7xl mx-auto border border-gray-300">
         {actions.map((action, actionIdx) => (
           <div
@@ -134,7 +147,7 @@ export default function Services() {
               actionIdx === actions.length - 1
                 ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
                 : "",
-              "group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-green-700 text-left shadow-sm"
+              "group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-green-700 text-left shadow-sm transform transition-transform duration-500 "
             )}
           >
             <div>
@@ -167,7 +180,7 @@ export default function Services() {
               </p>
             </div>
             <span
-              className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400"
+              className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400 transform transition-transform duration-300 rotate-90 group-hover:rotate-0"
               aria-hidden="true"
             >
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">

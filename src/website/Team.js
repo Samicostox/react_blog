@@ -39,47 +39,136 @@ const incentives = [
   },
 ];
 
-const people = [
+const trio = [
   {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
+    name: "Amy Tierney",
+    role: "Co-Founder / COO",
     imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312907/Yahia_uv3a7y.jpg",
     twitterUrl: "#",
-    linkedinUrl: "#",
-    Uni: "UOB",
-    color: "bg-red-100",
+    linkedinUrl: "https://www.linkedin.com/in/yahia-khairy-abdelkader/",
   },
   {
-    name: "Lindsay Walton",
-    role: "Consultant",
+    name: "Hugo Hazard",
+    role: "Co-Founder / CEO",
     imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697372178/Firefly_20231015131242_d2kr8s.png",
     twitterUrl: "#",
-    linkedinUrl: "#",
-    Uni: "UOB",
-    color: "bg-red-100",
+    linkedinUrl: "https://www.linkedin.com/in/hugo-hazard-5a8290220/",
   },
 
   {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
+    name: "Sami Ribardiere",
+    role: "Co-Founder / CEO",
     imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697370073/Photo_individual_sami_1_lwod5n.jpg",
     twitterUrl: "#",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/sami-ribardiere-039363234/",
+  },
+];
+
+const people = [
+  {
+    name: "Yahia Abdelkader",
+    role: "Software Developer / Sales & Lead Generations",
+    imageUrl:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312907/Yahia_uv3a7y.jpg",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/yahia-khairy-abdelkader/",
     Uni: "WIS",
     color: "bg-purple-100",
   },
   {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
+    name: "Rohan Luchmun",
+    role: "Software Developer",
+    imageUrl:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312854/Rohan_earqio.jpg",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/rohan-luchmun-633390259/",
+    Uni: "WIS",
+    color: "bg-purple-100",
+  },
+
+  {
+    name: "Elliot Teissandier",
+    role: "Business Developer",
+    imageUrl:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312853/Elliot_mgkau5.jpg",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/elliot-teissandier/",
+    Uni: "WIS",
+    color: "bg-purple-100",
+  },
+  {
+    name: "Rushen Fernando",
+    role: "Software Developer",
+    imageUrl:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312853/Rushen_djfost.jpg",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/rushen-fernando-287650254/",
+    Uni: "WIS",
+    color: "bg-purple-100",
+  },
+  {
+    name: "Mustafa Khan",
+    role: "Software Developer / Sales & Lead Generations",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+
+    linkedinUrl: "#https://www.linkedin.com/in/mustafakhan23/",
+    Uni: "WIS",
+    color: "bg-purple-100",
+  },
+  {
+    name: "Nadia Jaufarally",
+    role: "Software Developer",
     imageUrl:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
     twitterUrl: "#",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/nadiaj7860/",
     Uni: "WIS",
     color: "bg-purple-100",
+  },
+
+  {
+    name: "Dhuha Al-Fahad",
+    role: "Chief Marketing Officer",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/dhuha-al-fahad-45ba011b5/",
+    Uni: "BIS",
+    color: "bg-red-100",
+  },
+  {
+    name: "Arnav Kumar",
+    role: "Software Developer",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/arnav-kumar-a7b009204/",
+    Uni: "BIS",
+    color: "bg-red-100",
+  },
+  {
+    name: "Aamaan Mohammed",
+    role: "Software Developer",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/mohammed-aamaan/",
+    Uni: "BIS",
+    color: "bg-red-100",
+  },
+  {
+    name: "Loisa Wingfield",
+    role: "Chief Legal Officer",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/louisa-w-932010200/",
+    Uni: "BIS",
+    color: "bg-red-100",
   },
 
   // More people...
@@ -108,6 +197,7 @@ export default function Team() {
       </div>
       <div className="mx-auto max-w-[1600px] px-6 lg:px-8 lg:pl-14 pt-10 sm:pb-32">
         <div style={{ height: "1px", backgroundColor: "black" }}></div>
+
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mt-10 font-alliance">
             Our team
@@ -119,7 +209,68 @@ export default function Team() {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+        >
+          {trio.map((trio) => (
+            <li key={trio.name}>
+              <img
+                className="aspect-[3/2] w-full rounded-2xl object-cover font-alliance"
+                src={trio.imageUrl}
+                alt=""
+              />
+
+              {/* Added container */}
+              <div className="flex justify-between items-start mt-6">
+                {" "}
+                {/* Change here */}
+                <div>
+                  <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 text-left font-alliance">
+                    {trio.name}
+                  </h3>
+                  <p className="text-base leading-7 text-gray-600 text-left font-alliance font-light">
+                    {trio.role}
+                  </p>
+                </div>
+                <div>
+                  <a
+                    className={
+                      "relative z-10 rounded " +
+                      trio.color +
+                      " px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    }
+                  >
+                    {trio.Uni}
+                  </a>
+                </div>
+              </div>
+              <ul role="list" className="mt-6 flex gap-x-6">
+                <li>
+                  <a
+                    href={trio.linkedinUrl}
+                    className="text-gray-400 hover:text-gray-500"
+                  >
+                    <span className="sr-only">LinkedIn</span>
+                    <svg
+                      className="h-5 w-5"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          ))}
+        </ul>
+        <ul
+          role="list"
+          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4"
         >
           {people.map((person) => (
             <li key={person.name}>
@@ -154,22 +305,6 @@ export default function Team() {
                 </div>
               </div>
               <ul role="list" className="mt-6 flex gap-x-6">
-                <li>
-                  <a
-                    href={person.twitterUrl}
-                    className="text-gray-400 hover:text-gray-500"
-                  >
-                    <span className="sr-only">Twitter</span>
-                    <svg
-                      className="h-5 w-5"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                  </a>
-                </li>
                 <li>
                   <a
                     href={person.linkedinUrl}

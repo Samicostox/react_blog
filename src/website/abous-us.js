@@ -18,6 +18,7 @@ import Example from "./about_us/scroll_horizontal";
 import InnovationStudios from "./about_us/innovation_studios";
 import ScrollSnapProgressBar from "./about_us/package_service";
 import NumberLine from "./about_us/package_service";
+import Navbarv2 from "../navbarv2";
 const navigation = [
   { name: "LeadGeneration", href: "/software" },
   { name: "Contact", href: "/contact2" },
@@ -29,6 +30,12 @@ const sections = [
   { content: "Section 1 Content" },
   { content: "Section 2 Content" },
   // More sections...
+];
+const stats = [
+  { id: 1, name: "Students working with us", value: "30+" },
+  { id: 2, name: "Projects Completed", value: "15+" },
+  { id: 3, name: "Universities", value: "2" },
+  { id: 4, name: "Partners", value: "5+" },
 ];
 export default function AboutUs() {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -75,7 +82,7 @@ export default function AboutUs() {
 
   return (
     <div className="relative bg-white z-2">
-      <Navbar />
+      <Navbarv2 />
 
       <div className="relative bg-black z-2 overflow-hidden top-0">
         <div className="relative isolate overflow-hidden pt-14">
@@ -140,8 +147,29 @@ export default function AboutUs() {
       <Content />
 
       <InnovationStudios />
-      <Timeline />
+      <div className="relative pb-36 z-10 bg-white w-full ">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20 ">
+          <div className="w-full bg-white h-20 relative z-10">
+            {/* Content of the container goes here */}
+          </div>
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+              {stats.map((stat) => (
+                <div key={stat.id} className="flex flex-col bg-teal-900 p-8">
+                  <dt className="text-sm font-semibold leading-6 text-white font-alliance">
+                    {stat.name}
+                  </dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold">
+                    {stat.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </div>
       <Services />
+
       <h1 className="text-center text-4xl text-black  font-alliance font-bold ">
         OUR APPROACH
       </h1>
@@ -157,18 +185,18 @@ export default function AboutUs() {
               Ready to dive in?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300 font-alliance">
-              You can Sign Up for the beta via the form below, you will have a
-              premium access to our software!
+              Let's start our journey together! Simply fill in our form and we
+              will be in touch.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/#newhome"
+                href="/#/contact2"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-green-900 shadow-sm hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-alliance"
               >
-                Sign Up
+                Contact Us
               </a>
               <a
-                href="#"
+                href="/#/services"
                 className="text-sm font-semibold leading-6 text-white font-alliance"
               >
                 Learn more <span aria-hidden="true">→</span>
