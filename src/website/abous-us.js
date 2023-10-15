@@ -1,36 +1,14 @@
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Hero from "./about_us/hero";
 import Services from "./about_us/services";
-import Testimonials from "./about_us/testimonials";
 import Content from "./about_us/content";
-import Timeline from "./about_us/timeline";
-import Navbar from "./navigation_bar";
-import Package from "./about_us/package_service";
-import Slider from "./about_us/slider";
-import TypeformEmbed from "./typeform_students";
+import { TypeAnimation } from "react-type-animation";
 import Footer from "./footer";
-import Example from "./about_us/scroll_horizontal";
 import InnovationStudios from "./about_us/innovation_studios";
-import ScrollSnapProgressBar from "./about_us/package_service";
 import NumberLine from "./about_us/package_service";
 import Navbarv2 from "../navbarv2";
-const navigation = [
-  { name: "LeadGeneration", href: "/software" },
-  { name: "Contact", href: "/contact2" },
-  { name: "Software", href: "/newhome" },
-  { name: "Team", href: "/team" },
-  { name: "Past Projects", href: "/past-projects" },
-];
-const sections = [
-  { content: "Section 1 Content" },
-  { content: "Section 2 Content" },
-  // More sections...
-];
+
 const stats = [
   { id: 1, name: "Students working with us", value: "30+" },
   { id: 2, name: "Projects Completed", value: "15+" },
@@ -105,9 +83,33 @@ export default function AboutUs() {
           </div>
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl z-3">
-                Work Now With Tomorrow's Most Brillant Minds.
-              </h1>
+              <TypeAnimation
+                className="typingText text-4xl"
+                sequence={[
+                  "Work Now With",
+                  1000,
+                  "Work Now With Tomorrow's Leaders",
+                  1000,
+                  "Work Now With Tomorrow's Most Brillant Minds",
+                  1000,
+                  "Work Now With Tomorrow's Engineers",
+                  1000,
+                  "Work Now With Innovation Studios",
+                  5000,
+                  () => {
+                    console.log("Sequence completed");
+                  },
+                ]}
+                wrapper="strong"
+                cursor={true}
+                repeat={Infinity}
+                style={{
+                  display: "inline-block",
+                  color: "white",
+                  fontFamily: "Alliance",
+                }}
+              />
+
               <p className="mt-6 text-lg leading-8 text-gray-300">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
                 lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat

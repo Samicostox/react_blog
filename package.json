@@ -26,6 +26,7 @@
     "react-simple-chatbot": "^0.6.1",
     "react-syntax-highlighter": "^15.5.0",
     "react-transition-group": "^4.4.5",
+    "react-type-animation": "^3.2.0",
     "serve": "^14.2.1",
     "tailwindcss-scroll-snap": "^1.1.0",
     "tsparticles": "^2.12.0",
