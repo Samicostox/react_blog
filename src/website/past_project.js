@@ -21,7 +21,7 @@ export function PastProjects({ title, description, imageUrl }) {
   const cards = [
     {
       title: "Safequeen",
-      link: "https://google.com",
+      link: "https://safequeen.herokuapp.com/",
       tags: [
         {
           text: "Web App",
