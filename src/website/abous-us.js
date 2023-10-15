@@ -145,14 +145,30 @@ export default function AboutUs() {
       </div>
 
       <Content />
+      <div className="mx-auto max-w-[1700px] px-6 lg:px-8 lg:pl-14 pt-10   mt-10">
+          <div style={{ height: "1px", backgroundColor: "black" }}></div>
 
-      <InnovationStudios />
+          <div className="mt-10">
+          <InnovationStudios />
+          </div>
+        </div>
+
+
+        <div className="mx-auto max-w-[1700px] px-6 lg:px-8 lg:pl-14 pt-10   mt-10">
+          <div style={{ height: "1px", backgroundColor: "black" }}></div>
+
+          <div className="mt-10">
       <div className="relative pb-36 z-10 bg-white w-full ">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20 ">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8  ">
           <div className="w-full bg-white h-20 relative z-10">
             {/* Content of the container goes here */}
           </div>
           <div className="mx-auto max-w-2xl lg:max-w-none">
+          <div className="text-center">
+                <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl ">
+                  Our Year In Results
+                </h2>
+            </div>
             <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.id} className="flex flex-col bg-teal-900 p-8">
@@ -168,8 +184,20 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <Services />
+      </div>
+        </div>
+        <div className="mx-auto max-w-[1700px] px-6 lg:px-8 lg:pl-14 pt-10   mt-10">
+          <div style={{ height: "1px", backgroundColor: "black" }}></div>
 
+          <div className="mt-20">
+      <Services />
+      </div>
+        </div>
+
+        <div className="mx-auto max-w-[1700px] px-6 lg:px-8 lg:pl-14 pt-10   mt-10">
+          <div style={{ height: "1px", backgroundColor: "black" }}></div>
+
+          <div className="mt-20">           
       <h1 className="text-center text-4xl text-black  font-alliance font-bold ">
         OUR APPROACH
       </h1>
@@ -224,6 +252,8 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+      </div>
+        </div>
 
       <Footer />
     </div>

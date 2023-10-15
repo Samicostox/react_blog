@@ -128,11 +128,11 @@ export default function Services() {
       <h1 className="text-center text-4xl text-black font-alliance font-bold">
         OUR SERVICES
       </h1>
-      <p className="mt-6 text-lg leading-8 text-gray-600 text-center font-alliance mb-12 sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
-        Empowering your business with cutting-edge website design, innovative
-        mobile app development, strategic business planning, and insightful data
-        science solutions.
-      </p>
+      <p className="mt-6 text-lg leading-8 text-gray-600 text-center font-alliance mb-12 sm:max-w-4x1 md:max-w-4x1 lg:max-w-4xl mx-auto">
+    Empowering your business with cutting-edge website design, innovative
+    mobile app development, strategic business planning, and insightful data
+    science solutions.
+</p>
 
       <div className="divide-y divide-gray-400 overflow-hidden rounded-lg bg-gray-200 shadow-lg sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0 mt-20 max-w-7xl mx-auto border border-gray-300">
         {actions.map((action, actionIdx) => (
