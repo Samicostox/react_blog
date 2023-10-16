@@ -123,13 +123,13 @@ export default function AboutUs() {
                   href="/#/contact2"
                   className="rounded-md bg-green-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
-                  Get a Quote
+                  Contact Us
                 </a>
                 <a
                   href="/#/services"
                   className="text-sm font-semibold leading-6 text-white"
                 >
-                  Learn more <span aria-hidden="true">→</span>
+                  Learn more <span className="text-white "aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
