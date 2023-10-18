@@ -246,7 +246,7 @@ export default function Contact2() {
                       <input
                         id="budget-under-25k"
                         name="budget"
-                        value="under_25k"
+                        value="under_1k"
                         checked={formData.budget === "1000k"}
                         onChange={handleChange}
                         type="radio"
@@ -258,7 +258,7 @@ export default function Contact2() {
                       <input
                         id="budget-25k-50k"
                         name="budget"
-                        value="25k-50k"
+                        value="1k-5k"
                         checked={formData.budget === "1K-5K"}
                         onChange={handleChange}
                         type="radio"
@@ -270,7 +270,7 @@ export default function Contact2() {
                       <input
                         id="budget-50k-100k"
                         name="budget"
-                        value="50k-100k"
+                        value="5k-10k"
                         checked={formData.budget === "5k-10k"}
                         onChange={handleChange}
                         type="radio"
@@ -282,7 +282,7 @@ export default function Contact2() {
                       <input
                         id="budget-over-100k"
                         name="budget"
-                        value="over_100k"
+                        value="over_10k"
                         checked={formData.budget === "over_10k"}
                         onChange={handleChange}
                         type="radio"
