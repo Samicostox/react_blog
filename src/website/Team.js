@@ -129,6 +129,16 @@ const people = [
     Uni: "WIS",
     color: "bg-purple-100",
   },
+  {
+    name: "Louisa Wingfield",
+    role: "Chief Legal Officer",
+    imageUrl:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697660296/preferred_photo_Louisa______oeszjk.jpg",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/louisa-w-932010200/",
+    Uni: "BIS",
+    color: "bg-red-100",
+  },
 
   // More people...
 ];
@@ -161,16 +171,6 @@ const people_later = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/mohammed-aamaan/",
-    Uni: "BIS",
-    color: "bg-red-100",
-  },
-  {
-    name: "Louisa Wingfield",
-    role: "Chief Legal Officer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    twitterUrl: "#",
-    linkedinUrl: "https://www.linkedin.com/in/louisa-w-932010200/",
     Uni: "BIS",
     color: "bg-red-100",
   },
