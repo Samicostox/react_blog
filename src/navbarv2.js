@@ -13,9 +13,10 @@ import {
 } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "LeadGeneration", href: "/software" },
+  
   { name: "Team", href: "/team" },
   { name: "Past Projects", href: "/past-projects" },
+  { name: "Internal Tool", href: "/software" },
 ];
 
 const services = [

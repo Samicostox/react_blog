@@ -14,6 +14,7 @@ export default function Signup() {
     password: '',
     confirm_password: '',
     university: '',
+    passcode : ''
     
   });
 
@@ -51,7 +52,10 @@ export default function Signup() {
         navigate('/OTP', { state: { email: formData.email } });
       } else if (data.email && data.email.includes("user with this email already exists.")) {
         setError('Email already exists');  // Set the error state based on server response
-      } else {
+      }else if (data.msg && data.msg === "Wrong Beta key") {
+        setError('Wrong Beta key');  // Set the error state for wrong passcode
+    }
+       else {
         setError('Signup failed: ' + JSON.stringify(data));  // Set the error state with more detailed server response
       }
     } catch (error) {
@@ -132,6 +136,20 @@ export default function Signup() {
                   name="confirm_password"
                   id="confirm_password"
                   autoComplete="password"
+                  required
+                  onChange={handleChange}
+                  className="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+              <div>
+                <label htmlFor="passcode" className="text-left block text-sm font-medium text-gray-700">
+                  Beta Key
+                </label>
+                <input
+                  type="password"
+                  name="passcode"
+                  id="passcode"
+                  
                   required
                   onChange={handleChange}
                   className="mt-1 p-2 w-full border rounded-md"
