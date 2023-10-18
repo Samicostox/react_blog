@@ -33,17 +33,19 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import Navbarv2 from "../navbarv2";
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const featuredTestimonial = {
   body:
     "Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero. Hac condimentum dignissim nibh vulputate ut nunc. Amet nibh orci mi venenatis blandit vel et proin. Non hendrerit in vel ac diam.",
   author: {
-    name: "Roksana",
-    handle: "CEO, Safequeen",
+    name: "Eric Teissandier",
+    handle: "CEO, 4D",
     imageUrl:
-      "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80",
+      "https://res.cloudinary.com/dptyvjqcf/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1697625656/eric-teissandier_f3bxvz.jpg",
     logoUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538447/Copy_of_Medium_logo-black_160x50_aj8png.png",
+      "https://res.cloudinary.com/dptyvjqcf/image/upload/v1697625589/d_logo_icon_247741_du9ahu.png",
   },
 };
 const testimonials = [
@@ -56,7 +58,7 @@ const testimonials = [
           name: "Matthew Leeke",
           handle: "Deputy Head of School of Computer Science",
           imageUrl:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            "https://res.cloudinary.com/dptyvjqcf/image/upload/v1697625814/leeke-matthew_q7atfv.jpg",
         },
       },
       // More testimonials...
@@ -69,7 +71,7 @@ const testimonials = [
           name: "Alex Watkins",
           handle: "CEO, NuZones",
           imageUrl:
-            "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            "https://res.cloudinary.com/dptyvjqcf/image/upload/v1697625907/blank-profile-picture-973460_960_720_gaegxi.webp",
         },
       },
       // More testimonials...
@@ -84,7 +86,7 @@ const testimonials = [
           name: "Hugo Biais",
           handle: "Student at the University of Birmingham",
           imageUrl:
-            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            "https://res.cloudinary.com/dptyvjqcf/image/upload/v1697625769/1682583212519_qwfwo5.jpg",
         },
       },
       // More testimonials...
@@ -98,7 +100,7 @@ const testimonials = [
           name: "Ross Derick",
           handle: "CEO, Uplist",
           imageUrl:
-            "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            "https://res.cloudinary.com/dptyvjqcf/image/upload/v1697625907/blank-profile-picture-973460_960_720_gaegxi.webp",
         },
       },
       // More testimonials...
@@ -107,10 +109,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { id: 1, name: "Students working with us", value: "30+" },
-  { id: 2, name: "Projects Completed", value: "15+" },
-  { id: 3, name: "Universities", value: "2" },
-  { id: 4, name: "Partners", value: "5+" },
+  { id: 1, name: "Students working with us", value: "30" ,plussign:true},
+  { id: 2, name: "Projects Completed", value: "15",plussign:true },
+  { id: 3, name: "Universities", value: "2" ,plussign:false},
+  { id: 4, name: "Partners", value: "5" , plussign:true},
 ];
 
 function classNames(...classes) {
@@ -153,31 +155,37 @@ export default function Landingpage() {
               {/* Content of the container goes here */}
             </div>
             <div className="mx-auto max-w-2xl lg:max-w-none">
-              <div className="text-center">
-                <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl ">
-                  Our Year In Results
-                </h2>
-                <p className="mt-4 font-alliance text-lg leading-8 text-gray-600">
-                  This is what we achieved after only one year of hardworking
-                  and passion.
-                </p>
-              </div>
-              <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-                {stats.map((stat) => (
-                  <div
-                    key={stat.id}
-                    className="flex flex-col bg-gray-400/5 p-8"
-                  >
-                    <dt className="text-sm font-semibold leading-6 text-gray-500 font-alliance">
-                      {stat.name}
-                    </dt>
-                    <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 font-alliance font-bold">
-                      {stat.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+        <div className="text-center">
+          <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Our Year In Results
+          </h2>
+        </div>
+        <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat) => (
+            <div
+              key={stat.id}
+              className="flex flex-col bg-teal-900 p-8"
+            >
+              <dt className="text-sm font-semibold leading-6 text-white font-alliance">
+                {stat.name}
+              </dt>
+              <dd className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold">
+                <VisibilitySensor partialVisibility={true}>
+                  {({ isVisible }) => 
+                    <CountUp 
+                      className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold"
+                      start={0}
+                      end={isVisible ? stat.value : 0} 
+                      duration={4.0} 
+                      suffix={stat.plussign == true ? "+" : ""} // You can add conditions here if you want both "+" and "-" based on the value
+                    />
+                  }
+                </VisibilitySensor>
+              </dd>
             </div>
+                  ))}
+                </dl>
+              </div>
           </div>
         </div>
 
