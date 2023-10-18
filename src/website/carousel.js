@@ -66,7 +66,7 @@ const Carousel = () => {
       buttonText: "Get a Quote",
       svgSource:
         "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: "/#contact2",
+      href: "/contact2",
       particlesComponent: <ParticlesBackground1 />,
       image:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696331868/Untitled_1080_x_1080_px_900_x_1080_px_1_hbkthq.png",
@@ -80,7 +80,7 @@ const Carousel = () => {
       buttonText: "Get a Quote",
       svgSource:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1694955843/Apple_new-covid-19-app-macbook-pro-iphone-11-pro_03272020_big.jpg.large_inxrzr.jpg",
-      href: "/#contact2",
+      href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340531/2_akgsvx.png",
@@ -93,7 +93,7 @@ const Carousel = () => {
       buttonText: "Get a Quote",
       svgSource:
         "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: "/#contact2",
+      href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340535/3_zal96e.png",
@@ -107,7 +107,7 @@ const Carousel = () => {
       buttonText: "Get a Quote",
       svgSource:
         "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: "/#contact2",
+      href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340545/6_rhzcz4.png",
@@ -121,7 +121,7 @@ const Carousel = () => {
       buttonText: "Get a Quote",
       svgSource:
         "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: "/#contact2",
+      href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340539/4_lfxng4.png",
@@ -135,7 +135,7 @@ const Carousel = () => {
       buttonText: "Get a Quote",
       svgSource:
         "https://tailwindui.com/img/component-images/mobile-app-screenshot.png",
-      href: "/#contact2",
+      href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340542/5_ndyarz.png",

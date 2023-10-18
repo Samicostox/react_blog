@@ -11,12 +11,12 @@ export default function CTAP() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/#past-projects"
+                href="/past-projects"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-green-900 shadow-sm hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-alliance"
               >
                 Have a Look
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-white font-alliance">
+              <a href="/" className="text-sm font-semibold leading-6 text-white font-alliance">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>

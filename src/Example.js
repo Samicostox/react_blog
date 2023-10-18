@@ -20,7 +20,7 @@ export default function Example() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 font-alliance">
               Are you interested in hiring students?{' '}
-              <a href="/#contact2" className="font-semibold text-teal-600">
+              <a href="/contact2" className="font-semibold text-teal-600">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Contact Us <span aria-hidden="true">&rarr;</span>
               </a>
@@ -35,12 +35,12 @@ export default function Example() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/#signin"
+                href="/signin"
                 className="rounded-md bg-teal-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
               >
                 Start your journey
               </a>
-              <a href="/#newhome" className="text-sm font-semibold leading-6 text-gray-900 font-alliance">
+              <a href="/newhome" className="text-sm font-semibold leading-6 text-gray-900 font-alliance">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>

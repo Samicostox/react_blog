@@ -11,7 +11,7 @@ export default function CTA2() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/#newhome"
+                href="/newhome"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-green-900 shadow-sm hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-alliance"
               >
                 Sign Up 

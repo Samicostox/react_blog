@@ -345,7 +345,7 @@ export default function Newhome() {
                 </ul>
                 <div className="-mx-6 mt-auto mb-8">
                   <a
-                    href="/#newhome"
+                    href="/newhome"
                     className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
                   >
                     <img
@@ -373,7 +373,7 @@ export default function Newhome() {
             <div className="flex-1 text-sm font-semibold leading-6 text-gray-900">
               Software
             </div>
-            <a href="/#newhome">
+            <a href="/newhome">
               <span className="sr-only">Your profile</span>
               <img
                 className="h-8 w-8 rounded-full bg-gray-50"

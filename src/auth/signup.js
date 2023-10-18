@@ -193,7 +193,7 @@ export default function Signup() {
             </form>
             <p className="mt-10 text-center text-sm text-gray-500">
             Already a Member?{' '}
-            <a href="/#signin" className="font-semibold leading-6 text-green-800 hover:text-green-700">
+            <a href="/signin" className="font-semibold leading-6 text-green-800 hover:text-green-700">
               Sign In
             </a>
           </p>

@@ -77,7 +77,7 @@ export default function Content() {
               
               <div className="mt-6">
               <a
-                href="/#newhome" // Replace with your actual route
+                href="/newhome" // Replace with your actual route
                 className="inline-flex items-center px-4 py-2 text-base text-white bg-teal-800 border border-transparent rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-600 font-alliance"
               >
                Lead Generation <span className="text-white px-2" aria-hidden="true">&rarr;</span>

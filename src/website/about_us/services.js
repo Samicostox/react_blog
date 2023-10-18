@@ -58,7 +58,7 @@ const features = [
 const actions = [
   {
     title: "Mobile Development",
-    href: "/#/service-mobile",
+    href: "/service-mobile",
     icon: DevicePhoneMobileIcon,
     iconForeground: "text-teal-700",
     iconBackground: "bg-teal-50",
@@ -67,7 +67,7 @@ const actions = [
   },
   {
     title: "Web Development",
-    href: "/#/service-web",
+    href: "/service-web",
     icon: ComputerDesktopIcon,
     iconForeground: "text-purple-700",
     iconBackground: "bg-purple-50",
@@ -76,7 +76,7 @@ const actions = [
   },
   {
     title: "Data Science",
-    href: "/#/service-data",
+    href: "/service-data",
     icon: CircleStackIcon,
     iconForeground: "text-sky-700",
     iconBackground: "bg-sky-50",
@@ -85,7 +85,7 @@ const actions = [
   },
   {
     title: "Business Plan",
-    href: "/#/service-businessplan",
+    href: "/service-businessplan",
     icon: MapIcon,
     iconForeground: "text-yellow-700",
     iconBackground: "bg-yellow-50",
@@ -94,7 +94,7 @@ const actions = [
   },
   {
     title: "Strategies",
-    href: "/#/service-strategy",
+    href: "/service-strategy",
     icon: PresentationChartBarIcon,
     iconForeground: "text-rose-700",
     iconBackground: "bg-rose-50",
@@ -103,7 +103,7 @@ const actions = [
   },
   {
     title: "Benchmarking",
-    href: "/#/service-benchmarking",
+    href: "/service-benchmarking",
     icon: MagnifyingGlassIcon,
     iconForeground: "text-indigo-700",
     iconBackground: "bg-indigo-50",

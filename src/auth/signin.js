@@ -93,7 +93,7 @@ export default function Signin() {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a href="/#forgotpassword" className="font-semibold text-green-700 hover:text-green-700">
+                  <a href="/forgotpassword" className="font-semibold text-green-700 hover:text-green-700">
                     Forgot password?
                   </a>
                 </div>
@@ -124,7 +124,7 @@ export default function Signin() {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{' '}
-            <a href="/#signup" className="font-semibold leading-6 text-green-800 hover:text-green-700">
+            <a href="/signup" className="font-semibold leading-6 text-green-800 hover:text-green-700">
               Sign Up
             </a>
           </p>

@@ -129,13 +129,13 @@ export default function AboutUs() {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="/#/contact2"
+                  href="/contact2"
                   className="rounded-md bg-teal-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400"
                 >
                   Contact Us
                 </a>
                 <a
-                  href="/#/services"
+                  href="/services"
                   className="text-sm font-semibold leading-6 text-white"
                 >
                   Learn more <span className="text-white "aria-hidden="true">→</span>
@@ -246,13 +246,13 @@ export default function AboutUs() {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
-                    href="/#/contact2"
+                    href="/contact2"
                     className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-green-900 shadow-sm hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-alliance"
                   >
                     Contact Us
                   </a>
                   <a
-                    href="/#/services"
+                    href="/services"
                     className="text-sm font-semibold leading-6 text-white font-alliance"
                   >
                     Learn more <span aria-hidden="true">→</span>

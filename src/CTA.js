@@ -9,12 +9,12 @@ export default function CTA() {
         </h2>
         <div className="mt-10 flex flex-col items-center lg:flex-row lg:items-center lg:justify-between lg:mt-0 lg:flex-shrink-0">
           <a
-            href="/#newhome"
+            href="/newhome"
             className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 mb-4 lg:mb-0 lg:mr-4" // Added lg:mr-4 here
           >
             Get started
           </a>
-          <a href="/#newhome" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/newhome" className="text-sm font-semibold leading-6 text-gray-900">
             Learn more <span aria-hidden="true">→</span>
           </a>
         </div>

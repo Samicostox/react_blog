@@ -28,7 +28,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "android-icon_l1eebj",
         "flutter_wz2bg3",
       ],
-      link: "/#service-mobile",
+      link: "/service-mobile",
     },
     {
       title: "Web Development",
@@ -48,7 +48,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "framer_xrpm7x",
         "html-5_wst3nk",
       ],
-      link: "/#service-web",
+      link: "/service-web",
     },
     {
       title: "Data Engineering",
@@ -63,7 +63,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "postgresql_1_rxgttx",
         "icons8-excel_cndh13",
       ],
-      link: "/#service-data",
+      link: "/service-data",
     },
     {
       title: "Business Plan",
@@ -78,7 +78,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "ologo_square_colour_light_bg_w5keat",
         "modelcanva_ecyq0v",
       ],
-      link: "/#service-businessplan",
+      link: "/service-businessplan",
     },
     {
       title: "Strategies",
@@ -92,7 +92,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "notion-logo-svgrepo-com_m5vflg",
         "ologo_square_colour_light_bg_w5keat",
       ],
-      link: "/#service-strategy",
+      link: "/service-strategy",
     },
     {
       title: "Benchmarking",
@@ -107,7 +107,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "ologo_square_colour_light_bg_w5keat",
         "python_bmp5vb",
       ],
-      link: "/#service-benchmarking",
+      link: "/service-benchmarking",
     },
     // More cards...
   ];

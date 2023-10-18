@@ -23,37 +23,37 @@ const services = [
   {
     name: "Mobile Development",
     description: "Elevate your mobile app experience with us.",
-    href: "#/service-mobile",
+    href: "/service-mobile",
     icon: DevicePhoneMobileIcon,
   },
   {
     name: "Web Development",
     description: "Captivate and convert with our striking websites.",
-    href: "#/service-web",
+    href: "/service-web",
     icon: ComputerDesktopIcon,
   },
   {
     name: "Data Science",
     description: "Turn data into decisive insights effortlessly.",
-    href: "#/service-data",
+    href: "/service-data",
     icon: CircleStackIcon,
   },
   {
     name: "Business Plan",
     description: "Navigate towards success with our bespoke business plans.",
-    href: "#/service-businessplan",
+    href: "/service-businessplan",
     icon: MapIcon,
   },
   {
     name: "Strategy",
     description: "Plan strategically for impactful, lasting success.",
-    href: "#/service-strategy",
+    href: "/service-strategy",
     icon: PresentationChartBarIcon,
   },
   {
     name: "Benchmarking",
     description: "Stay ahead with our innovative benchmarking services.",
-    href: "#/service-benchmarking",
+    href: "/service-benchmarking",
     icon: MagnifyingGlassIcon,
   },
 ];
@@ -138,7 +138,7 @@ const Navbarv2 = () => {
             onMouseLeave={() => setIsHovered(false)}
           >
             <a
-              href="/#/services"
+              href="/services"
               className="font-alliance flex items-center gap-x-1 text-sm  leading-6 text-gray-900"
             >
               Services

@@ -103,7 +103,7 @@ export default function Service_benchmarking() {
                  Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
-                <a href="/#services" className="flex items-center gap-x-1">
+                <a href="/services" className="flex items-center gap-x-1">
                   <span className="absolute inset-0" aria-hidden="true" />
                   Explore our other services
                   <ChevronRightIcon
@@ -124,7 +124,7 @@ export default function Service_benchmarking() {
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
-                href="/#contact2"
+                href="/contact2"
                 className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 Get a Quote
