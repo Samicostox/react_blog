@@ -12,7 +12,7 @@ const HeaderT = () => {
             {/* Modified this line */}{" "}
             {/* Removed max-w-lg to make title and paragraph wider */}
             <div className="mt-24 sm:mt-32 lg:mt-16 text-left">
-              <a href="#" className="inline-flex space-x-6">
+              <a href="/#services" className="inline-flex space-x-6">
                 <span className="rounded-full bg-green-600/10 px-3 py-1 text-sm leading-6 text-green-600 ring-1 ring-inset ring-green-600/10 text-left font-alliance font-bold">
                   Our Services
                 </span>
@@ -44,13 +44,13 @@ const HeaderT = () => {
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
-                href="#"
+                href="/#contact2"
                 className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 font-alliance font-bold"
               >
                 Contact Us
               </a>
               <a
-                href="#"
+                href="/#software"
                 className="text-sm font-alliance font-bold leading-6 text-gray-900"
               >
                 Our Software <span aria-hidden="true ">→</span>

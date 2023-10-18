@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 import { ChevronRightIcon, CheckCircleIcon } from "@heroicons/react/20/solid";
 
 const JoinOurTeam = () => {
@@ -10,6 +11,24 @@ const JoinOurTeam = () => {
     "Engage in impactful projects",
     "Industry exposure",
   ];
+
+  
+    useEffect(() => {
+      // Dynamically load the Typeform embed script
+      const script = document.createElement("script");
+      script.src = "//embed.typeform.com/next/embed.js";
+      document.body.appendChild(script);
+  
+      // Clean up on component unmount
+      return () => {
+        document.body.removeChild(script);
+      };
+    }, []);
+    const handleClick = () => {
+      // Handle button click if needed
+    };
+  
+  
 
   return (
     <div className="bg-green-600 py-24 sm:py-32">
@@ -47,16 +66,26 @@ const JoinOurTeam = () => {
                 ))}
               </ul>
               <div className="mt-10 flex">
+                
                 <a
-                  href="#"
-                  className="text-sm leading-6 text-white font-alliance"
+                  data-tf-popup="lZ2mKiQJ"
+                  data-tf-opacity="100"
+                  data-tf-size="100"
+                  data-tf-iframe-props="title=Talent Recuitment"
+                  data-tf-transitive-search-params
+                  data-tf-medium="snippet"
+                  onClick={handleClick}
+                  className="text-sm leading-6 text-white font-alliance font-bold cursor-pointer"
                 >
-                  See our job postings{" "}
+                  
+                  Join The Team{" "}
                   <span aria-hidden="true" className="text-white">
                     &rarr;
                   </span>
                 </a>
               </div>
+              
+             
             </div>
           </div>
         </div>
@@ -72,6 +101,7 @@ const JoinOurTeam = () => {
             }}
           />
         </div>
+        <script src="//embed.typeform.com/next/embed.js"></script>
       </div>
     </div>
   );

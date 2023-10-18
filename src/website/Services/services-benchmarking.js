@@ -91,15 +91,15 @@ export default function Service_benchmarking() {
         </svg>
         <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            <div className="flex">
+          <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">
-                  We’re recruiting
+                 Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
-                <a href="#" className="flex items-center gap-x-1">
+                <a href="/#services" className="flex items-center gap-x-1">
                   <span className="absolute inset-0" aria-hidden="true" />
-                  Join the team
+                  Explore our other services
                   <ChevronRightIcon
                     className="-mr-2 h-5 w-5 text-gray-400"
                     aria-hidden="true"

@@ -97,12 +97,12 @@ export default function Service_businessplan() {
             <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">
-                  We’re recruiting
+                 Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
-                <a href="#" className="flex items-center gap-x-1">
+                <a href="/#services" className="flex items-center gap-x-1">
                   <span className="absolute inset-0" aria-hidden="true" />
-                  Join the team
+                  Explore our other services
                   <ChevronRightIcon
                     className="-mr-2 h-5 w-5 text-gray-400"
                     aria-hidden="true"

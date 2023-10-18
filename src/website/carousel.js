@@ -13,14 +13,32 @@ const Carousel = () => {
   const [timerId, setTimerId] = useState(null);
 
   useEffect(() => {
+    // Dynamically load the Typeform embed script
+    const script = document.createElement("script");
+    script.src = "//embed.typeform.com/next/embed.js";
+    document.body.appendChild(script);
+
+    // Set the interval for the slide change
     const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % 6);
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % 6);
     }, 6000);
 
     setTimerId(timer); // Save the timer's ID
 
-    return () => clearInterval(timer); // Clear the timer
-  }, []);
+    // Clean up on component unmount
+    return () => {
+        // Remove the Typeform embed script
+        document.body.removeChild(script);
+        
+        // Clear the timer
+        clearInterval(timer);
+    };
+}, []);
+
+
+  const handleClick = () => {
+    // Handle button click if needed
+  };
 
   const resetTimer = () => {
     clearInterval(timerId);
@@ -262,7 +280,16 @@ const Carousel = () => {
                         className="h-4 w-px bg-gray-900/10"
                         aria-hidden="true"
                       />
-                      <a href="#" className="flex items-center gap-x-1">
+                      <a 
+                      data-tf-popup="lZ2mKiQJ"
+                      data-tf-opacity="100"
+                      data-tf-size="100"
+                      data-tf-iframe-props="title=Talent Recuitment"
+                      data-tf-transitive-search-params
+                      data-tf-medium="snippet"
+                      onClick={handleClick}
+                      
+                      className="flex items-center gap-x-1 cursor-pointer">
                         <span
                           className="absolute inset-0 font-alliance"
                           aria-hidden="true"
@@ -301,6 +328,7 @@ const Carousel = () => {
             </div>
           </div>
         ))}
+        <script src="//embed.typeform.com/next/embed.js"></script>
       </div>
     </div>
   );
