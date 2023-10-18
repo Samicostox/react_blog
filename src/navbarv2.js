@@ -201,14 +201,14 @@ const Navbarv2 = () => {
           {isLoggedIn ? (
             <button
               onClick={() => navigate("/newhome")}
-              className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+              className="rounded-md bg-teal-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
             >
               Software
             </button>
           ) : (
             <button
               onClick={() => navigate("/contact2")}
-              className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+              className="rounded-md bg-teal-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
             >
               Contact Us
             </button>
@@ -219,7 +219,7 @@ const Navbarv2 = () => {
                 handleLogout();
                 navigate("/");
               }}
-              className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+              className="rounded-md bg-teal-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
             >
               Log out{" "}
               <span className="text-white" aria-hidden="true">
@@ -229,7 +229,7 @@ const Navbarv2 = () => {
           ) : (
             <button
               onClick={() => navigate("/signin")}
-              className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+              className="rounded-md bg-teal-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
             >
               Get Started{" "}
               <span className="text-white" aria-hidden="true">
@@ -252,7 +252,7 @@ const Navbarv2 = () => {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-24 w-auto"
-                src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1696254880/Logos_1_erqpem.png"
+                src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697027873/Design_sans_titre_3_tffvky.png"
                 alt=""
               />
             </a>
@@ -301,14 +301,14 @@ const Navbarv2 = () => {
                 {isLoggedIn ? (
                   <button
                     onClick={() => navigate("/newhome")}
-                    className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2"
+                    className="rounded-md bg-teal-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance mb-2"
                   >
                     Software
                   </button>
                 ) : (
                   <button
                     onClick={() => navigate("/contact2")}
-                    className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance mb-2"
+                    className="rounded-md bg-teal-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance mb-2"
                   >
                     Contact Us
                   </button>
@@ -316,7 +316,7 @@ const Navbarv2 = () => {
                 {isLoggedIn ? (
                   <button
                     onClick={handleLogout}
-                    className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+                    className="rounded-md bg-teal-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
                   >
                     Log out{" "}
                     <span className="text-white" aria-hidden="true">
@@ -326,7 +326,7 @@ const Navbarv2 = () => {
                 ) : (
                   <button
                     onClick={() => navigate("/signin")}
-                    className="rounded-md bg-green-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 font-alliance"
+                    className="rounded-md bg-teal-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
                   >
                     Get Started{" "}
                     <span className="text-white" aria-hidden="true">

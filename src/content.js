@@ -33,9 +33,9 @@ export default function Content() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-green-800 font-alliance text-left">Grow faster</p>
+              <p className="text-base font-semibold leading-7 text-teal-800 font-alliance text-left">Grow faster</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance text-left">Better Leads</h1>
-              <p className="mt-6 text-xl leading-8 text-gray-700 font-alliance font-light text-left">
+              <p className="mt-6  leading-8 text-gray-700 font-alliance text-left">
               Our advanced algorithm sifts through a plethora of data points to identify and generate qualified leads for your business. It uses machine learning and analytics to ensure high conversion rates.
               </p>
             </div>
@@ -50,7 +50,7 @@ export default function Content() {
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
-            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg font-alliance text-left">
+            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg font-alliance text-left font-alliance">
               <p>
               The algorithm employs a multi-step process that includes data collection, segmentation, and predictive analytics to identify potential customers who are most likely to convert.
               </p>
@@ -58,19 +58,19 @@ export default function Content() {
                 <li className="flex gap-x-3">
                   <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-green-600" aria-hidden="true" />
                   <span>
-                  <strong className="font-semibold text-green-900">Data Collection.</strong> The algorithm gathers data from multiple sources to create a comprehensive profile of potential leads.
+                  <strong className="font-semibold text-green-900 font-alliance">Data Collection.</strong> The algorithm gathers data from multiple sources to create a comprehensive profile of potential leads.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                  <strong className="font-semibold text-green-900">Data Security.</strong> All data is encrypted and securely stored, ensuring compliance with privacy regulations.
+                  <strong className="font-semibold text-green-900 font-alliance">Data Security.</strong> All data is encrypted and securely stored, ensuring compliance with privacy regulations.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                  <strong className="font-semibold text-green-900">Predictive Analytics.</strong> The algorithm uses machine learning to predict which leads are most likely to convert, saving your team time and effort.
+                  <strong className="font-semibold text-green-900 font-alliance">Predictive Analytics.</strong> The algorithm uses machine learning to predict which leads are most likely to convert, saving your team time and effort.
                   </span>
                 </li>
               </ul>
@@ -78,7 +78,7 @@ export default function Content() {
               <div className="mt-6">
               <a
                 href="/#newhome" // Replace with your actual route
-                className="inline-flex items-center px-4 py-2 text-base font-medium text-white bg-green-800 border border-transparent rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700 font-alliance"
+                className="inline-flex items-center px-4 py-2 text-base text-white bg-teal-800 border border-transparent rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-600 font-alliance"
               >
                Lead Generation <span className="text-white px-2" aria-hidden="true">&rarr;</span>
               </a>

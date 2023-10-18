@@ -45,7 +45,7 @@ const HeaderT = () => {
             <div className="mt-10 flex items-center gap-x-6">
               <a
                 href="/#contact2"
-                className="rounded-md bg-green-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 font-alliance font-bold"
+                className="rounded-md bg-teal-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 font-alliance font-bold"
               >
                 Contact Us
               </a>

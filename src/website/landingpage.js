@@ -216,7 +216,7 @@ export default function Landingpage() {
                 <div className="w-full bg-white h-20 relative z-10">
                   {/* Content of the container goes here */}
                 </div>
-                <h2 className="text-lg font-semibold leading-8 tracking-tight text-green-700 font-alliance font-bold">
+                <h2 className="text-lg font-semibold leading-8 tracking-tight text-teal-700 font-alliance font-bold">
                   Testimonials
                 </h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance">

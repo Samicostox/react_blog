@@ -76,7 +76,7 @@ export default function Content() {
               paddingRight: "2%",
             }}
           >
-            <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
+            <p className="mt-12 text-base font-semibold leading-7 text-teal-600 text-left font-alliance">
               Company values
             </p>
             <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance max-w-xl">
@@ -101,8 +101,8 @@ export default function Content() {
                 business services.
               </p>
             </div>
-            <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
-              Company values
+            <p className="mt-12 text-base font-semibold leading-7 text-teal-600 text-left font-alliance">
+              Company vision
             </p>
             <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance max-w-xl">
               Providing Higher Value with Younger Minds
@@ -126,8 +126,8 @@ export default function Content() {
                 solutions for your company.
               </p>
             </div>
-            <p className="mt-12 text-base font-semibold leading-7 text-green-600 text-left font-alliance">
-              Company values
+            <p className="mt-12 text-base font-semibold leading-7 text-teal-600 text-left font-alliance">
+              Company meaning
             </p>
             <h1 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left font-alliance max-w-xl">
               Empowering Tomorrow's Leaders
