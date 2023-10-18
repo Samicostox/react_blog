@@ -9,9 +9,11 @@ import {
 } from "@material-tailwind/react";
 import Footer from "./footer";
 import Navbar from "../navbar";
+import { Helmet } from 'react-helmet';
 
 import { useState, useEffect } from "react";
 import Navbarv2 from "../navbarv2";
+
 
 export function PastProjects({ title, description, imageUrl }) {
   useEffect(() => {
@@ -316,6 +318,12 @@ export function PastProjects({ title, description, imageUrl }) {
   ];
   return (
     <div className="bg-whites">
+     <Helmet>
+    <title>Our Portfolio | Innovation Studios</title>
+    <meta name="description" content="Dive into the portfolio of Innovation Studios and explore our past projects. Witness our commitment to excellence and innovation as we've partnered with diverse industries to deliver top-notch solutions. From software development to data engineering, see our expertise in action." />
+    </Helmet>
+
+
       <Navbarv2></Navbarv2>
       <div className="container mx-auto py-12">
         <h1 className="text-center text-4xl font-alliance font-bold mb-12">

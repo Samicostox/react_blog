@@ -7,6 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
+import { Helmet } from 'react-helmet';
 
 const steps = [
   {
@@ -58,6 +59,11 @@ export default function Service_data() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+    <title>Data Engineering Services | Innovation Studios</title>
+    <meta name="description" content="Harness the power of your data with Innovation Studios. Our data engineering solutions transform raw data into actionable insights, driving business growth." />
+</Helmet>
+
       <Navbarv2></Navbarv2>
 
       <div className="relative isolate">

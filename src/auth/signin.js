@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../navbar';
 import Navbarv2 from '../navbarv2';
+import { Helmet } from 'react-helmet';
 
 export default function Signin() {
   const [email, setEmail] = useState('');
@@ -50,6 +51,11 @@ export default function Signin() {
   return (
     <>
     <Navbarv2 />
+    <Helmet>
+    <title>Login | Innovation Studios</title>
+    <meta name="description" content="Access your Innovation Studios account. Login to explore our range of services, manage your projects, and connect with our team." />
+</Helmet>
+
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
   
       

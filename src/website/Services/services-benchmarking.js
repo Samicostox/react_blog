@@ -7,6 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
+import { Helmet } from 'react-helmet';
 const steps = [
   {
     name: "1. Scope Definition",
@@ -57,6 +58,11 @@ export default function Service_benchmarking() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+    <title>Benchmarking Services | Innovation Studios</title>
+    <meta name="description" content="Stay ahead of the competition with Innovation Studios' benchmarking services. Analyze, compare, and implement best practices to achieve industry excellence." />
+</Helmet>
+
       <Navbarv2></Navbarv2>
 
       <div className="relative isolate">

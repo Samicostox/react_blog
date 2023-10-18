@@ -7,6 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
+import { Helmet } from 'react-helmet';
 
 const steps = [
   {
@@ -59,6 +60,11 @@ export default function Service_mobile() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+    <title>Mobile Development Services | Innovation Studios</title>
+    <meta name="description" content="Offering top-tier mobile development solutions, Innovation Studios brings your app idea to life on both iOS and Android platforms. Let's shape the future of mobile together." />
+</Helmet>
+
       <Navbarv2></Navbarv2>
 
       <div className="relative isolate">

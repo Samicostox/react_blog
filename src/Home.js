@@ -11,6 +11,7 @@ import Section2 from "./section2";
 import CTA from "./CTA";
 import Footer from "./website/footer";
 import CTA2 from "./CTA2";
+import { Helmet } from 'react-helmet';
 
 
 
@@ -34,6 +35,11 @@ const Home = () => {
 
     return ( 
         <div className="home">
+            <Helmet>
+    <title>Lead & Technical Document Generation Software | Innovation Studios</title>
+    <meta name="description" content="Discover Innovation Studios' proprietary software solutions. Pioneering in lead generation and technical document automation, we leverage technology to streamline and enhance your business processes. Experience the future of efficient operations with us." />
+</Helmet>
+
             <Navbarv2></Navbarv2>
             <Example></Example>
             

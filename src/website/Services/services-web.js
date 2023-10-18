@@ -7,6 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
+import { Helmet } from 'react-helmet';
 
 const steps = [
   {
@@ -58,6 +59,11 @@ export default function Service_web() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+    <title>Web Development Services | Innovation Studios</title>
+    <meta name="description" content="Innovation Studios provides cutting-edge web development services, ensuring responsive, scalable, and performant websites tailored to your business needs." />
+</Helmet>
+
       <Navbarv2></Navbarv2>
 
       <div className="relative isolate ">

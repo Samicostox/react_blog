@@ -35,6 +35,7 @@ import { loadSlim } from "tsparticles-slim";
 import Navbarv2 from "../navbarv2";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+import { Helmet } from 'react-helmet';
 
 const featuredTestimonial = {
   body:
@@ -137,6 +138,10 @@ export default function Landingpage() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Our Services - Innovation Studios</title>
+        <meta name="description" content="Discover the comprehensive range of software development, data engineering, and business services offered by Innovation Studios, a student-run enterprise." />
+      </Helmet>
       {/* Header */}
 
       <Navbarv2></Navbarv2>

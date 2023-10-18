@@ -11,6 +11,7 @@ import Navbarv2 from "../navbarv2";
 import Example from "./navigation_bar";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+import { Helmet } from 'react-helmet';
 
 
 const stats = [
@@ -64,6 +65,11 @@ export default function AboutUs() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+    <title>Welcome to Innovation Studios</title>
+    <meta name="description" content="Innovation Studios is your trusted partner for software development, data engineering, and business services. Discover how we transform ideas into innovative solutions. Join us on a journey towards digital excellence." />
+</Helmet>
+
       <Navbarv2></Navbarv2>
       <div className="relative bg-black z-2 overflow-hidden top-0">
         <div className="relative isolate overflow-hidden pt-14">

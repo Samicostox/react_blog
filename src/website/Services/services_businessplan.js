@@ -7,6 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
+import { Helmet } from 'react-helmet';
 
 const steps = [
   {
@@ -60,6 +61,11 @@ export default function Service_businessplan() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+    <title>Business Plan Services | Innovation Studios</title>
+    <meta name="description" content="Innovation Studios offers comprehensive business plan services, aiding startups and enterprises alike in crafting compelling roadmaps to success." />
+</Helmet>
+
       <Navbarv2></Navbarv2>
 
       <div className="relative isolate ">
