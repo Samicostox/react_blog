@@ -44,15 +44,15 @@ const trio = [
     name: "Amy Tierney",
     role: "Co-Founder / COO",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312907/Yahia_uv3a7y.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697450106/Amy_s_fave_1_h6t2a5.jpg",
     twitterUrl: "#",
-    linkedinUrl: "https://www.linkedin.com/in/yahia-khairy-abdelkader/",
+    linkedinUrl: "https://www.linkedin.com/in/amy-tierney-341529170/",
   },
   {
     name: "Hugo Hazard",
     role: "Co-Founder / CEO",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697372178/Firefly_20231015131242_d2kr8s.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697449985/Firefly_20231015131242_napmpo.png",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/hugo-hazard-5a8290220/",
   },
@@ -93,7 +93,7 @@ const people = [
     name: "Elliot Teissandier",
     role: "Business Developer",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312853/Elliot_mgkau5.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697450271/IMG_5623_jzk53t.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/elliot-teissandier/",
     Uni: "WIS",
@@ -130,6 +130,10 @@ const people = [
     color: "bg-purple-100",
   },
 
+  // More people...
+];
+
+const people_later = [
   {
     name: "Dhuha Al-Fahad",
     role: "Chief Marketing Officer",
@@ -170,8 +174,6 @@ const people = [
     Uni: "BIS",
     color: "bg-red-100",
   },
-
-  // More people...
 ];
 
 export default function Team() {
