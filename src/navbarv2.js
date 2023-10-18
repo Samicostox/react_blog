@@ -13,7 +13,6 @@ import {
 } from "@heroicons/react/24/outline";
 
 const navigation = [
-  
   { name: "Team", href: "/team" },
   { name: "Past Projects", href: "/past-projects" },
   { name: "Internal Tool", href: "/software" },
@@ -268,6 +267,19 @@ const Navbarv2 = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    onClick={() =>
+                      handleNavigation(item.href, item.requiresAuth)
+                    }
+                    className="font-alliance -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+              <div className="space-y-2 py-6">
                 {services.map((item) => (
                   <a
                     key={item.name}
@@ -280,19 +292,6 @@ const Navbarv2 = () => {
                         aria-hidden="true"
                       />
                     </div>
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-              <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    onClick={() =>
-                      handleNavigation(item.href, item.requiresAuth)
-                    }
-                    className="font-alliance -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
-                  >
                     {item.name}
                   </a>
                 ))}
