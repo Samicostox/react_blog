@@ -135,7 +135,7 @@ export default function Service_web() {
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
               src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340531/2_akgsvx.png"
-              alt=""
+              alt="Web Development Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />
           </div>

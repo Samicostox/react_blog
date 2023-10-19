@@ -65,7 +65,7 @@ export default function Footer() {
             <img
               className="h-20"
               src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696432884/Logos_512_x_512_px_192_x_192_px_abcxt1.png"
-              alt="Company name"
+              alt="Innovation Studios"
             />
             <p className="text-sm leading-6 text-gray-600 text-left font-alliance">
               Bridging the gap between university and industry.

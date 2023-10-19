@@ -75,7 +75,7 @@ export default function AboutUs() {
         <div className="relative isolate overflow-hidden pt-14">
           <img
             src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697380837/3451101_vpsa8n.jpg"
-            alt=""
+            alt="Innovation Studios background image"
             className="absolute inset-0 -z-10 h-full w-full object-cover"
           />
           <div

@@ -134,7 +134,7 @@ export default function Service_data() {
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
               src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340535/3_zal96e.png"
-              alt=""
+              alt="Data Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />
           </div>

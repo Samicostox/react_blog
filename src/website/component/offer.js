@@ -16,7 +16,7 @@ export default function Offer({ steps }) {
                   <img
                     className="h-16 w-16"
                     src={step.imageSrc}
-                    alt=""
+                    alt="offer services"
                   />
                 </div>
               </div>

@@ -129,7 +129,7 @@ export function CardDefault({ title2, description, imageUrl }) {
               <div className="flex-1">
                 <Card className="w-full ">
                   <CardHeader color="blue-gray" className="relative h-90">
-                    <img src={card.imageUrl} alt="card-image" />
+                    <img src={card.imageUrl} alt="Services - Innovation Studios" />
                   </CardHeader>
                   <CardBody className="lg:h-[300px] md:h-[330px] overflow-auto">
                     <Typography
@@ -146,7 +146,7 @@ export function CardDefault({ title2, description, imageUrl }) {
                         <img
                           key={iconIndex}
                           src={`https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/${icon}.svg`}
-                          alt={icon}
+                          alt={card.title}
                           className="w-5 h-5" // Adjust the size as needed.
                         />
                       ))}

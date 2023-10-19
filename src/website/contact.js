@@ -82,7 +82,7 @@ export default function Contact2() {
         <img
           className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
           src="https://res.cloudinary.com/dl2adjye7/image/upload/v1694507174/protruding-squares_2_qtxkqi.png"
-          alt=""
+          alt="Contact Us - Innovation Studios"
         />
       </div>
       <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-14xl lg:grid-cols-2 lg:pt-32">

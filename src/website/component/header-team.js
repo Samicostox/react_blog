@@ -76,7 +76,7 @@ const HeaderT = () => {
             src={
               "https://res.cloudinary.com/dl2adjye7/image/upload/v1697372576/Hugo_s_Favorite_1_k8jnsn.jpg"
             }
-            alt={`Illustration for `}
+            alt={`Image of the team - Innovation Studios `}
           />
           <div className="pb-10"></div>
           <img
@@ -84,7 +84,7 @@ const HeaderT = () => {
             src={
               "https://res.cloudinary.com/dl2adjye7/image/upload/v1697372837/Hugo_s_Favorite_2_hr90c7.jpg"
             }
-            alt={`Illustration for `}
+            alt={`Image of the team - Innovation Studios`}
           />
         </div>
       </div>

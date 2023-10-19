@@ -38,7 +38,7 @@ const JoinOurTeam = () => {
             <img
               className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
               src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696342118/sami8694_A_portrait_of_a_group_of_uk_students_professional_phot_ce128212-76b9-4738-bd2d-7f6571dd7aec_l4btqj.png"
-              alt=""
+              alt="Join The Team - Innovation Studios"
             />
             <div className="w-full flex-auto">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-left font-alliance font-bold">

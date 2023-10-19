@@ -9,7 +9,7 @@ function handleReadMoreClick(link) {
 const Card = ({ imgSrc, title, description, url }) => (
   <div className="m-4 md:m-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 text-left transform transition-transform duration-500 hover:scale-105">
     <a href={url}>
-      <img className="rounded-t-lg" src={imgSrc} alt="" />
+      <img className="rounded-t-lg" src={imgSrc} alt="Innovation Studios Illustration" />
     </a>
     <div className="p-5">
       <a href={url}>

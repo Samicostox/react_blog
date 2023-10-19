@@ -117,7 +117,7 @@ const Navbarv2 = () => {
             <img
               className="h-24 w-auto"
               src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697027873/Design_sans_titre_3_tffvky.png"
-              alt=""
+              alt="Innovation Studios logo"
             />
           </a>
         </div>
@@ -252,7 +252,7 @@ const Navbarv2 = () => {
               <img
                 className="h-24 w-auto"
                 src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697027873/Design_sans_titre_3_tffvky.png"
-                alt=""
+                alt="Innovation Studios logo"
               />
             </a>
             <button

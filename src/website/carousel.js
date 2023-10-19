@@ -321,7 +321,7 @@ const Carousel = () => {
               <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
                 <img
                   src={slide.image}
-                  alt=""
+                  alt="Services - Innovation Studios"
                   className="mx-auto w-[35rem] max-w-full "
                 />
               </div>

@@ -237,7 +237,7 @@ export default function Landingpage() {
                     <img
                       className="h-10 w-10 flex-none rounded-full bg-gray-50"
                       src={featuredTestimonial.author.imageUrl}
-                      alt=""
+                      alt="Testimonials"
                     />
                     <div className="flex-auto">
                       <div className="font-semibold text-left">
@@ -248,7 +248,7 @@ export default function Landingpage() {
                     <img
                       className="h-10 w-auto flex-none"
                       src={featuredTestimonial.author.logoUrl}
-                      alt=""
+                      alt="Testimonials"
                     />
                   </figcaption>
                 </figure>
@@ -281,7 +281,7 @@ export default function Landingpage() {
                               <img
                                 className="h-10 w-10 rounded-full bg-gray-50"
                                 src={testimonial.author.imageUrl}
-                                alt=""
+                                alt="Testimonials"
                               />
                               <div>
                                 <div className="font-semibold  text-left">
