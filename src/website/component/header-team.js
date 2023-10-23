@@ -66,25 +66,24 @@ const HeaderT = () => {
         />
         <div
           style={{
-            paddingLeft: "13%",
-            paddingRight: "9%",
-            paddingBottom: "15%",
+            paddingLeft: "5%",
+            paddingTop: "5%",
           }}
         >
           <img
-            className="w-full h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800"
+            className="w-auto h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800 lg:w-[50vw] lg:max-w-none"
             src={
               "https://res.cloudinary.com/dl2adjye7/image/upload/v1697372576/Hugo_s_Favorite_1_k8jnsn.jpg"
             }
             alt={`Image of the team - Innovation Studios `}
+            style={{ maxWidth: "40vw" }}
           />
           <div className="pb-10"></div>
           <img
-            className="w-full h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800"
-            src={
-              "https://res.cloudinary.com/dl2adjye7/image/upload/v1697372837/Hugo_s_Favorite_2_hr90c7.jpg"
-            }
+            className="w-auto h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800 lg:w-[50vw] lg:max-w-none"
+            src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697372837/Hugo_s_Favorite_2_hr90c7.jpg"
             alt={`Image of the team - Innovation Studios`}
+            style={{ maxWidth: "40vw" }}
           />
         </div>
       </div>
