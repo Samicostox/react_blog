@@ -293,7 +293,7 @@ export default function DisplayPDF({ setToPDF }) {
                       .map((pdfFile) => (
                         <li
                           key={pdfFile.id}
-                          className="relative overflow-hidden rounded-xl border border-gray-200"
+                          className="relative overflow-hidden rounded-xl border border-gray-200 cursor-pointer"
                           onClick={() => {
                             setSelectedPdf(pdfFile);
                           }}
@@ -302,10 +302,10 @@ export default function DisplayPDF({ setToPDF }) {
                             <img
                               src={
                                 pdfFile.category === "phone"
-                                  ? "https://res.cloudinary.com/dl2adjye7/image/upload/v1694028599/63ff784daa460f472e688fb0_csv_2_dok9c8.png"
+                                  ? "https://res.cloudinary.com/dl2adjye7/image/upload/v1698149434/pdf-icon-1_b17ubh.jpg"
                                   : pdfFile.category === "email"
-                                  ? "https://res.cloudinary.com/dl2adjye7/image/upload/v1694853894/imgonline-com-ua-ReplaceColor-ko8MIMdERcDM1_eh9daf.jpg"
-                                  : "https://res.cloudinary.com/dl2adjye7/image/upload/v1694028599/63ff784daa460f472e688fb0_csv_2_dok9c8.png" // Default image
+                                  ? "https://res.cloudinary.com/dl2adjye7/image/upload/v1698149434/pdf-icon-1_b17ubh.jpg"
+                                  : "https://res.cloudinary.com/dl2adjye7/image/upload/v1698149434/pdf-icon-1_b17ubh.jpg" // Default image
                               }
                               alt={pdfFile.name}
                               className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
