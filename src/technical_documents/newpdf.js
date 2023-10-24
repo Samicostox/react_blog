@@ -97,6 +97,7 @@ export default function NewPDF() {
         localStorage.setItem("title", title);
         localStorage.setItem("date", date);
         localStorage.setItem("university", university);
+        localStorage.setItem("scope", scopeOfApp);
         //localStorage.setItem('pdf_url', pdf_url);
         setFunctionalTitles(data.functional_title);
         setFunctional(data.functional_requirements);
