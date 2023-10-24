@@ -59,7 +59,7 @@ function Functional({ moveToNext }) {
           className="mx-auto mt-8 sm:mt-10"
         >
           {/* Form Title */}
-          <h2 className="text-3xl pb-10 text-left font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="font-alliance text-3xl pb-10 text-left font-bold tracking-tight text-gray-900 sm:text-4xl">
             Functional Requirements
           </h2>
 
@@ -67,7 +67,7 @@ function Functional({ moveToNext }) {
           {functionalTitlesData.map((title, index) => (
             <div
               key={index}
-              className="sm:col-span-1 requirement-section mb-4 relative"
+              className="font-alliance sm:col-span-1 requirement-section mb-4 relative"
             >
               {editingTitleIndex === index ? (
                 <input
@@ -75,11 +75,11 @@ function Functional({ moveToNext }) {
                   value={functionalTitlesData[index]}
                   onChange={(e) => handleTitleChange(index, e.target.value)}
                   onBlur={() => setEditingTitleIndex(null)}
-                  className="block w-full text-2xl rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6"
+                  className="font-alliance block w-full text-2xl rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6 mb-6"
                 />
               ) : (
                 <div className="flex items-center justify-between">
-                  <h3 className="text-2xl mb-6">{title}</h3>
+                  <h3 className="font-alliance text-2xl mb-6">{title}</h3>
                   <button
                     type="button"
                     onClick={() => setEditingTitleIndex(index)}
@@ -113,7 +113,7 @@ function Functional({ moveToNext }) {
                       onChange={(e) =>
                         handleInputChange(index, reqIndex, e.target.value)
                       }
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
+                      className="font-alliance block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6"
                     />
                     <button
                       type="button"
@@ -130,9 +130,9 @@ function Functional({ moveToNext }) {
               <button
                 type="button"
                 onClick={() => handleAddField(index)}
-                className="mt-2 inline-flex justify-center items-center w-10 h-10 rounded-full bg-green-700 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
+                className="rounded-md mt-2 inline-flex justify-center items-center w-60 h-10 rounded-full bg-green-700 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
               >
-                +
+                Add a new requirement
               </button>
             </div>
           ))}
@@ -141,7 +141,7 @@ function Functional({ moveToNext }) {
           <div className="mt-10">
             <button
               type="submit"
-              className="inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
+              className="font-alliance inline-flex justify-center items-center w-full rounded-md bg-green-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500"
             >
               Save your new Functional Requirements
             </button>
