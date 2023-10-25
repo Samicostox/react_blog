@@ -39,7 +39,7 @@ import { Helmet } from 'react-helmet';
 
 const featuredTestimonial = {
   body:
-    "Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero. Hac condimentum dignissim nibh vulputate ut nunc. Amet nibh orci mi venenatis blandit vel et proin. Non hendrerit in vel ac diam.",
+    "We recently collaborated with the Innovation Studio team to study the impact of AI on our low-code development platform Quodly.com. We were genuinely impressed by the maturity and professionalism of the team at Innovation Studios despite their young age and experience. They were rapidly able to integrate and collaborate with our experimented team and provided valuable insights both in  technological analysis and in strategic implementation.  Our seamless experience with them has led to engage with them on a regular basis",
   author: {
     name: "Eric Teissandier",
     handle: "CEO, 4D",
