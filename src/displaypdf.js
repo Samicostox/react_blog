@@ -168,17 +168,17 @@ export default function DisplayPDF({ setToPDF }) {
       ) : (
         <div>
           {selectedPdf ? (
-            <div>
-              <button onClick={() => setSelectedPdf(null)}>Back to List</button>
-              <button
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  updatePDF(selectedPdf);
-                }} // Adjust this route to wherever your update component is located
-              >
-                Update PDF
-              </button>
+            <div className="pb-10">
+              <div className="mx-auto max-w-4x2 text-center mt-20 ">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance">
+                  Preview your Technical Document!
+                </h2>
+                <p className="mt-2 text-lg leading-8 text-gray-700 font-alliance">
+                  You visualise your technical document, download it or make
+                  some updates if necessary.
+                </p>
+              </div>
+
               <div
                 style={{
                   display: "flex",
@@ -190,11 +190,28 @@ export default function DisplayPDF({ setToPDF }) {
                 <iframe
                   src={`${selectedPdf.pdf_file}.pdf`}
                   width="80%"
-                  height="600px"
+                  height="80%"
                   style={{ border: "none" }}
                   title="PDF Preview"
+                  className="rounded shadow"
                 />
               </div>
+              <button
+                className="font-alliance"
+                onClick={() => setSelectedPdf(null)}
+              >
+                {" "}
+                ← Back to List
+              </button>
+              <button
+                className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-600 ml-10 font-alliance"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  updatePDF(selectedPdf);
+                }} // Adjust this route to wherever your update component is located
+              >
+                Update PDF
+              </button>
             </div>
           ) : (
             <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">

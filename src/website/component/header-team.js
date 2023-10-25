@@ -70,21 +70,26 @@ const HeaderT = () => {
             paddingTop: "5%",
           }}
         >
-          <img
-            className="w-auto h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800 lg:w-[50vw] lg:max-w-none"
-            src={
-              "https://res.cloudinary.com/dl2adjye7/image/upload/v1697372576/Hugo_s_Favorite_1_k8jnsn.jpg"
-            }
-            alt={`Image of the team - Innovation Studios `}
-            style={{ maxWidth: "40vw" }}
-          />
+          <div className="max-w-[700px]">
+            <img
+              className="w-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 lg:max-w-none"
+              src={
+                "https://res.cloudinary.com/dl2adjye7/image/upload/v1697372576/Hugo_s_Favorite_1_k8jnsn.jpg"
+              }
+              alt={`Image of the team - Innovation Studios `}
+              style={{ maxWidth: "40vw" }}
+            />
+          </div>
+
           <div className="pb-10"></div>
-          <img
-            className="w-auto h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800 lg:w-[50vw] lg:max-w-none"
-            src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697372837/Hugo_s_Favorite_2_hr90c7.jpg"
-            alt={`Image of the team - Innovation Studios`}
-            style={{ maxWidth: "40vw" }}
-          />
+          <div className="max-w-[700px]">
+            <img
+              className="w-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 lg:max-w-none"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697372837/Hugo_s_Favorite_2_hr90c7.jpg"
+              alt={`Image of the team - Innovation Studios`}
+              style={{ maxWidth: "40vw" }}
+            />
+          </div>
         </div>
       </div>
     </div>

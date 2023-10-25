@@ -46,10 +46,10 @@ export default function UpdatePDF() {
   return (
     <div className="pt-10 pl-10 pr-10 pb-10">
       <div className="mx-auto max-w-4x2 text-center mt-10 pb-20">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="font-alliance text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           You can update your Technical Document!
         </h2>
-        <p className="mt-2 text-lg leading-8 text-gray-700">
+        <p className="font-alliance mt-2 text-lg leading-8 text-gray-700">
           You will receive an updated PDF file with the modifications you just
           made.
         </p>
@@ -57,7 +57,7 @@ export default function UpdatePDF() {
       <nav aria-label="Progress">
         <ol role="list" className="space-y-4 md:flex md:space-x-8 md:space-y-0">
           {steps.map((step) => (
-            <li key={step.name} className="md:flex-1">
+            <li key={step.name} className="font-alliance md:flex-1">
               <a
                 href="#"
                 onClick={(e) => {
@@ -83,7 +83,9 @@ export default function UpdatePDF() {
                 >
                   {step.id}
                 </span>
-                <span className="text-sm font-medium">{step.name}</span>
+                <span className="text-sm font-medium font-alliance">
+                  {step.name}
+                </span>
               </a>
             </li>
           ))}
