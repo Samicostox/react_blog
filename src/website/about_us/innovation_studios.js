@@ -9,14 +9,17 @@ function handleReadMoreClick(link) {
 const Card = ({ imgSrc, title, description, url }) => (
   <div className="m-4 md:m-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 text-left transform transition-transform duration-500 hover:scale-105">
     <a href={url}>
-      <img className="rounded-t-lg" src={imgSrc} alt="Innovation Studios Illustration" />
+      <img
+        className="rounded-t-lg"
+        src={imgSrc}
+        alt="Innovation Studios Illustration"
+      />
     </a>
     <div className="p-5">
-      <a href={url}>
-        <h5 className="mb-2 text-2xl font-alliance font-bold tracking-tight text-gray-900 dark:text-white">
-          {title}
-        </h5>
-      </a>
+      <h5 className="mb-2 text-2xl font-alliance font-bold tracking-tight text-gray-900 dark:text-white">
+        {title}
+      </h5>
+
       <p className="mb-3 font-normal font-alliance text-gray-700 dark:text-gray-400">
         {description}
       </p>
@@ -32,10 +35,9 @@ const Card = ({ imgSrc, title, description, url }) => (
 
 export default function InnovationStudios() {
   const imgSrcBham =
-    "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697039921/birmingham_ngicng.jpg";
+    "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697372837/Hugo_s_Favorite_2_hr90c7.jpg";
 
-  const titleBham = "Birmingham Innovation Studio";
-  const urlBham = "https://www.birminghaminnovationstudio.com/";
+  const titleBham = "Birmingham";
 
   const descriptionBham =
     "Our Birmingham Innovation Studio, established a year ago, is a nexus for student-driven, groundbreaking solutions.";
@@ -44,9 +46,8 @@ export default function InnovationStudios() {
     "Celebrate with us the recent launch of our dynamic Warwick hub, furthering our vision of nurturing young innovators.";
 
   const imgSrcWar =
-    "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697039865/warwick_hvxrqw.jpg";
-  const titleWar = "Warwick Innovation Studio";
-  const urlWar = "https://www.warwickinnovationstudio.com/";
+    "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697372576/Hugo_s_Favorite_1_k8jnsn.jpg";
+  const titleWar = "Warwick";
 
   return (
     <div className="flex flex-col items-center justify-center min-h-1000 p-4 space-y-4">
@@ -65,13 +66,11 @@ export default function InnovationStudios() {
             imgSrc={imgSrcBham}
             title={titleBham}
             description={descriptionBham}
-            url={urlBham}
           />
           <Card
             imgSrc={imgSrcWar}
             title={titleWar}
             description={descriptionWar}
-            url={urlWar}
           />
         </ul>
       </div>

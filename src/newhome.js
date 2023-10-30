@@ -30,12 +30,6 @@ import DisplayPDF from "./displaypdf";
 
 const navigation = [
   { name: "Technical documents", href: "#", icon: HomeIcon, current: true },
-  {
-    name: "New Technical documents",
-    href: "#",
-    icon: HomeIcon,
-    current: false,
-  },
   { name: "Email Generation", href: "#", icon: UsersIcon, current: false },
   { name: "Cold Outreach", href: "#", icon: FolderIcon, current: false },
   { name: "PDFs", href: "#", icon: CalendarIcon, current: false },
@@ -44,11 +38,25 @@ const navigation = [
 ];
 
 const navigation2 = [
-  { name: "Cold Approach", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Venues Fetcher", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Email Generation Guide", href: "#", icon: DocumentDuplicateIcon, current: false },
+  {
+    name: "Cold Approach",
+    href: "#",
+    icon: DocumentDuplicateIcon,
+    current: false,
+  },
+  {
+    name: "Venues Fetcher",
+    href: "#",
+    icon: DocumentDuplicateIcon,
+    current: false,
+  },
+  {
+    name: "Email Generation Guide",
+    href: "#",
+    icon: DocumentDuplicateIcon,
+    current: false,
+  },
   { name: "Doc4", href: "#", icon: DocumentDuplicateIcon, current: false },
- 
 ];
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
@@ -384,7 +392,7 @@ export default function Newhome() {
           </div>
 
           <div className="flex ml-auto lg:ml-72 h-full justify-center items-center">
-            {activeContent === "Technical documents" && <PDF />}
+            {activeContent === "Technical documents" && <NewPDF />}
             {activeContent === "Email Generation" && (
               <Message setToDoc3={setToDoc3} />
             )}
@@ -421,15 +429,16 @@ export default function Newhome() {
                 setToDoc3={setToDoc3}
               />
             )}
-            {activeContent === "Doc4" && <Doc1
-            setTocold={setToCold}
-            setToCSV={setToCSV}
-            setToDoc1={setToDoc1}
-            setToDoc2={setToDoc2}
-            setToDoc3={setToDoc3}
-             />}
-             
-            {activeContent === "New Technical documents" && <NewPDF />}
+            {activeContent === "Doc4" && (
+              <Doc1
+                setTocold={setToCold}
+                setToCSV={setToCSV}
+                setToDoc1={setToDoc1}
+                setToDoc2={setToDoc2}
+                setToDoc3={setToDoc3}
+              />
+            )}
+
             {activeContent === "Modify PDf" && <ModifyPDF />}
           </div>
         </div>
