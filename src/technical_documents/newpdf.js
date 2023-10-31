@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "../navbar";
 import { useNavigate } from "react-router-dom";
 
-export default function NewPDF() {
+export default function NewPDF({ setToModifyPDF }) {
   const [scopeOfApp, setScopeOfApp] = useState("");
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
@@ -106,7 +106,7 @@ export default function NewPDF() {
         //setPDF_URL(pdf_url);
 
         setIsLoading(false);
-        navigate("/updatepdf");
+        setToModifyPDF();
       }
 
       // If you want to set them to state, you would do:

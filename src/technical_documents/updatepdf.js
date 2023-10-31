@@ -10,7 +10,7 @@ const steps = [
   { id: "3", name: "Non Functional", href: "#", status: "incomplete" },
 ];
 
-export default function UpdatePDF() {
+export default function UpdatePDF({ setPdfToUpdate, setSelectedPdf }) {
   const [activeContent, setActiveContent] = useState("Front Page");
   const navigate = useNavigate();
 
@@ -53,6 +53,13 @@ export default function UpdatePDF() {
           You will receive an updated PDF file with the modifications you just
           made.
         </p>
+        <button
+          className="font-alliance pt-10"
+          onClick={() => setPdfToUpdate(null)}
+        >
+          {" "}
+          ← Back to Preview
+        </button>
       </div>
       <nav aria-label="Progress">
         <ol role="list" className="space-y-4 md:flex md:space-x-8 md:space-y-0">
@@ -99,7 +106,12 @@ export default function UpdatePDF() {
         {activeContent === "Functional" && (
           <Functional moveToNext={moveToNextStep} />
         )}
-        {activeContent === "Non Functional" && <NonFunctional />}
+        {activeContent === "Non Functional" && (
+          <NonFunctional
+            setPdfToUpdate={setPdfToUpdate}
+            setSelectedPdf={setSelectedPdf}
+          />
+        )}
       </div>
     </div>
   );

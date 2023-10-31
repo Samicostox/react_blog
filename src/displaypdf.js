@@ -164,7 +164,10 @@ export default function DisplayPDF({ setToPDF }) {
         onDelete={confirmDelete}
       />
       {pdfToUpdate ? (
-        <UpdatePDF />
+        <UpdatePDF
+          setPdfToUpdate={setPdfToUpdate}
+          setSelectedPdf={setSelectedPdf}
+        />
       ) : (
         <div>
           {selectedPdf ? (
@@ -174,7 +177,7 @@ export default function DisplayPDF({ setToPDF }) {
                   Preview your Technical Document!
                 </h2>
                 <p className="mt-2 text-lg leading-8 text-gray-700 font-alliance">
-                  You visualise your technical document, download it or make
+                  You can visualise your technical document, download it or make
                   some updates if necessary.
                 </p>
               </div>
@@ -245,7 +248,7 @@ export default function DisplayPDF({ setToPDF }) {
                             type="text"
                             name="search-candidate"
                             id="search-candidate"
-                            className="block w-full rounded-md border-0 py-1.5 pl-10 text-sm leading-6 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700"
+                            className="block w-full rounded-l-md border-0 py-1.5 pl-10 text-sm leading-6 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700"
                             placeholder="Search PDF"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}

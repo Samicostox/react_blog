@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import xtype from "xtypejs";
 import { TrashIcon } from "@heroicons/react/20/solid";
 
-function NonFunctional({ moveToNext }) {
+function NonFunctional({ moveToNext, setPdfToUpdate, setSelectedPdf }) {
   const savedNonFunctional =
     JSON.parse(localStorage.getItem("nonFunctional")) || [];
   const savedNonFunctionalTitles =
@@ -107,6 +107,7 @@ function NonFunctional({ moveToNext }) {
         const data = await response.json();
         console.log("Response", data);
         // Navigate or show success message or any other action you want to perform
+        setPdfToUpdate(null);
       } else {
         // Handle errors
         console.error("Failed to send data:", response.statusText);

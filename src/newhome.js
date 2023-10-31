@@ -107,7 +107,7 @@ export default function Newhome() {
     setActiveContent("Email Generation Guide");
   }
   function setToModifyPDF() {
-    setActiveContent("Modify PDF");
+    setActiveContent("PDFs");
   }
 
   return (
@@ -392,7 +392,9 @@ export default function Newhome() {
           </div>
 
           <div className="flex ml-auto lg:ml-72 h-full justify-center items-center">
-            {activeContent === "Technical documents" && <NewPDF />}
+            {activeContent === "Technical documents" && (
+              <NewPDF setToModifyPDF={setToModifyPDF} />
+            )}
             {activeContent === "Email Generation" && (
               <Message setToDoc3={setToDoc3} />
             )}
