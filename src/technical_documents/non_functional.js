@@ -70,6 +70,7 @@ function NonFunctional({ moveToNext, setPdfToUpdate, setSelectedPdf }) {
     const date = localStorage.getItem("date");
     const university = localStorage.getItem("university");
     const scope = localStorage.getItem("scope");
+    const newDate = new Date(date + "T00:00:00Z");
     const payload = {
       token: token,
       pdf_id: id,
@@ -107,6 +108,7 @@ function NonFunctional({ moveToNext, setPdfToUpdate, setSelectedPdf }) {
         const data = await response.json();
         console.log("Response", data);
         // Navigate or show success message or any other action you want to perform
+        setSelectedPdf(data);
         setPdfToUpdate(null);
       } else {
         // Handle errors

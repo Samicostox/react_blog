@@ -34,10 +34,8 @@ export default function DisplayPDF({ setToPDF }) {
   const [showSortMenu, setShowSortMenu] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
   const [selectedPdf, setSelectedPdf] = useState(null);
   const [pdfToUpdate, setPdfToUpdate] = useState(null);
-  const [pdfFile, setPdfFile] = useState(null);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -95,7 +93,12 @@ export default function DisplayPDF({ setToPDF }) {
     );
     localStorage.setItem("consultant_name", selectedPdf.consultant_name);
     localStorage.setItem("title", selectedPdf.title);
-    localStorage.setItem("date", selectedPdf.date);
+    const dateObject = new Date(selectedPdf.date);
+
+    // Format the date to YYYY-MM-DD
+    const formattedDate = dateObject.toISOString().split("T")[0];
+    console.log(formattedDate);
+    localStorage.setItem("date", formattedDate);
     localStorage.setItem("university", selectedPdf.university);
     localStorage.setItem("scope", selectedPdf.scope);
     localStorage.setItem(
@@ -191,7 +194,11 @@ export default function DisplayPDF({ setToPDF }) {
                 }}
               >
                 <iframe
-                  src={`${selectedPdf.pdf_file}.pdf`}
+                  src={`${
+                    selectedPdf.pdf_file.endsWith(".pdf")
+                      ? selectedPdf.pdf_file
+                      : selectedPdf.pdf_file + ".pdf"
+                  }`}
                   width="80%"
                   height="80%"
                   style={{ border: "none" }}
