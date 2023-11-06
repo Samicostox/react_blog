@@ -75,7 +75,7 @@ const people = [
       "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312907/Yahia_uv3a7y.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/yahia-khairy-abdelkader/",
-    Uni: "WIS",
+    Uni: "W",
     color: "bg-purple-100",
   },
   {
@@ -85,7 +85,7 @@ const people = [
       "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312854/Rohan_earqio.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/rohan-luchmun-633390259/",
-    Uni: "WIS",
+    Uni: "W",
     color: "bg-purple-100",
   },
 
@@ -96,7 +96,7 @@ const people = [
       "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697450271/IMG_5623_jzk53t.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/elliot-teissandier/",
-    Uni: "WIS",
+    Uni: "W",
     color: "bg-purple-100",
   },
   {
@@ -106,7 +106,7 @@ const people = [
       "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312853/Rushen_djfost.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/rushen-fernando-287650254/",
-    Uni: "WIS",
+    Uni: "W",
     color: "bg-purple-100",
   },
   {
@@ -116,7 +116,7 @@ const people = [
       "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697400082/Mustafa_fav_wxwsia.jpg",
 
     linkedinUrl: "#https://www.linkedin.com/in/mustafakhan23/",
-    Uni: "WIS",
+    Uni: "W",
     color: "bg-purple-100",
   },
   {
@@ -126,7 +126,7 @@ const people = [
       "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697379674/Nadia_rpgrde.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/nadiaj7860/",
-    Uni: "WIS",
+    Uni: "W",
     color: "bg-purple-100",
   },
   {
@@ -136,7 +136,7 @@ const people = [
       "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697660296/preferred_photo_Louisa______oeszjk.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/louisa-w-932010200/",
-    Uni: "BIS",
+    Uni: "B",
     color: "bg-red-100",
   },
 

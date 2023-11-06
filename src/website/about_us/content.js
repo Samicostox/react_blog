@@ -84,21 +84,20 @@ export default function Content() {
             </h1>
             <div className="max-w-xl">
               <p className="mt-8 mb-8 text-left font-alliance font-light">
-                We are a pioneering student-led consulting firm born from the
-                innovative minds at the University of Birmingham and recently
-                the University of Warwick. Our mission follows our motto which
-                aims to bridge the gap between academia and industry. We want to
-                provide a unique platform where businesses get a chance to meet
-                and work with the brilliant minds of tomorrow. We are not just a
-                consulting firm; we are a vibrant community where the future
-                next generation of workers are nurtured and formed with real
-                work experience. Where companies gain access to young, dynamic,
-                and meticulously trained talents. Since the start, our journey
-                has been driven by a commitment to unlock the potential of
-                university talents and provide them with the tools and resources
-                to express their skills, while simultaneously offering
-                businesses high-quality, competitively priced technical and
-                business services.
+                We are a pioneering student-led consulting firm with teams of
+                students at the Universities of Birmingham and Warwick. Our
+                mission follows our motto which aims to bridge the gap between
+                academia and industry. We want to provide a unique platform
+                where businesses get a chance to meet and work with the
+                brilliant minds of tomorrow. We are not just a consulting firm;
+                we are a vibrant community where the next generation of workers
+                are nurtured and formed with real work experience. Where
+                companies gain access to young, dynamic, and meticulously
+                trained talents. Since the start, our journey has been driven by
+                a commitment to unlock the potential of university talents and
+                provide them with the tools and resources to express their
+                skills. While simultaneously offering businesses high-quality,
+                competitively priced technical and business services.
               </p>
             </div>
             <p className="mt-12 text-base font-semibold leading-7 text-teal-600 text-left font-alliance">
@@ -111,14 +110,14 @@ export default function Content() {
               <p className="mt-8 mb-8 text-left font-alliance font-light">
                 Dive into a pool of diverse services tailored to meet your
                 business needs while working together with the next generation
-                of professionals. Our offerings are broad and span across: web
+                of professionals. Our offerings are broad and span across : web
                 and mobile development, data science, business planning,
-                benchmarking, and strategic services. Over the last year, we
-                have've had the privilege of developing MVPs for early-stage
+                benchmarking, and strategic services… Over the last year, we
+                have had the privilege of developing MVPs for early-stage
                 startups to launch them into the market and working with larger
                 corporations in market research and strategic planning for their
                 future products. Our unique model allows us to provide services
-                at highly competitive prices, whilst maintaining a quality that
+                at highly competitive prices whilst maintaining a quality that
                 aligns with industry standards. By choosing us you do not only
                 get a low-cost service, but you also choose to invest in the
                 future. Today’s student is tomorrow’s employee; we represent
@@ -134,12 +133,12 @@ export default function Content() {
             </h1>
             <div className="max-w-xl">
               <p className="mt-8 mb-8 text-left font-alliance font-light">
-                For students, Innovation Studios is more than just a job it
+                For students, Innovation Studios is more than just a job; it
                 represents a stepping stone to a bright and promising career. By
                 engaging in real-world projects as consultants, our students
                 gain invaluable industry exposure and an opportunity to apply
                 their academic knowledge in a practical context. The experiences
-                we provide go beyond the limits of employee; they are a rich
+                we provide go beyond the limits of employees; they are a rich
                 blend of learning, networking, and skill enhancement, where both
                 hard and soft skills are polished. The feedback from our student
                 consultants has been overwhelmingly positive. Not only has our
