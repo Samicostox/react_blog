@@ -73,7 +73,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg",
       icons: [
         "swot3_hxgd7t",
-        "canva_mvtfow",
+        "canva",
         "notion-logo-svgrepo-com_m5vflg",
         "ologo_square_colour_light_bg_w5keat",
         "modelcanva_ecyq0v",
@@ -88,7 +88,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615270/website-images/image-service-strategy.jpg",
       icons: [
         "swot3_hxgd7t",
-        "canva_mvtfow",
+        "canva",
         "notion-logo-svgrepo-com_m5vflg",
         "ologo_square_colour_light_bg_w5keat",
       ],
@@ -102,7 +102,7 @@ export function CardDefault({ title2, description, imageUrl }) {
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615265/website-images/image-service-benchmarking.jpg",
       icons: [
         "swot3_hxgd7t",
-        "canva_mvtfow",
+        "canva",
         "notion-logo-svgrepo-com_m5vflg",
         "ologo_square_colour_light_bg_w5keat",
         "python_bmp5vb",
