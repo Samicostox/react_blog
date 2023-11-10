@@ -109,7 +109,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg ",
     },
 
     {
