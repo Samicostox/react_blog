@@ -61,7 +61,7 @@ export default function Service_web() {
     <div className="bg-white">
       <Helmet>
     <title>Web Development Services | Innovation Studios</title>
-    <meta name="description" content="Innovation Studios provides cutting-edge web development services, ensuring responsive, scalable, and performant websites tailored to your business needs." />
+    <meta name="description" content="Innovation Studios provides cutting-edge web development services, ensuring responsive and performant websites tailored to your business needs." />
 </Helmet>
 
       <Navbarv2></Navbarv2>
