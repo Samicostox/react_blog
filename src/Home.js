@@ -35,10 +35,11 @@ const Home = () => {
 
     return ( 
         <div className="home">
-            <Helmet>
-    <title>Lead & Technical Document Generation Software | Innovation Studios</title>
-    <meta name="description" content="Discover Innovation Studios' proprietary software solutions. Pioneering in lead generation and technical document automation, we leverage technology to streamline and enhance your business processes. Experience the future of efficient operations with us." />
+          <Helmet>
+    <title>Lead Generation | Innovation Studios</title>
+    <meta name="description" content="Innovation Studios offers advanced software for lead generation and technical document automation. Streamline business processes with our efficient, tech-driven solutions." />
 </Helmet>
+
 
             <Navbarv2></Navbarv2>
             <Example></Example>
@@ -47,7 +48,7 @@ const Home = () => {
             <Content></Content>
             <Section2></Section2>
             <CTA2></CTA2>
-            <Footer></Footer>            
+            <Footer></Footer>
             
             {/* Add the Chatbot component here */}
             

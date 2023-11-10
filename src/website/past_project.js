@@ -319,8 +319,8 @@ export function PastProjects({ title, description, imageUrl }) {
   return (
     <div className="bg-whites">
      <Helmet>
-    <title>Our Portfolio | Innovation Studios</title>
-    <meta name="description" content="Dive into the portfolio of Innovation Studios and explore our past projects. Witness our commitment to excellence and innovation as we've partnered with diverse industries to deliver top-notch solutions. From software development to data engineering, see our expertise in action." />
+    <title>Past Projects | Innovation Studios</title>
+    <meta name="description" content="Explore Innovation Studios' past projects showcasing diverse projects in software development and data engineering. Discover our excellence and innovative solutions across industries." />
     </Helmet>
 
 

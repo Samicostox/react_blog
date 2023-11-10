@@ -4,6 +4,7 @@ import { TabsWithIcon } from "./component/tabs";
 import Footer from "./footer";
 import Navbarv2 from "../navbarv2";
 import React, { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet';
 
 const benefits = [
   "Competitive salaries",
@@ -182,6 +183,11 @@ export default function Team() {
   }, []);
   return (
     <div className="bg-white">
+      <Helmet>
+    <title>Meet Our Team | Innovation Studios</title>
+    <meta name="description" content="Meet the driving force behind Innovation Studios: a diverse team of skilled professionals in software development, data engineering, and business strategy. Our team's expertise fuels innovative solutions." />
+</Helmet>
+
       <Navbarv2></Navbarv2>
 
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20 mx-auto">
