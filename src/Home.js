@@ -36,7 +36,7 @@ const Home = () => {
     return ( 
         <div className="home">
           <Helmet>
-    <title>Lead Generation & Document Automation Software | Innovation Studios</title>
+    <title>Lead Generation | Innovation Studios</title>
     <meta name="description" content="Innovation Studios offers advanced software for lead generation and technical document automation. Streamline business processes with our efficient, tech-driven solutions." />
 </Helmet>
 

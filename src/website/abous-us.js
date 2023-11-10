@@ -66,7 +66,7 @@ export default function AboutUs() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Innovation Studios: Software Development & Data Engineering Services</title>
+    <title>Innovation Studios: Software Development Services</title>
     <meta name="description" content="Empowering innovation with software development, data engineering, and business solutions at Innovation Studios. Transform your ideas into reality." />
 </Helmet>
 
