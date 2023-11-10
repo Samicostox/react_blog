@@ -3,7 +3,6 @@ import React from "react";
 const LogoCloud = ({ className }) => {
   const logos = [
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537893/University-of-Birmingham-logo_od1gji.png",
-
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537983/e4b96220-cc71-4e7f-946f-4433d1fa2895_xnwxrc.jpg",
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538138/Screenshot_2023-10-05_213455_dlyfie.png",
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538028/mqdefault_idsy1j.jpg",
@@ -13,7 +12,6 @@ const LogoCloud = ({ className }) => {
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538138/Screenshot_2023-10-05_213455_dlyfie.png",
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538028/mqdefault_idsy1j.jpg",
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537893/University-of-Birmingham-logo_od1gji.png",
-    "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537925/Warwick_Logo_jdtjhp.png",
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696537983/e4b96220-cc71-4e7f-946f-4433d1fa2895_xnwxrc.jpg",
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538138/Screenshot_2023-10-05_213455_dlyfie.png",
     "https://res.cloudinary.com/dl2adjye7/image/upload/v1696538028/mqdefault_idsy1j.jpg",
