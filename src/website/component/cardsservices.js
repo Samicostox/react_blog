@@ -35,7 +35,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Revolutionise your online identity with Innovation Studios' web development services. Our team excels in creating responsive, visually appealing websites that are not just aesthetically pleasing but also SEO-optimized. We focus on elevating your brand's digital narrative to engage and captivate a global audience.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615258/website-images/image-service-web.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641969/website-images/image-service-web.jpg",
       icons: [
         "react_y3ribl",
         "django-icon_rxmwzx",
