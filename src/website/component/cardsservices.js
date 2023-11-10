@@ -17,7 +17,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Mobile Development",
       description:
-        "Explore cutting-edge custom mobile app development at Innovation Studios. We specialise in iOS and Android apps, focusing on user-centric design and engagement, ensuring your app stands out in the competitive mobile market.",
+        "At Innovation Studios, we're at the forefront of mobile application innovation. Our expertise in crafting bespoke iOS and Android applications integrates cutting-edge technology with a user-first approach. We ensure your mobile presence is not just visible but remarkable in the ever-evolving app marketplace.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615280/website-images/image-service-mobile.jpg",
       icons: [
@@ -33,7 +33,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Web Development",
       description:
-        "Elevate your digital footprint with our responsive web design and custom website development services. Our team crafts stunning, user-friendly websites, tailored to captivate your audience and enhance your online presence.",
+        "Revolutionise your online identity with Innovation Studios' web development services. Our team excels in creating responsive, visually appealing websites that are not just aesthetically pleasing but also SEO-optimized. We focus on elevating your brand's digital narrative to engage and captivate a global audience.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615258/website-images/image-service-web.jpg",
       icons: [
@@ -53,7 +53,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Data Engineering",
       description:
-        "Unlock insights and drive decisions with our advanced data analysis and big data analytics services. At Innovation Studios, we transform complex data into actionable intelligence, propelling your business forward.",
+        "Our data engineering services are designed to turn complex datasets into valuable insights. We leverage advanced analytics to empower your decision-making, ensuring your business stays data-driven and ahead of the curve.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615261/website-images/image-service-data.jpg",
       icons: [
@@ -68,7 +68,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Business Plan",
       description:
-        "Foster growth and innovation with our strategic business planning and market analysis services. We provide comprehensive business development consulting to navigate market trends and achieve sustainable success.",
+        "Navigate the complexities of market trends with our strategic business development services. At Innovation Studios, we blend market analysis with innovative strategies to foster growth and resilience in your business. Our approach is tailored to help you thrive in today's dynamic business environment.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg",
       icons: [
@@ -83,7 +83,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Strategies",
       description:
-        "Shape the future of your business with our strategic planning services. From competitive strategy analysis to market positioning, we help you develop robust strategies to stay ahead in your dynamic industry.",
+        "Craft the blueprint for success with our strategic planning services. Innovation Studios specializes in dissecting market dynamics and formulating strategies that ensure your business stays relevant and ahead. From market positioning to competitive analysis, we are your partners in strategic excellence.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615270/website-images/image-service-strategy.jpg",
       icons: [
@@ -97,7 +97,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Benchmarking",
       description:
-        "Gain a competitive edge with our performance benchmarking services. We offer in-depth market and business benchmarking solutions, helping you set industry standards and outperform competitors.",
+        "Set new industry standards with Innovation Studios' benchmarking services. We provide comprehensive analysis to measure your performance against the best, offering insights that drive competitive advantage. Our goal is to position your business not just to compete, but to lead in your industry.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615265/website-images/image-service-benchmarking.jpg",
       icons: [
