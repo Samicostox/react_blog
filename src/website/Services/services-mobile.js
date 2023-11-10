@@ -7,7 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const steps = [
   {
@@ -21,7 +21,8 @@ const steps = [
     name: "2. Design",
     description:
       "Adhering to Human Interface Guidelines, our designs, crafted with tools like Figma, blend aesthetics with user-centric functionality, ensuring your brand identity is cohesively represented throughout the user experience.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190297/icons8-ui-ux-design-96_k1ku97.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190297/icons8-ui-ux-design-96_k1ku97.png",
   },
   {
     name: "3. Development",
@@ -41,7 +42,8 @@ const steps = [
     name: "5. Deployment",
     description:
       "Navigating through platform guidelines and managing deployment intricacies, we ensure your app is smoothly and successfully launched on platforms like the App Store, providing an uninterrupted user experience.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190739/icons8-launch-96_dlqjg2.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190739/icons8-launch-96_dlqjg2.png",
   },
   {
     name: "6. Maintenance",
@@ -61,9 +63,12 @@ export default function Service_mobile() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Mobile Development Services | Innovation Studios</title>
-    <meta name="description" content="Offering top-tier mobile development solutions, Innovation Studios brings your app idea to life on both iOS and Android platforms. Let's shape the future of mobile together." />
-</Helmet>
+        <title>Mobile Development Services | Innovation Studios</title>
+        <meta
+          name="description"
+          content="Offering top-tier mobile development solutions, Innovation Studios brings your app idea to life on both iOS and Android platforms. Let's shape the future of mobile together."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
 
@@ -97,12 +102,14 @@ export default function Service_mobile() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
+        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20">
+          {" "}
+          {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-          <div className="flex">
+            <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">
-                 Not Interested?
+                  Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="/services" className="flex items-center gap-x-1">
@@ -135,7 +142,7 @@ export default function Service_mobile() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696331868/Untitled_1080_x_1080_px_900_x_1080_px_1_hbkthq.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615280/website-images/image-service-mobile.jpg"
               alt="Mobile Development Services - Innovation Studios"
               className="mx-auto w-[33rem] max-w-full "
             />

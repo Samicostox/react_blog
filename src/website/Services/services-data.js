@@ -7,7 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const steps = [
   {
@@ -21,7 +21,8 @@ const steps = [
     name: "2. Data Acquisition and Understanding",
     description:
       "Our team employs a range of techniques to acquire, explore, and understand the data that will drive your solutions. Through exploratory data analysis and quality assessments, we ensure the data is robust and relevant, laying a solid foundation for the subsequent phases of the project.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191263/icons8-data-backup-100_w78o90.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191263/icons8-data-backup-100_w78o90.png",
   },
   {
     name: "3. Data Preprocessing and Cleaning",
@@ -41,13 +42,15 @@ const steps = [
     name: "5. Model Deployment",
     description:
       "We strategically deploy models into your operational environment, ensuring they are scalable, maintainable, and integrate seamlessly with your existing systems. Continuous monitoring post-deployment ensures consistent performance and reliability in delivering insights.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190739/icons8-launch-96_dlqjg2.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190739/icons8-launch-96_dlqjg2.png",
   },
   {
     name: "6. Project Delivery and Maintenance",
     description:
       "We ensure you can leverage the deployed models effectively through comprehensive training and robust documentation. Our commitment extends beyond delivery, offering ongoing support and maintenance to ensure the sustainability and evolution of your data-driven solutions in alignment with your business dynamics.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
   },
 ];
 export default function Service_data() {
@@ -60,9 +63,12 @@ export default function Service_data() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Data Engineering Services | Innovation Studios</title>
-    <meta name="description" content="Harness the power of your data with Innovation Studios. Our data engineering solutions transform raw data into actionable insights, driving business growth." />
-</Helmet>
+        <title>Data Engineering Services | Innovation Studios</title>
+        <meta
+          name="description"
+          content="Harness the power of your data with Innovation Studios. Our data engineering solutions transform raw data into actionable insights, driving business growth."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
 
@@ -96,12 +102,14 @@ export default function Service_data() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="max-w-[1800px] mx-auto px-6 xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
+        <div className="max-w-[1800px] mx-auto px-6 xl:flex lg:items-center lg:px-40  lg:gap-x-20">
+          {" "}
+          {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-          <div className="flex">
+            <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">
-                 Not Interested?
+                  Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="/services" className="flex items-center gap-x-1">
@@ -133,7 +141,7 @@ export default function Service_data() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340535/3_zal96e.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615261/website-images/image-service-data.jpg"
               alt="Data Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />

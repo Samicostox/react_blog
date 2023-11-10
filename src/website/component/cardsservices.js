@@ -19,7 +19,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Explore cutting-edge custom mobile app development at Innovation Studios. We specialise in iOS and Android apps, focusing on user-centric design and engagement, ensuring your app stands out in the competitive mobile market.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696257551/mobile_ghadoy.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615280/website-images/image-service-mobile.jpg",
       icons: [
         "react_y3ribl",
         "django-icon_rxmwzx",
@@ -35,7 +35,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Elevate your digital footprint with our responsive web design and custom website development services. Our team crafts stunning, user-friendly websites, tailored to captivate your audience and enhance your online presence.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696258003/computer_svt21c.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615258/website-images/image-service-web.jpg",
       icons: [
         "react_y3ribl",
         "django-icon_rxmwzx",
@@ -55,7 +55,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Unlock insights and drive decisions with our advanced data analysis and big data analytics services. At Innovation Studios, we transform complex data into actionable intelligence, propelling your business forward.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696257232/datata_gl2sns.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615261/website-images/image-service-data.jpg",
       icons: [
         "python_bmp5vb",
         "pytorch-icon_qqdkjv",
@@ -70,7 +70,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Foster growth and innovation with our strategic business planning and market analysis services. We provide comprehensive business development consulting to navigate market trends and achieve sustainable success.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696325241/11_ndpclf.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg",
       icons: [
         "swot3_hxgd7t",
         "canva_mvtfow",
@@ -85,7 +85,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Shape the future of your business with our strategic planning services. From competitive strategy analysis to market positioning, we help you develop robust strategies to stay ahead in your dynamic industry.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696325244/12_soms8p.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615270/website-images/image-service-strategy.jpg",
       icons: [
         "swot3_hxgd7t",
         "canva_mvtfow",
@@ -99,7 +99,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Gain a competitive edge with our performance benchmarking services. We offer in-depth market and business benchmarking solutions, helping you set industry standards and outperform competitors.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696325237/10_hoa8by.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615265/website-images/image-service-benchmarking.jpg",
       icons: [
         "swot3_hxgd7t",
         "canva_mvtfow",
@@ -129,7 +129,10 @@ export function CardDefault({ title2, description, imageUrl }) {
               <div className="flex-1">
                 <Card className="w-full ">
                   <CardHeader color="blue-gray" className="relative h-90">
-                    <img src={card.imageUrl} alt="Services - Innovation Studios" />
+                    <img
+                      src={card.imageUrl}
+                      alt="Services - Innovation Studios"
+                    />
                   </CardHeader>
                   <CardBody className="lg:h-[300px] md:h-[330px] overflow-auto">
                     <Typography

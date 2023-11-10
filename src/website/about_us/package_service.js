@@ -9,30 +9,30 @@ const NumberLine = () => {
   const data2 = [
     {
       number: 1,
-      subtitle : "First Meeting",
+      subtitle: "First Meeting",
       title: "Inception",
       paragraph:
         "Embarking on a journey with us begins with a comprehensive meeting or call, where mutual introductions pave the way for a collaborative partnership. Our initial conversations are meticulously designed to delve into the core of your organization, understanding not just what you do, but how you do it, and identifying the specific needs we can assist with, be it website development, MVP creation, or specialized research. The creation of our tailored technical documents, which precisely outline the proposed project, is a collaborative effort. We invite you to review, revise, and refine these documents with us, ensuring that every detail is aligned with your expectations and objectives. This phase is not just about planning; it’s about forging a partnership where your needs and goals are at the forefront of all decisions",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1697450121/sami8694_Isometric_illustration_of_a_first_client_meeting_busin_c2b5adb1-6fe6-4b41-9a92-318a48083a04_qvkatk.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699613947/website-images/image-inception.jpg",
     },
     {
       number: 2,
-      subtitle : "Development",
+      subtitle: "Development",
       title: "Development",
       paragraph:
         "Once the project is officially underway, our team, comprising astute student consultants and experienced project managers, becomes an extension of your own. With a development period typically spanning 2-3 weeks for websites, 1-2 months for business projects, and over 3 months for software projects, we ensure a seamless blend of quality and timeliness by incorporating a risk buffer into our schedule. This allows us to navigate through unexpected challenges without compromising on the deliverables. Weekly meetings provide you with insights into each step of the process, and your feedback becomes an integral part of our development cycle. Should the scope of the project evolve, we maintain transparency and fairness by discussing additional investments for out-of-scope work, ensuring that the project adapts to your evolving needs without any hidden surprises.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1697450125/sami8694_Isometric_illustration_of_a_team_working_on_a_software_c773d850-1669-4a8a-aa4e-16190530a236_ejb94c.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699613929/website-images/image-development.jpg",
     },
     {
       number: 3,
       title: "Delivery",
-      subtitle : "End of Project",
+      subtitle: "End of Project",
       paragraph:
         "The culmination of our journey together is marked by a meticulous delivery process. For business projects, we present our findings and documents, ensuring every detail is communicated and understood. For technical projects, we manage the deployment onto your servers, ensuring a smooth transition from development to live environment. Following delivery, our commitment to your success continues with a maintenance period, typically lasting between 2 weeks to 1 month. This period is dedicated to addressing any technical adjustments, bug fixes, or deeper dives into business documents as needed. But our relationship doesn’t end at project completion. We welcome feedback, and after a period of reflection on your end, we eagerly anticipate reconnecting to discuss the impacts of our collaboration and explore future opportunities to support your ongoing journey.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1697450275/sami8694_Isometric_illustration_of_a_delivery_of_a_software_dev_107fe48c-5c9d-400c-b9f1-642ddf161ad8_ijmlhd.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699613932/website-images/image-delivery.jpg",
     },
   ];
 

@@ -7,7 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 const steps = [
   {
     name: "1. Scope Definition",
@@ -20,7 +20,8 @@ const steps = [
     name: "2. Selection of Comparisons",
     description:
       "We strategically identify benchmark partners, whether industry leaders or direct competitors, ensuring they provide an optimal comparison point to measure your performance against.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697194211/comparaison_v0uqaf.svg",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697194211/comparaison_v0uqaf.svg",
   },
   {
     name: "3. Data Collection",
@@ -40,13 +41,15 @@ const steps = [
     name: "5. Strategy & Action Plan",
     description:
       "Our analysis insights shape a strategic blueprint, offering actionable recommendations and clear steps to address performance gaps and elevate your business operations.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193880/plan_freyov.svg",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193880/plan_freyov.svg",
   },
   {
     name: "6. Post-Delivery Support",
     description:
       "Strategy formulation is just the beginning. We are with you every step of the way, offering post-delivery consultations, revisions, and insights to ensure the strategy is actualised effectively.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
   },
 ];
 export default function Service_benchmarking() {
@@ -59,9 +62,12 @@ export default function Service_benchmarking() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Benchmarking Services | Innovation Studios</title>
-    <meta name="description" content="Stay ahead of the competition with Innovation Studios' benchmarking services. Analyze, compare, and implement best practices to achieve industry excellence." />
-</Helmet>
+        <title>Benchmarking Services | Innovation Studios</title>
+        <meta
+          name="description"
+          content="Stay ahead of the competition with Innovation Studios' benchmarking services. Analyze, compare, and implement best practices to achieve industry excellence."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
 
@@ -95,12 +101,14 @@ export default function Service_benchmarking() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
+        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20">
+          {" "}
+          {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-          <div className="flex">
+            <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">
-                 Not Interested?
+                  Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="/services" className="flex items-center gap-x-1">
@@ -133,7 +141,7 @@ export default function Service_benchmarking() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340539/4_lfxng4.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615265/website-images/image-service-benchmarking.jpg"
               alt="Benchmarking Plan Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />

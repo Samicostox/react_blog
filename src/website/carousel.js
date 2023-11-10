@@ -20,21 +20,20 @@ const Carousel = () => {
 
     // Set the interval for the slide change
     const timer = setInterval(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % 6);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % 6);
     }, 6000);
 
     setTimerId(timer); // Save the timer's ID
 
     // Clean up on component unmount
     return () => {
-        // Remove the Typeform embed script
-        document.body.removeChild(script);
-        
-        // Clear the timer
-        clearInterval(timer);
-    };
-}, []);
+      // Remove the Typeform embed script
+      document.body.removeChild(script);
 
+      // Clear the timer
+      clearInterval(timer);
+    };
+  }, []);
 
   const handleClick = () => {
     // Handle button click if needed
@@ -69,7 +68,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground1 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696331868/Untitled_1080_x_1080_px_900_x_1080_px_1_hbkthq.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615280/website-images/image-service-mobile.jpg",
     },
 
     {
@@ -83,7 +82,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340531/2_akgsvx.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615258/website-images/image-service-web.jpg",
     },
     {
       title: "Data Engineering",
@@ -96,7 +95,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340535/3_zal96e.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615261/website-images/image-service-data.jpg",
     },
 
     {
@@ -110,7 +109,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340545/6_rhzcz4.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg",
     },
 
     {
@@ -124,7 +123,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340539/4_lfxng4.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615265/website-images/image-service-benchmarking.jpg",
     },
 
     {
@@ -138,7 +137,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1696340542/5_ndyarz.png",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615270/website-images/image-service-strategy.jpg",
     },
   ];
 
@@ -280,16 +279,16 @@ const Carousel = () => {
                         className="h-4 w-px bg-gray-900/10"
                         aria-hidden="true"
                       />
-                      <a 
-                      data-tf-popup="lZ2mKiQJ"
-                      data-tf-opacity="100"
-                      data-tf-size="100"
-                      data-tf-iframe-props="title=Talent Recuitment"
-                      data-tf-transitive-search-params
-                      data-tf-medium="snippet"
-                      onClick={handleClick}
-                      
-                      className="flex items-center gap-x-1 cursor-pointer">
+                      <a
+                        data-tf-popup="lZ2mKiQJ"
+                        data-tf-opacity="100"
+                        data-tf-size="100"
+                        data-tf-iframe-props="title=Talent Recuitment"
+                        data-tf-transitive-search-params
+                        data-tf-medium="snippet"
+                        onClick={handleClick}
+                        className="flex items-center gap-x-1 cursor-pointer"
+                      >
                         <span
                           className="absolute inset-0 font-alliance"
                           aria-hidden="true"

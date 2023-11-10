@@ -4,7 +4,7 @@ import { TabsWithIcon } from "./component/tabs";
 import Footer from "./footer";
 import Navbarv2 from "../navbarv2";
 import React, { useState, useEffect } from "react";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const benefits = [
   "Competitive salaries",
@@ -45,7 +45,7 @@ const trio = [
     name: "Amy Tierney",
     role: "Co-Founder / COO",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697450106/Amy_s_fave_1_h6t2a5.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699613513/website-images/photo-amy.webp",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/amy-tierney-341529170/",
   },
@@ -53,7 +53,7 @@ const trio = [
     name: "Hugo Hazard",
     role: "Co-Founder / CEO",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697449985/Firefly_20231015131242_napmpo.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699614783/website-images/photo-hugo.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/hugo-hazard-5a8290220/",
   },
@@ -62,7 +62,7 @@ const trio = [
     name: "Sami Ribardiere",
     role: "Co-Founder / CEO",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697370073/Photo_individual_sami_1_lwod5n.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699637422/website-images/photo-sami.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/sami-ribardiere-039363234/",
   },
@@ -73,7 +73,7 @@ const people = [
     name: "Yahia Abdelkader",
     role: "Software Developer / Sales & Lead Generations",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312907/Yahia_uv3a7y.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699615837/website-images/photo-yahia.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/yahia-khairy-abdelkader/",
     Uni: "W",
@@ -83,7 +83,7 @@ const people = [
     name: "Rohan Luchmun",
     role: "Software Developer",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312854/Rohan_earqio.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699615841/website-images/photo-rohan.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/rohan-luchmun-633390259/",
     Uni: "W",
@@ -94,7 +94,7 @@ const people = [
     name: "Elliot Teissandier",
     role: "Business Developer",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697450271/IMG_5623_jzk53t.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699613520/website-images/photo-elliot.jpg",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/elliot-teissandier/",
     Uni: "W",
@@ -104,7 +104,7 @@ const people = [
     name: "Rushen Fernando",
     role: "Software Developer",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697312853/Rushen_djfost.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699615838/website-images/photo-rushen.webp",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/rushen-fernando-287650254/",
     Uni: "W",
@@ -114,7 +114,7 @@ const people = [
     name: "Mustafa Khan",
     role: "Software Developer / Sales & Lead Generations",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697400082/Mustafa_fav_wxwsia.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699613503/website-images/photo-mustafa.jpg",
 
     linkedinUrl: "#https://www.linkedin.com/in/mustafakhan23/",
     Uni: "W",
@@ -124,7 +124,7 @@ const people = [
     name: "Nadia Jaufarally",
     role: "Software Developer",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697379674/Nadia_rpgrde.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699614818/website-images/photo-nadia.webp",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/nadiaj7860/",
     Uni: "W",
@@ -134,7 +134,7 @@ const people = [
     name: "Louisa Wingfield",
     role: "Chief Legal Officer",
     imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697660296/preferred_photo_Louisa______oeszjk.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699613530/website-images/photo-louisa.webp",
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/louisa-w-932010200/",
     Uni: "B",
@@ -184,9 +184,12 @@ export default function Team() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Meet Our Team | Innovation Studios</title>
-    <meta name="description" content="Meet the driving force behind Innovation Studios: a diverse team of skilled professionals in software development, data engineering, and business strategy. Our team's expertise fuels innovative solutions." />
-</Helmet>
+        <title>Meet Our Team | Innovation Studios</title>
+        <meta
+          name="description"
+          content="Meet the driving force behind Innovation Studios: a diverse team of skilled professionals in software development, data engineering, and business strategy. Our team's expertise fuels innovative solutions."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
 

@@ -35,7 +35,7 @@ const Card = ({ imgSrc, title, description, url }) => (
 
 export default function InnovationStudios() {
   const imgSrcBham =
-    "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697372837/Hugo_s_Favorite_2_hr90c7.jpg";
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615841/website-images/group-photo-birmingham.webp";
 
   const titleBham = "Birmingham";
 
@@ -46,7 +46,7 @@ export default function InnovationStudios() {
     "Celebrate with us the recent launch of our dynamic Warwick hub, furthering our vision of nurturing young innovators.";
 
   const imgSrcWar =
-    "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1697372576/Hugo_s_Favorite_1_k8jnsn.jpg";
+    "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615838/website-images/group-photo-warwick.webp";
   const titleWar = "Warwick";
 
   return (

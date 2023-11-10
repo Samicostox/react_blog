@@ -7,7 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const steps = [
   {
@@ -21,7 +21,8 @@ const steps = [
     name: "Risk Analysis",
     description:
       "Risk is inherent in business. Our team delves deep to identify potential risks associated with your ventures. More importantly, for each risk pinpointed, we propose robust mitigation strategies, ensuring your operations remain resilient in face of uncertainties.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697192751/risk_analysis_cylvcg.svg",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697192751/risk_analysis_cylvcg.svg",
   },
   {
     name: "Marketing Strategy",
@@ -41,13 +42,15 @@ const steps = [
     name: "Road Map",
     description:
       "With a clearly defined path, we layout step-by-step actionable plans. This ensures that strategy translates seamlessly into execution, propelling your business forward.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193006/icons8-roadmap-80_vyqfxx.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193006/icons8-roadmap-80_vyqfxx.png",
   },
   {
     name: "Post-Delivery Support",
     description:
       "Strategy formulation is just the beginning. We are with you every step of the way, offering post-delivery consultations, revisions, and insights to ensure the strategy is actualised effectively.al.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
   },
 ];
 export default function Service_strategy() {
@@ -60,9 +63,12 @@ export default function Service_strategy() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Strategic Services | Innovation Studios</title>
-    <meta name="description" content="Navigate the business landscape with confidence. Innovation Studios provides forward-thinking strategic services to position your venture for long-term success." />
-</Helmet>
+        <title>Strategic Services | Innovation Studios</title>
+        <meta
+          name="description"
+          content="Navigate the business landscape with confidence. Innovation Studios provides forward-thinking strategic services to position your venture for long-term success."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
 
@@ -96,12 +102,14 @@ export default function Service_strategy() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
+        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20">
+          {" "}
+          {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-          <div className="flex">
+            <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">
-                 Not Interested?
+                  Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="/services" className="flex items-center gap-x-1">
@@ -134,7 +142,7 @@ export default function Service_strategy() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340542/5_ndyarz.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615270/website-images/image-service-strategy.jpg"
               alt="Strategy Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />

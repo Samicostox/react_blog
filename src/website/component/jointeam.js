@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { ChevronRightIcon, CheckCircleIcon } from "@heroicons/react/20/solid";
 
@@ -12,23 +11,20 @@ const JoinOurTeam = () => {
     "Industry exposure",
   ];
 
-  
-    useEffect(() => {
-      // Dynamically load the Typeform embed script
-      const script = document.createElement("script");
-      script.src = "//embed.typeform.com/next/embed.js";
-      document.body.appendChild(script);
-  
-      // Clean up on component unmount
-      return () => {
-        document.body.removeChild(script);
-      };
-    }, []);
-    const handleClick = () => {
-      // Handle button click if needed
+  useEffect(() => {
+    // Dynamically load the Typeform embed script
+    const script = document.createElement("script");
+    script.src = "//embed.typeform.com/next/embed.js";
+    document.body.appendChild(script);
+
+    // Clean up on component unmount
+    return () => {
+      document.body.removeChild(script);
     };
-  
-  
+  }, []);
+  const handleClick = () => {
+    // Handle button click if needed
+  };
 
   return (
     <div className="bg-green-600 py-24 sm:py-32">
@@ -37,7 +33,7 @@ const JoinOurTeam = () => {
           <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
             <img
               className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696342118/sami8694_A_portrait_of_a_group_of_uk_students_professional_phot_ce128212-76b9-4738-bd2d-7f6571dd7aec_l4btqj.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615311/website-images/image-join-the-team.jpg"
               alt="Join The Team - Innovation Studios"
             />
             <div className="w-full flex-auto">
@@ -66,7 +62,6 @@ const JoinOurTeam = () => {
                 ))}
               </ul>
               <div className="mt-10 flex">
-                
                 <a
                   data-tf-popup="lZ2mKiQJ"
                   data-tf-opacity="100"
@@ -77,15 +72,12 @@ const JoinOurTeam = () => {
                   onClick={handleClick}
                   className="text-sm leading-6 text-white font-alliance font-bold cursor-pointer"
                 >
-                  
                   Join The Team{" "}
                   <span aria-hidden="true" className="text-white">
                     &rarr;
                   </span>
                 </a>
               </div>
-              
-             
             </div>
           </div>
         </div>

@@ -74,7 +74,7 @@ const HeaderT = () => {
             <img
               className="w-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 lg:max-w-none"
               src={
-                "https://res.cloudinary.com/dl2adjye7/image/upload/v1697372576/Hugo_s_Favorite_1_k8jnsn.jpg"
+                "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615838/website-images/group-photo-warwick.webp"
               }
               alt={`Image of the team - Innovation Studios `}
               style={{ maxWidth: "40vw" }}
@@ -85,7 +85,7 @@ const HeaderT = () => {
           <div className="max-w-[700px]">
             <img
               className="w-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 lg:max-w-none"
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697372837/Hugo_s_Favorite_2_hr90c7.jpg"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615841/website-images/group-photo-birmingham.webp"
               alt={`Image of the team - Innovation Studios`}
               style={{ maxWidth: "40vw" }}
             />

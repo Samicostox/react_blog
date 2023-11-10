@@ -7,7 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const steps = [
   {
@@ -21,7 +21,8 @@ const steps = [
     name: "2. Company Description",
     description:
       "Our service provides a concise yet comprehensive introduction of your company, positioning it aptly within its industry and elucidating relevant market trends and financial data. We meticulously detail your business type, leadership, and employee dynamics, while spotlighting your unique selling propositions and advantages.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697194000/company_mbx4qf.svg",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697194000/company_mbx4qf.svg",
   },
   {
     name: "3. Market Analysis and Opportunity",
@@ -41,7 +42,8 @@ const steps = [
     name: "5. Execution Plan",
     description:
       "Our expertly crafted execution plan outlines how your business will operate, develop, and fulfill its strategic objectives. We detail your organizational structure, leadership, and daily operations, providing clear timelines for startups to commence operations and achieve profitability, or for established companies to implement new strategies.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193880/plan_freyov.svg",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697193880/plan_freyov.svg",
   },
   {
     name: "6. Marketing Plan",
@@ -62,9 +64,12 @@ export default function Service_businessplan() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Business Plan Services | Innovation Studios</title>
-    <meta name="description" content="Innovation Studios offers comprehensive business plan services, aiding startups and enterprises alike in crafting compelling roadmaps to success." />
-</Helmet>
+        <title>Business Plan Services | Innovation Studios</title>
+        <meta
+          name="description"
+          content="Innovation Studios offers comprehensive business plan services, aiding startups and enterprises alike in crafting compelling roadmaps to success."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
 
@@ -98,12 +103,14 @@ export default function Service_businessplan() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
+        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20">
+          {" "}
+          {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
             <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">
-                 Not Interested?
+                  Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="/services" className="flex items-center gap-x-1">
@@ -135,7 +142,7 @@ export default function Service_businessplan() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340545/6_rhzcz4.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg"
               alt="Business Plan Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />

@@ -7,7 +7,7 @@ import Offer from "../component/offer";
 import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const steps = [
   {
@@ -21,7 +21,8 @@ const steps = [
     name: "2. Design",
     description:
       "Merging aesthetics with functionality, our designs adhere to the latest guidelines and ensure your brand identity is consistently represented, crafting a seamless and engaging user journey on your website.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190297/icons8-ui-ux-design-96_k1ku97.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190297/icons8-ui-ux-design-96_k1ku97.png",
   },
   {
     name: "3. Development",
@@ -41,13 +42,15 @@ const steps = [
     name: "5. Deployment",
     description:
       "We navigate deployment intricacies to ensure your website launches smoothly and successfully with Heroku or Azure, providing a consistent, uninterrupted user experience across the board.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190739/icons8-launch-96_dlqjg2.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697190739/icons8-launch-96_dlqjg2.png",
   },
   {
     name: "6. Maintenance",
     description:
       "Post-launch, we offer 2 weeks to 1 month of dedicated maintenance, focusing on bug fixes and updates, with ongoing email support to ensure your website remains up-to-date and operational.",
-    imageSrc: "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
+    imageSrc:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1697191003/icons8-maintenance-80_u5uied.png",
   },
 ];
 export default function Service_web() {
@@ -60,9 +63,12 @@ export default function Service_web() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Web Development Services | Innovation Studios</title>
-    <meta name="description" content="Innovation Studios provides cutting-edge web development services, ensuring responsive and performant websites tailored to your business needs." />
-</Helmet>
+        <title>Web Development Services | Innovation Studios</title>
+        <meta
+          name="description"
+          content="Innovation Studios provides cutting-edge web development services, ensuring responsive and performant websites tailored to your business needs."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
 
@@ -96,12 +102,14 @@ export default function Service_web() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20"> {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
+        <div className="max-w-[1800px] mx-auto px-6  xl:flex lg:items-center lg:px-40  lg:gap-x-20">
+          {" "}
+          {/* in order to have less space between navbar and section remove those two "py-24 sm:py-32", this will also remove the pâdding down so take that into consideration*/}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-          <div className="flex">
+            <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-green-600">
-                 Not Interested?
+                  Not Interested?
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="/services" className="flex items-center gap-x-1">
@@ -134,7 +142,7 @@ export default function Service_web() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696340531/2_akgsvx.png"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615258/website-images/image-service-web.jpg"
               alt="Web Development Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />

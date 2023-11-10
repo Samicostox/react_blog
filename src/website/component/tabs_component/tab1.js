@@ -118,20 +118,19 @@ function Tab2() {
             <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
               <img
                 className="absolute inset-0 h-full w-full object-cover "
-                src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697381386/sami8694_Isometric_illustration_of_one_student_with_a_graduatio_35de0e76-c885-4d32-8c92-1346f9804bc2_hocfue.png"
+                src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699614789/website-images/image-training.jpg"
                 alt=""
               />
 
               <figure className="relative isolate">
-                
-                
                 <blockquote className="mt-6 text-xl font-semibold leading-8 text-transparent bg-clip-text text-left">
-                <p className="text-transparent bg-clip-text">
-                  “Amet amet eget scelerisque tellus sit neque faucibus non
-                  eleifend. Integer eu praesent at a. Ornare arcu gravida
-                  natoque erat et cursus tortoraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.”
-                </p>
-              </blockquote>
+                  <p className="text-transparent bg-clip-text">
+                    “Amet amet eget scelerisque tellus sit neque faucibus non
+                    eleifend. Integer eu praesent at a. Ornare arcu gravida
+                    natoque erat et cursus
+                    tortoraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.”
+                  </p>
+                </blockquote>
               </figure>
             </div>
           </div>
@@ -296,7 +295,8 @@ const tiers = [
     id: "tier-freelancer",
     href: "/#contact2",
     priceMonthly: "£20",
-    description: "Work directly with a company part-time while receiving our continuous support.",
+    description:
+      "Work directly with a company part-time while receiving our continuous support.",
     features: [
       "Direct placement in a company ",
       "Regular training sessions",
@@ -304,7 +304,6 @@ const tiers = [
       "Mentoring from experienced professionals",
       "Access to resources and tools",
       "Use of professional templates",
-      
     ],
     mostPopular: false,
   },
@@ -330,19 +329,17 @@ const tiers = [
     id: "tier-enterprise",
     href: "/#contact2",
     priceMonthly: "£xx",
-    description: "Step into the professional world with a full-time position facilitated by us.",
+    description:
+      "Step into the professional world with a full-time position facilitated by us.",
     features: [
       "Full-time placement in a company",
       "Position and benefits based on company",
       "Introduction and initial support ",
       "Networking opportunities",
-    
-      
     ],
     mostPopular: false,
   },
 ];
-
 
 function Tab4() {
   return (
