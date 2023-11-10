@@ -19,7 +19,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "At Innovation Studios, we're at the forefront of mobile application innovation. Our expertise in crafting bespoke iOS and Android applications integrates cutting-edge technology with a user-first approach. We ensure your mobile presence is not just visible but remarkable in the ever-evolving app marketplace.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641969/website-images/image-service-web.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641816/website-images/image-service-mobile.jpg",
       icons: [
         "react_y3ribl",
         "django-icon_rxmwzx",
