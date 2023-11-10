@@ -39,7 +39,7 @@ import { Helmet } from 'react-helmet';
 
 const featuredTestimonial = {
   body:
-    "We recently collaborated with the Innovation Studio team to study the impact of AI on our low-code development platform Quodly.com. We were genuinely impressed by the maturity and professionalism of the team at Innovation Studios despite their young age and experience. They were rapidly able to integrate and collaborate with our experimented team and provided valuable insights both in  technological analysis and in strategic implementation.  Our seamless experience with them has led to engage with them on a regular basis",
+    "We recently collaborated with the Innovation Studios team to study the impact of AI on our low-code development platform Quodly.com. We were genuinely impressed by the maturity and professionalism of the team at Innovation Studios despite their young age and experience. They were rapidly able to integrate and collaborate with our experimented team and provided valuable insights both in  technological analysis and in strategic implementation.  Our seamless experience with them has led to engage with them on a regular basis",
   author: {
     name: "Eric Teissandier",
     handle: "CEO, 4D",
@@ -221,12 +221,12 @@ export default function Landingpage() {
                 <div className="w-full bg-white h-20 relative z-10">
                   {/* Content of the container goes here */}
                 </div>
-                <h2 className="text-lg font-semibold leading-8 tracking-tight text-teal-700 font-alliance font-bold">
+                <p className="text-lg font-semibold leading-8 tracking-tight text-teal-700 font-alliance font-bold">
                   Testimonials
-                </h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance">
-                  We have worked with thousands of amazing people
                 </p>
+                <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance">
+                  We have worked with thousands of amazing people
+                </h2>
               </div>
               <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
                 <figure className="col-span-2 hidden sm:block sm:rounded-2xl sm:bg-white sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">

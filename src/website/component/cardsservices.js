@@ -17,7 +17,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Mobile Development",
       description:
-        "Dive into the mobile-centric world with our top-tier mobile app solutions. From idea to launch, our team ensures your app not only looks great but also resonates with your target audience for maximum engagement.",
+        "Explore cutting-edge custom mobile app development at Innovation Studios. We specialise in iOS and Android apps, focusing on user-centric design and engagement, ensuring your app stands out in the competitive mobile market.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696257551/mobile_ghadoy.png",
       icons: [
@@ -33,7 +33,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Web Development",
       description:
-        "Elevate your online presence with our bespoke web development services. We craft beautiful, user-friendly websites that captivate and convert, ensuring your brand stands out in the digital landscape.",
+        "Elevate your digital footprint with our responsive web design and custom website development services. Our team crafts stunning, user-friendly websites, tailored to captivate your audience and enhance your online presence.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696258003/computer_svt21c.png",
       icons: [
@@ -53,7 +53,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Data Engineering",
       description:
-        "Unlock the power of your data with our cutting-edge data science services. We transform raw data into actionable insights, helping you make informed decisions and stay ahead in your industry.",
+        "Unlock insights and drive decisions with our advanced data analysis and big data analytics services. At Innovation Studios, we transform complex data into actionable intelligence, propelling your business forward.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696257232/datata_gl2sns.png",
       icons: [
@@ -68,7 +68,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Business Plan",
       description:
-        "Future-proof your business with our expert strategic planning. We dive deep into market analytics and trends to craft strategies that position you for lasting success and growth.",
+        "Foster growth and innovation with our strategic business planning and market analysis services. We provide comprehensive business development consulting to navigate market trends and achieve sustainable success.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696325241/11_ndpclf.png",
       icons: [
@@ -83,7 +83,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Strategies",
       description:
-        "Stay ahead of the curve with our comprehensive benchmarking services. We will help you gauge where you stand in the market, unveiling opportunities and strategies to outperform competitors and set industry standards.",
+        "Shape the future of your business with our strategic planning services. From competitive strategy analysis to market positioning, we help you develop robust strategies to stay ahead in your dynamic industry.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696325244/12_soms8p.png",
       icons: [
@@ -97,7 +97,7 @@ export function CardDefault({ title2, description, imageUrl }) {
     {
       title: "Benchmarking",
       description:
-        "Turn your vision into a tangible roadmap with our tailored business plan services. Whether you are a startup or an established entity, our team crafts plans that attract investors and steer your business towards unparalleled success.",
+        "Gain a competitive edge with our performance benchmarking services. We offer in-depth market and business benchmarking solutions, helping you set industry standards and outperform competitors.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1696325237/10_hoa8by.png",
       icons: [
@@ -113,9 +113,9 @@ export function CardDefault({ title2, description, imageUrl }) {
   ];
   return (
     <div className="container mx-auto py-12">
-      <h1 className="text-center text-4xl text-black mb-12 font-alliance font-bold">
+      <h3 className="text-center text-4xl text-black mb-12 font-alliance font-bold">
         {title2}
-      </h1>
+      </h3>
       <ul
         role="list"
         className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
