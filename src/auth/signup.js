@@ -2,11 +2,12 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Navbar from '../navbar';
 import { useNavigate } from 'react-router-dom';
 import Navbarv2 from '../navbarv2';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -64,6 +65,11 @@ export default function Signup() {
       console.error('There was a problem with the fetch operation:', error);
     }
   };
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

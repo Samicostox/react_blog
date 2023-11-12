@@ -8,6 +8,7 @@ import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
 import { Helmet } from "react-helmet";
+import ReactGA from 'react-ga';
 const steps = [
   {
     name: "1. Scope Definition",
@@ -56,6 +57,7 @@ export default function Service_benchmarking() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
     window.scrollTo(0, 0);
   }, []);
 
