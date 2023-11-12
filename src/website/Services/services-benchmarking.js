@@ -143,7 +143,7 @@ export default function Service_benchmarking() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615265/website-images/image-service-benchmarking.jpg"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699641919/website-images/image-service-benchmarking.jpg"
               alt="Benchmarking Plan Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />

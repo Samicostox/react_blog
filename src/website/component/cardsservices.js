@@ -19,7 +19,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "At Innovation Studios, we're at the forefront of mobile application innovation. Our expertise in crafting bespoke iOS and Android applications integrates cutting-edge technology with a user-first approach. We ensure your mobile presence is not just visible but remarkable in the ever-evolving app marketplace.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615280/website-images/image-service-mobile.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641816/website-images/image-service-mobile.jpg",
       icons: [
         "react_y3ribl",
         "django-icon_rxmwzx",
@@ -35,7 +35,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Revolutionise your online identity with Innovation Studios' web development services. Our team excels in creating responsive, visually appealing websites that are not just aesthetically pleasing but also SEO-optimized. We focus on elevating your brand's digital narrative to engage and captivate a global audience.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615258/website-images/image-service-web.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641969/website-images/image-service-web.jpg",
       icons: [
         "react_y3ribl",
         "django-icon_rxmwzx",
@@ -55,7 +55,7 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Our data engineering services are designed to turn complex datasets into valuable insights. We leverage advanced analytics to empower your decision-making, ensuring your business stays data-driven and ahead of the curve.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615261/website-images/image-service-data.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641940/website-images/image-service-data.jpg",
       icons: [
         "python_bmp5vb",
         "pytorch-icon_qqdkjv",
@@ -70,10 +70,10 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Navigate the complexities of market trends with our strategic business development services. At Innovation Studios, we blend market analysis with innovative strategies to foster growth and resilience in your business. Our approach is tailored to help you thrive in today's dynamic business environment.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641865/website-images/image-service-business-plan.jpg",
       icons: [
         "swot3_hxgd7t",
-        "canva_mvtfow",
+        "canva",
         "notion-logo-svgrepo-com_m5vflg",
         "ologo_square_colour_light_bg_w5keat",
         "modelcanva_ecyq0v",
@@ -85,10 +85,10 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Craft the blueprint for success with our strategic planning services. Innovation Studios specializes in dissecting market dynamics and formulating strategies that ensure your business stays relevant and ahead. From market positioning to competitive analysis, we are your partners in strategic excellence.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615270/website-images/image-service-strategy.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641888/website-images/image-service-strategy.jpg",
       icons: [
         "swot3_hxgd7t",
-        "canva_mvtfow",
+        "canva",
         "notion-logo-svgrepo-com_m5vflg",
         "ologo_square_colour_light_bg_w5keat",
       ],
@@ -99,10 +99,10 @@ export function CardDefault({ title2, description, imageUrl }) {
       description:
         "Set new industry standards with Innovation Studios' benchmarking services. We provide comprehensive analysis to measure your performance against the best, offering insights that drive competitive advantage. Our goal is to position your business not just to compete, but to lead in your industry.",
       imageUrl:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615265/website-images/image-service-benchmarking.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641919/website-images/image-service-benchmarking.jpg",
       icons: [
         "swot3_hxgd7t",
-        "canva_mvtfow",
+        "canva",
         "notion-logo-svgrepo-com_m5vflg",
         "ologo_square_colour_light_bg_w5keat",
         "python_bmp5vb",

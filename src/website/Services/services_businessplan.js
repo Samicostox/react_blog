@@ -144,7 +144,7 @@ export default function Service_businessplan() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699641865/website-images/image-service-business-plan.jpg"
               alt="Business Plan Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />

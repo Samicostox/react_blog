@@ -144,7 +144,7 @@ export default function Service_mobile() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615280/website-images/image-service-mobile.jpg"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699641816/website-images/image-service-mobile.jpg"
               alt="Mobile Development Services - Innovation Studios"
               className="mx-auto w-[33rem] max-w-full "
             />

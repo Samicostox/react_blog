@@ -68,7 +68,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground1 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615280/website-images/image-service-mobile.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641816/website-images/image-service-mobile.jpg",
     },
 
     {
@@ -82,7 +82,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615258/website-images/image-service-web.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641969/website-images/image-service-web.jpg",
     },
     {
       title: "Data Engineering",
@@ -95,7 +95,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615261/website-images/image-service-data.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641940/website-images/image-service-data.jpg",
     },
 
     {
@@ -109,7 +109,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615273/website-images/image-service-business-plan.jpg ",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641865/website-images/image-service-business-plan.jpg",
     },
 
     {
@@ -123,7 +123,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615265/website-images/image-service-benchmarking.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641919/website-images/image-service-benchmarking.jpg",
     },
 
     {
@@ -137,7 +137,7 @@ const Carousel = () => {
       href: "/contact2",
       particlesComponent: <ParticlesBackground2 />,
       image:
-        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699615270/website-images/image-service-strategy.jpg",
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1699641888/website-images/image-service-strategy.jpg",
     },
   ];
 

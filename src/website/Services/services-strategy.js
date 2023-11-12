@@ -144,7 +144,7 @@ export default function Service_strategy() {
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699615270/website-images/image-service-strategy.jpg"
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1699641888/website-images/image-service-strategy.jpg"
               alt="Strategy Services - Innovation Studios"
               className="mx-auto w-[35rem] max-w-full "
             />
