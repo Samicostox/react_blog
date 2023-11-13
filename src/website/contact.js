@@ -20,7 +20,9 @@ import Navbarv2 from "../navbarv2";
 import ReactGA from 'react-ga';
 export default function Contact2() {
   useEffect(() => {
+
     ReactGA.pageview(window.location.pathname);
+    
     window.scrollTo(0, 0);
   }, []);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -38,6 +40,7 @@ export default function Contact2() {
   // Function to handle form submission
   // Function to handle form submission
   const handleSubmit = async (e) => {
+    ReactGA.event({category:'Test',action:'submit',label:'form'})
     e.preventDefault();
 
     try {
