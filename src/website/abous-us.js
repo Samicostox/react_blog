@@ -9,16 +9,15 @@ import InnovationStudios from "./about_us/innovation_studios";
 import NumberLine from "./about_us/package_service";
 import Navbarv2 from "../navbarv2";
 import Example from "./navigation_bar";
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-import { Helmet } from 'react-helmet';
-
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
+import { Helmet } from "react-helmet";
 
 const stats = [
-  { id: 1, name: "Students working with us", value: "30" ,plussign:true},
-  { id: 2, name: "Projects Completed", value: "15",plussign:true },
-  { id: 3, name: "Universities", value: "2" ,plussign:false},
-  { id: 4, name: "Partners", value: "5" , plussign:true},
+  { id: 1, name: "Students working with us", value: "30", plussign: true },
+  { id: 2, name: "Projects Completed", value: "15", plussign: true },
+  { id: 3, name: "Universities", value: "2", plussign: false },
+  { id: 4, name: "Partners", value: "5", plussign: true },
 ];
 export default function AboutUs() {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -66,9 +65,12 @@ export default function AboutUs() {
   return (
     <div className="bg-white">
       <Helmet>
-    <title>Innovation Studios: Software Development Services</title>
-    <meta name="description" content="Empowering innovation with software development, data engineering, and business solutions at Innovation Studios. Transform your ideas into reality." />
-</Helmet>
+        <title>Innovation Studios: Software Development Services</title>
+        <meta
+          name="description"
+          content="Empowering innovation with software development, data engineering, and business solutions at Innovation Studios. Transform your ideas into reality."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
       <div className="relative bg-black z-2 overflow-hidden top-0">
@@ -125,7 +127,7 @@ export default function AboutUs() {
               <p className="mt-6 text-lg leading-8 text-gray-300 font-alliance">
                 We are a student-led consulting firm, which aims to provide a
                 unique platform where businesses meet and work with the
-                brilliant minds of tomorrow..
+                brilliant minds of tomorrow.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
@@ -138,7 +140,10 @@ export default function AboutUs() {
                   href="/services"
                   className="text-sm font-semibold leading-6 text-white"
                 >
-                  Learn more <span className="text-white "aria-hidden="true">→</span>
+                  Learn more{" "}
+                  <span className="text-white " aria-hidden="true">
+                    →
+                  </span>
                 </a>
               </div>
             </div>
@@ -177,34 +182,34 @@ export default function AboutUs() {
                 {/* Content of the container goes here */}
               </div>
               <div className="mx-auto max-w-2xl lg:max-w-none">
-        <div className="text-center">
-          <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Our Year In Results
-          </h2>
-        </div>
-        <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
-            <div
-              key={stat.id}
-              className="flex flex-col bg-teal-900 p-8"
-            >
-              <dt className="text-sm font-semibold leading-6 text-white font-alliance">
-                {stat.name}
-              </dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold">
-                <VisibilitySensor partialVisibility={true}>
-                  {({ isVisible }) => 
-                    <CountUp 
-                      className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold"
-                      start={0}
-                      end={isVisible ? stat.value : 0} 
-                      duration={3.0} 
-                      suffix={stat.plussign == true ? "+" : ""} // You can add conditions here if you want both "+" and "-" based on the value
-                    />
-                  }
-                </VisibilitySensor>
-              </dd>
-            </div>
+                <div className="text-center">
+                  <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Year In Results
+                  </h2>
+                </div>
+                <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+                  {stats.map((stat) => (
+                    <div
+                      key={stat.id}
+                      className="flex flex-col bg-teal-900 p-8"
+                    >
+                      <dt className="text-sm font-semibold leading-6 text-white font-alliance">
+                        {stat.name}
+                      </dt>
+                      <dd className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold">
+                        <VisibilitySensor partialVisibility={true}>
+                          {({ isVisible }) => (
+                            <CountUp
+                              className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold"
+                              start={0}
+                              end={isVisible ? stat.value : 0}
+                              duration={3.0}
+                              suffix={stat.plussign == true ? "+" : ""} // You can add conditions here if you want both "+" and "-" based on the value
+                            />
+                          )}
+                        </VisibilitySensor>
+                      </dd>
+                    </div>
                   ))}
                 </dl>
               </div>
