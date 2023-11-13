@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../navbar';
 import Navbarv2 from '../navbarv2';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 export default function Signin() {
   const [email, setEmail] = useState('');
@@ -48,6 +49,11 @@ export default function Signin() {
     }
   };
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    window.scrollTo(0, 0);
+  }, []);
+ 
   return (
     <>
     <Navbarv2 />

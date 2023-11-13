@@ -12,6 +12,7 @@ import CTA from "./CTA";
 import Footer from "./website/footer";
 import CTA2 from "./CTA2";
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 
 
@@ -19,6 +20,7 @@ import { Helmet } from 'react-helmet';
 const Home = () => {
 
     useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
         window.scrollTo(0, 0);
     }, []);
 
