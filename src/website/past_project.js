@@ -9,11 +9,13 @@ import {
 } from "@material-tailwind/react";
 import Footer from "./footer";
 import Navbar from "../navbar";
+
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
+
+
 import { useState, useEffect } from "react";
 import Navbarv2 from "../navbarv2";
-
 
 export function PastProjects({ title, description, imageUrl }) {
   useEffect(() => {
@@ -313,7 +315,7 @@ export function PastProjects({ title, description, imageUrl }) {
         },
       ],
       description:
-        "Webb Express required a sophisticated automation tool tailored to their business operations. Through a custom solution, repetitive tasks were streamlined, efficiency was enhanced, and the company could focus on core objectives. It's automation precision, driving Webb Express's business forward.",
+        "Weeb Express required a sophisticated automation tool tailored to their business operations. Through a custom solution, repetitive tasks were streamlined, efficiency was enhanced, and the company could focus on core objectives. It's automation precision, driving Webb Express's business forward.",
       imageUrl:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1695582979/UoBjuniorsolutions.weblow.io_1080_x_700_px_fp29em.png",
     },
@@ -322,11 +324,13 @@ export function PastProjects({ title, description, imageUrl }) {
   ];
   return (
     <div className="bg-whites">
-     <Helmet>
-    <title>Past Projects | Innovation Studios</title>
-    <meta name="description" content="Explore Innovation Studios' past projects showcasing diverse projects in software development and data engineering. Discover our excellence and innovative solutions across industries." />
-    </Helmet>
-
+      <Helmet>
+        <title>Past Projects | Innovation Studios</title>
+        <meta
+          name="description"
+          content="Explore Innovation Studios' past projects showcasing diverse projects in software development and data engineering. Discover our excellence and innovative solutions across industries."
+        />
+      </Helmet>
 
       <Navbarv2></Navbarv2>
       <div className="container mx-auto py-12">
