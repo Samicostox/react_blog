@@ -12,7 +12,7 @@ import Example from "./navigation_bar";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 
 const stats = [
