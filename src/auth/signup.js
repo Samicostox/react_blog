@@ -7,7 +7,7 @@ import Navbar from '../navbar';
 import { useNavigate } from 'react-router-dom';
 import Navbarv2 from '../navbarv2';
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -67,7 +67,10 @@ export default function Signup() {
   };
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview", 
+      page: window.location.pathname + window.location.search
+    });
     window.scrollTo(0, 0);
   }, []);
 

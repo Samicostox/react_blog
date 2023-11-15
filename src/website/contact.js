@@ -17,11 +17,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../navbar";
 import Navbarv2 from "../navbarv2";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 export default function Contact2() {
   useEffect(() => {
 
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview", 
+      page: window.location.pathname + window.location.search
+    });
     
     window.scrollTo(0, 0);
   }, []);

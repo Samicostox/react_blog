@@ -10,13 +10,17 @@ import {
 import Footer from "./footer";
 import Navbar from "../navbar";
 import { Helmet } from 'react-helmet';
-
+import ReactGA from 'react-ga4';
 import { useState, useEffect } from "react";
 import Navbarv2 from "../navbarv2";
 
 
 export function PastProjects({ title, description, imageUrl }) {
   useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview", 
+      page: window.location.pathname + window.location.search
+    });
     window.scrollTo(0, 0);
   }, []);
 

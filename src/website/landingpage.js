@@ -36,7 +36,7 @@ import Navbarv2 from "../navbarv2";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const featuredTestimonial = {
   body:
@@ -123,7 +123,10 @@ function classNames(...classes) {
 
 export default function Landingpage() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview", 
+      page: window.location.pathname + window.location.search
+    });
     window.scrollTo(0, 0);
   }, []);
 

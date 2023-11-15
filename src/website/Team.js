@@ -5,7 +5,7 @@ import Footer from "./footer";
 import Navbarv2 from "../navbarv2";
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const benefits = [
   "Competitive salaries",
@@ -180,7 +180,10 @@ const people_later = [
 
 export default function Team() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview", 
+      page: window.location.pathname + window.location.search
+    });
     window.scrollTo(0, 0);
   }, []);
   return (

@@ -35,10 +35,10 @@ import Service_data from "./website/Services/services-data";
 import Service_benchmarking from "./website/Services/services-benchmarking";
 import Service_businessplan from "./website/Services/services_businessplan";
 import Service_strategy from "./website/Services/services-strategy";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 
-const TRACKING_ID = "G-6Q6MF17687"
+const TRACKING_ID = "G-E24FJ6HJJJ"
 ReactGA.initialize(TRACKING_ID)
 
 function App() {

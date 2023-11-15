@@ -8,7 +8,7 @@ import Footer from "../footer";
 import CTAP from "./CTA_pastprojects";
 import Navbarv2 from "../../navbarv2";
 import { Helmet } from "react-helmet";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const steps = [
   {
@@ -59,7 +59,10 @@ export default function Service_businessplan() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview", 
+      page: window.location.pathname + window.location.search
+    });
     window.scrollTo(0, 0);
   }, []);
 

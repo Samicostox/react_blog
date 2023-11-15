@@ -12,7 +12,7 @@ import Example from "./navigation_bar";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 
 const stats = [
@@ -47,7 +47,10 @@ export default function AboutUs() {
   };
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview", 
+      page: window.location.pathname + window.location.search
+    });
     const handleScroll = () => {
       const offset = window.scrollY;
       if (offset > 100) {
