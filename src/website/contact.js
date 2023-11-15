@@ -65,6 +65,12 @@ export default function Contact2() {
       const data = await response.json();
       console.log("Client created: ", data);
 
+      ReactGA.event({
+        category: "Lead Generation",  // Customize as needed
+        action: "Form Submission",    // Customize as needed
+        label: "Contact Form"         // Customize as needed
+      });
+
       // Show the success modal
       setShowSuccessModal(true);
     } catch (error) {
