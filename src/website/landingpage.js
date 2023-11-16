@@ -33,10 +33,10 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import Navbarv2 from "../navbarv2";
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
+import { Helmet } from "react-helmet";
+import ReactGA from "react-ga";
 
 const featuredTestimonial = {
   body:
@@ -111,10 +111,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { id: 1, name: "Students working with us", value: "30" ,plussign:true},
-  { id: 2, name: "Projects Completed", value: "15",plussign:true },
-  { id: 3, name: "Universities", value: "2" ,plussign:false},
-  { id: 4, name: "Partners", value: "5" , plussign:true},
+  { id: 1, name: "Students working with us", value: "30", plussign: true },
+  { id: 2, name: "Projects Completed", value: "15", plussign: true },
+  { id: 3, name: "Universities", value: "2", plussign: false },
+  { id: 4, name: "Partners", value: "5", plussign: true },
 ];
 
 function classNames(...classes) {
@@ -142,7 +142,10 @@ export default function Landingpage() {
     <div className="bg-white">
       <Helmet>
         <title>Our Services - Innovation Studios</title>
-        <meta name="description" content="Discover the comprehensive range of software development, data engineering, and business services offered by Innovation Studios, a student-run enterprise." />
+        <meta
+          name="description"
+          content="Discover the comprehensive range of software development, data engineering, and business services offered by Innovation Studios, a student-run enterprise."
+        />
       </Helmet>
       {/* Header */}
 
@@ -162,37 +165,34 @@ export default function Landingpage() {
               {/* Content of the container goes here */}
             </div>
             <div className="mx-auto max-w-2xl lg:max-w-none">
-        <div className="text-center">
-          <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Our Year In Results
-          </h2>
-        </div>
-        <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
-            <div
-              key={stat.id}
-              className="flex flex-col bg-teal-900 p-8"
-            >
-              <dt className="text-sm font-semibold leading-6 text-white font-alliance">
-                {stat.name}
-              </dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold">
-                <VisibilitySensor partialVisibility={true}>
-                  {({ isVisible }) => 
-                    <CountUp 
-                      className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold"
-                      start={0}
-                      end={isVisible ? stat.value : 0} 
-                      duration={4.0} 
-                      suffix={stat.plussign == true ? "+" : ""} // You can add conditions here if you want both "+" and "-" based on the value
-                    />
-                  }
-                </VisibilitySensor>
-              </dd>
-            </div>
-                  ))}
-                </dl>
+              <div className="text-center">
+                <h2 className="text-3xl font-alliance font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  Our Year In Results
+                </h2>
               </div>
+              <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+                {stats.map((stat) => (
+                  <div key={stat.id} className="flex flex-col bg-teal-900 p-8">
+                    <dt className="text-sm font-semibold leading-6 text-white font-alliance">
+                      {stat.name}
+                    </dt>
+                    <dd className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold">
+                      <VisibilitySensor partialVisibility={true}>
+                        {({ isVisible }) => (
+                          <CountUp
+                            className="order-first text-3xl font-semibold tracking-tight text-white font-alliance font-bold"
+                            start={0}
+                            end={isVisible ? stat.value : 0}
+                            duration={4.0}
+                            suffix={stat.plussign == true ? "+" : ""} // You can add conditions here if you want both "+" and "-" based on the value
+                          />
+                        )}
+                      </VisibilitySensor>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
         </div>
 
@@ -201,7 +201,7 @@ export default function Landingpage() {
         </div>
 
         <div className="relative z-10 bg-white w-full">
-          <CardDefault title2 = "OUR SERVICES"></CardDefault>
+          <CardDefault title2="OUR SERVICES"></CardDefault>
         </div>
 
         <div className="w-full bg-white h-20 relative z-10">
@@ -227,7 +227,7 @@ export default function Landingpage() {
                   Testimonials
                 </p>
                 <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-alliance">
-                  We have worked with thousands of amazing people
+                  We have worked with hundreds of amazing people
                 </h2>
               </div>
               <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
