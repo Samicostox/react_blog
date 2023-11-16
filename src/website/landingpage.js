@@ -123,7 +123,10 @@ function classNames(...classes) {
 
 export default function Landingpage() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname + window.location.search,
+    });
     window.scrollTo(0, 0);
   }, []);
 

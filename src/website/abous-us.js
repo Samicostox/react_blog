@@ -9,10 +9,11 @@ import InnovationStudios from "./about_us/innovation_studios";
 import NumberLine from "./about_us/package_service";
 import Navbarv2 from "../navbarv2";
 import Example from "./navigation_bar";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
-import { Helmet } from "react-helmet";
-import ReactGA from "react-ga";
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga4';
+
 
 const stats = [
   { id: 1, name: "Students working with us", value: "30", plussign: true },
@@ -46,7 +47,10 @@ export default function AboutUs() {
   };
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview", 
+      page: window.location.pathname + window.location.search
+    });
     const handleScroll = () => {
       const offset = window.scrollY;
       if (offset > 100) {
