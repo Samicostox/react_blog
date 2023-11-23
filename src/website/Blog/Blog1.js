@@ -19,10 +19,10 @@ export default function Blog1() {
   return (
     <div>
          <Helmet>
-        <title>Computer Science Blog: Software Engineering, Data Science & Tech Insights</title>
+        <title>Understanding Software Development for Beginners</title>
         <meta
           name="description"
-          content="Unlock the world of computer science with our blogs. Master software engineering, data science, and the latest tech trends through our expert-led tutorials and insights."
+          content="Innovation Studios, Introduction to Software Development."
         />
       </Helmet>
     <Navbarv2></Navbarv2>
