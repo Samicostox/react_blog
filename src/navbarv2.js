@@ -16,6 +16,7 @@ const navigation = [
   { name: "Team", href: "/team" },
   { name: "Past Projects", href: "/past-projects" },
   { name: "Internal Tool", href: "/software" },
+  { name: 'Blogs', href: '/blogs' },
 ];
 
 const services = [

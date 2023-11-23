@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Software', href: '/newhome' },
   { name: 'Team', href: '/team' },
   { name: 'Past Projects', href: '/past-projects' },
+  { name: 'Blogs', href: '/blogs' },
   
 ];
 
