@@ -38,6 +38,7 @@ import Service_strategy from "./website/Services/services-strategy";
 import ReactGA from 'react-ga4';
 import Blogs from "./website/Blog/Blogs";
 import Blog1 from "./website/Blog/Blog1";
+import Blog2 from "./website/Blog/Blog2";
 
 
 const TRACKING_ID = "G-E24FJ6HJJJ"
@@ -73,6 +74,8 @@ function App() {
             <Route path="/service-data" element={<Service_data />} />
             <Route path="/Blogs" element={<Blogs />} />
             <Route path="/Blogs/Software-Development" element={<Blog1 />} />
+            <Route path="/Blogs/MVP" element={<Blog2 />} />
+            
             <Route
               path="/service-benchmarking"
               element={<Service_benchmarking />}

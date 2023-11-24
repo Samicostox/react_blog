@@ -8,6 +8,27 @@ import LatestPost from "./LatestPost";
 import { Helmet } from "react-helmet";
 import ReactGA from 'react-ga4';
 const posts = [
+  
+  {
+    id: 2,
+    title: 'Why Businesses Should Start with an MVP Rather Than a Full App',
+    href: '/Blogs/MVP',
+    description:
+    "If you don't know where to start with your project of creating an application, this blog will guide you!",
+    imageUrl:
+      'https://res.cloudinary.com/dl2adjye7/image/upload/v1700837219/mvp1_s7zxwu.webp',
+    date: 'November 24, 2023',
+    datetime: '2020-03-16',
+    category: { title: 'Tech', href: '/Blogs/MVP' },
+    author: {
+      name: 'Michael Foster',
+      role: 'Co-Founder / CTO',
+      href: '/Blogs/MVP',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+  },
+  
     {
       id: 1,
       title: 'Everything you need to know about software development',
@@ -32,6 +53,8 @@ const posts = [
   ]
   
   export default function Blogs() {
+    const latestPost = posts.reduce((max, post) => (post.id > max.id ? post : max), posts[0]);
+
     useEffect(() => {
 
         ReactGA.send({
@@ -58,7 +81,7 @@ const posts = [
         
       <div className="bg-white py-24 sm:py-32">
 
-        <LatestPost></LatestPost>
+        <LatestPost post={latestPost}></LatestPost>
         
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div style={{ height: "0.5px", backgroundColor: "black" }}></div>
