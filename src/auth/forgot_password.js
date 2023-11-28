@@ -34,7 +34,8 @@ export default function Forgotpassword() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.post('https://djangoback-705982cd1fda.herokuapp.com/api/forgot-password/', { email });
+        const backendUrl = process.env.REACT_APP_BACK_URL;
+        const response = await axios.post(`${backendUrl}api/forgot-password/`, { email });
         if (response.status === 200) {
           setShowModal(true);
         }

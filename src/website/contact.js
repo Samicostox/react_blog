@@ -47,8 +47,9 @@ export default function Contact2() {
     e.preventDefault();
 
     try {
+      const backendUrl = process.env.REACT_APP_BACK_URL;
       const response = await fetch(
-        "https://djangoback-705982cd1fda.herokuapp.com/api/create_client/",
+        `${backendUrl}api/create_client/`,
         {
           method: "POST",
           headers: {

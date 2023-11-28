@@ -18,7 +18,7 @@ export default function Signin() {
     try {
       const backendUrl = process.env.REACT_APP_BACK_URL;
       console.log(backendUrl)
-      const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/login/', {
+      const response = await fetch(`${backendUrl}api/login/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

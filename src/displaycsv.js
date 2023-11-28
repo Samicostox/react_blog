@@ -40,8 +40,9 @@ export default function DisplayCSV({ setToCSV }) {
     }
 
     setIsLoading(true);
+    const backendUrl = process.env.REACT_APP_BACK_URL;
 
-    fetch("https://djangoback-705982cd1fda.herokuapp.com/api/usercsv/", {
+    fetch(`${backendUrl}api/usercsv/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

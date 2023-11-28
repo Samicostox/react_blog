@@ -122,7 +122,8 @@ export default function DisplayPDF({ setToPDF }) {
 
   const deletePDF = (pdfId) => {
     const token = localStorage.getItem("token");
-    fetch("https://djangoback-705982cd1fda.herokuapp.com/api/delete_pdf/", {
+    const backendUrl = process.env.REACT_APP_BACK_URL;
+    fetch(`${backendUrl}api/delete_pdf/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

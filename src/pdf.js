@@ -43,7 +43,8 @@ export default function PDF() {
     };
 
     try {
-      const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/generate_requirements_pdf/', {
+      const backendUrl = process.env.REACT_APP_BACK_URL;
+      const response = await fetch(`${backendUrl}api/generate_requirements_pdf/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

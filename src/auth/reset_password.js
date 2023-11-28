@@ -36,7 +36,8 @@ export default function Resetpassword() {
           code : code,
           new_password: password,
         };
-        const response = await axios.post('https://djangoback-705982cd1fda.herokuapp.com/api/reset-password/', data);
+        const backendUrl = process.env.REACT_APP_BACK_URL;
+        const response = await axios.post(`${backendUrl}api/reset-password/`, data);
         if (response.status === 200) {
             setShowEmailSentModal(true);
         }

@@ -38,7 +38,8 @@ const handleSubmit = async (e, newOtp = otp) => {
   const otpValue = newOtp.join('');
 
   try {
-    const response = await axios.post('https://djangoback-705982cd1fda.herokuapp.com/api/verify-email-code/', {
+    const backendUrl = process.env.REACT_APP_BACK_URL;
+    const response = await axios.post(`${backendUrl}api/verify-email-code`, {
       code: otpValue,
       email: emailFromSignup,
     });

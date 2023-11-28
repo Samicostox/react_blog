@@ -17,7 +17,8 @@ export default function Adminhome() {
   
       const fetchData = async () => {
         try {
-          const response = await axios.post('https://djangoback-705982cd1fda.herokuapp.com/api/fetch_all_clients/', {
+          const backendUrl = process.env.REACT_APP_BACK_URL;
+          const response = await axios.post(`${backendUrl}api/fetch_all_clients/`, {
             token: token,
           }, {
             headers: {

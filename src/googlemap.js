@@ -30,8 +30,10 @@ export default function GoogleMap({ setToDoc3 }) {
     const token = localStorage.getItem("token");
     setIsLoading(true);
     try {
-      const response = await fetch(
-        "https://djangoback-705982cd1fda.herokuapp.com/api/fetch_venues/",
+      const backendUrl = process.env.REACT_APP_BACK_URL;
+      const response =
+       await fetch(
+        `${backendUrl}api/fetch_venues/`,
         {
           method: "POST",
           headers: {

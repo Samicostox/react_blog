@@ -47,7 +47,8 @@ export default function Signup() {
     };
   
     try {
-      const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/signup/', requestOptions);
+      const backendUrl = process.env.REACT_APP_BACK_URL;
+      const response = await fetch(`${backendUrl}api/signup/`, requestOptions);
       const data = await response.json();
   
       if (data.msg === 'Successfully signed up! Please check your email for the verification code') {
