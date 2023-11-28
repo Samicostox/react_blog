@@ -16,6 +16,8 @@ export default function Signin() {
     setError(null); // Resetting the error before a new request
   
     try {
+      const backendUrl = process.env.REACT_APP_BACK_URL;
+      console.log(backendUrl)
       const response = await fetch('https://djangoback-705982cd1fda.herokuapp.com/api/login/', {
         method: 'POST',
         headers: {
