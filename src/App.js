@@ -39,6 +39,7 @@ import ReactGA from 'react-ga4';
 import Blogs from "./website/Blog/Blogs";
 import Blog1 from "./website/Blog/Blog1";
 import Blog2 from "./website/Blog/Blog2";
+import Blog3 from "./website/Blog/Blog3";
 
 
 const TRACKING_ID = "G-E24FJ6HJJJ"
@@ -75,6 +76,7 @@ function App() {
             <Route path="/Blogs" element={<Blogs />} />
             <Route path="/Blogs/Software-Development" element={<Blog1 />} />
             <Route path="/Blogs/MVP" element={<Blog2 />} />
+            <Route path="/Blogs/REST-APIs" element={<Blog3 />} />
             
             <Route
               path="/service-benchmarking"

@@ -8,6 +8,25 @@ import LatestPost from "./LatestPost";
 import { Helmet } from "react-helmet";
 import ReactGA from 'react-ga4';
 const posts = [
+  {
+    id: 3,
+    title: 'Understanding REST APIs: The Backbone of Modern Web Applications',
+    href: '/Blogs/REST-APIs',
+    description:
+    "In today's digital world, REST APIs have become a cornerstone in the development of web applications. But what exactly are REST APIs, and why are they so important? Let's dive in.",
+    imageUrl:
+      'https://res.cloudinary.com/dl2adjye7/image/upload/v1701185083/documenting_web_apis_sn6nr1.png',
+    date: 'November 28, 2023',
+    datetime: '2020-03-16',
+    category: { title: 'Tech', href: '/Blogs/REST-APIs' },
+    author: {
+      name: 'Michael Foster',
+      role: 'Co-Founder / CTO',
+      href: '/Blogs/REST-APIs',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+  },
   
   {
     id: 2,
