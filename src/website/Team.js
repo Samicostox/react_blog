@@ -67,6 +67,16 @@ const trio = [
     twitterUrl: "#",
     linkedinUrl: "https://www.linkedin.com/in/sami-ribardiere-039363234/",
   },
+  {
+    name: "Elliot Teissandier",
+    role: "Co-Founder / Head of Business Development",
+    imageUrl:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699613520/website-images/photo-elliot.jpg",
+    twitterUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/elliot-teissandier/",
+    Uni: "W",
+    color: "bg-purple-100",
+  },
 ];
 
 const people = [
@@ -91,16 +101,7 @@ const people = [
     color: "bg-purple-100",
   },
 
-  {
-    name: "Elliot Teissandier",
-    role: "Co-Founder / Head of Business Development",
-    imageUrl:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699613520/website-images/photo-elliot.jpg",
-    twitterUrl: "#",
-    linkedinUrl: "https://www.linkedin.com/in/elliot-teissandier/",
-    Uni: "W",
-    color: "bg-purple-100",
-  },
+  
   {
     name: "Rushen Fernando",
     role: "Software Developer",
