@@ -93,7 +93,7 @@ const people = [
 
   {
     name: "Elliot Teissandier",
-    role: "Business Developer",
+    role: "Co-Founder / Head of Business Development",
     imageUrl:
       "https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1699613520/website-images/photo-elliot.jpg",
     twitterUrl: "#",
