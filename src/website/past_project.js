@@ -320,6 +320,191 @@ export function PastProjects({ title, description, imageUrl }) {
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1695582979/UoBjuniorsolutions.weblow.io_1080_x_700_px_fp29em.png",
     },
 
+    {
+      title: "Manta",
+      link: "https://samis-wondrous-site-25db6b.webflow.io/events2",
+      tags: [
+        {
+          text: "Web App",
+          color: "bg-red-100",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png"
+              alt="Web App Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        
+        
+        {
+          text: "Figma",
+          color: "bg-orange-100",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322228/figma_joejhn.svg"
+              alt="Figma Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+
+        {
+          text: "Webflow",
+          color: "bg-grey-300",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1705520929/webflow_yofobf.svg"
+              alt="Figma Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        
+      ],
+      description:
+        "Manta is a sleek and user-friendly website that presents a vibrant team of young chefs renowned for their culinary expertise. The site delves into the essence of Manta, highlighting the team's collective experience in the culinary world and showcasing their past events to illustrate their versatility and creativity in catering. ",
+      imageUrl:
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1705519985/Announce_Website_Launch_1080_x_500_px_1080_x_700_px_mrcx20.png",
+    },
+
+    {
+      title: "Qodly",
+      link: "https://v2software-a96756d889f0.herokuapp.com/",
+      tags: [
+        {
+          text: "Strategy",
+          color: "bg-pink-100",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583592/strategy_b6dcym.png"
+              alt="Web App Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        {
+          text: "Web App",
+          color: "bg-red-100",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png"
+              alt="Web App Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        {
+          text: "Data Engineering",
+          color: "bg-purple-100",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583655/data-management_1_vnmv5o.png"
+              alt="Web App Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        {
+          text: "Python",
+          color: "bg-green-200",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583207/python_wfr9jn.svg"
+              alt="React Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        {
+          text: "Heroku",
+          color: "bg-purple-200",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322208/heroku-icon_t8pyfm.svg"
+              alt="Heroku Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+         {
+              text: "React",
+              color: "bg-blue-100",
+              icon: (
+                <img
+                  src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg"
+                  alt="React Icon"
+                  className="h-4 w-4"
+                />
+              ),
+            },
+            {
+              text: "AI",
+              color: "bg-red-200",
+              icon: (
+                <img
+                  src="https://res.cloudinary.com/dl2adjye7/image/upload/v1705520435/artificial-intelligence-ai-icon_scn1gn.svg"
+                  alt="React Icon"
+                  className="h-4 w-4"
+                />
+              ),
+            },
+      ],
+      description:
+        "The project focused on developing a streamlined MVP for integrating AI features into Qodly's platform. This strategy was concise yet effective, involving thorough research and the implementation of key AI functionalities that align with Qodly's objectives. The MVP served as a critical testbed for the AI integration, ensuring usability and market relevance, and setting the stage for future enhancements and broader AI adoption within the platform.",
+      imageUrl:
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1705520712/Announce_Website_Launch_1080_x_500_px_1080_x_700_px_1_fgcirp.png",
+    },
+    
+    {
+      title: "Sen Noods",
+      link: "https://www.sennoods.co.uk/",
+      tags: [
+        {
+          text: "Web App",
+          color: "bg-red-100",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695583481/monitor_ewewup.png"
+              alt="Web App Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        
+        
+        {
+          text: "Figma",
+          color: "bg-orange-100",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322228/figma_joejhn.svg"
+              alt="Figma Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        {
+          text: "Webflow",
+          color: "bg-grey-300",
+          icon: (
+            <img
+              src="https://res.cloudinary.com/dl2adjye7/image/upload/v1705520929/webflow_yofobf.svg"
+              alt="Figma Icon"
+              className="h-4 w-4"
+            />
+          ),
+        },
+        
+      ],
+      description:
+        "The enhancement of the Sen Noods website, achieved through Webflow, involved adding two strategically designed pages, seamlessly integrated with a CRM system. This update aimed to enhance user engagement and streamline customer management, blending new functionalities with the site's existing design. ",
+      imageUrl:
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1705521339/Announce_Website_Launch_1080_x_500_px_1080_x_700_px_2_hkdyqy.png",
+    },
+
+   
+
     // More cards...
   ];
   return (
