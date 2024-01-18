@@ -71,7 +71,7 @@ export default function AboutUs() {
   return (
     <div className="bg-white">
       <Helmet>
-        <title>Innovation Studios: Software Development Services</title>
+        <title>Innovation Studios</title>
         <meta
           name="description"
           content="Empowering innovation with software development, data engineering, and business solutions at Innovation Studios. Transform your ideas into reality."
@@ -79,7 +79,7 @@ export default function AboutUs() {
       </Helmet>
 
       <Navbarv2></Navbarv2>
-      <div className="relative bg-black z-2 overflow-hidden top-0">
+      <div className="relative bg-black z-2 overflow-hidden top-0 ">
         <div className="relative isolate overflow-hidden pt-14">
           <img
             src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697380837/3451101_vpsa8n.jpg"
@@ -98,8 +98,8 @@ export default function AboutUs() {
               }}
             />
           </div>
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="text-center">
+          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 h-[800px]">
+            <div className="text-center h-[800px]">
               <h1 className="text-6xl font-alliance text-white font-bold">
                 Work Now With
               </h1>
