@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import ButtonWrapper2 from './buttons/filling'
-import ButtonWrapper3 from './buttons/fillinginvert'
+import ButtonWrapper2 from '../buttons/filling'
+import ButtonWrapper3 from '../buttons/fillinginvert'
 
 const navigation = [
   { name: 'Product', href: '#' },
