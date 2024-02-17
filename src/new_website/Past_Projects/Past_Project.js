@@ -17,10 +17,13 @@ const PastProjects2 = () => {
   return (
     <div>
         <Navbarv2></Navbarv2>
+        
       {/* Call the HeroParallaxDemo component and pass the products data */}
       <HeroParallax products={products} />;
-
       <Integrations></Integrations>
+      
+
+      
       
     </div>
   );
@@ -37,7 +40,7 @@ export const products = [
       iconUrl: 'https://res.cloudinary.com/dl2adjye7/image/upload/v1708188866/reshot-icon-computer-Q54WFMUSVT_xmqkly.svg',
       thumbnail:
         "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-      gradient: 'linear-gradient(110deg, #007bff, 45%, #6610f2, 55%, #007bff)', // Example gradient
+      
         
         
         

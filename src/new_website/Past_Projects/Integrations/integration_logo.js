@@ -32,7 +32,7 @@ const Logo = () => {
       viewBox="0 0 50 39"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="relative z-10 fill-green-900"
+      className="relative z-10 fill-gray-200"
       initial={{
         opacity: 0,
         scale: 0.85,

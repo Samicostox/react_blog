@@ -49,7 +49,8 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      style={{ height: '2400px' }} // Default to 2500px for mobile
     >
       <Header />
       <motion.div
@@ -158,7 +159,7 @@ export const ProductCard = ({
         {title}
       </h2>
       <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100">
-        <button className={`font-alliance inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-teal-700 bg-[${gradient}] bg-[length:200%_100%] px-4 py-2 text-sm font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-50 opacity-100`}>
+        <button className={`font-alliance inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-teal-700 bg-[linear-gradient(110deg,#004d4d,45%,#008080,55%,#004d4d)] bg-[length:200%_100%] px-4 py-2 text-sm font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-50 opacity-100`}>
           {buttonText}
           <img src={iconUrl} className="w-5 h-5 ml-2" alt="Icon"/>
         </button>
