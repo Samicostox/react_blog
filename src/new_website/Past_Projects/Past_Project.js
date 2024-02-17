@@ -21,7 +21,7 @@ const PastProjects2 = () => {
         <Navbarv2></Navbarv2>
         
       {/* Call the HeroParallaxDemo component and pass the products data */}
-      <HeroParallax products={products} />;
+      <HeroParallax products={products} />
       <Integrations></Integrations>
 
       <Cta></Cta>
