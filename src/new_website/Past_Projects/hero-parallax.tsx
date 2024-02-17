@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform, useSpring, MotionValue } from 'framer-motion';
+import { MovingBorderDemo } from './Button/movingborderbutton';
+import { PhoneIcon } from "@heroicons/react/24/outline";
 
 // Assuming you have a component to handle images in React similar to `next/image`
 // If not, you can use the standard <img> tag for images.
@@ -118,35 +120,50 @@ export const Header = () => {
   );
 };
 
-export const ProductCard = ({
-    product,
-    translate,
-  }) => {
-    return (
-      <motion.div
-        style={{
-          x: translate,
-        }}
-        whileHover={{
-          y: -20,
-        }}
-        key={product.title}
-        className="group product h-96 w-[30rem] relative flex-shrink-0 cursor-pointer" // Added cursor-pointer for better UX
-      >
-        <a href={product.link} className="block hover:shadow-2xl">
-          <img
-            src={product.thumbnail}
-            height="600"
-            width="600"
-            className="object-cover object-left-top absolute h-full w-full inset-0"
-            alt={product.title}
-          />
-        </a>
-        <div className="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-80 bg-teal-900 pointer-events-none"></div>
-        <h2 className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 text-white font-alliance">
-          {product.title}
-        </h2>
-      </motion.div>
-    );
-  };
+
   
+
+export const ProductCard = ({
+  product,
+  translate,
+}) => {
+  // Destructuring to extract the gradient property from the product object
+  const {
+    title,
+    link,
+    thumbnail,
+    buttonText,
+    iconUrl,
+    gradient = 'linear-gradient(110deg,#004d4d,45%,#008080,55%,#004d4d)' // Default gradient
+  } = product;
+
+  return (
+    <motion.div
+      style={{ x: translate }}
+      whileHover={{ y: -20 }}
+      key={title}
+      className="group product h-96 w-[30rem] relative flex-shrink-0 cursor-pointer"
+    >
+      <a href={link} className="block hover:shadow-2xl">
+        <img
+          src={thumbnail}
+          height="600"
+          width="600"
+          className="object-cover object-left-top absolute h-full w-full inset-0"
+          alt={title}
+        />
+      </a>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-80 bg-teal-900 pointer-events-none"></div>
+      <h2 className="absolute bottom-16 left-4 opacity-0 group-hover:opacity-100 text-white">
+        {title}
+      </h2>
+      <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100">
+        <button className={`font-alliance inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-teal-700 bg-[${gradient}] bg-[length:200%_100%] px-4 py-2 text-sm font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-50 opacity-100`}>
+          {buttonText}
+          <img src={iconUrl} className="w-5 h-5 ml-2" alt="Icon"/>
+        </button>
+      </div>
+    </motion.div>
+  );
+};
+
