@@ -6,6 +6,8 @@ import React from 'react';
 import { HeroParallax } from "./hero-parallax.tsx";
 import Navbarv2 from '../../navbarv2.js';
 import Integrations from './Integrations/Integrations.jsx';
+import Cta from './CTA.js';
+import Footer from '../../website/footer.js';
 
 
 // Define the new page component
@@ -21,6 +23,11 @@ const PastProjects2 = () => {
       {/* Call the HeroParallaxDemo component and pass the products data */}
       <HeroParallax products={products} />;
       <Integrations></Integrations>
+
+      <Cta></Cta>
+
+      <Footer></Footer>
+      
       
 
       

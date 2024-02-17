@@ -9,6 +9,7 @@ import Icon04 from './images/integration-icon-04.svg';
 import Icon05 from './images/integration-icon-05.svg';
 import Icon06 from './images/integration-icon-06.svg';
 import Animated from './integration_logo';
+import Cta from '../CTA';
 
 
 export default function Integrations() {
@@ -181,7 +182,10 @@ export default function Integrations() {
             </div>
           </div>
         </div>
+       
       </div>
+      
     </section>
+    
   )
 }
