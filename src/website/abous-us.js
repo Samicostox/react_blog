@@ -14,6 +14,10 @@ import VisibilitySensor from 'react-visibility-sensor';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
 
+import { BentoGridThirdDemo } from "../test/bento";
+import { BentoGridDemo } from "../test/bento2";
+import { FollowingPointerDemo } from "../test/pointer";
+
 
 const stats = [
   { id: 1, name: "Students working with us", value: "30", plussign: true },
@@ -69,7 +73,7 @@ export default function AboutUs() {
   const [viewLeft, setViewLeft] = useState(true);
 
   return (
-    <div className="bg-white">
+    <div className="bg-red">
       <Helmet>
         <title>Innovation Studios</title>
         <meta
@@ -79,6 +83,9 @@ export default function AboutUs() {
       </Helmet>
 
       <Navbarv2></Navbarv2>
+      <div className="bg-gray-100">
+     
+      </div>
       <div className="relative bg-black z-2 overflow-hidden top-0 ">
         <div className="relative isolate overflow-hidden pt-14">
           <img

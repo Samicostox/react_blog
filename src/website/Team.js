@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import ReactGA from 'react-ga4';
 
+
 const benefits = [
   "Competitive salaries",
   "Flexible work hours",
@@ -198,6 +199,7 @@ export default function Team() {
       </Helmet>
 
       <Navbarv2></Navbarv2>
+  
 
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20 mx-auto">
         <HeaderT></HeaderT>
@@ -217,7 +219,7 @@ export default function Team() {
 
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mt-10 font-alliance">
-            Our team
+            Our team2
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600 text-left font-alliance   ">
             Meet the brilliant minds shaping the future, our team of dedicated
