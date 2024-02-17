@@ -10,6 +10,8 @@ import Cta from './CTA.js';
 import Footer from '../../website/footer.js';
 
 
+
+
 // Define the new page component
 const PastProjects2 = () => {
   // Sample products data to pass to HeroParallaxDemo
@@ -25,6 +27,9 @@ const PastProjects2 = () => {
       <Integrations></Integrations>
 
       <Cta></Cta>
+      
+
+      
 
       <Footer></Footer>
       

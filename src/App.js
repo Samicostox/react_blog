@@ -42,6 +42,9 @@ import Blog2 from "./website/Blog/Blog2";
 import Blog3 from "./website/Blog/Blog3";
 import { HeroParallaxDemo } from "./new_website/Past_Projects/Paralax";
 import PastProjects2 from "./new_website/Past_Projects/Past_Project";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Services from "./new_website/Services/services";
 
 
 const TRACKING_ID = "G-E24FJ6HJJJ"
@@ -96,6 +99,7 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
 
             <Route path="/past-projects2" element={<PastProjects2 />} />
+            <Route path="/services2" element={<Services />} />
 
 
 
