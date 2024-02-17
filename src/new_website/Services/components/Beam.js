@@ -3,9 +3,10 @@
 // Removed the Icons import since you don't have it
 import { cn } from "../Beam/cn.ts";
 import React, { forwardRef, useRef } from "react";
-import AnimatedBeam from "../Beam/animated-beam.js";
+
 // Example of using an icon from react-icons, if you choose to use it
 import { FaUser, FaRobot } from 'react-icons/fa';
+import { AnimatedBeam } from "../Beam/animated-beam.tsx";
 
 const Circle = forwardRef(({ className, children }, ref) => {
   return (

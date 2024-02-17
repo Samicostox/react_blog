@@ -3,6 +3,8 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import ButtonWrapper2 from '../buttons/filling'
 import ButtonWrapper3 from '../buttons/fillinginvert'
+import { AnimatedBeamDemo } from './Beam'
+import { MaxiBeam } from './MaxiBeam'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -65,20 +67,13 @@ export default function Hero_Service() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
               <ButtonWrapper2></ButtonWrapper2>
               <ButtonWrapper3></ButtonWrapper3>
+              
                 
               </div>
+              
             </div>
-            <div className="mt-16 flow-root sm:mt-24">
-              <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-                <img
-                  src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
-                  alt="App screenshot"
-                  width={2432}
-                  height={1442}
-                  className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
-                />
-              </div>
-            </div>
+            
+            <MaxiBeam></MaxiBeam>
           </div>
         </div>
         <div

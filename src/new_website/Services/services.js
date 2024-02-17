@@ -3,6 +3,7 @@ import React from 'react';
 import Hero_Service from './components/hero';
 import Navbarv2 from '../../navbarv2';
 import { AnimatedBeamDemo } from './components/Beam';
+import { MaxiBeam } from './components/MaxiBeam';
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
 
@@ -18,6 +19,8 @@ const Services = () => {
     <div>
         <Navbarv2></Navbarv2>
         <Hero_Service></Hero_Service>
+       
+
         
      
       
