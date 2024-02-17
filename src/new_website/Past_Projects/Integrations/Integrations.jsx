@@ -117,7 +117,7 @@ export default function Integrations() {
               {/* Circle */}
               <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <img  src={Icon01} width={36} height={46} alt="Icon 01" />
+                <img  src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503515/react_y3ribl.svg" width={36} height={46} alt="Icon 01" />
               </div>
             </div>
             <div className="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up" data-aos-delay="100">
@@ -129,7 +129,7 @@ export default function Integrations() {
               {/* Circle */}
               <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <img  src={Icon02} width={46} height={46} alt="Icon 02" />
+                <img  src="https://res.cloudinary.com/dl2adjye7/image/upload/v1695503370/django-icon_rxmwzx.svg" width={46} height={46} alt="Icon 02" />
               </div>
             </div>
             <div className="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up" data-aos-delay="200">
@@ -141,7 +141,7 @@ export default function Integrations() {
               {/* Circle */}
               <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <img  src={Icon03} width={53} height={45} alt="Icon 03" />
+                <img  src={Icon01} width={53} height={45} alt="Icon 03" />
               </div>
             </div>
             <div className="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up" data-aos-delay="300">
@@ -153,7 +153,7 @@ export default function Integrations() {
               {/* Circle */}
               <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <img  src={Icon04} width={48} height={46} alt="Icon 04" />
+                <img  src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696255943/webflow_pstet1.svg" width={48} height={46} alt="Icon 04" />
               </div>
             </div>
             <div className="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up" data-aos-delay="400">
@@ -165,7 +165,7 @@ export default function Integrations() {
               {/* Circle */}
               <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <img  src={Icon05} width={49} height={48} alt="Icon 05" />
+                <img  src="https://res.cloudinary.com/dl2adjye7/image/upload/v1696322208/heroku-icon_t8pyfm.svg" width={40} height={48} alt="Icon 05" />
               </div>
             </div>
             <div className="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up" data-aos-delay="500">
@@ -177,7 +177,7 @@ export default function Integrations() {
               {/* Circle */}
               <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <img  src={Icon06} width={48} height={44} alt="Icon 06" />
+                <img  src="https://res.cloudinary.com/dl2adjye7/image/upload/v1697187882/vue_ez1vlf.svg" width={40} height={44} alt="Icon 06" />
               </div>
             </div>
           </div>

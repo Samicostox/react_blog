@@ -49,8 +49,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
-      style={{ height: '2400px' }} // Default to 2500px for mobile
+      className="h-[2500px] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -97,7 +96,7 @@ export const Header = () => {
   return (
    
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 ">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white text-center text-tyle-200  font-alliance">
+      <h1 className="text-3xl md:text-7xl font-bold dark:text-white text-center text-tyle-200  font-alliance">
         Past Projects <br /> from {' '}
         <span className="relative whitespace-nowrap text-teal-800 font-alliance">
           <svg
