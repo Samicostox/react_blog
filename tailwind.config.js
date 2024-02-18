@@ -7,6 +7,7 @@ const {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -41,8 +42,9 @@ module.exports = {
     },
   },
   plugins: [
-    addVariablesForColors,
+   
     require("@tailwindcss/forms"),
+    addVariablesForColors,
   ],
 };
 

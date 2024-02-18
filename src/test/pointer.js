@@ -1,6 +1,8 @@
-
 import { FollowerPointerCard } from "./follwoing-pointer.tsx";
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from "react";
+
+
 
 export function FollowingPointerDemo() {
   return (
