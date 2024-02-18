@@ -72,8 +72,11 @@ export default function Hero_Service() {
               </div>
               
             </div>
-            
-            <MaxiBeam></MaxiBeam>
+
+            <div className="absolute inset-x-0 md:-mt-20 lg:-mt-24 z-20 flex justify-center">
+        <MaxiBeam />
+      </div>
+
           </div>
         </div>
         <div
