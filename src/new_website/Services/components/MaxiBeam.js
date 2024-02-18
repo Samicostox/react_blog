@@ -131,14 +131,14 @@ export function MaxiBeam() {
         fromRef={div5Ref}
         toRef={div4Ref}
         curvature={-150}
-        reverse
+        
         endYOffset={-10}
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div6Ref}
         toRef={div4Ref}
-        reverse
+        
       />
     
       <AnimatedBeam
@@ -146,7 +146,7 @@ export function MaxiBeam() {
         fromRef={div7Ref}
         toRef={div4Ref}
         curvature={150}
-        reverse
+        
         endYOffset={10}
       />
     </div>

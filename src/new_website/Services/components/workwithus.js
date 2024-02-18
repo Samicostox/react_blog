@@ -1,193 +1,173 @@
-import { Dispatch, SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
-import { IconType } from "react-icons";
-import {
-  SiAtlassian,
-  SiDribbble,
-  SiGrubhub,
-  SiKaggle,
-  SiSlack,
-  SiNike,
-} from "react-icons/si";
+import { useState } from "react";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import useMeasure from "react-use-measure";
+
+const CARD_WIDTH = 350;
+const CARD_HEIGHT = 350;
+const MARGIN = 20;
+const CARD_SIZE = CARD_WIDTH + MARGIN;
+
+const BREAKPOINTS = {
+  sm: 640,
+  lg: 1024,
+};
 
 const WorkWithUs = () => {
-  const [selected, setSelected] = useState(0);
+  const [ref, { width }] = useMeasure();
+  const [offset, setOffset] = useState(0);
+
+  const CARD_BUFFER =
+    width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
+
+  const CAN_SHIFT_LEFT = offset < 0;
+
+  const CAN_SHIFT_RIGHT =
+    Math.abs(offset) < CARD_SIZE * (items.length - CARD_BUFFER);
+
+  const shiftLeft = () => {
+    if (!CAN_SHIFT_LEFT) {
+      return;
+    }
+    setOffset((pv) => (pv += CARD_SIZE));
+  };
+
+  const shiftRight = () => {
+    if (!CAN_SHIFT_RIGHT) {
+      return;
+    }
+    setOffset((pv) => (pv -= CARD_SIZE));
+  };
 
   return (
-    <section className="bg-white py-24 px-4 lg:px-8 grid items-center grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 overflow-hidden max-w-7xl ">
-      <div className="p-4 justify-center">
-        <h3 className="text-5xl font-semibold">What our customers think</h3>
-        <p className="text-slate-500 my-4">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-          commodi sint, similique cupiditate possimus suscipit delectus illum
-          eos iure magnam!
-        </p>
-        <SelectBtns
-          numTracks={testimonials.length}
-          setSelected={setSelected}
-          selected={selected}
-        />
+    <section className="bg-slate-100" ref={ref}>
+      <div className="relative overflow-hidden p-4">
+        {/* CARDS */}
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-4 text-2xl font-semibold text-left font-alliance text-slate-900">
+            Everything. <span className="text-slate-500">Yes, even that.</span>
+          </p>
+          <motion.div
+            animate={{
+              x: offset,
+            }}
+            className="flex"
+          >
+            {items.map((item) => {
+              return <Card key={item.id} {...item} />;
+            })}
+          </motion.div>
+        </div>
+
+        {/* BUTTONS */}
+        <>
+          <motion.button
+            initial={false}
+            animate={{
+              x: CAN_SHIFT_LEFT ? "0%" : "-100%",
+            }}
+            className="absolute left-0 top-[60%] z-30 rounded-r-xl bg-slate-100/30 p-3 pl-2 text-4xl text-white backdrop-blur-sm transition-[padding] hover:pl-3"
+            onClick={shiftLeft}
+          >
+            <FiChevronLeft />
+          </motion.button>
+          <motion.button
+            initial={false}
+            animate={{
+              x: CAN_SHIFT_RIGHT ? "0%" : "100%",
+            }}
+            className="absolute right-0 top-[60%] z-30 rounded-l-xl bg-slate-100/30 p-3 pr-2 text-4xl text-white backdrop-blur-sm transition-[padding] hover:pr-3"
+            onClick={shiftRight}
+          >
+            <FiChevronRight />
+          </motion.button>
+        </>
       </div>
-      <Cards
-        testimonials={testimonials}
-        setSelected={setSelected}
-        selected={selected}
-      />
     </section>
   );
 };
 
-const SelectBtns = ({ numTracks, setSelected, selected }) => {
+const Card = ({ url, category, title, description }) => {
   return (
-    <div className="flex gap-1 mt-8">
-      {Array.from(Array(numTracks).keys()).map((n) => {
-        return (
-          <button
-            key={n}
-            onClick={() => setSelected(n)}
-            className="h-1.5 w-full bg-slate-300 relative"
-          >
-            {selected === n ? (
-              <motion.span
-                className="absolute top-0 left-0 bottom-0 bg-slate-950"
-                initial={{
-                  width: "0%",
-                }}
-                animate={{
-                  width: "100%",
-                }}
-                transition={{
-                  duration: 5,
-                }}
-                onAnimationComplete={() => {
-                  setSelected(selected === numTracks - 1 ? 0 : selected + 1);
-                }}
-              />
-            ) : (
-              <span
-                className="absolute top-0 left-0 bottom-0 bg-slate-950"
-                style={{
-                  width: selected > n ? "100%" : "0%",
-                }}
-              />
-            )}
-          </button>
-        );
-      })}
-    </div>
-  );
-};
-
-const Cards = ({ testimonials, selected, setSelected }) => {
-  return (
-    <div className="p-4 relative h-[450px] lg:h-[500px] shadow-xl">
-      {testimonials.map((t, i) => {
-        return (
-          <Card
-            {...t}
-            key={i}
-            position={i}
-            selected={selected}
-            setSelected={setSelected}
-          />
-        );
-      })}
-    </div>
-  );
-};
-
-const Card = ({
-  Icon,
-  description,
-  name,
-  title,
-  position,
-  selected,
-  setSelected,
-}) => {
-  const scale = position <= selected ? 1 : 1 + 0.015 * (position - selected);
-  const offset = position <= selected ? 0 : 95 + (position - selected) * 3;
-  const background = position % 2 ? "black" : "white";
-  const color = position % 2 ? "white" : "black";
-
-  return (
-    <motion.div
-      initial={false}
+    <div
+      className="relative shrink-0 cursor-pointer rounded-2xl bg-white shadow-md transition-all hover:scale-[1.015] hover:shadow-xl"
       style={{
-        zIndex: position,
-        transformOrigin: "left bottom",
-        background,
-        color,
+        width: CARD_WIDTH,
+        height: CARD_HEIGHT,
+        marginRight: MARGIN,
+        backgroundImage: `url(${url})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
-      animate={{
-        x: `${offset}%`,
-        scale,
-      }}
-      whileHover={{
-        translateX: position === selected ? 0 : -3,
-      }}
-      transition={{
-        duration: 0.25,
-        ease: "easeOut",
-      }}
-      onClick={() => setSelected(position)}
-      className="absolute top-0 left-0 w-full min-h-full p-8 lg:p-12 cursor-pointer flex flex-col justify-between"
     >
-      <Icon className="text-7xl mx-auto" />
-      <p className="text-lg lg:text-xl font-light italic my-8">
-        "{description}"
-      </p>
-      <div>
-        <span className="block font-semibold text-lg">{name}</span>
-        <span className="block text-sm">{title}</span>
+      <div className="absolute inset-0 z-20 rounded-2xl bg-gradient-to-b from-black/90 via-black/60 to-black/0 p-6 text-white transition-[backdrop-filter] hover:backdrop-blur-sm text-left">
+        <span className="text-xs font-semibold uppercase text-violet-300 text-left">
+          {category}
+        </span>
+        <p className="my-2 text-3xl font-bold text-left font-alliance text-white-900">{title}</p>
+        <p className="text-lg text-slate-300 text-left font-alliance">{description}</p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 export default WorkWithUs;
 
-const testimonials = [
+const items = [
   {
-    Icon: SiNike,
+    id: 1,
+    url: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708257918/29b8c6f11bd416449595db1fcb8d5ce0_cemmer.jpg",
+    category: "Mice",
+    title: "Just feels right",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Jane Dodson",
-    title: "Marketing Director, Nike",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
   },
   {
-    Icon: SiAtlassian,
+    id: 2,
+    url: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708257918/29b8c6f11bd416449595db1fcb8d5ce0_cemmer.jpg",
+    category: "Keyboards",
+    title: "Type in style",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Johnathan Rodriguez",
-    title: "UX Research, Atlassian",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
   },
   {
-    Icon: SiDribbble,
+    id: 3,
+    url: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708257918/29b8c6f11bd416449595db1fcb8d5ce0_cemmer.jpg",
+    category: "Monitors",
+    title: "Looks like a win",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Phil Heath",
-    title: "Staff Engineer, Dribbble",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
   },
   {
-    Icon: SiGrubhub,
+    id: 4,
+    url: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708257918/29b8c6f11bd416449595db1fcb8d5ce0_cemmer.jpg",
+    category: "Chairs",
+    title: "Back feels great",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Andrea Beck",
-    title: "Marketing Manager, GrubHub",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
   },
   {
-    Icon: SiKaggle,
+    id: 5,
+    url: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708257918/29b8c6f11bd416449595db1fcb8d5ce0_cemmer.jpg",
+    category: "Lights",
+    title: "It's lit",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Daniel Henderson",
-    title: "Engineering Manager, Kaggle",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
   },
   {
-    Icon: SiSlack,
+    id: 6,
+    url: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708257918/29b8c6f11bd416449595db1fcb8d5ce0_cemmer.jpg",
+    category: "Desks",
+    title: "Stand up straight",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Anderson Lima",
-    title: "Product Manager, Slack",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+  },
+  {
+    id: 7,
+    url: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708257918/29b8c6f11bd416449595db1fcb8d5ce0_cemmer.jpg",
+    category: "Headphones",
+    title: "Sounds good",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
   },
 ];

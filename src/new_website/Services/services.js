@@ -9,6 +9,9 @@ import ScrollingTestimonials from './components/Testimonials';
 import { BentoGridDemo } from './components/bento2';
 import WorkWithUs from './components/workwithus';
 import { AnimatedTooltipPreview } from './components/Avatar';
+import Integrations from '../Past_Projects/Integrations/Integrations';
+import Cta from '../Past_Projects/CTA';
+import Footer from '../../website/footer';
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
 
@@ -58,6 +61,15 @@ const Services = () => {
       <div className='mt-20'>
 
         <BentoGridDemo></BentoGridDemo>
+
+      
+
+        <Integrations></Integrations>
+        
+
+        <Cta></Cta>
+
+        <Footer></Footer>
         
 
         </div>
