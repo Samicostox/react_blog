@@ -6,6 +6,20 @@ import { cn } from "../Beam/cn.ts";
 import { AnimatedBeam } from "../Beam/animated-beam.tsx";
 import React, { forwardRef, useRef } from "react";
 import { FaUser, FaRobot } from 'react-icons/fa';
+import { AnimatedTooltipPreview } from "./Avatar.js";
+import { AnimatedTooltip } from "../ToolTip/animated-tooltip.tsx";
+
+const people = [
+  {
+    id: 1,
+    name: "John Doe",
+    designation: "Imperial College London",
+    image:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708254634/pilot_traveller_person_avatar-512_1_lk82hz.webp",
+  },
+  
+];
+
 
 
 
@@ -43,16 +57,16 @@ export function MaxiBeam() {
         <div className="flex h-full w-full flex-col items-stretch justify-between gap-12">
           {/* Adjusted the size of the icons and spacing between them */}
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div1Ref}> <FaUser className="text-black h-10 w-10" /></Circle>
+            <Circle ref={div1Ref}> <AnimatedTooltip items={people} /></Circle>
             <Circle ref={div5Ref}><img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708212076/1636px-Oxford-University-Circlet.svg_xyrarz.png" alt="Custom Icon" className="h-14 w-12" /></Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div2Ref}> <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708213245/Shield_of_Imperial_College_London.svg_yjpcpy.png" alt="Custom Icon" className="h-14 w-12" /></Circle>
+            <Circle ref={div2Ref}> <AnimatedTooltip items={people} /></Circle>
             <Circle ref={div4Ref} className="h-32 w-32"><img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708195363/Logo_Sam_4_vsv5ue.png" alt="Custom Icon" className="h-full w-full" /></Circle>
             <Circle ref={div6Ref}><img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708212076/1636px-Oxford-University-Circlet.svg_xyrarz.png" alt="Custom Icon" className="h-14 w-12" /></Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div3Ref}><img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708212076/1636px-Oxford-University-Circlet.svg_xyrarz.png" alt="Custom Icon" className="h-14 w-12" /></Circle>
+            <Circle ref={div3Ref}> <AnimatedTooltip items={people} /></Circle>
             <Circle ref={div7Ref}><img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708213245/Shield_of_Imperial_College_London.svg_yjpcpy.png" alt="Custom Icon" className="h-14 w-12" /></Circle>
           </div>
         </div>

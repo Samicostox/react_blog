@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BentoGrid, BentoGridItem } from "./bento-grid.tsx";
+import { BentoGrid, BentoGridItem } from "../../../test/bento-grid.tsx";
 import Lottie from 'react-lottie';
 import {
   IconClipboardCopy,

@@ -15,7 +15,7 @@ import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
 
 import { BentoGridThirdDemo } from "../test/bento";
-import { BentoGridDemo } from "../test/bento2";
+import { BentoGridDemo } from "../new_website/Services/components/bento2";
 import { FollowingPointerDemo } from "../test/pointer";
 
 
