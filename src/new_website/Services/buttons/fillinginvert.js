@@ -3,7 +3,7 @@ import React from 'react';
 
 const ButtonWrapper3 = () => {
   return (
-    <div className="flex rounded-lg items-center justify-center bg-teal-600">
+    <div className="flex rounded-lg items-center justify-center bg-teal-600 ">
       <RoundedSlideButton />
     </div>
   );

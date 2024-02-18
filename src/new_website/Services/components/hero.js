@@ -64,16 +64,20 @@ export default function Hero_Service() {
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
                 fugiat veniam occaecat fugiat aliqua.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-              <ButtonWrapper2></ButtonWrapper2>
-              <ButtonWrapper3></ButtonWrapper3>
+              <div className="mt-10 flex items-center justify-center gap-x-6 z-100">
+              <div className=" z-50 flex justify-center">
+        <div className="flex items-center justify-center gap-x-6">
+          <ButtonWrapper2></ButtonWrapper2>
+          <ButtonWrapper3></ButtonWrapper3>
+        </div>
+      </div>
               
                 
               </div>
               
             </div>
 
-            <div className="absolute inset-x-0 md:-mt-20 lg:-mt-24 z-20 flex justify-center">
+            <div className="absolute inset-x-0 md:-mt-20 lg:-mt-24 z-0 flex justify-center">
         <MaxiBeam />
       </div>
 
