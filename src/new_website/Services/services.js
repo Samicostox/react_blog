@@ -12,6 +12,8 @@ import { AnimatedTooltipPreview } from './components/Avatar';
 import Integrations from '../Past_Projects/Integrations/Integrations';
 import Cta from '../Past_Projects/CTA';
 import Footer from '../../website/footer';
+import ExampleShimmer from './components/shipperboard';
+import { BorderBeam } from './BorderBeam/border-beam.tsx';
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
 
@@ -59,7 +61,7 @@ const Services = () => {
       </div>
 
       <div className='mt-20'>
-
+        
         <BentoGridDemo></BentoGridDemo>
 
       
@@ -70,6 +72,10 @@ const Services = () => {
         <Cta></Cta>
 
         <Footer></Footer>
+
+      
+
+       
         
 
         </div>

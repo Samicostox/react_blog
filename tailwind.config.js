@@ -14,15 +14,15 @@ module.exports = {
       },
       animation: {
         ticker: "ticker 30s infinite linear",
-        // Add your shimmer animation here
         shimmer: "shimmer 2s linear infinite",
+        // Add the border-beam animation here
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
         ticker: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
         },
-        // Add your shimmer keyframes here
         shimmer: {
           from: {
             "backgroundPosition": "0 0",
@@ -31,13 +31,19 @@ module.exports = {
             "backgroundPosition": "-200% 0",
           },
         },
+        // Add the border-beam keyframes here
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
       },
     },
   },
   plugins: [
     addVariablesForColors,
-    
-    require("@tailwindcss/forms")],
+    require("@tailwindcss/forms"),
+  ],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {

@@ -10,6 +10,7 @@ import {
   IconBoxAlignTopLeft,
   IconBoxAlignRightFilled,
 } from "@tabler/icons-react";
+import { BorderBeam } from '../BorderBeam/border-beam.tsx';
 
 export function BentoGridDemo() {
     const [animationData, setAnimationData] = useState(null);
@@ -19,19 +20,19 @@ export function BentoGridDemo() {
     const [fifthAnimationData, setfifthAnimationData] = useState(null);
     const [sixthAnimationData, setsixthAnimationData] = useState(null);
     useEffect(() => {
-        fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708026439/vexfiqVuEA_mmzckx.json')
+        fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708265899/Animation_-_1708265878925_sllzpd.json')
           .then(response => response.json())
           .then(data => setAnimationData(data));
 
-          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708027142/Animation_-_1705311877993_rp1ayq.json') // Fetching the second animation
+          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708265497/Animation_-_1708265473074_j2idr6.json') // Fetching the second animation
           .then(response => response.json())
           .then(data => setSecondAnimationData(data));
 
-          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708027333/Animation_-_1708026982226_wurmfv.json') // Fetching the second animation
+          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708267231/Animation_-_1708267123983_xuwkfs.json') // Fetching the second animation
           .then(response => response.json())
           .then(data => setthirdAnimationData(data));
 
-          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708027877/Animation_-_1708027682754_xgkjdv.json') // Fetching the second animation
+          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708266336/Animation_-_1708266114186_mvrqry.json') // Fetching the second animation
           .then(response => response.json())
           .then(data => setforthAnimationData(data));
 
@@ -39,20 +40,20 @@ export function BentoGridDemo() {
           .then(response => response.json())
           .then(data => setfifthAnimationData(data));
 
-          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708028615/Animation_-_1708028503822_vlxqql.json') // Fetching the second animation
+          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708267496/Animation_-_1708267425533_bgiqqy.json') // Fetching the second animation
           .then(response => response.json())
           .then(data => setsixthAnimationData(data));
       }, []);
 
-      const defaultOptions = animationData => ({ // Modified to accept animationData as a parameter
+      const defaultOptions = (animationData, alignLeft = false) => ({
         loop: true,
         autoplay: true, 
         animationData: animationData,
         rendererSettings: {
-          preserveAspectRatio: 'xMidYMid slice'
+            preserveAspectRatio: alignLeft ? 'xMinYMid meet' : 'xMidYMid slice'
         }
     });
-
+    
     const items = [
         {
           title: "Web Development",
@@ -75,12 +76,7 @@ export function BentoGridDemo() {
         {
             title: "Data Engineering & Science",
             description: "Understand the impact of effective communication in our lives.",
-            header: fifthAnimationData && sixthAnimationData ? (
-              <div className="flex justify-around"> {/* This div will contain both animations */}
-                <Lottie options={defaultOptions(fifthAnimationData)} height={250} width={250} />
-                <Lottie options={defaultOptions(sixthAnimationData)} height={250} width={250} />
-              </div>
-            ) : <Skeleton />,
+            header: sixthAnimationData ? <Lottie options={defaultOptions(sixthAnimationData)} height={300} width={350} /> : <Skeleton />,
             icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
           },
         {
@@ -121,6 +117,8 @@ export function BentoGridDemo() {
                     className={`${i === 3 || i === 6 ? "md:col-span-2" : ""} shadow-lg`}
                 />
             ))}
+
+
         </BentoGrid>
         </div>
     );
