@@ -18,7 +18,7 @@ module.exports = {
         shimmer: "shimmer 2s linear infinite",
         // Add the border-beam animation here
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
-        "meteor-effect": "meteor 5s linear infinite",
+      
       },
       keyframes: {
 
@@ -56,7 +56,7 @@ module.exports = {
   plugins: [
    
     require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"), 
+
     addVariablesForColors
   ],
 };

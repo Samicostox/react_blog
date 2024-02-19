@@ -66,7 +66,7 @@ const Team2 = () => {
         <WorkwithusTeam></WorkwithusTeam>
 
 
-        <BackgroundBeamsDemo></BackgroundBeamsDemo>
+
 
   
 
