@@ -22,7 +22,7 @@ export default function WorkwithusTeam() {
 
   return (
     <section className="relative bg-zinc-50">
-      <div className="py-12 md:py-20">
+      <div className="py-0 md:py-0">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <h3 className="text-slate-900 text-5xl font-semibold text-center text-left font-alliance">
           
@@ -149,8 +149,8 @@ export default function WorkwithusTeam() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src={FeatureImage01} width={1000} height={700} alt="Feature 03" />
-                    <img className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" />
+                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708367891/Send_Your_CV_zmbgg4.png" width={1000} height={700} alt="Feature 03" />
+
                   </div>
                 </Transition>
                 {/* Item 4 */}
@@ -167,8 +167,8 @@ export default function WorkwithusTeam() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src={FeatureImage01} width={1000} height={700} alt="Feature 04" />
-                    <img className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" />
+                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708365455/Untitled_design_2_wbtq06.png" width={1000} height={700} alt="Feature 04" />
+               
                   </div>
                 </Transition>
               </div>

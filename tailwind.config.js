@@ -18,8 +18,20 @@ module.exports = {
         shimmer: "shimmer 2s linear infinite",
         // Add the border-beam animation here
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        "meteor-effect": "meteor 5s linear infinite",
       },
       keyframes: {
+
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: 0,
+          },
+        },
+     
+   
         ticker: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
@@ -44,7 +56,8 @@ module.exports = {
   plugins: [
    
     require("@tailwindcss/forms"),
-    addVariablesForColors,
+    require("@tailwindcss/aspect-ratio"), 
+    addVariablesForColors
   ],
 };
 

@@ -9,6 +9,10 @@ import Footer from '../../website/footer';
 import Hero_Team from './Components/Hero_Team.js';
 import CustomersList from './Highlights/customers-list.js';
 import WorkwithusTeam from './Components/workwithus.js';
+import Services from '../../website/about_us/services.js';
+import Benefits from './Components/benefits.js';
+import { MeteorsDemo } from './Meteors/meteorsdemo.js';
+import { BackgroundBeamsDemo } from './Components/bgbeam.js';
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
 
@@ -23,6 +27,7 @@ const Team2 = () => {
     <div>
         <Navbarv2></Navbarv2>
         <Hero_Team></Hero_Team>
+        
         <div className='mt-0 md:mt-96'></div>
 
         <div className="bg-slate-900">
@@ -50,7 +55,20 @@ const Team2 = () => {
 
         </div>
 
+        <Benefits></Benefits>
+
+        <div className="h-auto w-full bg-zinc-50">
+
+        <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708272146/Untitled_300_x_1080_px_nbtb5k.png" alt="Downward Arrow" className="mx-auto h-96 w-100 bg-zinc-50" />
+
+        </div>
+
         <WorkwithusTeam></WorkwithusTeam>
+
+
+        <BackgroundBeamsDemo></BackgroundBeamsDemo>
+
+  
 
         
 
