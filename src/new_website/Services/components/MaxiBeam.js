@@ -72,7 +72,7 @@ const Circle = forwardRef(({ className, children }, ref) => {
   );
 });
 
-export function MaxiBeam() {
+export function MaxiBeam({ people }) {
   const containerRef = useRef(null);
   const div1Ref = useRef(null);
   const div2Ref = useRef(null);
@@ -92,17 +92,17 @@ export function MaxiBeam() {
         <div className="flex h-full w-full flex-col items-stretch justify-between gap-12">
           {/* Adjusted the size of the icons and spacing between them */}
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div1Ref}> <AnimatedTooltip items={people} /></Circle>
-            <Circle ref={div5Ref}><AnimatedTooltip items={business} /></Circle>
+            <Circle ref={div1Ref}> <AnimatedTooltip items={[people[0]]} /></Circle>
+            <Circle ref={div5Ref}><AnimatedTooltip items={[people[1]]} /></Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div2Ref}> <AnimatedTooltip items={people} /></Circle>
+            <Circle ref={div2Ref}> <AnimatedTooltip items={[people[2]]} /></Circle>
             <Circle ref={div4Ref} className="h-32 w-32"><img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708195363/Logo_Sam_4_vsv5ue.png" alt="Custom Icon" className="h-full w-full" /></Circle>
-            <Circle ref={div6Ref}><AnimatedTooltip items={business2} /></Circle>
+            <Circle ref={div6Ref}><AnimatedTooltip items={[people[3]]} /></Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div3Ref}> <AnimatedTooltip items={people} /></Circle>
-            <Circle ref={div7Ref}><AnimatedTooltip items={business3} /></Circle>
+            <Circle ref={div3Ref}> <AnimatedTooltip items={[people[4]]} /></Circle>
+            <Circle ref={div7Ref}><AnimatedTooltip items={[people[5]]} /></Circle>
           </div>
         </div>
 

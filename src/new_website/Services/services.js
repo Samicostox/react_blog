@@ -19,6 +19,8 @@ import Process from './components/process.js';
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
 
+
+
 const stats = [
   { id: 1, name: "Students working with us", value: "30", plussign: true },
   { id: 2, name: "Projects Completed", value: "15", plussign: true },
