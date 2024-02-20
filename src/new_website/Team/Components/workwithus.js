@@ -21,7 +21,7 @@ export default function WorkwithusTeam() {
   }, [])   
 
   return (
-    <section className="relative bg-zinc-50">
+    <section className="relative bg-zinc-50  pb-20 md:pb-40">
       <div className="py-0 md:py-0">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <h3 className="text-slate-900 text-5xl font-semibold text-center text-left font-alliance">

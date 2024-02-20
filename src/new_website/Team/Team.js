@@ -13,6 +13,9 @@ import Services from '../../website/about_us/services.js';
 import Benefits from './Components/benefits.js';
 import { MeteorsDemo } from './Meteors/meteorsdemo.js';
 import { BackgroundBeamsDemo } from './Components/bgbeam.js';
+import Cta from './Components/CTA.js';
+import Integrations from '../Past_Projects/Integrations/Integrations.jsx';
+
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
 
@@ -64,6 +67,10 @@ const Team2 = () => {
         </div>
 
         <WorkwithusTeam></WorkwithusTeam>
+
+
+
+        <Cta></Cta>
 
 
 
