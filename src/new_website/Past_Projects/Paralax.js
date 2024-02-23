@@ -7,16 +7,16 @@ export function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "SafeQueen",
+    link: "https://www.safequeen.co.uk/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708684564/SafeQueen_Paralax_u2x4xa.png",
   },
   {
     title: "Cursor",
-    link: "https://cursor.so",
+    link: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708684564/SafeQueen_Paralax_u2x4xa.png",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708684564/SafeQueen_Paralax_u2x4xa.png",
   },
   {
     title: "Rogue",

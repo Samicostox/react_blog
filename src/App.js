@@ -46,6 +46,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Services from "./new_website/Services/services";
 import Team2 from "./new_website/Team/Team";
+import Contactclient from "./new_website/Contact/contactclient";
+import ShiftingContactForm from "./new_website/Contact/contactclient2";
+
 
 
 const TRACKING_ID = "G-E24FJ6HJJJ"
@@ -102,6 +105,10 @@ function App() {
             <Route path="/past-projects2" element={<PastProjects2 />} />
             <Route path="/services2" element={<Services />} />
             <Route path="/team2" element={<Team2 />} />
+            <Route path="/contact5" element={<ShiftingContactForm />} />
+
+            
+
 
 
 

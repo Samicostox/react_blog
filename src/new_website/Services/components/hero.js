@@ -19,21 +19,21 @@ const people = [
     name: "John Doe",
     designation: "Imperial College London",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708254634/pilot_traveller_person_avatar-512_1_lk82hz.webp",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688215/istockphoto-1212812078-170667a_vhogug.jpg",
   },
   {
     id: 2,
     name: "Ben Smith",
     designation: "Citadel",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708256073/man5-512_humaer.webp",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688768/office-building_sptilx.png",
   },
   {
     id: 3,
-    name: "Clara Morgan",
-    designation: "CapGemini",
+    name: "Alice Morgan",
+    designation: "Imperial College London",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708256209/26_avatar_people_business_businesswoman_woman_female_long_hair-512_ip5sm2.webp",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688215/istockphoto-1212812078-170667a_vhogug.jpg",
   },
 
   {
@@ -41,21 +41,21 @@ const people = [
     name: "Amy Sulec",
     designation: "Vanguard",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708256288/images_wsmev1.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688768/office-building_sptilx.png",
   },
   {
     id: 5,
     name: "John Doe",
     designation: "Imperial College London",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708254634/pilot_traveller_person_avatar-512_1_lk82hz.webp",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688215/istockphoto-1212812078-170667a_vhogug.jpg",
   },
   {
     id: 6,
     name: "John Doe",
-    designation: "Imperial College London",
+    designation: "CapGemini",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708254634/pilot_traveller_person_avatar-512_1_lk82hz.webp",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688768/office-building_sptilx.png",
   },
   
 ];
