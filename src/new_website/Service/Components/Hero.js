@@ -13,7 +13,10 @@ export default function Hero() {
           <div className="max-w-7xl mx-auto">
               <div className="text-center pb-12 md:pb-16">
                 <h1 className="font-inter-tight text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-500 via-slate-900 to-teal-900 pb-4 font-alliance">
-                 Software Development
+                {' '}
+            <span className="inline-flex relative text-teal-900 before:absolute before:inset-0 before:bg-teal-200 dark:before:bg-teal-500 before:opacity-30 before:-z-10 before:-rotate-2 before:translate-y-1/4 font-alliance">
+              Software Development
+            </span>{' '}
                 </h1>
                 <p className="text-lg text-slate-900 mb-8 font-alliance">
                   Turbocharge your creative process with a powerful AI design platform that gives creatives the power of creating without limits.

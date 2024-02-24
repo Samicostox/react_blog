@@ -92,7 +92,7 @@ export function BentoGridDemo() {
     return (
       <div>
           <div
-          className="absolute inset-x-0 top-800 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-100"
+          className="absolute inset-x-0 top-800 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-100 "
           aria-hidden="true"
         >
           <div

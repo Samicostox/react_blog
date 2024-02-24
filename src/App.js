@@ -107,7 +107,7 @@ function App() {
             <Route path="/services2" element={<Services />} />
             <Route path="/team2" element={<Team2 />} />
             <Route path="/contact5" element={<ShiftingContactForm />} />
-            <Route path="service" element={<Service />} />
+            <Route path="/service" element={<Service />} />
 
             
 

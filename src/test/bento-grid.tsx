@@ -15,7 +15,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[24rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid md:auto-rows-[24rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", // Added px-4 sm:px-6 lg:px-8 for responsive padding
         className
       )}
     >
@@ -23,7 +23,7 @@ export const BentoGrid = ({
     </div>
   );
 };
- 
+
 export const BentoGridItem = ({
   className,
   title,
@@ -38,15 +38,13 @@ export const BentoGridItem = ({
   icon?: React.ReactNode;
 }) => {
   return (
-
-    
     <div
       className={cn(
         "relative row-span-1 rounded-xl group hover:shadow-2xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-gray-200 dark:border-gray-700 justify-between flex flex-col space-y-4 hover:border-transparent",
         className
       )}
     >
-      <div className="absolute inset-0 group-hover:opacity-100 opacity-0 transition-opacity duration-300 rounded-xl">
+      <div className="absolute inset-0 group-hover:opacity-100 opacity-0 transition-opacity duration-300 rounded-xl ">
         <BorderBeam
           size={100}
           duration={10}
@@ -71,7 +69,6 @@ export const BentoGridItem = ({
     </div>
   );
 };
-
 
 const TitleComponent = ({
   title,
