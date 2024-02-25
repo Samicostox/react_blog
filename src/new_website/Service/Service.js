@@ -4,6 +4,7 @@ import Hero from './Components/Hero';
 import Navbarv2 from '../../navbarv2';
 import Features02 from './Components/feature';
 import Footer from '../../website/footer';
+import { HoverEffect } from './Components/card-hover-effect';
 
 
 // Import the HeroParallaxDemo component
@@ -21,7 +22,13 @@ const Service = () => {
         <Navbarv2></Navbarv2>
         <Hero></Hero>
         <div className='bg-slate-900'><Features02></Features02></div>
+
+        
+        <HoverEffect></HoverEffect>
+       
         <Footer></Footer>
+       
+    
         
     </div>
   );
