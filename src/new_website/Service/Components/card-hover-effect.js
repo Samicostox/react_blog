@@ -1,5 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Bookcall from "./button";
 
 export const projects = [
@@ -45,14 +47,19 @@ export const projects = [
 
 export const HoverEffect = () => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
-  
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // You can also use configuration settings from the other component
+    });
+  }, []);
 
   return (
 
       
     <div className='bg-gray-100 pb-20'>
-    <div className="max-w-6xl mx-auto text-center pt-12 md:pt-20 px-2 ">
-        <h2 className="text-4xl md:text-5xl bg-clip-text pb-4 font-alliance font-bold text-slate-900 ">Simple yet {' '}
+    <div className="max-w-7xl mx-auto text-center pt-12 md:pt-20 px-2 ">
+        <h2 className="text-4xl md:text-6xl bg-clip-text pb-4 font-alliance font-bold text-slate-900 ">Simple yet {' '}
     <span className="relative whitespace-nowrap text-teal-800 font-alliance">
       <svg
         aria-hidden="true"
@@ -67,14 +74,15 @@ export const HoverEffect = () => {
         <p className="text-lg text-slate-900 font-alliance">There are many variations available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
       </div>
     
-    <div className="max-w-5xl mx-auto px-8 bg-gray-100">
-      <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-2 py-10">
+    <div className="max-w-7xl mx-auto px-8 bg-gray-100">
+      <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-2 py-10 ">
         {projects.map((project, idx) => (
           <div
             key={project.link} // Assuming link is unique for each project
             className="relative group block p-2 h-full w-full"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
+            data-aos="fade-up"
           >
             <AnimatePresence>
               {hoveredIndex === idx && (
