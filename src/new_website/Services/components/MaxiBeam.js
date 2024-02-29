@@ -8,6 +8,7 @@ import React, { forwardRef, useRef } from "react";
 import { FaUser, FaRobot } from 'react-icons/fa';
 import { AnimatedTooltipPreview } from "./Avatar.js";
 import { AnimatedTooltip } from "../ToolTip/animated-tooltip.tsx";
+import { AnimatedTooltip2 } from "../ToolTip/animated-tooltip-big.tsx";
 
 const people = [
   {
@@ -97,7 +98,7 @@ export function MaxiBeam({ people }) {
           </div>
           <div className="flex flex-row items-center justify-between">
             <Circle ref={div2Ref}> <AnimatedTooltip items={[people[2]]} /></Circle>
-            <Circle ref={div4Ref} className="h-32 w-32"><img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708195363/Logo_Sam_4_vsv5ue.png" alt="Custom Icon" className="h-full w-full" /></Circle>
+            <Circle ref={div4Ref} className="h-32 w-32"><AnimatedTooltip2 items={[people[6]]} /></Circle>
             <Circle ref={div6Ref}><AnimatedTooltip items={[people[3]]} /></Circle>
           </div>
           <div className="flex flex-row items-center justify-between">

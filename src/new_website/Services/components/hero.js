@@ -19,14 +19,14 @@ const people = [
     name: "John Doe",
     designation: "Imperial College London",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688215/istockphoto-1212812078-170667a_vhogug.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1709211942/yo_lowrzi.png",
   },
   {
     id: 2,
     name: "Ben Smith",
     designation: "Citadel",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688768/office-building_sptilx.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1709212572/5_q4gjlw.png",
   },
   {
     id: 3,
@@ -41,14 +41,14 @@ const people = [
     name: "Amy Sulec",
     designation: "Vanguard",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688768/office-building_sptilx.png",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1709212572/4_acy1sz.png",
   },
   {
     id: 5,
     name: "John Doe",
     designation: "Imperial College London",
     image:
-      "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688215/istockphoto-1212812078-170667a_vhogug.jpg",
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1709212024/Untitled_design_9_h8p2cg.png",
   },
   {
     id: 6,
@@ -56,6 +56,13 @@ const people = [
     designation: "CapGemini",
     image:
       "https://res.cloudinary.com/dl2adjye7/image/upload/v1708688768/office-building_sptilx.png",
+  },
+  {
+    id: 7,
+    name: "Innovation Studios",
+    designation: "Best Company",
+    image:
+      "https://res.cloudinary.com/dl2adjye7/image/upload/v1709211456/Untitled_design_8_ltp8rj.png",
   },
   
 ];

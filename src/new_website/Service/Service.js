@@ -7,6 +7,7 @@ import Footer from '../../website/footer';
 import { HoverEffect } from './Components/card-hover-effect';
 
 
+
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
 
@@ -20,6 +21,7 @@ const Service = () => {
   return (
     <div>
         <Navbarv2></Navbarv2>
+    
         <Hero></Hero>
         <div className='bg-slate-900'><Features02></Features02></div>
 

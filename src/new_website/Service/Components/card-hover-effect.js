@@ -42,6 +42,7 @@ export const projects = [
     link: "https://algochurn.com",
     image: "https://res.cloudinary.com/dl2adjye7/image/upload/v1708875918/6_ipnisn.png" // Example image URL
   },
+  
   // Add more projects as needed
 ];
 

@@ -1,6 +1,6 @@
 import { FiLogIn } from "react-icons/fi";
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const ButtonWrapper2 = () => {
   return (
     <div className="flex rounded-lg items-center justify-center bg-slate-900">
@@ -10,8 +10,15 @@ const ButtonWrapper2 = () => {
 };
 
 const RoundedSlideButton = () => {
+  const navigate = useNavigate();
+
+  // Function to handle click event
+  const handleClick = () => {
+    navigate('/contact2'); // Navigate to /contact2 when the button is clicked
+  };
   return (
     <button
+      onClick={handleClick}
       className={`
         relative z-0 inline-flex items-center gap-2 overflow-hidden rounded-lg 
         border-teal-300 px-4 py-2 font-semibold

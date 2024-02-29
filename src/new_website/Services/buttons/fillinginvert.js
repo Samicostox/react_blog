@@ -30,7 +30,7 @@ const RoundedSlideButton = () => {
         active:scale-95
       `}
     >
-      <span className="text-slate-900 hover:text-white font-alliance text-sm">Book a Call</span>
+      <span className="text-white hover:text-white font-alliance text-sm">Book a Call</span>
       <span className="text-white" aria-hidden="true">
         &rarr;
       </span>
