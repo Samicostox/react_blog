@@ -25,11 +25,7 @@ const ScrollingTestimonials = () => {
           <TestimonialList list={testimonials.middle} duration={75} reverse />
           <TestimonialList list={testimonials.middle} duration={75} reverse />
         </div>
-        <div className="flex items-center">
-          <TestimonialList list={testimonials.bottom} duration={275} />
-          <TestimonialList list={testimonials.bottom} duration={275} />
-          <TestimonialList list={testimonials.bottom} duration={275} />
-        </div>
+       
 
         <div className="absolute top-0 bottom-0 right-0 w-24 z-10 bg-gradient-to-l from-slate-900 to-transparent" />
       </div>
@@ -71,89 +67,89 @@ const testimonials = {
   top: [
     {
       id: 1,
-      img: "https://images.unsplash.com/photo-1627161683077-e34782c24d81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=703&q=80",
-      name: "Jen S.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam aspernatur esse corporis!",
+      img: "https://res.cloudinary.com/dl2adjye7/image/upload/v1709287053/SQ_ICON_-_BLACK_500X500_xgqn31_cmwiog.png",
+      name: "Roxy",
+      title: "Founder of SafeQueen",
+      info: "Amazing work!",
     },
     {
       id: 2,
-      img: "https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80",
-      name: "Paul A,",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis.",
+      img: "https://res.cloudinary.com/dl2adjye7/image/upload/v1709288499/Announce_End_Of_Project_pzt3n4.png",
+      name: "Alex Watkins",
+      title: "CEO, NuZones",
+      info: "It has been a pleasure working with Innovation Studios. They really helped bring my idea to life and construct something that passionates me!",
     },
     {
       id: 3,
-      img: "https://plus.unsplash.com/premium_photo-1670588776139-da93b47afc6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      name: "Cindy J.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam.",
+      img: "https://res.cloudinary.com/dl2adjye7/image/upload/v1709288264/eric-teissandier_f3bxvz_rdfnj9.jpg",
+      name: "Eric Teissandier",
+      title: "CEO, 4D",
+      info: "We recently collaborated with the Innovation Studios, our seamless experience with them has led to engage with them on a regular basis.",
     },
     {
       id: 4,
-      img: "https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
-      name: "Danica W.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor.",
+      img: "https://res.cloudinary.com/dl2adjye7/image/upload/v1709288584/Announce_End_Of_Project_1_eh3hwi.png",
+      name: "Ross Derick",
+      title: "CEO, Uplist",
+      info: "The team at Birmingham Innovation Studio are not only skilled software engineers, but also valuable tech consultants with a clear understanding of commercial realities and supporting product strategy. ",
     },
     {
       id: 5,
-      img: "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      name: "Peter H.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore.",
+      img: "https://res.cloudinary.com/dl2adjye7/image/upload/v1709288263/1682583212519_qwfwo5_kfugmc.jpg",
+      name: "Hugo Biais",
+      title: "Student at the University of Birmingham",
+      info: "Working at Innovation Studios as a software engineer gives me the opportunity to tackle real world project. This enhances my practical skills and experience, adding great value to my professional profile.",
     },
     {
       id: 6,
-      img: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      name: "Lanny B.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam aspernatur esse!",
+      img: "https://res.cloudinary.com/dl2adjye7/image/upload/v1709288633/65bcb923b4a92c0f155ea513_Screenshot_2024-02-02_at_09.42.15_mxbiei.png",
+      name: "Tristan Vandenberghe.",
+      title: "Founder of Manta",
+      info: "I had an amazing experience with Innovation Studios, they created amazing designs for us!",
     },
   ],
   middle: [
     {
       id: 1,
       img: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      name: "Alex F.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam.",
+      name: "xxx",
+      title: "Sen Nood",
+      info: "hugo fill",
     },
     {
       id: 2,
       img: "https://images.unsplash.com/photo-1580518324671-c2f0833a3af3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      name: "Claude O.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt.",
+      name: "Clement D.",
+      title: "Orion",
+      info: "In 2 weeks they did the designs and developed our website without anny issue! we were truly impressed by the quality of the service!",
     },
     {
       id: 3,
       img: "https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
-      name: "Max Q.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis.",
+      name: "xxx",
+      title: "Zmartly",
+      info: "hugo fill",
     },
     {
       id: 4,
       img: "https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
-      name: "Jeff R.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam aspernatur esse corporis!",
+      name: "xxx",
+      title: "WeebExpress",
+      info: "I asked them to develop for me an automation tool for my business, and it went extremly smootlhy!",
     },
     {
       id: 5,
       img: "https://images.unsplash.com/photo-1625504615927-c14f4f309b63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80",
-      name: "Kevin K.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit!",
+      name: "xxx",
+      title: "Vanguard",
+      info: "I worked with innovation Studios multiple times, They did an amazing job!",
     },
     {
       id: 6,
       img: "https://images.unsplash.com/photo-1589729132389-8f0e0b55b91e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      name: "Andrea B.",
-      title: "Founder of XYZ",
-      info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere!",
+      name: "Emmanuel k.",
+      title: "Software Engineer at JP Morgan",
+      info: "Working with innovation studios allowed me to get practical experience during my studies and crush my interview!",
     },
   ],
   bottom: [
