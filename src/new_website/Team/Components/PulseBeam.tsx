@@ -120,15 +120,16 @@ export const SVGs = () => {
         d="M310 220.5H21.5C10.9772 220.5 6.5 224.977 6.5 230.5V398.5"
         stroke="var(--teal-800)"
       />
+     
       <path
-        d="M530 200H841C846.523 200 851 195.523 851 190V40"
+        d="M548 220.5H836.5C847.0228 220.5 851.5 224.977 851.5 230.5V398.5"
         stroke="var(--teal-800)"
       />
+      
       <path
-     
-        d="M425.5 262V328C425.5 333.523 421.023 338 415.5 338H152C146.477 338 142 342.477 142 348V421.5"
-        stroke="var(--slate-800)"
-      />
+  d="M400.5 262V328C400.5 333.523 396.023 338 390.5 338H127C121.477 338 117 342.477 117 348V421.5"
+  stroke="var(--teal-800)"
+/>
       <path
         d="M493 262V333.226C493 338.749 497.477 343.226 503 343.226H760C765.523 343.226 770 347.703 770 353.226V427"
         stroke="var(--teal-800)"
@@ -147,13 +148,9 @@ export const SVGs = () => {
         stroke="url(#grad1)"
         strokeWidth="2" // Increased stroke-width
       />
+      
       <path
-        d="M568 200H841C846.523 200 851 195.523 851 190V40"
-        stroke="url(#grad2)"
-        strokeWidth="2" // Increased stroke-width
-      />
-      <path
-        d="M425.5 262V328C425.5 333.523 421.023 338 415.5 338H152C146.477 338 142 342.477 142 348V421.5"
+        d="M400.5 262V328C400.5 333.523 396.023 338 390.5 338H127C121.477 338 117 342.477 117 348V421.5"
         stroke="url(#grad3)"
         strokeWidth="2" // Increased stroke-width
       />
@@ -167,6 +164,11 @@ export const SVGs = () => {
         d="M429 220V10"  // Adjust the start point (x=429, y=220) according to your layout and desired beam length
         stroke="url(#grad5)" // Using grad1 for this example, but you can define a new gradient if desired
         strokeWidth="2" // Adjust as needed for visibility
+      />
+      <path
+        d="M548 220.5H836.5C847.0228 220.5 851.5 224.977 851.5 230.5V398.5"
+        stroke="url(#grad3)"
+        strokeWidth="2"
       />
 
       <defs>
@@ -251,13 +253,7 @@ export const SVGs = () => {
           <GradientColors />
         </motion.linearGradient>
       </defs>
-      <circle
-        cx="851"
-        cy="34"
-        r="6.5"
-        fill="var(--slate-700)"
-        stroke="var(--slate-600)"
-      />
+     
       <circle
         cx="770"
         cy="427"
@@ -266,7 +262,7 @@ export const SVGs = () => {
         stroke="var(--slate-600)"
       />
       <circle
-        cx="142"
+        cx="117"
         cy="427"
         r="6.5"
         fill="var(--slate-700)"
@@ -287,6 +283,13 @@ export const SVGs = () => {
         fill="var(--slate-700)"
         stroke="var(--slate-600) md:var(--slate-600)"
         className="lg:hidden " 
+      />
+      <circle
+        cx="851.5"
+        cy="398.5"
+        r="6.5"
+        fill="var(--slate-700)"
+        stroke="var(--slate-600)"
       />
     </svg>
   );
