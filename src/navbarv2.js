@@ -228,10 +228,10 @@ const Navbarv2 = () => {
             </button>
           ) : (
             <button
-              onClick={() => navigate("/signin")}
+              onClick={() => navigate("/bookcall")}
               className="rounded-md bg-teal-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
             >
-              Get Started{" "}
+              Discovery Call{" "}
               <span className="text-white" aria-hidden="true">
                 &rarr;
               </span>
@@ -325,10 +325,10 @@ const Navbarv2 = () => {
                   </button>
                 ) : (
                   <button
-                    onClick={() => navigate("/signin")}
+                    onClick={() => navigate("/bookcall")}
                     className="rounded-md bg-teal-800 w-full px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 font-alliance"
                   >
-                    Get Started{" "}
+                   Discovery Call{" "}
                     <span className="text-white" aria-hidden="true">
                       &rarr;
                     </span>
