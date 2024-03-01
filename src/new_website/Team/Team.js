@@ -15,6 +15,7 @@ import { MeteorsDemo } from './Meteors/meteorsdemo.js';
 import { BackgroundBeamsDemo } from './Components/bgbeam.js';
 import Cta from './Components/CTA.js';
 import Integrations from '../Past_Projects/Integrations/Integrations.jsx';
+import { PulseBeams } from './Components/PulseBeam.tsx';
 
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
@@ -30,6 +31,10 @@ const Team2 = () => {
     <div>
         <Navbarv2></Navbarv2>
         <Hero_Team></Hero_Team>
+        <div className='sm:mt-0 md:mt-96 lg:mt-20 flex justify-center items-center'>
+        <PulseBeams></PulseBeams>
+
+        </div>
         
         <div className='mt-0 md:mt-96'></div>
 

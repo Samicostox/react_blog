@@ -7,6 +7,7 @@ import ButtonWrapper3 from '../../Services/buttons/fillinginvert.js'
 import { MaxiBeam } from '../../Services/components/MaxiBeam'
 
 import EncryptButton from './encrypt_button.js'
+import { PulseBeams } from './PulseBeam.tsx'
 
 
 const navigation = [
@@ -59,6 +60,13 @@ const people = [
       designation: "University College London",
       image:
         "https://res.cloudinary.com/dl2adjye7/image/upload/v1708332131/4537088_tpkbdi.png",
+    },
+    {
+      id: 7,
+      name: "Innovation Studios",
+      designation: "Best Company",
+      image:
+        "https://res.cloudinary.com/dl2adjye7/image/upload/v1709211456/Untitled_design_8_ltp8rj.png",
     },
     
   ];
@@ -117,7 +125,7 @@ export default function Hero_Team() {
               <div className="mt-10 flex items-center justify-center gap-x-6 z-100">
               <div className=" z-50 flex justify-center">
         <div className="flex items-center justify-center gap-x-6">
-        <EncryptButton />
+        
         </div>
       </div>
               
@@ -128,10 +136,15 @@ export default function Hero_Team() {
 
             <div className="absolute inset-x-0 md:-mt-20 lg:-mt-24 z-0 flex justify-center">
             <MaxiBeam people={people} />
+            
       </div>
 
+      
+
           </div>
+          
         </div>
+        
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"
@@ -144,7 +157,9 @@ export default function Hero_Team() {
             }}
           />
         </div>
+        
       </div>
+      
     </div>
   )
 }
