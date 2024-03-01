@@ -35,7 +35,7 @@ const Services = () => {
   
 
   return (
-    <div>
+    <div className='overflow-x-hidden'>
         <Navbarv2></Navbarv2>
         <Hero_Service></Hero_Service>
         <div className='mt-0 md:mt-96'>

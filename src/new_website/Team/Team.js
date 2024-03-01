@@ -28,7 +28,7 @@ const Team2 = () => {
   
 
   return (
-    <div>
+    <div className='overflow-x-hidden'>
         <Navbarv2></Navbarv2>
         <Hero_Team></Hero_Team>
         <div className='sm:mt-0 md:mt-96 lg:mt-20 flex justify-center items-center'>

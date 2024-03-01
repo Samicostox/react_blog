@@ -19,7 +19,7 @@ const PastProjects2 = () => {
   
 
   return (
-    <div>
+    <div className='overflow-x-hidden'>
         <Navbarv2></Navbarv2>
         
       {/* Call the HeroParallaxDemo component and pass the products data */}
