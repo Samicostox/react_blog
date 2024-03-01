@@ -78,6 +78,20 @@ const grad5 = {
     y1: ["0%", "0%", "180%"],
     y2: ["20%", "20%", "200%"],
   },
+  
+};
+const grad6 = {
+  initial: {
+    x1: "0%",
+    x2: "0%",
+    y1: "100%", // Start from the bottom
+    y2: "0%",   // To the top
+  },
+  animate: {
+    x1: ["0%", "0%", "0%"],  // x positions remain constant for a vertical line
+    y1: ["100%", "50%", "0%"], // y positions create the animation flow from bottom to top
+    y2: ["0%", "50%", "100%"], // Inverse of y1 for a dynamic effect
+  },
 };
 export const PulseBeams = () => {
   useEffect(() => {
@@ -162,8 +176,8 @@ export const SVGs = () => {
       
       <path
         d="M429 220V10"  // Adjust the start point (x=429, y=220) according to your layout and desired beam length
-        stroke="url(#grad5)" // Using grad1 for this example, but you can define a new gradient if desired
-        strokeWidth="2" // Adjust as needed for visibility
+        stroke="url(#grad1)"// Using grad1 for this example, but you can define a new gradient if desired
+        strokeWidth="" // Adjust as needed for visibility
       />
       <path
         d="M548 220.5H836.5C847.0228 220.5 851.5 224.977 851.5 230.5V398.5"
@@ -186,6 +200,8 @@ export const SVGs = () => {
           }}
           id="grad5"
         >
+          
+          
           <GradientColors />
         </motion.linearGradient>
         <motion.linearGradient
@@ -202,6 +218,22 @@ export const SVGs = () => {
           }}
           id="grad1"
         >
+           <motion.linearGradient
+          variants={grad6}
+          animate="animate"
+          initial="initial"
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+            repeatDelay: 2,
+            delay: Math.random() * 2, // Randomize start for a dynamic effect
+          }}
+          id="grad6"
+        >
+          <GradientColors />
+        </motion.linearGradient>
           <GradientColors />
         </motion.linearGradient>
         <motion.linearGradient
