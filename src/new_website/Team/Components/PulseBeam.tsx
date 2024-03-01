@@ -1,6 +1,10 @@
 "use client";
 
-import React from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
+
+
 import { motion } from "framer-motion";
 
 
@@ -76,8 +80,14 @@ const grad5 = {
   },
 };
 export const PulseBeams = () => {
+  useEffect(() => {
+    AOS.init({
+      // settings here
+      duration: 1000, // Global animation duration
+    });
+  }, []);
   return (
-    <div className="flex h-[20rem] w-[1300px] relative items-center justify-center antialiased bg-transparent overflow-hidden">
+    <div className="flex h-[20rem] w-[1300px] relative items-center justify-center antialiased bg-transparent overflow-hidden "data-aos="fade-up">
       <button className="bg-slate-800 hover:bg-teal-900 w-[160px] z-40 h-[60px] no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-lg p-px text-xs font-semibold leading-6 text-white inline-block transition-colors duration-300">
         <span className="absolute inset-0 overflow-hidden rounded-mg ">
           <span className="absolute inset-0 rounded-lg bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
