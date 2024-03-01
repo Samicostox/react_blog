@@ -19,6 +19,8 @@ export function BentoGridDemo() {
     const [forthAnimationData, setforthAnimationData] = useState(null);
     const [fifthAnimationData, setfifthAnimationData] = useState(null);
     const [sixthAnimationData, setsixthAnimationData] = useState(null);
+    const [sevenAnimationData, setsevenAnimationData] = useState(null);
+    const [heightAnimationData, setheightAnimationData] = useState(null);
     useEffect(() => {
         fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708265899/Animation_-_1708265878925_sllzpd.json')
           .then(response => response.json())
@@ -43,6 +45,14 @@ export function BentoGridDemo() {
           fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1708267496/Animation_-_1708267425533_bgiqqy.json') // Fetching the second animation
           .then(response => response.json())
           .then(data => setsixthAnimationData(data));
+
+          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1709290014/Animation_-_1709289854042_p6d6c1.json') // Fetching the second animation
+          .then(response => response.json())
+          .then(data => setsevenAnimationData(data));
+
+          fetch('https://res.cloudinary.com/dl2adjye7/raw/upload/v1709290617/Animation_-_1709290452915_iiyqyu.json') // Fetching the second animation
+          .then(response => response.json())
+          .then(data => setheightAnimationData(data));
       }, []);
 
       const defaultOptions = (animationData, alignLeft = false) => ({
@@ -74,7 +84,7 @@ export function BentoGridDemo() {
           icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
         },
         {
-            title: "Data Engineering & Science",
+            title: "Data Engineering & Analytics",
             description: "Understand the impact of effective communication in our lives.",
             header: sixthAnimationData ? <Lottie options={defaultOptions(sixthAnimationData)} height={300} width={350} /> : <Skeleton />,
             icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
@@ -83,6 +93,18 @@ export function BentoGridDemo() {
           title: "AI & Machine Learning",
           description: "Join the quest for understanding and enlightenment.",
           header: thirdAnimationData ? <Lottie options={defaultOptions(thirdAnimationData)} height={200} width={200} /> : <Skeleton />,
+          icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+        },
+        {
+          title: "Automation Solutions",
+          description: "Join the quest for understanding and enlightenment.",
+          header: heightAnimationData ? <Lottie options={defaultOptions(heightAnimationData)} height={400} width={300} /> : <Skeleton />,
+          icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+        },
+        {
+          title: "Research & Development (R&D)",
+          description: "Join the quest for understanding and enlightenment.",
+          header: sevenAnimationData ? <Lottie options={defaultOptions(sevenAnimationData)} height={300} width={350} /> : <Skeleton />,
           icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
         },
         
