@@ -36,7 +36,7 @@ const Team2 = () => {
 
         </div>
         
-        <div className='mt-0 md:mt-96'></div>
+        <div className='mt-6 md:mt-20'></div>
 
         <div className="bg-slate-900">
 

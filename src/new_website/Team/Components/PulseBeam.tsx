@@ -82,8 +82,8 @@ export const PulseBeams = () => {
         <span className="absolute inset-0 overflow-hidden rounded-mg ">
           <span className="absolute inset-0 rounded-lg bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
         </span>
-        <div className="relative flex justify-center w-[160px] text-center space-x-2 h-[60px] items-center z-10 rounded-lg bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10  hover:bg-teal-900">
-          <span className="sm:text-2xl text-lg inline-block bg-clip-text text-transparent bg-gradient-to-r from-neutral-300 via-gray-200 to-neutral-400">
+        <div className="relative flex justify-center w-[160px] text-center space-x-2 h-[60px] items-center z-10 rounded-lg bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10  hover:bg-teal-900 font-alliance">
+          <span className="sm:text-2xl text-lg inline-block bg-clip-text text-transparent bg-gradient-to-r from-neutral-300 via-gray-200 to-neutral-400 font-alliance">
             Apply Now
           </span>
         </div>
