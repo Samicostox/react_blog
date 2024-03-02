@@ -16,6 +16,7 @@ import { BackgroundBeamsDemo } from './Components/bgbeam.js';
 import Cta from './Components/CTA.js';
 import Integrations from '../Past_Projects/Integrations/Integrations.jsx';
 import { PulseBeams } from './Components/PulseBeam.tsx';
+import GlassNavigation from '../Navbar/navbarv3.js';
 
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
@@ -29,8 +30,10 @@ const Team2 = () => {
 
   return (
     <div className='overflow-x-hidden'>
-        <Navbarv2></Navbarv2>
+        <GlassNavigation></GlassNavigation>
+        <div className='sm:mt-0 md:mt-20 '>
         <Hero_Team></Hero_Team>
+        </div>
         <div className='sm:mt-0 md:mt-96 lg:mt-20 flex justify-center items-center'>
         <PulseBeams></PulseBeams>
 
