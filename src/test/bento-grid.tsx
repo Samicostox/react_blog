@@ -3,6 +3,7 @@ import React from "react";
 import { FollowerPointerCard } from "./follwoing-pointer.tsx";
 import { motion } from 'framer-motion';
 import { BorderBeam } from "../new_website/Services/BorderBeam/border-beam.tsx";
+import { useNavigate } from "react-router-dom";
 
 
 export const BentoGrid = ({
@@ -30,19 +31,30 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  onClickPath,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
+  onClickPath?: string;
 }) => {
+  const navigate = useNavigate(); // Hook to navigate
+
+  // Function to handle click, navigating to the specified path
+  const handleClick = () => {
+    if (onClickPath) {
+      navigate(onClickPath);
+    }
+  };
   return (
     <div
       className={cn(
         "relative row-span-1 rounded-xl group hover:shadow-2xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-gray-200 dark:border-gray-700 justify-between flex flex-col space-y-4 hover:border-transparent",
         className
       )}
+      onClick={handleClick}
     >
       <div className="absolute inset-0 group-hover:opacity-100 opacity-0 transition-opacity duration-300 rounded-xl ">
         <BorderBeam

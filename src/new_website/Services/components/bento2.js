@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BentoGrid, BentoGridItem } from "../../../test/bento-grid.tsx";
 import Lottie from 'react-lottie';
+import { useNavigate } from 'react-router-dom';
+
 import {
   IconClipboardCopy,
   IconFileBroken,
@@ -13,6 +15,7 @@ import {
 import { BorderBeam } from '../BorderBeam/border-beam.tsx';
 
 export function BentoGridDemo() {
+    const navigate = useNavigate();
     const [animationData, setAnimationData] = useState(null);
     const [secondAnimationData, setSecondAnimationData] = useState(null); // New state for the second animation
     const [thirdAnimationData, setthirdAnimationData] = useState(null); // New state for the second animation
@@ -129,6 +132,7 @@ export function BentoGridDemo() {
       
         <BentoGrid className="max-w-6xl mx-auto">
           
+          
             {items.map((item, i) => (
                 <BentoGridItem
                     key={i}
@@ -136,7 +140,10 @@ export function BentoGridDemo() {
                     description={item.description}
                     header={item.header}
                     icon={item.icon}
-                    className={`${i === 3 || i === 6 ? "md:col-span-2" : ""} shadow-lg`}
+                    onClickPath="/contact2"
+                    className={`${i === 3 || i === 6 ? "md:col-span-2" : ""} shadow-lg cursor-pointer`}
+              
+                    
                 />
             ))}
 

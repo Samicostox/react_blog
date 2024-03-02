@@ -16,6 +16,7 @@ import ExampleShimmer from './components/shipperboard';
 import { BorderBeam } from './BorderBeam/border-beam.tsx';
 import { FollowingPointerDemo } from '../../test/pointer.js';
 import Process from './components/process.js';
+import { FollowerPointerCard } from '../../test/follwoing-pointer.tsx';
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
 
@@ -40,6 +41,7 @@ const Services = () => {
         <Hero_Service></Hero_Service>
         <div className='mt-0 md:mt-96'>
         <ScrollingTestimonials></ScrollingTestimonials>
+        
         </div>
 
         <div className='mt-20'>
@@ -65,8 +67,9 @@ const Services = () => {
       </div>
 
       <div className='mt-20'>
-        
+      
         <BentoGridDemo></BentoGridDemo>
+      
         <img src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708272146/Untitled_300_x_1080_px_nbtb5k.png" alt="Downward Arrow" className="mx-auto h-96 w-100" />
 
         
