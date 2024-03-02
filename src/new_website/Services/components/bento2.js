@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BentoGrid, BentoGridItem } from "../../../test/bento-grid.tsx";
 import Lottie from 'react-lottie';
 import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import {
   IconClipboardCopy,
@@ -113,6 +115,12 @@ export function BentoGridDemo() {
         
        
       ];
+      useEffect(() => {
+        AOS.init({
+          // settings here
+          duration: 1000, // Global animation duration
+        });
+      }, []);
 
     return (
       <div>
@@ -130,7 +138,7 @@ export function BentoGridDemo() {
         </div>
 
       
-        <BentoGrid className="max-w-6xl mx-auto">
+        <BentoGrid className="max-w-6xl mx-auto" >
           
           
             {items.map((item, i) => (
@@ -141,7 +149,7 @@ export function BentoGridDemo() {
                     header={item.header}
                     icon={item.icon}
                     onClickPath="/contact2"
-                    className={`${i === 3 || i === 6 ? "md:col-span-2" : ""} shadow-lg cursor-pointer`}
+                    className= {`${i === 3 || i === 6 ? "md:col-span-2" : ""} shadow-lg cursor-pointer ` } 
               
                     
                 />

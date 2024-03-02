@@ -4,6 +4,8 @@ import { FollowerPointerCard } from "./follwoing-pointer.tsx";
 import { motion } from 'framer-motion';
 import { BorderBeam } from "../new_website/Services/BorderBeam/border-beam.tsx";
 import { useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export const BentoGrid = ({
@@ -40,7 +42,11 @@ export const BentoGridItem = ({
   icon?: React.ReactNode;
   onClickPath?: string;
 }) => {
-  const navigate = useNavigate(); // Hook to navigate
+  const navigate = useNavigate(); 
+  React.useEffect(() => {
+    AOS.init(); // Initialize AOS on component mount
+  }, []);
+// Hook to navigate
 
   // Function to handle click, navigating to the specified path
   const handleClick = () => {
@@ -55,6 +61,7 @@ export const BentoGridItem = ({
         className
       )}
       onClick={handleClick}
+      data-aos="zoom-in-up"
     >
       <div className="absolute inset-0 group-hover:opacity-100 opacity-0 transition-opacity duration-300 rounded-xl ">
         <BorderBeam
