@@ -101,7 +101,7 @@ export const PulseBeams = () => {
     });
   }, []);
   return (
-    <div className="flex h-[20rem] w-[1300px] relative items-center justify-center antialiased bg-transparent overflow-hidden "data-aos="fade-up">
+    <div className="flex sm:h-[20rem] h-[10rem] w-[1300px] relative items-center justify-center antialiased bg-transparent overflow-hidden "data-aos="fade-up">
       <button className="bg-slate-800 hover:bg-teal-900 w-[160px] z-40 h-[60px] no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-lg p-px text-xs font-semibold leading-6 text-white inline-block transition-colors duration-300">
         <span className="absolute inset-0 overflow-hidden rounded-mg ">
           <span className="absolute inset-0 rounded-lg bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -130,28 +130,34 @@ export const SVGs = () => {
       xmlns="http://www.w3.org/2000/svg"
       className="flex flex-shrink-0 sm:w-400 md:w-600"
     >
+     
       <path
         d="M310 220.5H21.5C10.9772 220.5 6.5 224.977 6.5 230.5V398.5"
         stroke="var(--teal-800)"
+        className='hidden sm:block'
       />
      
       <path
         d="M548 220.5H836.5C847.0228 220.5 851.5 224.977 851.5 230.5V398.5"
         stroke="var(--teal-800)"
+        className='hidden sm:block'
       />
       
       <path
   d="M400.5 262V328C400.5 333.523 396.023 338 390.5 338H127C121.477 338 117 342.477 117 348V421.5"
   stroke="var(--teal-800)"
+  className='hidden sm:block'
 />
       <path
         d="M493 262V333.226C493 338.749 497.477 343.226 503 343.226H760C765.523 343.226 770 347.703 770 353.226V427"
         stroke="var(--teal-800)"
+        className='hidden sm:block'
       />
      
        <path
          d="M429 220V12"
         stroke="var(--teal-800)"
+        className='hidden sm:block'
       />
       
 
@@ -161,29 +167,35 @@ export const SVGs = () => {
         d="M269 220.5H16.5C10.9772 220.5 6.5 224.977 6.5 230.5V398.5"
         stroke="url(#grad1)"
         strokeWidth="2" // Increased stroke-width
+        className='hidden sm:block'
       />
       
       <path
         d="M400.5 262V328C400.5 333.523 396.023 338 390.5 338H127C121.477 338 117 342.477 117 348V421.5"
         stroke="url(#grad3)"
         strokeWidth="2" // Increased stroke-width
+        className='hidden sm:block'
       />
       <path
         d="M493 262V333.226C493 338.749 497.477 343.226 503 343.226H760C765.523 343.226 770 347.703 770 353.226V427"
         stroke="url(#grad4)"
         strokeWidth="2" // Increased stroke-width
+        className='hidden sm:block'
       />
       
       <path
         d="M429 220V10"  // Adjust the start point (x=429, y=220) according to your layout and desired beam length
         stroke="url(#grad1)"// Using grad1 for this example, but you can define a new gradient if desired
-        strokeWidth="" // Adjust as needed for visibility
+        strokeWidth="2" // Adjust as needed for visibility
+        className='hidden sm:block'
       />
       <path
         d="M548 220.5H836.5C847.0228 220.5 851.5 224.977 851.5 230.5V398.5"
         stroke="url(#grad3)"
         strokeWidth="2"
+        className='hidden sm:block'
       />
+  
 
       <defs>
         <motion.linearGradient
@@ -292,6 +304,7 @@ export const SVGs = () => {
         r="6.5"
         fill="var(--slate-700)"
         stroke="var(--slate-600)"
+        className='hidden sm:block'
       />
       <circle
         cx="117"
@@ -299,6 +312,7 @@ export const SVGs = () => {
         r="6.5"
         fill="var(--slate-700)"
         stroke="var(--slate-600)"
+        className='hidden sm:block'
       />
       <circle
         cx="6.5"
@@ -306,6 +320,7 @@ export const SVGs = () => {
         r="6"
         fill="var(--slate-700)"
         stroke="var(--slate-600)"
+        className='hidden sm:block'
       />
       
       <circle
@@ -314,7 +329,7 @@ export const SVGs = () => {
         r="6"
         fill="var(--slate-700)"
         stroke="var(--slate-600) md:var(--slate-600)"
-        className="lg:hidden " 
+        className="lg:hidden hidden sm:block" 
       />
       <circle
         cx="851.5"
@@ -322,6 +337,7 @@ export const SVGs = () => {
         r="6.5"
         fill="var(--slate-700)"
         stroke="var(--slate-600)"
+        className='hidden sm:block'
       />
     </svg>
   );
