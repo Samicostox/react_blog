@@ -83,20 +83,35 @@ const Tab = ({ selected, Icon, title, setSelected, tabNum }) => {
 };
 
 const ExampleFeature = ({ Icon }) => (
-  <div className="w-full px-0 py-8 md:px-8 ">
+  <div className="w-full px-0 py-8 md:px-8 relative ">
     <div className="relative h-96 w-full rounded-xl bg-slate-800 shadow-xl">
       <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
       </div>
-      <div className="space-y-2 p-2">
-        <p className="font-mono text-xl text-teal-500 text-left ">
+      <div className="space-y-2 p-2 z-20 relative">
+        <p className="font-mono text-2xl sm:text-3xl text-teal-500 text-left ">
           <span className="text-green-300 text-left">~</span> 1. Understanding your Idea! 🚀
         </p>
+        <p className="font-mono text-md text-slate-200 text-left">
+            <span className="text-green-300 text-left"></span> In the Discovery Phase, we'll embark on a journey to deeply understand your vision and goals. It's all about ensuring a perfect synergy between your project and our expertise. The following roadmap is to be expected:
+          </p>
+        <p className="font-mono text-xl text-slate-200 text-left">
+            <span className="text-green-300 text-left">~</span> 1.1 Discovery Meeting 🕵
+          </p>
+         
+          <p className="font-mono text-xl text-slate-200 text-left">
+            <span className="text-green-300 text-left">~</span> 1.2 Scope Definition 🔬
+          </p>
+          
+          <p className="font-mono text-xl text-slate-200 text-left">
+            <span className="text-green-300 text-left">~</span> 1.3 Creating the Team 💪🏼
+          </p>
+          
       </div>
 
-      <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700">
+      <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700 z-10">
         <Icon />
       </span>
     </div>
@@ -104,26 +119,32 @@ const ExampleFeature = ({ Icon }) => (
 );
 
 const ExampleFeature2 = ({ Icon }) => (
-    <div className="w-full px-0 py-8 md:px-8 ">
+    <div className="w-full px-0 py-8 md:px-8 relative">
       <div className="relative h-96 w-full rounded-xl bg-slate-800 shadow-xl">
         <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
           <div className="h-3 w-3 rounded-full bg-red-500" />
           <div className="h-3 w-3 rounded-full bg-yellow-500" />
           <div className="h-3 w-3 rounded-full bg-green-500" />
         </div>
-        <div className="space-y-2 p-2">
-          <p className="font-mono text-xl text-teal-500 text-left">
+        <div className="space-y-2 p-2 relative z-20">
+          <p className="font-mono text-2xl sm:text-3xl text-teal-500 text-left">
             <span className="text-green-300 text-left">~</span> 2. Working together! 👨‍💻
           </p>
           <p className="font-mono text-md text-slate-200 text-left">
-            <span className="text-green-300 text-left"></span> Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+            <span className="text-green-300 text-left"></span> Our collaboration takes shape in the Working Together phase. From laying the groundwork with meticulous planning to the hands-on development and iterative testing, we're in this together every step of the way. The following roadmap is to be expected:
           </p>
-          <p className="font-mono text-lg text-slate-200 text-left">
-            <span className="text-green-300 text-left">~</span> 2.1 UI/UX design 🖌️
+          <p className="font-mono text-xl text-slate-200 text-left">
+            <span className="text-green-300 text-left">~</span> 2.1 Project Planning 📋
           </p>
-          <p className="font-mono text-md text-slate-200 text-left">
-            <span className="text-green-300 text-left"></span> Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+         
+          <p className="font-mono text-xl text-slate-200 text-left">
+            <span className="text-green-300 text-left">~</span> 2.2 Project Development 🛠️
           </p>
+          
+          <p className="font-mono text-xl text-slate-200 text-left">
+            <span className="text-green-300 text-left">~</span> 2.3 Testing 📝
+          </p>
+          
         </div>
   
         <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700">
@@ -134,16 +155,26 @@ const ExampleFeature2 = ({ Icon }) => (
   );
 
   const ExampleFeature3 = ({ Icon }) => (
-    <div className="w-full px-0 py-8 md:px-8 ">
+    <div className="w-full px-0 py-8 md:px-8 relative ">
       <div className="relative h-96 w-full rounded-xl bg-slate-800 shadow-xl">
         <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
           <div className="h-3 w-3 rounded-full bg-red-500" />
           <div className="h-3 w-3 rounded-full bg-yellow-500" />
           <div className="h-3 w-3 rounded-full bg-green-500" />
         </div>
-        <div className="space-y-2 p-2">
-          <p className="font-mono text-xl text-teal-500 text-left">
-            <span className="text-green-300 text-left">~</span> 3. Bringing your Idea to Life! 📦
+        <div className="space-y-2 p-2 relative z-10">
+          <p className="font-mono text-2xl sm:text-3xl text-teal-500 text-left">
+            <span className="text-green-300 text-left">~</span> 3. Delivery! 📦
+          </p>
+          <p className="font-mono text-md text-slate-200 text-left">
+            <span className="text-green-300 text-left"></span> The grand finale, the Delivery phase, is where we cross the finish line. But it's not a goodbye; it's the beginning of a new chapter where your project thrives, supported by our continued assistance. The following roadmap is to be expected:
+          </p>
+          <p className="font-mono text-xl text-slate-200 text-left">
+            <span className="text-green-300 text-left">~</span> 3.1 Handover 🤝
+          </p>
+         
+          <p className="font-mono text-xl text-slate-200 text-left">
+            <span className="text-green-300 text-left">~</span> 3.2 Maintenance ⚙️
           </p>
         </div>
   
@@ -158,17 +189,17 @@ export default Process;
 
 const FEATURES = [
   {
-    title: "We Explore your project and if we are a good fit",
+    title: "Understanding your Idea! 🚀",
     Icon: FiSearch,
     Feature: () => <ExampleFeature Icon={FiSearch} />,
   },
   {
-    title: "We start working together if the fit is here!",
+    title: "2. Working together! 👨‍💻",
     Icon: FiSave,
     Feature: () => <ExampleFeature2 Icon={FiSave} />,
   },
   {
-    title: "We deliver you your project!!! and you become rich",
+    title: "3. Delivery! 📦",
     Icon: FiMonitor,
     Feature: () => <ExampleFeature3 Icon={FiMonitor} />,
   },

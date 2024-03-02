@@ -15,7 +15,7 @@ export default function Cta() {
             {/* CTA content */}
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left">
               <h3 className="text-4xl font-bold font-alliance mb-2 text-white">Get started with Innovation Studios</h3>
-              <p className="text-slate-900 font-alliance">It only takes a few minutes to get started with Innovation Studios. Understand your users, start free, today.</p>
+              <p className="text-slate-900 font-alliance">Contact Us to bring your ideas to life and don't forget to book a free discovery meeting with us!</p>
             </div>
             {/* CTA button */}
             <div className="shrink-0">
