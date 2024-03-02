@@ -2,13 +2,14 @@ import {
     InboxIcon,
     TrashIcon,
     UsersIcon,
-    MapIcon,
-    DevicePhoneMobileIcon,
-    ComputerDesktopIcon,
-    CircleStackIcon,
-    PresentationChartBarIcon,
-    MagnifyingGlassIcon,
+    CheckIcon,
+    AcademicCapIcon,
+    BanknotesIcon,
+    CheckBadgeIcon,
+    ReceiptRefundIcon,
+    ClockIcon,
   } from "@heroicons/react/24/outline";
+ 
 import { Meteors } from "../Meteors/meteors.tsx";
 import { useRef, useEffect } from "react";
 
@@ -62,58 +63,58 @@ import 'aos/dist/aos.css';
   
   const actions = [
     {
-      title: "Mobile Development",
-      href: "/service-mobile",
-      icon: DevicePhoneMobileIcon,
+      title: "Experience",
+      href: "/#contact2",
+      icon: ClockIcon,
       iconForeground: "text-teal-700",
       iconBackground: "bg-teal-50",
       text:
-        "Dive into the mobile-centric world with our top-tier mobile app solutions. From idea to launch, our team ensures your app not only looks great but also resonates with your target audience for maximum engagement.",
+        "Engage in real-world applications that enhance academic knowledge while navigating through practical challenges and projects.",
     },
     {
-      title: "Web Development",
-      href: "/service-web",
-      icon: ComputerDesktopIcon,
+      title: "Training",
+      href: "/#contact2",
+      icon: CheckBadgeIcon,
       iconForeground: "text-purple-700",
       iconBackground: "bg-purple-50",
       text:
-        "Elevate your online presence with our bespoke web development services. We craft beautiful, user-friendly websites that captivate and convert, ensuring your brand stands out in the digital landscape.",
+        "Benefit from comprehensive training modules, ensuring you acquire vital professional skills and industry-relevant expertise.",
     },
     {
-      title: "Data Science",
-      href: "/service-data",
-      icon: CircleStackIcon,
+      title: "Support",
+      href: "/#contact2",
+      icon: UsersIcon,
       iconForeground: "text-sky-700",
       iconBackground: "bg-sky-50",
       text:
-        "Unlock the power of your data with our cutting-edge data science services. We transform raw data into actionable insights, helping you make informed decisions and stay ahead in your industry.",
+        "Enjoy a robust support system where your ideas are valued and your challenges are addressed through consistent mentorship and resources.",
     },
     {
-      title: "Business Plan",
-      href: "/service-businessplan",
-      icon: MapIcon,
+      title: "Compensation",
+      href: "/#contact2",
+      icon: BanknotesIcon,
       iconForeground: "text-yellow-700",
       iconBackground: "bg-yellow-50",
       text:
-        "Future-proof your business with our expert strategic planning. We dive deep into market analytics and trends to craft strategies that position you for lasting success and growth.",
+        "Earn competitive compensation, providing financial support during your educational journey and potentially easing student loan burdens.",
     },
     {
-      title: "Strategies",
-      href: "/service-strategy",
-      icon: PresentationChartBarIcon,
+      title: "Career",
+      href: "/#contact2",
+      icon: ReceiptRefundIcon,
       iconForeground: "text-rose-700",
       iconBackground: "bg-rose-50",
       text:
-        "Stay ahead of the curve with our comprehensive benchmarking services. We will help you gauge where you stand in the market, unveiling opportunities and strategies to outperform competitors and set industry standards.",
+        "Establish a strong career foundation by connecting with industry professionals and gaining insights into your future professional pathway.",
     },
     {
-      title: "Benchmarking",
-      href: "/service-benchmarking",
-      icon: MagnifyingGlassIcon,
+      title: "Community",
+      href: "/#contact2",
+      icon: AcademicCapIcon,
       iconForeground: "text-indigo-700",
       iconBackground: "bg-indigo-50",
       text:
-        "Turn your vision into a tangible roadmap with our tailored business plan services. Whether you are a startup or an established entity, our team crafts plans that attract investors and steer your business towards unparalleled success.",
+        "Be part of a vibrant community where networking, collaborative learning, and social interactions pave the way for lifelong friendships and professional connections.",
     },
   ];
   function classNames(...classes) {
