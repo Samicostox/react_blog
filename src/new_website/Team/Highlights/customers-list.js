@@ -124,14 +124,14 @@ export default function CustomersList() {
         <div className="flex flex-col items-center justify-center text-center p-4">
           <p className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-3">
             <span className="line-clamp-4 text-white">
-              “We struggled to bring all our conversations into one place until we found Stellar. The UI is very clean and we love the integration with Spark.”
+              “One of my best decision was to join innovation studios! It was a huge workload but I managed to gain so much experience thanks to them!”
             </span>
           </p>
           <div className="inline-flex mb-2">
-            <img className="rounded-full" src={CustomerAvatar02} width="32" height="32" alt="Customer Avatar 02" />
+            <img className="rounded-full" src="https://res.cloudinary.com/dl2adjye7/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1699613520/website-images/photo-elliot.jpg" width="32" height="32" alt="Customer Avatar 02" />
           </div>
           <div className="text-sm font-medium text-slate-300">
-            Mirko Mitt <span className="text-slate-700">-</span> Mildrink
+            Elliot Teissandier <span className="text-slate-700">-</span> UOW
           </div>
         </div>
       </Highlighter>

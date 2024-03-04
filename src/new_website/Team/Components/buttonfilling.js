@@ -1,5 +1,6 @@
 import { FiLogIn } from "react-icons/fi";
 import React from 'react';
+import { PopupButton } from '@typeform/embed-react';
 
 const ButtonWrapper4 = () => {
   return (
@@ -11,7 +12,7 @@ const ButtonWrapper4 = () => {
 
 const RoundedSlideButton = () => {
   return (
-    <button
+    <PopupButton id="LAVPtHED"
       className={`
         relative z-0 inline-flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
         border-teal-300 px-4 py-2 font-semibold
@@ -34,7 +35,7 @@ const RoundedSlideButton = () => {
       <span className="text-white" aria-hidden="true">
         &rarr;
       </span>
-    </button>
+    </PopupButton>
   );
 };
 

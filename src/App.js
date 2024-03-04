@@ -106,7 +106,7 @@ function App() {
 
             <Route path="/past-projects2" element={<PastProjects2 />} />
             <Route path="/services2" element={<Services />} />
-            <Route path="/team2" element={<Team2 />} />
+            <Route path="/recruitment" element={<Team2 />} />
             <Route path="/contact5" element={<ShiftingContactForm />} />
             <Route path="/service" element={<Service />} />
             <Route path="/BookCall" element={<BookCall />} />

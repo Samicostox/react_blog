@@ -4,6 +4,7 @@ import React from 'react';
 import Navbarv2 from '../../navbarv2';
 
 import Footer from '../../website/footer';
+import { Helmet } from 'react-helmet';
 
 
 import Hero_Team from './Components/Hero_Team.js';
@@ -30,8 +31,17 @@ const Team2 = () => {
 
   return (
     <div className='overflow-x-hidden'>
-        <GlassNavigation></GlassNavigation>
-        <div className='sm:mt-0 md:mt-20 '>
+      <Helmet>
+        <title>#1 UK Student Pool To Work On Your Projects</title>
+        <meta
+          name="description"
+          content="Empowering innovation with software development, data engineering, and R&D at Innovation Studios. Transform your ideas into reality."
+        />
+      </Helmet>
+
+      
+        <Navbarv2></Navbarv2>
+        <div className='sm:mt-0 md:mt-0 '>
         <Hero_Team></Hero_Team>
         </div>
         <div className='sm:mt-0 md:mt-96 lg:mt-20 flex justify-center items-center'>

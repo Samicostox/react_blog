@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
 import ButtonWrapper4 from './buttonfilling';
+import { PopupButton } from '@typeform/embed-react';
 
 export default function Cta() {
     useEffect(() => {
