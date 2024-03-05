@@ -3,8 +3,8 @@ import ButtonWrapper3 from '../Services/buttons/fillinginvert';
 
 const Contactcl = () => {
     const [formData, setFormData] = useState({
-        first_name: "",
-        last_name: "",
+        first_name: "a",
+        last_name: "a",
         email: "",
         company: "",
         phone: "",
@@ -117,8 +117,8 @@ const Contactcl = () => {
                                     <div className="mt-2.5 relative">
                                     <input
                             type="text"
-                            name="full_name"
-                            placeholder="Enter your full name"
+                            name="first_name"
+                            placeholder="Enter your  name"
                             className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
                             onChange={handleChange}
                         />
