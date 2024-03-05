@@ -46,6 +46,7 @@ const Contactcl = () => {
             // Handle success
         } catch (error) {
             console.error('Failed to submit form:', error);
+      
             // Handle error
         }
     };
