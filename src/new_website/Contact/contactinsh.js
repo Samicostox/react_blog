@@ -23,7 +23,7 @@ const Contactcl = () => {
     // Submit form data to the server
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const apiUrl = process.env.REACT_APP_BACK_URL + "api/contact_submit/";
+        const apiUrl = process.env.REACT_APP_BACK_URL + "api/create_client/";
 
         try {
             const response = await fetch(apiUrl, {
