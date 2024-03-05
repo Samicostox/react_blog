@@ -10,9 +10,20 @@ const CalendlyWidget = () => {
     // Append script to the body
     document.body.appendChild(script);
 
+    const handleEventCompleted = (e) => {
+      if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+        // Redirect user
+        window.location.href = '/';
+      }
+    };
+
+    // Listen for messages from Calendly iframe
+    window.addEventListener('message', handleEventCompleted);
+
     // Clean up
     return () => {
       document.body.removeChild(script);
+      window.removeEventListener('message', handleEventCompleted);
     };
   }, []);
 
