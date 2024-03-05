@@ -9,7 +9,7 @@ const Contactcl = () => {
         company: "",
         phone: "",
         message: "",
-        budget: "",
+        budget: "10",
       });
 
       const handleChange = (event) => {
@@ -40,17 +40,17 @@ const Contactcl = () => {
 
             const result = await response.json();
             console.log(result);
-            // Handle success (e.g., show a success message or redirect)
+            // Handle success
         } catch (error) {
             console.error('Failed to submit form:', error);
-            // Handle error (e.g., show an error message)
+            // Handle error
         }
     };
     
   return (
     <section className="py-10 bg-gray-900 sm:py-16 lg:py-24">
     <div className="max-w-7xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:items-stretch md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10">
+        <div className="grid grid-cols-1 md:items-stretch md:grid-cols-[1.2fr,2fr] gap-x-12 lg:gap-x-20 gap-y-10">
             <div className="flex flex-col justify-between lg:py-5">
                 <div>
                     <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:leading-tight lg:text-5xl text-left font-alliance">It’s time to build something exciting!</h2>
@@ -110,32 +110,45 @@ const Contactcl = () => {
                         <h3 className="text-3xl font-semibold text-black text-left font-alliance">Get a free quote</h3>
                         <p className="mt-4 text-base text-gray-600 text-left font-alliance">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
 
-                        <form action="#" method="POST" className="mt-4">
+                        <form onSubmit={handleSubmit} className="mt-4">
                             <div className="space-y-6">
                                 <div>
                                 <label for="" className="font-medium text-gray-900 text-left font-alliance text-lg"> Your name </label>
                                     <div className="mt-2.5 relative">
-                                        <input
-                                            type="text"
-                                            name=""
-                                            id=""
-                                            placeholder="Enter your full name"
-                                            className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
-                                        />
+                                    <input
+                            type="text"
+                            name="full_name"
+                            placeholder="Enter your full name"
+                            className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
+                            onChange={handleChange}
+                        />
                                     </div>
                                    
                                 </div>
+                                <div>
+                                    <label for="" className="font-medium text-gray-900 text-left font-alliance text-lg"> Company Name </label>
+                                    <div className="mt-2.5 relative">
+                                    <input
+                            type="text"
+                            name="company"
+                            placeholder="Enter your company name"
+                            className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
+                            onChange={handleChange}
+                        />
+                                    </div>
+                                </div>
+                                
 
                                 <div>
                                     <label for="" className="font-medium text-gray-900 text-left font-alliance text-lg"> Email address </label>
                                     <div className="mt-2.5 relative">
-                                        <input
-                                            type="text"
-                                            name=""
-                                            id=""
-                                            placeholder="Enter your Email"
-                                            className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
-                                        />
+                                    <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
+                            onChange={handleChange}
+                        />
                                     </div>
                                 </div>
 
@@ -148,8 +161,9 @@ const Contactcl = () => {
                     id="phone"
                     placeholder="Enter your phone number"
                     className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    
                     title="Phone number format: 123-456-7890"
+                    onChange={handleChange}
                 />
             </div>
         </div>
@@ -157,14 +171,14 @@ const Contactcl = () => {
                                 <div>
                                     <label for="" className="text-base font-medium text-gray-900 text-left text-lg"> Project brief </label>
                                     <div className="mt-2.5 relative">
-                                        <textarea
-                                            name=""
-                                            id=""
-                                            placeholder="Enter your project brief"
-                                            className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
-                                            rows="4"
-                                        ></textarea>
-                                    </div>
+                        <textarea
+                            name="message"
+                            placeholder="Enter your project brief"
+                            className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
+                            rows="4"
+                            onChange={handleChange}
+                        ></textarea>
+                    </div>
                                 </div>
 
                                 <div>
