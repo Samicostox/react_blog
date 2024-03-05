@@ -123,9 +123,10 @@ const Contactcl = () => {
                                     <input
                             type="text"
                             name="first_name"
-                            placeholder="Enter your  name"
+                            placeholder="Enter your name"
                             className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
                             onChange={handleChange}
+                            required
                         />
                                     </div>
                                    
@@ -139,6 +140,7 @@ const Contactcl = () => {
                             placeholder="Enter your company name"
                             className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
                             onChange={handleChange}
+                            required
                         />
                                     </div>
                                 </div>
@@ -153,6 +155,7 @@ const Contactcl = () => {
                             placeholder="Enter your email"
                             className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
                             onChange={handleChange}
+                            required
                         />
                                     </div>
                                 </div>
@@ -182,6 +185,7 @@ const Contactcl = () => {
                             className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-teal-500 focus:border-teal-500 caret-teal-500"
                             rows="4"
                             onChange={handleChange}
+                            required
                         ></textarea>
                     </div>
                                 </div>
