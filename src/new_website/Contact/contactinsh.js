@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import ButtonWrapper3 from '../Services/buttons/fillinginvert';
+import Successclient from '../../modals/successclient';
 
 const Contactcl = () => {
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
     const [formData, setFormData] = useState({
         first_name: "a",
         last_name: "a",
@@ -40,6 +42,7 @@ const Contactcl = () => {
 
             const result = await response.json();
             console.log(result);
+            setShowSuccessModal(true);
             // Handle success
         } catch (error) {
             console.error('Failed to submit form:', error);
@@ -49,12 +52,13 @@ const Contactcl = () => {
     
   return (
     <section className="py-10 bg-gray-900 sm:py-16 lg:py-24">
+        <Successclient open={showSuccessModal} setOpen={setShowSuccessModal} />
     <div className="max-w-7xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:items-stretch md:grid-cols-[1.2fr,2fr] gap-x-12 lg:gap-x-20 gap-y-10">
             <div className="flex flex-col justify-between lg:py-5">
                 <div>
                     <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:leading-tight lg:text-5xl text-left font-alliance">It’s time to build something exciting!</h2>
-                    <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-white text-left font-alliance">#1 Trusted company to work with students in the uk! Stop dreaming about your project, make it come true! </p>
+                    <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-white text-left font-alliance">#1 Trusted company to work with students in the uk! Start Building Now! </p>
 
                     <img className="relative z-10 max-w-xs mx-auto -mb-16 md:hidden hidden" src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line-mobile.svg" alt="" />
 
