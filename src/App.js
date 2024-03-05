@@ -50,6 +50,7 @@ import Contactclient from "./new_website/Contact/contactclient";
 import ShiftingContactForm from "./new_website/Contact/contactclient2";
 import Service from "./new_website/Service/Service";
 import BookCall from "./new_website/bookcall/bookcall";
+import Contactpage from "./new_website/Contact/contactpage";
 
 
 
@@ -110,6 +111,8 @@ function App() {
             <Route path="/contact5" element={<ShiftingContactForm />} />
             <Route path="/service" element={<Service />} />
             <Route path="/BookCall" element={<BookCall />} />
+            <Route path="/Contactpage" element={<Contactpage />} />
+            
 
             
 

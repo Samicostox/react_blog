@@ -18,6 +18,8 @@ import Cta from './Components/CTA.js';
 import Integrations from '../Past_Projects/Integrations/Integrations.jsx';
 import { PulseBeams } from './Components/PulseBeam.tsx';
 import GlassNavigation from '../Navbar/navbarv3.js';
+import ContactSection from '../Contact/contact3.js';
+import Contactcl from '../Contact/contactinsh.js';
 
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
@@ -89,6 +91,7 @@ const Team2 = () => {
 
 
         <Cta></Cta>
+ 
 
 
 
