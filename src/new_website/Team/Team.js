@@ -20,6 +20,7 @@ import { PulseBeams } from './Components/PulseBeam.tsx';
 import GlassNavigation from '../Navbar/navbarv3.js';
 import ContactSection from '../Contact/contact3.js';
 import Contactcl from '../Contact/contactinsh.js';
+import BarPoll from './Components/survey.js';
 
 // Import the HeroParallaxDemo component
 // Make sure the path matches the location of your HeroParallaxDemo component file
@@ -87,6 +88,7 @@ const Team2 = () => {
         </div>
 
         <WorkwithusTeam></WorkwithusTeam>
+  
 
 
 
@@ -94,8 +96,8 @@ const Team2 = () => {
  
 
 
-
-
+        <BarPoll></BarPoll>
+      
   
 
         
