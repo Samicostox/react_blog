@@ -51,48 +51,48 @@ export default function WorkwithusTeam() {
                 onClick={(e) => { e.preventDefault(); setTab(1); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-inter-tight font-bold text-slate-900 font-alliance">1. Send You CV</div>
+                  <div className="font-inter-tight font-bold text-slate-900 font-alliance">1. Who Should Apply</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 1 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>
                 </div>
-                <div className="text-sm text-slate-900 font-alliance">Visually structure your designs and structure them easily.</div>
+                <div className="text-sm text-slate-900 font-alliance">You need to share our values and mission for you to apply.</div>
               </button>
               <button
                 className={`text-left px-4 py-5 border border-transparent rounded ${tab !== 2 ? 'bg-zinc-100 opacity-60 hover:opacity-100 transition' : '[background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.teal.300),theme(colors.teal.100),theme(colors.teal.300))_border-box] shadow-sm rotate-1'}`}
                 onClick={(e) => { e.preventDefault(); setTab(2); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-inter-tight font-bold text-slate-900 font-alliance">2. Interview</div>
+                  <div className="font-inter-tight font-bold text-slate-900 font-alliance">2. Get in Touch</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 2 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>
                 </div>
-                <div className="text-sm text-slate-900 font-alliance">Visually structure your designs and structure them easily.</div>
+                <div className="text-sm text-slate-900 font-alliance">Show us your motivation by contacting us through different platforms.</div>
               </button>
               <button
                 className={`text-left px-4 py-5 border border-transparent rounded ${tab !== 3 ? 'bg-zinc-100 opacity-60 hover:opacity-100 transition' : '[background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.teal.300),theme(colors.teal.100),theme(colors.teal.300))_border-box] shadow-sm rotate-1'}`}
                 onClick={(e) => { e.preventDefault(); setTab(3); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-inter-tight font-bold text-slate-900 font-alliance">3. Assesment</div>
+                  <div className="font-inter-tight font-bold text-slate-900 font-alliance">3. Process</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 3 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>
                 </div>
-                <div className="text-sm text-slate-900 font-alliance">Visually structure your designs and structure them easily.</div>
+                <div className="text-sm text-slate-900 font-alliance">You should expect the following process before joining us.</div>
               </button >
               <button
                 className={`text-left px-4 py-5 border border-transparent rounded ${tab !== 4 ? 'bg-zinc-100 opacity-60 hover:opacity-100 transition' : '[background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.teal.300),theme(colors.teal.100),theme(colors.teal.300))_border-box] shadow-sm rotate-1'}`}
                 onClick={(e) => { e.preventDefault(); setTab(4); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-inter-tight font-bold text-slate-900 font-alliance">4. Offer</div>
+                  <div className="font-inter-tight font-bold text-slate-900 font-alliance">4. Projects</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 4 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>
                 </div>
-                <div className="text-sm text-slate-900 font-alliance">Visually structure your designs and structure them easily.</div>
+                <div className="text-sm text-slate-900 font-alliance">A breakdown of what to expect when working with us.</div>
               </button >
             </div>
             {/* Tabs items */}
@@ -113,7 +113,7 @@ export default function WorkwithusTeam() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708367891/Send_Your_CV_zmbgg4.png" width={1000} height={700} alt="Feature 01" />
+                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1710504593/1_cdvr82.png" width={1000} height={700} alt="Feature 01" />
                
                   </div>
                 </Transition>
@@ -131,7 +131,7 @@ export default function WorkwithusTeam() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708365455/Untitled_design_2_wbtq06.png" width={1000} height={700} alt="Feature 02" />
+                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1710504593/2_fcyuqr.png" width={1000} height={700} alt="Feature 02" />
                    
                   </div>
                 </Transition>
@@ -149,7 +149,7 @@ export default function WorkwithusTeam() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708367891/Send_Your_CV_zmbgg4.png" width={1000} height={700} alt="Feature 03" />
+                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1710504593/3_jmktvq.png" width={1000} height={700} alt="Feature 03" />
 
                   </div>
                 </Transition>
@@ -167,7 +167,7 @@ export default function WorkwithusTeam() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1708365455/Untitled_design_2_wbtq06.png" width={1000} height={700} alt="Feature 04" />
+                    <img className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src="https://res.cloudinary.com/dl2adjye7/image/upload/v1710504593/4_cz6rwy.png" width={1000} height={700} alt="Feature 04" />
                
                   </div>
                 </Transition>
