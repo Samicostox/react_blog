@@ -43,6 +43,8 @@ const Team2 = () => {
       </Helmet>
 
       
+
+      
         <Navbarv2></Navbarv2>
         <div className='sm:mt-0 md:mt-0 '>
         <Hero_Team></Hero_Team>

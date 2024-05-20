@@ -111,10 +111,10 @@ const testimonials = {
   middle: [
     {
       id: 1,
-      img: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      name: "xxx",
-      title: "Sen Nood",
-      info: "hugo fill",
+      img: "https://res.cloudinary.com/dl2adjye7/image/upload/v1714420184/1698251861492_e4wiyn.jpg",
+      name: "Alexandre Buée",
+      title: "Head of Business Development",
+      info: "Working with Innovation Studios has enhanced my sales & marketing capabilities by negotiating over 20 deals through meetings and calls with clients.",
     },
     {
       id: 2,

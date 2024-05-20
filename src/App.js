@@ -51,6 +51,7 @@ import ShiftingContactForm from "./new_website/Contact/contactclient2";
 import Service from "./new_website/Service/Service";
 import BookCall from "./new_website/bookcall/bookcall";
 import Contactpage from "./new_website/Contact/contactpage";
+import ContactCruip from "./new_website/Contact/contactcruip";
 
 
 
@@ -112,6 +113,8 @@ function App() {
             <Route path="/service" element={<Service />} />
             <Route path="/BookCall" element={<BookCall />} />
             <Route path="/Contactpage" element={<Contactpage />} />
+            <Route path="/ContactCruip" element={<ContactCruip />} />
+            
             
 
             

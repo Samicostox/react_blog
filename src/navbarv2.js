@@ -13,8 +13,8 @@ import {
 } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Team", href: "/team" },
-  { name: "Past Projects", href: "/past-projects" },
+  { name: "Recruitment", href: "/recruitment" },
+  { name: "Past Projects", href: "/past-projects2" },
   { name: "Internal Tool", href: "/software" },
   { name: 'Blogs', href: '/blogs' },
 ];
@@ -138,7 +138,7 @@ const Navbarv2 = () => {
             onMouseLeave={() => setIsHovered(false)}
           >
             <a
-              href="/services"
+              href="/services2"
               className="font-alliance flex items-center gap-x-1 text-sm  leading-6 text-gray-900"
             >
               Services
