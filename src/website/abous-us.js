@@ -150,7 +150,7 @@ export default function AboutUs() {
                   Contact Us
                 </a>
                 <a
-                  href="/services"
+                  href="/services2"
                   className="text-sm font-semibold leading-6 text-white"
                 >
                   Learn more{" "}

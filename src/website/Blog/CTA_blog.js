@@ -16,7 +16,7 @@ export default function CTAB() {
               >
                 Contact Us
               </a>
-              <a href="/services" className="text-sm font-semibold leading-6 text-white font-alliance">
+              <a href="/services2" className="text-sm font-semibold leading-6 text-white font-alliance">
                Our Services <span aria-hidden="true">→</span>
               </a>
             </div>
